@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const Dish = require(""../Dish.mjs"");
-const MagicLib = require(""../lib/Magic.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const Dish = require("../Dish.mjs");
+const MagicLib = require("../lib/Magic.mjs");
 
 /**
  * Magic operation

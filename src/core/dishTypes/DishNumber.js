@@ -5,8 +5,8 @@
  */
 
 
-const DishType = require(""./DishType.mjs"");
-const Utils = require(""../Utils.mjs"");
+const DishType = require("./DishType.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * Translation methods for number dishes

@@ -1,4 +1,4 @@
-const Utils = require(""../Utils.mjs"");
+const Utils = require("../Utils.mjs");
 
 /**
  * Base85 resources.
@@ -34,7 +34,7 @@ exports.ALPHABET_OPTIONS = ALPHABET_OPTIONS;<=>?@^_`{|}~",
  * @param {string} alphabet
  * @returns {string}
  */
-export function alphabetName(alphabet) {
+function alphabetName(alphabet) {
     alphabet = escape(alphabet);
     let name;
 
@@ -44,4 +44,5 @@ export function alphabetName(alphabet) {
     });
 
     return name;
-}
+};
+exports.alphabetName = alphabetName;

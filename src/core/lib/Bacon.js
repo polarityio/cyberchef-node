@@ -65,11 +65,12 @@ exports.BACON_NORMALIZE_MAP = BACON_NORMALIZE_MAP;
  * // returns "11001 01010"
  * swapZeroAndOne("00110 10101");
  */
-export function swapZeroAndOne(string) {
+function swapZeroAndOne(string) {
     return string.replace(/[01]/g, function (c) {
         return {
             "0": "1",
             "1": "0"
         }[c];
     });
-}
+};
+exports.swapZeroAndOne = swapZeroAndOne;

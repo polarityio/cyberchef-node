@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Cbor = require(""cbor"");
+const Operation = require("../Operation.mjs");
+const Cbor = require("cbor");
 
 /**
  * CBOR Encode operation

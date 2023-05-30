@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Gaussian blurs an image.
@@ -16,7 +16,7 @@ const OperationError = require(""../errors/OperationError.mjs"");
  * @param {boolean} fast
  * @returns {jimp}
  */
-export function gaussianBlur (input, radius) {
+function gaussianBlur (input, radius) {
     try {
         // From http://blog.ivank.net/fastest-gaussian-blur.html
         const boxes = boxesForGauss(radius, 3);
@@ -28,7 +28,8 @@ export function gaussianBlur (input, radius) {
     }
 
     return input;
-}
+};
+exports.gaussianBlur  = gaussianBlur ;
 
 /**
  *

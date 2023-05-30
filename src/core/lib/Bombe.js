@@ -7,9 +7,9 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
-const {Rotor, Plugboard, a2i, i2a} = require(""./Enigma.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
+const {Rotor, Plugboard, a2i, i2a} = require("./Enigma.mjs");
 
 /**
  * Convenience/optimisation subclass of Rotor

@@ -16,7 +16,7 @@ import {
     logTestReport,
 } from "../lib/utils.mjs";
 
-const TestRegister = require(""../lib/TestRegister.mjs"");
+const TestRegister = require("../lib/TestRegister.mjs");
 import "./tests/BCD.mjs";
 import "./tests/BSON.mjs";
 import "./tests/BaconCipher.mjs";

@@ -9,10 +9,10 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-const Chef = require(""../../src/core/Chef.mjs"");
-const Utils = require(""../../src/core/Utils.mjs"");
-const cliProgress = require(""cli-progress"");
-const log = require(""loglevel"");
+const Chef = require("../../src/core/Chef.mjs");
+const Utils = require("../../src/core/Utils.mjs");
+const cliProgress = require("cli-progress");
+const log = require("loglevel");
 
 /**
  * Object to store and run the list of tests.

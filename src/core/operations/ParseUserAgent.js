@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const UAParser = require(""ua-parser-js"");
+const Operation = require("../Operation.mjs");
+const UAParser = require("ua-parser-js");
 
 /**
  * Parse User Agent operation

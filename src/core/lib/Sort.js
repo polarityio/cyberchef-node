@@ -14,9 +14,10 @@
  * @param {string} b
  * @returns {number}
  */
-export function caseInsensitiveSort(a, b) {
+function caseInsensitiveSort(a, b) {
     return a.toLowerCase().localeCompare(b.toLowerCase());
-}
+};
+exports.caseInsensitiveSort = caseInsensitiveSort;
 
 
 /**
@@ -26,7 +27,7 @@ export function caseInsensitiveSort(a, b) {
  * @param {string} b
  * @returns {number}
  */
-export function ipSort(a, b) {
+function ipSort(a, b) {
     let a_ = a.split("."),
         b_ = b.split(".");
 
@@ -38,7 +39,8 @@ export function ipSort(a, b) {
     if (isNaN(a_) && isNaN(b_)) return a.localeCompare(b);
 
     return a_ - b_;
-}
+};
+exports.ipSort = ipSort;
 
 /**
  * Comparison operation for sorting of numeric values.
@@ -48,7 +50,7 @@ export function ipSort(a, b) {
  * @param {string} b
  * @returns {number}
  */
-export function numericSort(a, b) {
+function numericSort(a, b) {
     const a_ = a.split(/([^\d]+)/),
         b_ = b.split(/([^\d]+)/);
 
@@ -65,7 +67,8 @@ export function numericSort(a, b) {
     }
 
     return a.localeCompare(b);
-}
+};
+exports.numericSort = numericSort;
 
 /**
  * Comparison operation for sorting of hexadecimal values.
@@ -75,7 +78,7 @@ export function numericSort(a, b) {
  * @param {string} b
  * @returns {number}
  */
-export function hexadecimalSort(a, b) {
+function hexadecimalSort(a, b) {
     let a_ = a.split(/([^\da-f]+)/i),
         b_ = b.split(/([^\da-f]+)/i);
 
@@ -102,7 +105,8 @@ export function hexadecimalSort(a, b) {
     }
 
     return a.localeCompare(b);
-}
+};
+exports.hexadecimalSort = hexadecimalSort;
 
 /**
  * Comparison operation for sorting by length
@@ -111,7 +115,8 @@ export function hexadecimalSort(a, b) {
  * @param {string} b
  * @returns {number}
  */
-export function lengthSort(a, b) {
+function lengthSort(a, b) {
     return a.length - b.length;
-}
+};
+exports.lengthSort = lengthSort;
 

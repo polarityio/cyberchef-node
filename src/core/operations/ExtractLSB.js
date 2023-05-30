@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
-const { fromBinary } = require(""../lib/Binary.mjs"");
-const { isImage } = require(""../lib/FileType.mjs"");
-const jimp = require(""jimp"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
+const { fromBinary } = require("../lib/Binary.mjs");
+const { isImage } = require("../lib/FileType.mjs");
+const jimp = require("jimp");
 
 /**
  * Extract LSB operation

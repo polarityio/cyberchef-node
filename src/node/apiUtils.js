@@ -32,7 +32,7 @@ const capitalise = function capitalise(str) {
  * @param {String} name - string to be altered
  * @returns {String} decapitalised
  */
-export function decapitalise(str) {
+function decapitalise(str) {
     // Don't decapitalise str that start with 2+ caps
     if (/^[A-Z0-9]{2,}/g.test(str)) {
         return str;
@@ -43,13 +43,14 @@ export function decapitalise(str) {
     }
 
     return `${str.charAt(0).toLowerCase()}${str.substr(1)}`;
-}
+};
+exports.decapitalise = decapitalise;
 
 
 /**
  * Remove strings surrounded with [] from the given array.
 */
-export function removeSubheadingsFromArray(array) {
+function removeSubheadingsFromArray(array) {
     if (Array.isArray(array)) {
         return array.filter((i) => {
             if (typeof i === "string") {
@@ -58,23 +59,25 @@ export function removeSubheadingsFromArray(array) {
             return true;
         });
     }
-}
+};
+exports.removeSubheadingsFromArray = removeSubheadingsFromArray;
 
 
 /**
  * Remove spaces, make lower case.
  * @param str
  */
-export function sanitise(str) {
+function sanitise(str) {
     return str.replace(/ /g, "").toLowerCase();
-}
+};
+exports.sanitise = sanitise;
 
 
 /**
  * something like this => somethingLikeThis
  * ABC a sentence => ABCASentence
 */
-export function sentenceToCamelCase(str) {
+function sentenceToCamelCase(str) {
     return str.split(" ")
         .map((s, index) => {
             if (index === 0) {
@@ -83,4 +86,5 @@ export function sentenceToCamelCase(str) {
             return capitalise(s);
         })
         .reduce((prev, curr) => `${prev}${curr}`, "");
-}
+};
+exports.sentenceToCamelCase = sentenceToCamelCase;

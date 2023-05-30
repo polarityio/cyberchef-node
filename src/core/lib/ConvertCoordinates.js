@@ -6,18 +6,18 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const geohash = require(""ngeohash"");
+const OperationError = require("../errors/OperationError.mjs");
+const geohash = require("ngeohash");
 /*
 Currently unable to update to geodesy v2 as we cannot load .js modules into a .mjs file.
 When we do update, imports will look like this:
 
-const LatLonEllipsoidal = require(""geodesy/latlon-ellipsoidal.js"");
-const Mgrs = require(""geodesy/mgrs.js"");
-const OsGridRef = require(""geodesy/osgridref.js"");
-const Utm = require(""geodesy/utm.js"");
+const LatLonEllipsoidal = require("geodesy/latlon-ellipsoidal.js");
+const Mgrs = require("geodesy/mgrs.js");
+const OsGridRef = require("geodesy/osgridref.js");
+const Utm = require("geodesy/utm.js");
 */
-const geodesy = require(""geodesy"");
+const geodesy = require("geodesy");
 const LatLonEllipsoidal = geodesy.LatLonEllipsoidal,
     Mgrs = geodesy.Mgrs,
     OsGridRef = geodesy.OsGridRef,
@@ -59,7 +59,7 @@ const NO_CHANGE = [
  * @param {number} precision - Precision of the result
  * @returns {string} A formatted string of the converted co-ordinates
  */
-export function convertCoordinates (input, inFormat, inDelim, outFormat, outDelim, includeDir, precision) {
+function convertCoordinates (input, inFormat, inDelim, outFormat, outDelim, includeDir, precision) {
     let isPair = false,
         split,
         latlon,
@@ -333,7 +333,8 @@ export function convertCoordinates (input, inFormat, inDelim, outFormat, outDeli
     }
 
     return conv;
-}
+};
+exports.convertCoordinates  = convertCoordinates ;
 
 /**
  * Split up the input using a space or degrees signs, and sanitise the result
@@ -472,7 +473,7 @@ function convDDToDDM (decDegrees, precision) {
  * @param {string} delim - The delimiter separating latitide and longitude
  * @returns {string[]} String array containing the latitude and longitude directions
  */
-export function findDirs(input, delim) {
+function findDirs(input, delim) {
     const upperInput = input.toUpperCase();
     const dirExp = new RegExp(/[NESW]/g);
 
@@ -524,7 +525,8 @@ export function findDirs(input, delim) {
     }
 
     return [latDir, longDir];
-}
+};
+exports.findDirs = findDirs;
 
 /**
  * Detects the co-ordinate format of the input data
@@ -533,7 +535,7 @@ export function findDirs(input, delim) {
  * @param {string} delim - The delimiter separating the data in input
  * @returns {string} The input format
  */
-export function findFormat (input, delim) {
+function findFormat (input, delim) {
     let testData;
     const mgrsPattern = new RegExp(/^[0-9]{2}\s?[C-HJ-NP-X]{1}\s?[A-HJ-NP-Z][A-HJ-NP-V]\s?[0-9\s]+/),
         osngPattern = new RegExp(/^[A-HJ-Z]{2}\s+[0-9\s]+$/),
@@ -590,7 +592,8 @@ export function findFormat (input, delim) {
         }
     }
     return null;
-}
+};
+exports.findFormat  = findFormat ;
 
 /**
  * Automatically find the delimeter type from the given input
@@ -598,7 +601,7 @@ export function findFormat (input, delim) {
  * @param {string} input
  * @returns {string} Delimiter type
  */
-export function findDelim (input) {
+function findDelim (input) {
     input = input.trim();
     const delims = [",", ";", ":"];
     const testDir = input.match(/[NnEeSsWw]/g);
@@ -627,7 +630,8 @@ export function findDelim (input) {
         }
     }
     return null;
-}
+};
+exports.findDelim  = findDelim ;
 
 /**
  * Gets the real string for a delimiter name.
@@ -635,7 +639,7 @@ export function findDelim (input) {
  * @param {string} delim The delimiter to be matched
  * @returns {string}
  */
-export function realDelim (delim) {
+function realDelim (delim) {
     return {
         "Auto":         "Auto",
         "Space":        " ",
@@ -644,7 +648,8 @@ export function realDelim (delim) {
         "Semi-colon":   ";",
         "Colon":        ":"
     }[delim];
-}
+};
+exports.realDelim  = realDelim ;
 
 /**
  * Returns true if a zero is negative

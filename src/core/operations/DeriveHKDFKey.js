@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const CryptoApi = require(""crypto-api/src/crypto-api.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const CryptoApi = require("crypto-api/src/crypto-api.mjs");
 
 /**
  * Derive HKDF Key operation

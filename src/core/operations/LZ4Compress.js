@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const lz4 = require(""lz4js"");
+const Operation = require("../Operation.mjs");
+const lz4 = require("lz4js");
 
 /**
  * LZ4 Compress operation

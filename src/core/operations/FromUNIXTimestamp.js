@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const moment = require(""moment-timezone"");
-const {UNITS} = require(""../lib/DateTime.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const moment = require("moment-timezone");
+const {UNITS} = require("../lib/DateTime.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * From UNIX Timestamp operation

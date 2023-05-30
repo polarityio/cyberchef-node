@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const { search, DOMAIN_REGEX } = require(""../lib/Extract.mjs"");
-const { caseInsensitiveSort } = require(""../lib/Sort.mjs"");
+const Operation = require("../Operation.mjs");
+const { search, DOMAIN_REGEX } = require("../lib/Extract.mjs");
+const { caseInsensitiveSort } = require("../lib/Sort.mjs");
 
 /**
  * Extract domains operation

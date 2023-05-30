@@ -14,11 +14,11 @@
  * Algorithm released under the BSD-3-clause licence
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
-const Stream = require(""../lib/Stream.mjs"");
-const {runHash} = require(""../lib/Hash.mjs"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
+const Stream = require("../lib/Stream.mjs");
+const {runHash} = require("../lib/Hash.mjs");
 
 /**
  * HASSH Client Fingerprint operation

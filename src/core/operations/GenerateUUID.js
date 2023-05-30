@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const crypto = require(""crypto"");
+const Operation = require("../Operation.mjs");
+const crypto = require("crypto");
 
 /**
  * Generate UUID operation

@@ -15,13 +15,14 @@
  * @param endX
  * @param endY
  */
-export function drawLine(ctx, startX, startY, endX, endY) {
+function drawLine(ctx, startX, startY, endX, endY) {
     ctx.beginPath();
     ctx.moveTo(startX, startY);
     ctx.lineTo(endX, endY);
     ctx.closePath();
     ctx.stroke();
-}
+};
+exports.drawLine = drawLine;
 
 /**
  * Draws a bar chart on the canvas.
@@ -34,7 +35,7 @@ export function drawLine(ctx, startX, startY, endX, endY) {
  * @param numYLabels
  * @param fontSize
  */
-export function drawBarChart(canvas, scores, xAxisLabel, yAxisLabel, numXLabels, numYLabels, fontSize) {
+function drawBarChart(canvas, scores, xAxisLabel, yAxisLabel, numXLabels, numYLabels, fontSize) {
     fontSize = fontSize || 15;
     if (!numXLabels || numXLabels > Math.round(canvas.width / 50)) {
         numXLabels = Math.round(canvas.width / 50);
@@ -130,7 +131,8 @@ export function drawBarChart(canvas, scores, xAxisLabel, yAxisLabel, numXLabels,
         ctx.fillText(yAxisLabel, 0, 0);
         ctx.restore();
     }
-}
+};
+exports.drawBarChart = drawBarChart;
 
 /**
  * Draws a scale bar on the canvas.
@@ -140,7 +142,7 @@ export function drawBarChart(canvas, scores, xAxisLabel, yAxisLabel, numXLabels,
  * @param max
  * @param markings
  */
-export function drawScaleBar(canvas, score, max, markings) {
+function drawScaleBar(canvas, score, max, markings) {
     // Bar properties
     const ctx = canvas.getContext("2d"),
         leftPadding = canvas.width * 0.01,
@@ -201,4 +203,5 @@ export function drawScaleBar(canvas, score, max, markings) {
         y0 = topPadding + barHeight + (bottomPadding * 0.8);
         ctx.fillText(markings[i].label, x0, y0);
     }
-}
+};
+exports.drawScaleBar = drawScaleBar;

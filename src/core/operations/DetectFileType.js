@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {detectFileType} = require(""../lib/FileType.mjs"");
-const {FILE_SIGNATURES} = require(""../lib/FileSignatures.mjs"");
+const Operation = require("../Operation.mjs");
+const {detectFileType} = require("../lib/FileType.mjs");
+const {FILE_SIGNATURES} = require("../lib/FileSignatures.mjs");
 
 // Concat all supported extensions into a single flat list
 const exts = [].concat.apply([], Object.keys(FILE_SIGNATURES).map(cat =>

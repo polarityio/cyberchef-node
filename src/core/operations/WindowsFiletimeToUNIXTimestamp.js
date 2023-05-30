@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const BigNumber = require(""bignumber.js"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const BigNumber = require("bignumber.js");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Windows Filetime to UNIX Timestamp operation

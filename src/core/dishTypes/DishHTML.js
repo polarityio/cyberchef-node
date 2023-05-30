@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const DishString = require(""./DishString.mjs"");
-const Utils = require(""../Utils.mjs"");
+const DishString = require("./DishString.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * Translation methods for HTML Dishes

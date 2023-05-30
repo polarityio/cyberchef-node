@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const { toHex, fromHex } = require(""./Hex.mjs"");
+const { toHex, fromHex } = require("./Hex.mjs");
 
 /**
  * Formats Distinguished Name (DN) objects to strings.
@@ -15,7 +15,7 @@ const { toHex, fromHex } = require(""./Hex.mjs"");
  * @param {number} indent
  * @returns {string}
  */
-export function formatDnObj(dnObj, indent) {
+function formatDnObj(dnObj, indent) {
     let output = "";
 
     const maxKeyLen = dnObj.array.reduce((max, item) => {
@@ -33,7 +33,8 @@ export function formatDnObj(dnObj, indent) {
     }
 
     return output.slice(0, -1);
-}
+};
+exports.formatDnObj = formatDnObj;
 
 
 /**
@@ -44,7 +45,7 @@ export function formatDnObj(dnObj, indent) {
  * @param {number} indent
  * @returns {string}
  */
-export function formatByteStr(byteStr, length, indent) {
+function formatByteStr(byteStr, length, indent) {
     byteStr = toHex(fromHex(byteStr), ":");
     length = length * 3;
     let output = "";
@@ -59,4 +60,5 @@ export function formatByteStr(byteStr, length, indent) {
     }
 
     return output.slice(0, output.length-1);
-}
+};
+exports.formatByteStr = formatByteStr;

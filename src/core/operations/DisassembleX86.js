@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const * as disassemble = require(""../vendor/DisassembleX86-64.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const * as disassemble = require("../vendor/DisassembleX86-64.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Disassemble x86 operation

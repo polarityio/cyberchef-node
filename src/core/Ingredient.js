@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""./Utils.mjs"");
-const {fromHex} = require(""./lib/Hex.mjs"");
+const Utils = require("./Utils.mjs");
+const {fromHex} = require("./lib/Hex.mjs");
 
 /**
  * The arguments to operations.

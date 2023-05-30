@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
-const {COMPRESSION_OUTPUT_FORMATS, DECOMPRESSION_FUNCTIONS} = require(""../lib/LZString.mjs"");
+const {COMPRESSION_OUTPUT_FORMATS, DECOMPRESSION_FUNCTIONS} = require("../lib/LZString.mjs");
 
 /**
  * LZString Decompress operation

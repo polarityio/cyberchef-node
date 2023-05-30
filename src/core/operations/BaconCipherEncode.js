@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
+const Operation = require("../Operation.mjs");
 import {
     BACON_ALPHABETS,
     BACON_TRANSLATIONS_FOR_ENCODING, BACON_TRANSLATION_AB,

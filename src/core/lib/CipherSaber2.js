@@ -3,7 +3,7 @@
  * @copyright Crown Copyright 2020
  * @license Apache-2.0
  */
-export function encode(tempIVP, key, rounds, input) {
+function encode(tempIVP, key, rounds, input) {
     const ivp = new Uint8Array(key.concat(tempIVP));
     const state = new Array(256).fill(0);
     let j = 0, i = 0;
@@ -31,4 +31,5 @@ export function encode(tempIVP, key, rounds, input) {
         result.push(state[n] ^ input[x]);
     }
     return result;
-}
+};
+exports.encode = encode;

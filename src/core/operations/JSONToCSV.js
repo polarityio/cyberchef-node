@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const * as flat = require(""flat"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const * as flat = require("flat");
 const flatten = flat.default ? flat.default.flatten : flat.flatten;
 
 /**

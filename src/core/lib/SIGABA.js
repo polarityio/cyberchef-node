@@ -44,13 +44,14 @@ exports.NUMBERS = NUMBERS;
  * @param {char} letter - letter to convert to uppercase
  * @returns {char}
  */
-export function convToUpperCase(letter) {
+function convToUpperCase(letter) {
     const charCode = letter.charCodeAt();
     if (97<=charCode && charCode<=122) {
         return String.fromCharCode(charCode-32);
     }
     return letter;
-}
+};
+exports.convToUpperCase = convToUpperCase;
 
 /**
  * The SIGABA machine consisting of the 3 rotor banks: cipher, control and index banks.

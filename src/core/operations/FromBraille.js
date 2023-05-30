@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {BRAILLE_LOOKUP} = require(""../lib/Braille.mjs"");
+const Operation = require("../Operation.mjs");
+const {BRAILLE_LOOKUP} = require("../lib/Braille.mjs");
 
 /**
  * From Braille operation

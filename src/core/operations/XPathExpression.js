@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const xmldom = require(""xmldom"");
-const xpath = require(""xpath"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const xmldom = require("xmldom");
+const xpath = require("xpath");
 
 /**
  * XPath expression operation

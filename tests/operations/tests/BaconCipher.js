@@ -5,8 +5,8 @@
  * @copyright Karsten Silkenbäumer 2019
  * @license Apache-2.0
  */
-const TestRegister = require(""../../lib/TestRegister.mjs"");
-const { BACON_ALPHABETS, BACON_TRANSLATIONS } = require(""../../../src/core/lib/Bacon.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
+const { BACON_ALPHABETS, BACON_TRANSLATIONS } = require("../../../src/core/lib/Bacon.mjs");
 
 const alphabets = Object.keys(BACON_ALPHABETS);
 const translations = BACON_TRANSLATIONS;

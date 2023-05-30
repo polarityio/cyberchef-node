@@ -6,10 +6,10 @@
  * @license Apache-2.0
  */
 
-const Chef = require(""./Chef.mjs"");
+const Chef = require("./Chef.mjs");
 const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
-const OpModules = require(""./config/modules/OpModules.mjs"");
-const loglevelMessagePrefix = require(""loglevel-message-prefix"");
+const OpModules = require("./config/modules/OpModules.mjs");
+const loglevelMessagePrefix = require("loglevel-message-prefix");
 
 
 // Set up Chef instance

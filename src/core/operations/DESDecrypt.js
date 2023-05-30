@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const forge = require(""node-forge"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const forge = require("node-forge");
 
 /**
  * DES Decrypt operation

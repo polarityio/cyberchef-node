@@ -3,10 +3,10 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-const Operation = require(""../Operation.mjs"");
-const jwt = require(""jsonwebtoken"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const {JWT_ALGORITHMS} = require(""../lib/JWT.mjs"");
+const Operation = require("../Operation.mjs");
+const jwt = require("jsonwebtoken");
+const OperationError = require("../errors/OperationError.mjs");
+const {JWT_ALGORITHMS} = require("../lib/JWT.mjs");
 
 
 /**

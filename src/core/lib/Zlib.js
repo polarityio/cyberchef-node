@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const zlibAndGzip = require(""zlibjs/bin/zlib_and_gzip.min.js"");
+const zlibAndGzip = require("zlibjs/bin/zlib_and_gzip.min.js");
 
 const Zlib = zlibAndGzip.Zlib;
 

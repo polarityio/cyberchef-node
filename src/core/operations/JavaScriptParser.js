@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const * as esprima = require(""esprima"");
+const Operation = require("../Operation.mjs");
+const * as esprima = require("esprima");
 
 /**
  * JavaScript Parser operation

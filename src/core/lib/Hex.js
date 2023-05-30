@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 
 /**
@@ -28,7 +28,7 @@ const OperationError = require(""../errors/OperationError.mjs"");
  * // returns "0x0a,0x14,0x1e"
  * toHex([10,20,30], "0x", 2, ",")
  */
-export function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
+function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
     if (!data) return "";
     if (data instanceof ArrayBuffer) data = new Uint8Array(data);
 
@@ -57,7 +57,8 @@ export function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
     } else {
         return output;
     }
-}
+};
+exports.toHex = toHex;
 
 
 /**
@@ -70,7 +71,7 @@ export function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
  * // returns "0a141e"
  * toHex([10,20,30]);
  */
-export function toHexFast(data) {
+function toHexFast(data) {
     if (!data) return "";
     if (data instanceof ArrayBuffer) data = new Uint8Array(data);
 
@@ -82,7 +83,8 @@ export function toHexFast(data) {
     }
 
     return output.join("");
-}
+};
+exports.toHexFast = toHexFast;
 
 
 /**
@@ -100,7 +102,7 @@ export function toHexFast(data) {
  * // returns [10,20,30]
  * fromHex("0a:14:1e", "Colon");
  */
-export function fromHex(data, delim="Auto", byteLen=2) {
+function fromHex(data, delim="Auto", byteLen=2) {
     if (byteLen < 1 || Math.round(byteLen) !== byteLen)
         throw new OperationError("Byte length must be a positive integer");
 
@@ -118,7 +120,8 @@ export function fromHex(data, delim="Auto", byteLen=2) {
         }
     }
     return output;
-}
+};
+exports.fromHex = fromHex;
 
 
 /**

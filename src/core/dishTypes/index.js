@@ -5,14 +5,14 @@
  */
 
 
-const DishByteArray = require(""./DishByteArray.mjs"");
-const DishBigNumber = require(""./DishBigNumber.mjs"");
-const DishFile = require(""./DishFile.mjs"");
-const DishHTML = require(""./DishHTML.mjs"");
-const DishJSON = require(""./DishJSON.mjs"");
-const DishListFile = require(""./DishListFile.mjs"");
-const DishNumber = require(""./DishNumber.mjs"");
-const DishString = require(""./DishString.mjs"");
+const DishByteArray = require("./DishByteArray.mjs");
+const DishBigNumber = require("./DishBigNumber.mjs");
+const DishFile = require("./DishFile.mjs");
+const DishHTML = require("./DishHTML.mjs");
+const DishJSON = require("./DishJSON.mjs");
+const DishListFile = require("./DishListFile.mjs");
+const DishNumber = require("./DishNumber.mjs");
+const DishString = require("./DishString.mjs");
 
 export {
     DishByteArray,

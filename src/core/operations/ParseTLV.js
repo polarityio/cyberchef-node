@@ -5,9 +5,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const TLVParser = require(""../lib/TLVParser.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const TLVParser = require("../lib/TLVParser.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Parse TLV operation

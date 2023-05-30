@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {URL_REGEX, DOMAIN_REGEX} = require(""../lib/Extract.mjs"");
+const Operation = require("../Operation.mjs");
+const {URL_REGEX, DOMAIN_REGEX} = require("../lib/Extract.mjs");
 
 /**
  * DefangURL operation

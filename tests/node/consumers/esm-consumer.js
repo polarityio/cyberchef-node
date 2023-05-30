@@ -5,9 +5,9 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const assert = require(""assert"");
-const chef = require(""cyberchef"");
-const { bake, toHex, reverse, unique, multiply } = require(""cyberchef"");
+const assert = require("assert");
+const chef = require("cyberchef");
+const { bake, toHex, reverse, unique, multiply } = require("cyberchef");
 
 const a = bake("Testing, 1 2 3", [
     toHex,

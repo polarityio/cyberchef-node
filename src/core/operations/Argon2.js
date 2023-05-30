@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
-const argon2 = require(""argon2-browser"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
+const argon2 = require("argon2-browser");
 
 /**
  * Argon2 operation

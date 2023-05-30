@@ -6,9 +6,9 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const OperationError = require(""../errors/OperationError.mjs"");
-const * as Enigma = require(""../lib/Enigma.mjs"");
-const Utils = require(""../Utils.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
+const * as Enigma = require("../lib/Enigma.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * A set of example Typex rotors. No Typex rotor wirings are publicly available, so these are

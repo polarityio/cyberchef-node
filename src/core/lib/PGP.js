@@ -10,10 +10,10 @@
  *
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const { isWorkerEnvironment } = require(""../Utils.mjs"");
-const kbpgp = require(""kbpgp"");
-const * as es6promisify = require(""es6-promisify"");
+const OperationError = require("../errors/OperationError.mjs");
+const { isWorkerEnvironment } = require("../Utils.mjs");
+const kbpgp = require("kbpgp");
+const * as es6promisify = require("es6-promisify");
 const promisify = es6promisify.default ? es6promisify.default.promisify : es6promisify.promisify;
 
 /**
@@ -58,7 +58,7 @@ exports.ASP = ASP;
  * @param {number} keySize
  * @returns {number}
  */
-export function getSubkeySize(keySize) {
+function getSubkeySize(keySize) {
     return {
         1024: 1024,
         2048: 1024,
@@ -66,7 +66,8 @@ export function getSubkeySize(keySize) {
         256:   256,
         384:   256,
     }[keySize];
-}
+};
+exports.getSubkeySize = getSubkeySize;
 
 /**
 * Import private key and unlock if necessary

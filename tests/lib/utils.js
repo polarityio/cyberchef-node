@@ -45,7 +45,7 @@ function handleTestResult(testStatus, testResult) {
  * @param {Object} testStatus - object describing test run data
  * @param {Object[]} results - results from TestRegister
  */
-export function logTestReport(testStatus, results) {
+function logTestReport(testStatus, results) {
     results.forEach(r => handleTestResult(testStatus, r));
 
     console.log();
@@ -76,15 +76,17 @@ export function logTestReport(testStatus, results) {
     console.log();
 
     process.exit(testStatus.allTestsPassing ? 0 : 1);
-}
+};
+exports.logTestReport = logTestReport;
 
 /**
  * Fail if the process takes longer than 60 seconds.
  */
-export function setLongTestFailure() {
+function setLongTestFailure() {
     const timeLimit = 120;
     setTimeout(function() {
         console.log(`Tests took longer than ${timeLimit} seconds to run, returning.`);
         process.exit(1);
     }, timeLimit * 1000);
-}
+};
+exports.setLongTestFailure = setLongTestFailure;

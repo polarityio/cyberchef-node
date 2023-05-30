@@ -8,7 +8,7 @@
  * @copyright 2021
  * @license Apache-2.0
  */
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 /* Cleartexts */
 const TWO_BLOCK_PLAIN = "aa aa aa aa bb bb bb bb cc cc cc cc dd dd dd dd ee ee ee ee ff ff ff ff aa aa aa aa bb bb bb bb";

@@ -7,8 +7,8 @@
  * @license Apache-2.0
  */
 
-const chef = require(""./index.mjs"");
-const repl = require(""repl"");
+const chef = require("./index.mjs");
+const repl = require("repl");
 
 
 /* eslint no-console: ["off"] */

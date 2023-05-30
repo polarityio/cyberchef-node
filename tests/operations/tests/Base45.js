@@ -7,7 +7,7 @@
  * @license Apache-2.0
  */
 
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 const defaultB45Alph = "0-9A-Z $%*+\\-./:";
 

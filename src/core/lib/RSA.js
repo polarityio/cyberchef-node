@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const forge = require(""node-forge"");
+const forge = require("node-forge");
 
 const MD_ALGORITHMS = {
     "SHA-1": forge.md.sha1,

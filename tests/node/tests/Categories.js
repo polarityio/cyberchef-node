@@ -1,8 +1,8 @@
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 const Categories = require(""../../../src/core/config/Categories.json" assert {type: "json"}");
 const OperationConfig = require(""../../../src/core/config/OperationConfig.json" assert {type: "json"}");
-const it = require(""../assertionHandler.mjs"");
-const assert = require(""assert"");
+const it = require("../assertionHandler.mjs");
+const assert = require("assert");
 
 TestRegister.addApiTests([
     it("Categories: operations should be in a category", () => {

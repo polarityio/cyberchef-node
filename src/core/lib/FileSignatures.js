@@ -6,7 +6,7 @@
  * @license Apache-2.0
  *
  */
-const Stream = require(""./Stream.mjs"");
+const Stream = require("./Stream.mjs");
 
 /**
  * A categorised table of file types, including signatures to identify them and functions
@@ -2606,7 +2606,7 @@ exports.FILE_SIGNATURES = FILE_SIGNATURES;
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractJPEG(bytes, offset) {
+function extractJPEG(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     while (stream.hasMore()) {
@@ -2700,7 +2700,8 @@ export function extractJPEG(bytes, offset) {
     }
 
     throw new Error("Unable to parse JPEG successfully");
-}
+};
+exports.extractJPEG = extractJPEG;
 
 
 /**
@@ -2710,7 +2711,7 @@ export function extractJPEG(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractGIF(bytes, offset) {
+function extractGIF(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to application extension block.
@@ -2743,7 +2744,8 @@ export function extractGIF(bytes, offset) {
         stream.moveForwardsBy(1);
     }
     return stream.carve();
-}
+};
+exports.extractGIF = extractGIF;
 
 
 /**
@@ -2754,7 +2756,7 @@ export function extractGIF(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractMZPE(bytes, offset) {
+function extractMZPE(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Read pointer to PE header
@@ -2811,7 +2813,8 @@ export function extractMZPE(bytes, offset) {
     stream.moveTo(rawDataAddress + rawDataSize);
 
     return stream.carve();
-}
+};
+exports.extractMZPE = extractMZPE;
 
 
 /**
@@ -2821,7 +2824,7 @@ export function extractMZPE(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractPDF(bytes, offset) {
+function extractPDF(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Find end-of-file marker (%%EOF)
@@ -2831,7 +2834,8 @@ export function extractPDF(bytes, offset) {
     stream.consumeIf(0x0a);
 
     return stream.carve();
-}
+};
+exports.extractPDF = extractPDF;
 
 
 /**
@@ -2841,7 +2845,7 @@ export function extractPDF(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractZIP(bytes, offset) {
+function extractZIP(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Find End of central directory record
@@ -2853,7 +2857,8 @@ export function extractZIP(bytes, offset) {
     stream.moveForwardsBy(commentLength);
 
     return stream.carve();
-}
+};
+exports.extractZIP = extractZIP;
 
 
 /**
@@ -2863,7 +2868,7 @@ export function extractZIP(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractMACHO(bytes, offset) {
+function extractMACHO(bytes, offset) {
 
     // Magic bytes.
     const MHCIGAM64 = "207250237254";
@@ -2962,7 +2967,8 @@ export function extractMACHO(bytes, offset) {
     // Move to the end of the final segment.
     stream.moveTo(dumpMachHeader(stream, isMagic64(magic), shouldSwapBytes(magic) ? "le" : "be"));
     return stream.carve();
-}
+};
+exports.extractMACHO = extractMACHO;
 
 
 /**
@@ -2972,7 +2978,7 @@ export function extractMACHO(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractTAR(bytes, offset) {
+function extractTAR(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
     while (stream.hasMore()) {
 
@@ -3001,7 +3007,8 @@ export function extractTAR(bytes, offset) {
     }
     stream.consumeWhile(0x00);
     return stream.carve();
-}
+};
+exports.extractTAR = extractTAR;
 
 
 /**
@@ -3011,7 +3018,7 @@ export function extractTAR(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractPNG(bytes, offset) {
+function extractPNG(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move past signature to first chunk
@@ -3030,7 +3037,8 @@ export function extractPNG(bytes, offset) {
 
 
     return stream.carve();
-}
+};
+exports.extractPNG = extractPNG;
 
 
 /**
@@ -3040,7 +3048,7 @@ export function extractPNG(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractWEBP(bytes, offset) {
+function extractWEBP(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to file size offset.
@@ -3054,7 +3062,8 @@ export function extractWEBP(bytes, offset) {
     stream.moveForwardsBy(fileSize);
 
     return stream.carve();
-}
+};
+exports.extractWEBP = extractWEBP;
 
 
 /**
@@ -3064,7 +3073,7 @@ export function extractWEBP(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractBMP(bytes, offset) {
+function extractBMP(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move past header
@@ -3077,7 +3086,8 @@ export function extractBMP(bytes, offset) {
     stream.moveForwardsBy(bmpSize - 6);
 
     return stream.carve();
-}
+};
+exports.extractBMP = extractBMP;
 
 
 /**
@@ -3086,7 +3096,7 @@ export function extractBMP(bytes, offset) {
  * @param {Uint8Array} bytes
  * @param {number} offset
  */
-export function extractICO(bytes, offset) {
+function extractICO(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to number of files there are.
@@ -3103,7 +3113,8 @@ export function extractICO(bytes, offset) {
     // Move to the end of the last file.
     stream.moveTo(fileOffset + fileSize);
     return stream.carve();
-}
+};
+exports.extractICO = extractICO;
 
 
 /**
@@ -3112,7 +3123,7 @@ export function extractICO(bytes, offset) {
  * @param {Uint8Array} bytes
  * @param {number} offset
  */
-export function extractTARGA(bytes, offset) {
+function extractTARGA(bytes, offset) {
     // Need all the bytes since we do not know how far up the image goes.
     const stream = new Stream(bytes);
     stream.moveTo(offset - 8);
@@ -3187,7 +3198,8 @@ export function extractTARGA(bytes, offset) {
     }
 
     return stream.carve(stream.position, offset+0x12);
-}
+};
+exports.extractTARGA = extractTARGA;
 
 
 /**
@@ -3197,7 +3209,7 @@ export function extractTARGA(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractWAV(bytes, offset) {
+function extractWAV(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to file size field.
@@ -3207,7 +3219,8 @@ export function extractWAV(bytes, offset) {
     stream.moveTo(stream.readInt(4, "le") + 8);
 
     return stream.carve();
-}
+};
+exports.extractWAV = extractWAV;
 
 
 /**
@@ -3217,7 +3230,7 @@ export function extractWAV(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractMP3(bytes, offset) {
+function extractMP3(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Constants for flag byte.
@@ -3280,7 +3293,8 @@ export function extractMP3(bytes, offset) {
         }
     }
     return stream.carve();
-}
+};
+exports.extractMP3 = extractMP3;
 
 
 /**
@@ -3290,7 +3304,7 @@ export function extractMP3(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractFLV(bytes, offset) {
+function extractFLV(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move past signature, version and flags
@@ -3327,7 +3341,8 @@ export function extractFLV(bytes, offset) {
     }
 
     return stream.carve();
-}
+};
+exports.extractFLV = extractFLV;
 
 
 /**
@@ -3337,7 +3352,7 @@ export function extractFLV(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractRTF(bytes, offset) {
+function extractRTF(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     let openTags = 0;
@@ -3367,7 +3382,8 @@ export function extractRTF(bytes, offset) {
     }
 
     return stream.carve();
-}
+};
+exports.extractRTF = extractRTF;
 
 
 /**
@@ -3377,7 +3393,7 @@ export function extractRTF(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractSQLITE(bytes, offset) {
+function extractSQLITE(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Extract the size of the page.
@@ -3392,7 +3408,8 @@ export function extractSQLITE(bytes, offset) {
     stream.moveTo(pageSize*numPages);
 
     return stream.carve();
-}
+};
+exports.extractSQLITE = extractSQLITE;
 
 
 /**
@@ -3402,7 +3419,7 @@ export function extractSQLITE(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractPListXML(bytes, offset) {
+function extractPListXML(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     let braceCount = 0;
@@ -3434,7 +3451,8 @@ export function extractPListXML(bytes, offset) {
     stream.consumeIf(0x0a);
 
     return stream.carve();
-}
+};
+exports.extractPListXML = extractPListXML;
 
 
 /**
@@ -3444,7 +3462,7 @@ export function extractPListXML(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractMacOSXKeychain(bytes, offset) {
+function extractMacOSXKeychain(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to size field.
@@ -3454,7 +3472,8 @@ export function extractMacOSXKeychain(bytes, offset) {
     stream.moveForwardsBy(stream.readInt(4));
 
     return stream.carve();
-}
+};
+exports.extractMacOSXKeychain = extractMacOSXKeychain;
 
 
 /**
@@ -3464,7 +3483,7 @@ export function extractMacOSXKeychain(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractOLE2(bytes, offset) {
+function extractOLE2(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
     const entries = [
         [[0x52, 0x00, 0x6f, 0x00, 0x6f, 0x00, 0x74, 0x00, 0x20, 0x00, 0x45, 0x00, 0x6e, 0x00, 0x74, 0x00, 0x72, 0x00, 0x79], 19, "Root Entry"],
@@ -3543,7 +3562,8 @@ export function extractOLE2(bytes, offset) {
 
     stream.moveTo(total);
     return stream.carve();
-}
+};
+exports.extractOLE2 = extractOLE2;
 
 
 /**
@@ -3553,7 +3573,7 @@ export function extractOLE2(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractGZIP(bytes, offset) {
+function extractGZIP(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
 
@@ -3612,7 +3632,8 @@ export function extractGZIP(bytes, offset) {
     stream.moveForwardsBy(8);
 
     return stream.carve();
-}
+};
+exports.extractGZIP = extractGZIP;
 
 
 /**
@@ -3622,7 +3643,7 @@ export function extractGZIP(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractBZIP2(bytes, offset) {
+function extractBZIP2(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // The EOFs shifted between all possible combinations.
@@ -3649,7 +3670,8 @@ export function extractBZIP2(bytes, offset) {
     }
     stream.moveForwardsBy(4);
     return stream.carve();
-}
+};
+exports.extractBZIP2 = extractBZIP2;
 
 
 /**
@@ -3659,7 +3681,7 @@ export function extractBZIP2(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractZlib(bytes, offset) {
+function extractZlib(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Skip over CMF
@@ -3680,7 +3702,8 @@ export function extractZlib(bytes, offset) {
     stream.moveForwardsBy(4);
 
     return stream.carve();
-}
+};
+exports.extractZlib = extractZlib;
 
 
 /**
@@ -3690,7 +3713,7 @@ export function extractZlib(bytes, offset) {
  * @param {Number} offset
  * @returns {string}
  */
-export function extractXZ(bytes, offset) {
+function extractXZ(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move forward to EOF marker
@@ -3700,7 +3723,8 @@ export function extractXZ(bytes, offset) {
     stream.moveForwardsBy(7);
 
     return stream.carve();
-}
+};
+exports.extractXZ = extractXZ;
 
 
 /**
@@ -3709,7 +3733,7 @@ export function extractXZ(bytes, offset) {
  * @param {Uint8Array} bytes
  * @param {Number} offset
  */
-export function extractDEB(bytes, offset) {
+function extractDEB(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move past !<arch>
@@ -3731,7 +3755,8 @@ export function extractDEB(bytes, offset) {
         stream.moveForwardsBy(fsize);
     }
     return stream.carve();
-}
+};
+exports.extractDEB = extractDEB;
 
 
 /**
@@ -3741,7 +3766,7 @@ export function extractDEB(bytes, offset) {
  * @param {number} offset
  * @returns {Uint8Array}
  */
-export function extractELF(bytes, offset) {
+function extractELF(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Skip over magic number
@@ -3775,7 +3800,8 @@ export function extractELF(bytes, offset) {
     stream.moveForwardsBy(shentsize * shnum);
 
     return stream.carve();
-}
+};
+exports.extractELF = extractELF;
 
 
 // Construct required Huffman Tables
@@ -3994,7 +4020,7 @@ function readHuffmanCode(stream, table) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractEVTX(bytes, offset) {
+function extractEVTX(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to first ELFCHNK.
@@ -4010,7 +4036,8 @@ export function extractEVTX(bytes, offset) {
     }
     stream.consumeWhile(0x00);
     return stream.carve();
-}
+};
+exports.extractEVTX = extractEVTX;
 
 
 /**
@@ -4020,7 +4047,7 @@ export function extractEVTX(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractEVT(bytes, offset) {
+function extractEVT(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Extract offset of EOF.
@@ -4034,7 +4061,8 @@ export function extractEVT(bytes, offset) {
     // Move past EOF.
     stream.moveForwardsBy(eofSize-4);
     return stream.carve();
-}
+};
+exports.extractEVT = extractEVT;
 
 
 /**
@@ -4044,7 +4072,7 @@ export function extractEVT(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractDMP(bytes, offset) {
+function extractDMP(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to fileSize field.
@@ -4054,7 +4082,8 @@ export function extractDMP(bytes, offset) {
     stream.moveTo((stream.readInt(4, "le") + 1) * 0x1000);
 
     return stream.carve();
-}
+};
+exports.extractDMP = extractDMP;
 
 
 /**
@@ -4064,7 +4093,7 @@ export function extractDMP(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractPF(bytes, offset) {
+function extractPF(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to file size.
@@ -4072,7 +4101,8 @@ export function extractPF(bytes, offset) {
     stream.moveTo(stream.readInt(4, "be"));
 
     return stream.carve();
-}
+};
+exports.extractPF = extractPF;
 
 
 /**
@@ -4082,14 +4112,15 @@ export function extractPF(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractPFWin10(bytes, offset) {
+function extractPFWin10(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Read in file size.
     stream.moveTo(stream.readInt(4, "be"));
 
     return stream.carve();
-}
+};
+exports.extractPFWin10 = extractPFWin10;
 
 
 /**
@@ -4099,7 +4130,7 @@ export function extractPFWin10(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractLNK(bytes, offset) {
+function extractLNK(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Move to file size field.
@@ -4107,7 +4138,8 @@ export function extractLNK(bytes, offset) {
     stream.moveTo(stream.readInt(4, "le"));
 
     return stream.carve();
-}
+};
+exports.extractLNK = extractLNK;
 
 
 /**
@@ -4117,7 +4149,7 @@ export function extractLNK(bytes, offset) {
  * @param {Number} offset
  * @returns {Uint8Array}
  */
-export function extractLZOP(bytes, offset) {
+function extractLZOP(bytes, offset) {
     const stream = new Stream(bytes.slice(offset));
 
     // Flag bits.
@@ -4189,4 +4221,5 @@ export function extractLZOP(bytes, offset) {
     }
     return stream.carve();
 
-}
+};
+exports.extractLZOP = extractLZOP;

@@ -18,10 +18,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const Utils = require(""../Utils.mjs"");
+const Utils = require("../Utils.mjs");
 
 // Param jpeg should be a binaryArray
-export function removeEXIF(jpeg) {
+function removeEXIF(jpeg) {
   // Convert binaryArray to char string
   jpeg = Utils.byteArrayToChars(jpeg);
   if (jpeg.slice(0, 2) != "\xff\xd8") {
@@ -46,6 +46,7 @@ export function removeEXIF(jpeg) {
 
   return new_data;
 };
+exports.removeEXIF = removeEXIF;;
 
 function splitIntoSegments(data) {
   if (data.slice(0, 2) != "\xff\xd8") {

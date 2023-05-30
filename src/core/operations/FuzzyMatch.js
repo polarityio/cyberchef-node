@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {fuzzyMatch, calcMatchRanges, DEFAULT_WEIGHTS} = require(""../lib/FuzzyMatch.mjs"");
-const Utils = require(""../Utils.mjs"");
+const Operation = require("../Operation.mjs");
+const {fuzzyMatch, calcMatchRanges, DEFAULT_WEIGHTS} = require("../lib/FuzzyMatch.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * Fuzzy Match operation

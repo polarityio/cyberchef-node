@@ -1,12 +1,12 @@
-const assert = require(""assert"");
-const it = require(""../assertionHandler.mjs"");
-const fs = require(""fs"");
+const assert = require("assert");
+const it = require("../assertionHandler.mjs");
+const fs = require("fs");
 
-const BigNumber = require(""bignumber.js"");
+const BigNumber = require("bignumber.js");
 
-const { Dish, toBase32, SHA3 } = require(""../../../src/node/index.mjs"");
-const File = require(""../../../src/node/File.mjs"");
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const { Dish, toBase32, SHA3 } = require("../../../src/node/index.mjs");
+const File = require("../../../src/node/File.mjs");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 TestRegister.addApiTests([
     it("Composable Dish: Should have top level Dish object", () => {

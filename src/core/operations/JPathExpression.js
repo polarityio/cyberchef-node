@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const {JSONPath} = require(""jsonpath-plus"");
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const {JSONPath} = require("jsonpath-plus");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * JPath expression operation

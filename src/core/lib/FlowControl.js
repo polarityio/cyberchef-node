@@ -13,8 +13,9 @@
  * @param {string} name - The label name to look for.
  * @returns {number}
  */
-export function getLabelIndex(name, state) {
+function getLabelIndex(name, state) {
     return state.opList.findIndex((operation) => {
         return (operation.name === "Label") && (name === operation.ingValues[0]);
     });
-}
+};
+exports.getLabelIndex = getLabelIndex;

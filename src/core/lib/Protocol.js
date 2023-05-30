@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-const BigNumber = require(""bignumber.js"");
-const {toHexFast} = require(""../lib/Hex.mjs"");
+const BigNumber = require("bignumber.js");
+const {toHexFast} = require("../lib/Hex.mjs");
 
 /**
  * Recursively displays a JSON object as an HTML table
@@ -15,7 +15,7 @@ const {toHexFast} = require(""../lib/Hex.mjs"");
  * @param {Object} obj
  * @returns string
  */
-export function objToTable(obj, nested=false) {
+function objToTable(obj, nested=false) {
     let html = `<table
         class='table table-sm table-nonfluid ${nested ? "mb-0 table-borderless" : "table-bordered"}'
         style='table-layout: fixed; ${nested ? "margin: -1px !important;" : ""}'>`;
@@ -35,13 +35,15 @@ export function objToTable(obj, nested=false) {
     }
     html += "</table>";
     return html;
-}
+};
+exports.objToTable = objToTable;
 
 /**
  * Converts bytes into a BigNumber string
  * @param {Uint8Array} bs
  * @returns {string}
  */
-export function bytesToLargeNumber(bs) {
+function bytesToLargeNumber(bs) {
     return BigNumber(toHexFast(bs), 16).toString();
-}
+};
+exports.bytesToLargeNumber = bytesToLargeNumber;

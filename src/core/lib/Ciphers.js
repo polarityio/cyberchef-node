@@ -9,8 +9,8 @@
  *
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const CryptoJS = require(""crypto-js"");
+const OperationError = require("../errors/OperationError.mjs");
+const CryptoJS = require("crypto-js");
 
 /**
  * Affine Cipher Encode operation.
@@ -20,7 +20,7 @@ const CryptoJS = require(""crypto-js"");
  * @param {Object[]} args
  * @returns {string}
  */
-export function affineEncode(input, args) {
+function affineEncode(input, args) {
     const alphabet = "abcdefghijklmnopqrstuvwxyz",
         a = args[0],
         b = args[1];
@@ -43,7 +43,8 @@ export function affineEncode(input, args) {
         }
     }
     return output;
-}
+};
+exports.affineEncode = affineEncode;
 
 /**
  * Generates a polybius square for the given keyword
@@ -53,7 +54,7 @@ export function affineEncode(input, args) {
  * @param {string} keyword - Must be upper case
  * @returns {string}
  */
-export function genPolybiusSquare (keyword) {
+function genPolybiusSquare (keyword) {
     const alpha = "ABCDEFGHIKLMNOPQRSTUVWXYZ",
         polArray = `${keyword}${alpha}`.split("").unique(),
         polybius = [];
@@ -63,7 +64,8 @@ export function genPolybiusSquare (keyword) {
     }
 
     return polybius;
-}
+};
+exports.genPolybiusSquare  = genPolybiusSquare ;
 
 /**
  * A mapping of string formats to their classes in the CryptoJS library.

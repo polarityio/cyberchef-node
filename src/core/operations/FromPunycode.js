@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const punycode = require(""punycode"");
+const Operation = require("../Operation.mjs");
+const punycode = require("punycode");
 
 /**
  * From Punycode operation

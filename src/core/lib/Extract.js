@@ -18,7 +18,7 @@
  * @param {boolean} [unique=false] - Whether to unique the results
  * @returns {string}
  */
-export function search(input, searchRegex, removeRegex=null, sortBy=null, unique=false) {
+function search(input, searchRegex, removeRegex=null, sortBy=null, unique=false) {
     let results = [];
     let match;
 
@@ -43,7 +43,8 @@ export function search(input, searchRegex, removeRegex=null, sortBy=null, unique
     }
 
     return results;
-}
+};
+exports.search = search;
 
 
 /**

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
-const {fromDecimal} = require(""../lib/Decimal.mjs"");
+const Operation = require("../Operation.mjs");
+const {DELIM_OPTIONS} = require("../lib/Delim.mjs");
+const {fromDecimal} = require("../lib/Decimal.mjs");
 
 /**
  * From Decimal operation

@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const cptable = require(""codepage"");
-const {CHR_ENC_CODE_PAGES} = require(""../lib/ChrEnc.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const cptable = require("codepage");
+const {CHR_ENC_CODE_PAGES} = require("../lib/ChrEnc.mjs");
 
 /**
  * Text Encoding Brute Force operation

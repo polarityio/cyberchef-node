@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const vkbeautify = require(""vkbeautify"");
-const Operation = require(""../Operation.mjs"");
+const vkbeautify = require("vkbeautify");
+const Operation = require("../Operation.mjs");
 
 /**
  * SQL Minify operation

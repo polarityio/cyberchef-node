@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const { GenerateParagraphs, GenerateSentences, GenerateWords, GenerateBytes } = require(""../lib/LoremIpsum.mjs"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const { GenerateParagraphs, GenerateSentences, GenerateWords, GenerateBytes } = require("../lib/LoremIpsum.mjs");
 
 /**
  * Generate Lorem Ipsum operation

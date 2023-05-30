@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const CryptoJS = require(""crypto-js"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const CryptoJS = require("crypto-js");
 
 /**
  * Derive EVP key operation

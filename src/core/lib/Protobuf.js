@@ -1,5 +1,5 @@
-const Utils = require(""../Utils.mjs"");
-const protobuf = require(""protobufjs"");
+const Utils = require("../Utils.mjs");
+const protobuf = require("protobufjs");
 
 /**
  * Protobuf lib. Contains functions to decode protobuf serialised

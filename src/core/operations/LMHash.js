@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {smbhash} = require(""ntlm"");
+const Operation = require("../Operation.mjs");
+const {smbhash} = require("ntlm");
 
 /**
  * LM Hash operation

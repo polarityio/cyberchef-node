@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const camelCase = require(""lodash/camelCase.js"");
-const Operation = require(""../Operation.mjs"");
-const { replaceVariableNames } = require(""../lib/Code.mjs"");
+const camelCase = require("lodash/camelCase.js");
+const Operation = require("../Operation.mjs");
+const { replaceVariableNames } = require("../lib/Code.mjs");
 
 /**
  * To Camel case operation

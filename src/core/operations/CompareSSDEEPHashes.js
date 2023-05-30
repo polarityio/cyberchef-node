@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const {HASH_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
-const ssdeepjs = require(""ssdeep.js"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const {HASH_DELIM_OPTIONS} = require("../lib/Delim.mjs");
+const ssdeepjs = require("ssdeep.js");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Compare SSDEEP hashes operation

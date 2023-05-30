@@ -7,8 +7,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const CryptoApi = require(""crypto-api/src/crypto-api.mjs"");
+const Utils = require("../Utils.mjs");
+const CryptoApi = require("crypto-api/src/crypto-api.mjs");
 
 
 /**
@@ -19,10 +19,11 @@ const CryptoApi = require(""crypto-api/src/crypto-api.mjs"");
  * @param {Object} [options={}]
  * @returns {string}
  */
-export function runHash(name, input, options={}) {
+function runHash(name, input, options={}) {
     const msg = Utils.arrayBufferToStr(input, false),
         hasher = CryptoApi.getHasher(name, options);
     hasher.update(msg);
     return CryptoApi.encoder.toHex(hasher.finalize());
-}
+};
+exports.runHash = runHash;
 

@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const { fromBase64, toBase64 } = require(""../lib/Base64.mjs"");
-const { fromHex } = require(""../lib/Hex.mjs"");
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
-const { isType, detectFileType } = require(""../lib/FileType.mjs"");
+const { fromBase64, toBase64 } = require("../lib/Base64.mjs");
+const { fromHex } = require("../lib/Hex.mjs");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
+const { isType, detectFileType } = require("../lib/FileType.mjs");
 
 /**
  * PlayMedia operation

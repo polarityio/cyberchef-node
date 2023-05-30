@@ -1,9 +1,9 @@
 const OperationConfig = require(""../config/OperationConfig.json" assert {type: "json"}");
-const Utils, { isWorkerEnvironment } = require(""../Utils.mjs"");
-const Recipe = require(""../Recipe.mjs"");
-const Dish = require(""../Dish.mjs"");
-const {detectFileType, isType} = require(""./FileType.mjs"");
-const chiSquared = require(""chi-squared"");
+const Utils, { isWorkerEnvironment } = require("../Utils.mjs");
+const Recipe = require("../Recipe.mjs");
+const Dish = require("../Dish.mjs");
+const {detectFileType, isType} = require("./FileType.mjs");
+const chiSquared = require("chi-squared");
 
 /**
  * A class for detecting encodings, file types and byte frequencies and

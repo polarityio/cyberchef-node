@@ -36,7 +36,7 @@ exports.DEFAULT_WEIGHTS = DEFAULT_WEIGHTS;
  * @returns [boolean, number]       a boolean which tells if pattern was
  *                                  found or not and a search score
  */
-export function fuzzyMatch(pattern, str, global=false, weights=DEFAULT_WEIGHTS) {
+function fuzzyMatch(pattern, str, global=false, weights=DEFAULT_WEIGHTS) {
     const recursionCount = 0;
     const recursionLimit = 10;
     const matches = [];
@@ -83,7 +83,8 @@ export function fuzzyMatch(pattern, str, global=false, weights=DEFAULT_WEIGHTS) 
         strCurrIndex = idxs[idxs.length - 1] + 1;
     }
     return results;
-}
+};
+exports.fuzzyMatch = fuzzyMatch;
 
 /**
  * Recursive helper function
@@ -235,7 +236,7 @@ function fuzzyMatchRecursive(
  * @param [number] matches
  * @returns [[number]]
  */
-export function calcMatchRanges(matches) {
+function calcMatchRanges(matches) {
     const ranges = [];
     let start = matches[0],
         curr = start;
@@ -251,4 +252,5 @@ export function calcMatchRanges(matches) {
 
     ranges.push([start, curr - start + 1]);
     return ranges;
-}
+};
+exports.calcMatchRanges = calcMatchRanges;

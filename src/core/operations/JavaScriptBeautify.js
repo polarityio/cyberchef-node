@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const escodegen = require(""escodegen"");
-const * as esprima = require(""esprima"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const escodegen = require("escodegen");
+const * as esprima = require("esprima");
 
 /**
  * JavaScript Beautify operation

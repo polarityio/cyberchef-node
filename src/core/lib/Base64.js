@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Base64's the input byte array using the given alphabet, returning a string.
@@ -23,7 +23,7 @@ const OperationError = require(""../errors/OperationError.mjs"");
  * // returns "SGVsbG8="
  * toBase64("Hello");
  */
-export function toBase64(data, alphabet="A-Za-z0-9+/=") {
+function toBase64(data, alphabet="A-Za-z0-9+/=") {
     if (!data) return "";
     if (typeof data == "string") {
         data = Utils.strToArrayBuffer(data);
@@ -63,7 +63,8 @@ export function toBase64(data, alphabet="A-Za-z0-9+/=") {
     }
 
     return output;
-}
+};
+exports.toBase64 = toBase64;
 
 
 /**
@@ -82,7 +83,7 @@ export function toBase64(data, alphabet="A-Za-z0-9+/=") {
  * // returns [72, 101, 108, 108, 111]
  * fromBase64("SGVsbG8=", null, "byteArray");
  */
-export function fromBase64(data, alphabet="A-Za-z0-9+/=", returnType="string", removeNonAlphChars=true, strictMode=false) {
+function fromBase64(data, alphabet="A-Za-z0-9+/=", returnType="string", removeNonAlphChars=true, strictMode=false) {
     if (!data) {
         return returnType === "string" ? "" : [];
     }
@@ -156,7 +157,8 @@ export function fromBase64(data, alphabet="A-Za-z0-9+/=", returnType="string", r
     }
 
     return returnType === "string" ? Utils.byteArrayToUtf8(output) : output;
-}
+};
+exports.fromBase64 = fromBase64;
 
 
 /**

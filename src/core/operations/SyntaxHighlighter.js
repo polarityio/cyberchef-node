@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const hljs = require(""highlight.js"");
+const Operation = require("../Operation.mjs");
+const hljs = require("highlight.js");
 
 /**
  * Syntax highlighter operation

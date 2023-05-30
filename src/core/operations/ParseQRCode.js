@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const { isImage } = require(""../lib/FileType.mjs"");
-const { parseQrCode } = require(""../lib/QRCode.mjs"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const { isImage } = require("../lib/FileType.mjs");
+const { parseQrCode } = require("../lib/QRCode.mjs");
 
 /**
  * Parse QR Code operation

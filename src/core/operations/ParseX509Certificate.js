@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const r = require(""jsrsasign"");
-const { fromBase64 } = require(""../lib/Base64.mjs"");
-const { toHex } = require(""../lib/Hex.mjs"");
-const { formatByteStr, formatDnObj } = require(""../lib/PublicKey.mjs"");
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
+const r = require("jsrsasign");
+const { fromBase64 } = require("../lib/Base64.mjs");
+const { toHex } = require("../lib/Hex.mjs");
+const { formatByteStr, formatDnObj } = require("../lib/PublicKey.mjs");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * Parse X.509 certificate operation

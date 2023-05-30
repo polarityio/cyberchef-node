@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const forge = require(""node-forge"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const forge = require("node-forge");
 
 /**
  * Derive PBKDF2 key operation

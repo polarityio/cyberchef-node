@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const { toHex } = require(""../lib/Hex.mjs"");
-const { decryptSM4 } = require(""../lib/SM4.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const { toHex } = require("../lib/Hex.mjs");
+const { decryptSM4 } = require("../lib/SM4.mjs");
 
 /**
  * SM4 Decrypt operation

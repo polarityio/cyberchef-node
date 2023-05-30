@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const DishType = require(""./DishType.mjs"");
-const Utils, { isNodeEnvironment } = require(""../Utils.mjs"");
+const DishType = require("./DishType.mjs");
+const Utils, { isNodeEnvironment } = require("../Utils.mjs");
 
 /**
  * Translation methods for file Dishes

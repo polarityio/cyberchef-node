@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const XRegExp = require(""xregexp"");
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const XRegExp = require("xregexp");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Regular expression operation

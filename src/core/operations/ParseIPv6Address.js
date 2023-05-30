@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} = require(""../lib/IP.mjs"");
-const BigNumber = require(""bignumber.js"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} = require("../lib/IP.mjs");
+const BigNumber = require("bignumber.js");
 
 /**
  * Parse IPv6 address operation

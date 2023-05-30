@@ -16,7 +16,7 @@
  * @param {string} scheme
  * @returns {byteArray}
  */
-export function bitOp (input, key, func, nullPreserving, scheme) {
+function bitOp (input, key, func, nullPreserving, scheme) {
     if (!key || !key.length) key = [0];
     const result = [];
     let x = null,
@@ -44,7 +44,8 @@ export function bitOp (input, key, func, nullPreserving, scheme) {
     }
 
     return result;
-}
+};
+exports.bitOp  = bitOp ;
 
 /**
  * XOR bitwise calculation.
@@ -53,9 +54,10 @@ export function bitOp (input, key, func, nullPreserving, scheme) {
  * @param {number} key
  * @returns {number}
  */
-export function xor(operand, key) {
+function xor(operand, key) {
     return operand ^ key;
-}
+};
+exports.xor = xor;
 
 
 /**
@@ -64,9 +66,10 @@ export function xor(operand, key) {
  * @param {number} operand
  * @returns {number}
  */
-export function not(operand, _) {
+function not(operand, _) {
     return ~operand & 0xff;
-}
+};
+exports.not = not;
 
 
 /**
@@ -76,9 +79,10 @@ export function not(operand, _) {
  * @param {number} key
  * @returns {number}
  */
-export function and(operand, key) {
+function and(operand, key) {
     return operand & key;
-}
+};
+exports.and = and;
 
 
 /**
@@ -88,9 +92,10 @@ export function and(operand, key) {
  * @param {number} key
  * @returns {number}
  */
-export function or(operand, key) {
+function or(operand, key) {
     return operand | key;
-}
+};
+exports.or = or;
 
 
 /**
@@ -100,9 +105,10 @@ export function or(operand, key) {
  * @param {number} key
  * @returns {number}
  */
-export function add(operand, key) {
+function add(operand, key) {
     return (operand + key) % 256;
-}
+};
+exports.add = add;
 
 
 /**
@@ -112,10 +118,11 @@ export function add(operand, key) {
  * @param {number} key
  * @returns {number}
  */
-export function sub(operand, key) {
+function sub(operand, key) {
     const result = operand - key;
     return (result < 0) ? 256 + result : result;
-}
+};
+exports.sub = sub;
 
 
 /**

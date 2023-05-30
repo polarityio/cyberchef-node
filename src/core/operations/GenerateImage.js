@@ -4,13 +4,13 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
-const {isImage} = require(""../lib/FileType.mjs"");
-const {toBase64} = require(""../lib/Base64.mjs"");
-const {isWorkerEnvironment} = require(""../Utils.mjs"");
-const jimp = require(""jimp"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
+const {isImage} = require("../lib/FileType.mjs");
+const {toBase64} = require("../lib/Base64.mjs");
+const {isWorkerEnvironment} = require("../Utils.mjs");
+const jimp = require("jimp");
 
 /**
  * Generate Image operation

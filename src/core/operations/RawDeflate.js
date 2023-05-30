@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {COMPRESSION_TYPE} = require(""../lib/Zlib.mjs"");
-const rawdeflate = require(""zlibjs/bin/rawdeflate.min.js"");
+const Operation = require("../Operation.mjs");
+const {COMPRESSION_TYPE} = require("../lib/Zlib.mjs");
+const rawdeflate = require("zlibjs/bin/rawdeflate.min.js");
 
 const Zlib = rawdeflate.Zlib;
 

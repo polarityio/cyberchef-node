@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const url = require(""url"");
+const Operation = require("../Operation.mjs");
+const url = require("url");
 
 /**
  * Parse URI operation

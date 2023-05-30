@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
+const Operation = require("../Operation.mjs");
 import "reflect-metadata"; // Required as a shim for the amf library
-const { AMF0, AMF3 } = require(""@astronautlabs/amf"");
+const { AMF0, AMF3 } = require("@astronautlabs/amf");
 
 /**
  * AMF Encode operation

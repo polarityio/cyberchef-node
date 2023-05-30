@@ -5,11 +5,11 @@
  */
 
 const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
-const OperationError = require(""./errors/OperationError.mjs"");
-const Operation = require(""./Operation.mjs"");
-const DishError = require(""./errors/DishError.mjs"");
-const log = require(""loglevel"");
-const { isWorkerEnvironment } = require(""./Utils.mjs"");
+const OperationError = require("./errors/OperationError.mjs");
+const Operation = require("./Operation.mjs");
+const DishError = require("./errors/DishError.mjs");
+const log = require("loglevel");
+const { isWorkerEnvironment } = require("./Utils.mjs");
 
 // Cache container for modules
 let modules = null;

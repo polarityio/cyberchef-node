@@ -5,7 +5,7 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const {INIT_PATTERNS, ITA2_TABLE, ROTOR_SIZES} = require(""../lib/Lorenz.mjs"");
+const {INIT_PATTERNS, ITA2_TABLE, ROTOR_SIZES} = require("../lib/Lorenz.mjs");
 
 /**
  * Colossus simulator class.

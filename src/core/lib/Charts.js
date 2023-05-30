@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * @constant
@@ -47,7 +47,7 @@ exports.COLOURS = COLOURS;
  * @param {number} length
  * @returns {Object[]}
  */
-export function getValues(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded, length) {
+function getValues(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded, length) {
     let headings;
     const values = [];
 
@@ -64,7 +64,8 @@ export function getValues(input, recordDelimiter, fieldDelimiter, columnHeadings
             }
         });
     return { headings, values };
-}
+};
+exports.getValues = getValues;
 
 
 /**
@@ -76,7 +77,7 @@ export function getValues(input, recordDelimiter, fieldDelimiter, columnHeadings
  * @param {boolean} columnHeadingsAreIncluded - whether we should skip the first record
  * @returns {Object[]}
  */
-export function getScatterValues(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded) {
+function getScatterValues(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded) {
     let { headings, values } = getValues(
         input,
         recordDelimiter,
@@ -100,7 +101,8 @@ export function getScatterValues(input, recordDelimiter, fieldDelimiter, columnH
     });
 
     return { headings, values };
-}
+};
+exports.getScatterValues = getScatterValues;
 
 
 /**
@@ -112,7 +114,7 @@ export function getScatterValues(input, recordDelimiter, fieldDelimiter, columnH
  * @param {boolean} columnHeadingsAreIncluded - whether we should skip the first record
  * @returns {Object[]}
  */
-export function getScatterValuesWithColour(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded) {
+function getScatterValuesWithColour(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded) {
     let { headings, values } = getValues(
         input,
         recordDelimiter, fieldDelimiter,
@@ -136,7 +138,8 @@ export function getScatterValuesWithColour(input, recordDelimiter, fieldDelimite
     });
 
     return { headings, values };
-}
+};
+exports.getScatterValuesWithColour = getScatterValuesWithColour;
 
 /**
  * Gets values from input for a time series plot.
@@ -147,7 +150,7 @@ export function getScatterValuesWithColour(input, recordDelimiter, fieldDelimite
  * @param {boolean} columnHeadingsAreIncluded - whether we should skip the first record
  * @returns {Object[]}
  */
-export function getSeriesValues(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded) {
+function getSeriesValues(input, recordDelimiter, fieldDelimiter, columnHeadingsAreIncluded) {
     const { values } = getValues(
         input,
         recordDelimiter, fieldDelimiter,
@@ -179,4 +182,5 @@ export function getSeriesValues(input, recordDelimiter, fieldDelimiter, columnHe
     }
 
     return { xValues, series: seriesList };
-}
+};
+exports.getSeriesValues = getSeriesValues;

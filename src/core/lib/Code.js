@@ -13,7 +13,7 @@
  * @param {function} replacer - This function will be fed the token which should be renamed.
  * @returns {string}
  */
-export function replaceVariableNames(input, replacer) {
+function replaceVariableNames(input, replacer) {
     const tokenRegex = /\\"|"(?:\\"|[^"])*"|(\b[a-z0-9\-_]+\b)/ig;
 
     return input.replace(tokenRegex, (...args) => {
@@ -26,4 +26,5 @@ export function replaceVariableNames(input, replacer) {
             return replacer(match);
         }
     });
-}
+};
+exports.replaceVariableNames = replaceVariableNames;

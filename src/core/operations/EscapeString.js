@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const jsesc = require(""jsesc"");
+const Operation = require("../Operation.mjs");
+const jsesc = require("jsesc");
 
 /**
  * Escape string operation

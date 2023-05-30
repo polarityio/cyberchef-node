@@ -50,11 +50,12 @@ const wrapRun = (run) => async () => {
  *      assert(r)
  * })
  */
-export function it(name, run) {
+function it(name, run) {
     return {
         name: `Node API: ${name}`,
         run: wrapRun(run),
     };
-}
+};
+exports.it = it;
 
 module.exports = it;

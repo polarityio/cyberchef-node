@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Stream = require(""../lib/Stream.mjs"");
-const {toHexFast, fromHex} = require(""../lib/Hex.mjs"");
-const {objToTable} = require(""../lib/Protocol.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const Stream = require("../lib/Stream.mjs");
+const {toHexFast, fromHex} = require("../lib/Hex.mjs");
+const {objToTable} = require("../lib/Protocol.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Parse UDP operation

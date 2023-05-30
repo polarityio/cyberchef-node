@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 /** RSA 2048bit key pair as PKCS1 and PKCS8 and as certificate */
 const PEMS_RSA_PRIVATE_KEY_PKCS1 = `-----BEGIN RSA PRIVATE KEY-----

@@ -13,7 +13,7 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
 
 /** Number of rounds */
 const NROUNDS = 32;
@@ -159,7 +159,7 @@ function intsToBytes(ints) {
  * @param {boolean} noPadding - Don't add PKCS#7 padding if set.
  * @returns {byteArray} - The cipher text.
  */
-export function encryptSM4(message, key, iv, mode="ECB", noPadding=false) {
+function encryptSM4(message, key, iv, mode="ECB", noPadding=false) {
     const messageLength = message.length;
     if (messageLength === 0)
         return [];
@@ -234,7 +234,8 @@ export function encryptSM4(message, key, iv, mode="ECB", noPadding=false) {
     if (mode !== "ECB" && mode !== "CBC")
         return cipherText.slice(0, messageLength);
     return cipherText;
-}
+};
+exports.encryptSM4 = encryptSM4;
 
 /**
  * Decrypt using SM4 using a given block cipher mode.
@@ -246,7 +247,7 @@ export function encryptSM4(message, key, iv, mode="ECB", noPadding=false) {
  * @param {boolean] ignorePadding - If true, ignore padding issues in ECB/CBC mode.
  * @returns {byteArray} - The cipher text.
  */
-export function decryptSM4(cipherText, key, iv, mode="ECB", ignorePadding=false) {
+function decryptSM4(cipherText, key, iv, mode="ECB", ignorePadding=false) {
     const originalLength = cipherText.length;
     if (originalLength === 0)
         return [];
@@ -327,5 +328,6 @@ export function decryptSM4(cipherText, key, iv, mode="ECB", ignorePadding=false)
         return clearText.slice(0, clearText.length - padByte);
     }
     return clearText.slice(0, originalLength);
-}
+};
+exports.decryptSM4 = decryptSM4;
 

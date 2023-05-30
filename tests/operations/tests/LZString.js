@@ -5,7 +5,7 @@
  * @copyright Peter Jacobs 2021
  * @license Apache-2.0
  */
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 TestRegister.addTests([
     {

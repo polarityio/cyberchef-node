@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const * as d3temp = require(""d3"");
-const * as nodomtemp = require(""nodom"");
+const * as d3temp = require("d3");
+const * as nodomtemp = require("nodom");
 
-const Operation = require(""../Operation.mjs"");
+const Operation = require("../Operation.mjs");
 
 const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;

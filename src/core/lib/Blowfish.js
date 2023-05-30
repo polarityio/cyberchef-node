@@ -38,7 +38,7 @@
 
 const crypto = {};
 
-const forge = require(""node-forge"");
+const forge = require("node-forge");
 
 
 /* dojo-release-1.8.1/dojo/_base/lang.js.uncompressed.js */

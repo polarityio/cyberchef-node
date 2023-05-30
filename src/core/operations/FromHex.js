@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {fromHex, FROM_HEX_DELIM_OPTIONS} = require(""../lib/Hex.mjs"");
-const Utils = require(""../Utils.mjs"");
+const Operation = require("../Operation.mjs");
+const {fromHex, FROM_HEX_DELIM_OPTIONS} = require("../lib/Hex.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * From Hex operation

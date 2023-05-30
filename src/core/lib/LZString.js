@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const LZString = require(""lz-string"");
+const LZString = require("lz-string");
 
 const COMPRESSION_OUTPUT_FORMATS = ["default", "UTF16", "Base64"];
 exports.COMPRESSION_OUTPUT_FORMATS = COMPRESSION_OUTPUT_FORMATS;

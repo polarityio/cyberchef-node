@@ -3344,7 +3344,7 @@ If input "type" is set 5 it will adjust the mnemonic array to decode Centaur ins
 If input "type" is set 6 it will adjust the mnemonic array to decode instruction for the X86/486 CPU which conflict with the vector unit instructions with UMOV.
 -------------------------------------------------------------------------------------------------------------------------*/
 
-export function CompatibilityMode( type )
+function CompatibilityMode( type )
 {
   //Reset the changeable sections of the Mnemonics array, and operand encoding array.
   
@@ -3530,7 +3530,8 @@ export function CompatibilityMode( type )
     Operands[0x1A6] = ""; Operands[0x1A7] = "";
   }
   
-}
+};
+exports.CompatibilityMode = CompatibilityMode;
 
 /*-------------------------------------------------------------------------------------------------------------------------
 This function loads the BinCode array using an hex string as input, and Resets the Code position along the array, but does not
@@ -3543,7 +3544,7 @@ The function "GetPosition()" Gives back the current base address in it's proper 
 If the hex input is invalid returns false.
 -------------------------------------------------------------------------------------------------------------------------*/
 
-export function LoadBinCode( HexStr )
+function LoadBinCode( HexStr )
 {
   //Clear BinCode, and Reset Code Position in Bin Code array.
 
@@ -3596,7 +3597,8 @@ export function LoadBinCode( HexStr )
   //Return true for that the binary code loaded properly.
 
   return ( true );
-}
+};
+exports.LoadBinCode = LoadBinCode;
 
 /*-------------------------------------------------------------------------------------------------------------------------
 This function moves the address by one and caries to 64 section for the Base address. The BitMode settings limit how much of
@@ -3632,7 +3634,7 @@ segment, and offset address. Note that the Code Segment is used in 16 bit code. 
 if set 36, or higher. Effects instruction location in memory when decoding a program.
 -------------------------------------------------------------------------------------------------------------------------*/
 
-export function SetBasePosition( Address )
+function SetBasePosition( Address )
 {
   //Split the Segment:offset.
 
@@ -3653,7 +3655,8 @@ export function SetBasePosition( Address )
   //Convert Pos32 to undignified integer.
 
   if ( Pos32 < 0 ) { Pos32 += 0x100000000; }
-}
+};
+exports.SetBasePosition = SetBasePosition;
 
 /*-------------------------------------------------------------------------------------------------------------------------
 Gives back the current Instruction address position.
@@ -5691,7 +5694,7 @@ function Reset()
 do an linear disassemble.
 -------------------------------------------------------------------------------------------------------------------------*/
 
-export function LDisassemble()
+function LDisassemble()
 {
   var Instruction = ""; //Stores the Decoded instruction.
   var Out = "";  //The Disassemble output
@@ -5740,7 +5743,8 @@ export function LDisassemble()
 
   return(Out);
 
-}
+};
+exports.LDisassemble = LDisassemble;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -5748,13 +5752,16 @@ export function LDisassemble()
  * The following code has been added to expose public methods for use in CyberChef
  */
 
-export function setBitMode (val) {
+function setBitMode (val) {
   BitMode = val; 
 };
-export function setShowInstructionHex (val) {
+exports.setBitMode  = setBitMode ;;
+function setShowInstructionHex (val) {
   ShowInstructionHex = val;
 };
-export function setShowInstructionPos (val) {
+exports.setShowInstructionHex  = setShowInstructionHex ;;
+function setShowInstructionPos (val) {
   ShowInstructionPos = val; 
 };
+exports.setShowInstructionPos  = setShowInstructionPos ;;
 

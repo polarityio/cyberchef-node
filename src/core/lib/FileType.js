@@ -6,8 +6,8 @@
  * @license Apache-2.0
  *
  */
-const {FILE_SIGNATURES} = require(""./FileSignatures.mjs"");
-const {sendStatusMessage} = require(""../Utils.mjs"");
+const {FILE_SIGNATURES} = require("./FileSignatures.mjs");
+const {sendStatusMessage} = require("../Utils.mjs");
 
 
 /**
@@ -83,7 +83,7 @@ function bytesMatch(sig, buf, offset=0) {
  * @returns {string} type.mime - Mime type
  * @returns {string} [type.desc] - Description
  */
-export function detectFileType(buf, categories=Object.keys(FILE_SIGNATURES)) {
+function detectFileType(buf, categories=Object.keys(FILE_SIGNATURES)) {
     if (buf instanceof ArrayBuffer) {
         buf = new Uint8Array(buf);
     }
@@ -111,7 +111,8 @@ export function detectFileType(buf, categories=Object.keys(FILE_SIGNATURES)) {
         });
     }
     return matchingFiles;
-}
+};
+exports.detectFileType(buf, categories=Object.keys = detectFileType(buf, categories=Object.keys;
 
 
 /**
@@ -128,7 +129,7 @@ export function detectFileType(buf, categories=Object.keys(FILE_SIGNATURES)) {
  * @returns {string} foundFiles.fileDetails.mime - Mime type
  * @returns {string} [foundFiles.fileDetails.desc] - Description
  */
-export function scanForFileTypes(buf, categories=Object.keys(FILE_SIGNATURES)) {
+function scanForFileTypes(buf, categories=Object.keys(FILE_SIGNATURES)) {
     if (!(buf && buf.length > 1)) {
         return [];
     }
@@ -169,7 +170,8 @@ export function scanForFileTypes(buf, categories=Object.keys(FILE_SIGNATURES)) {
     return foundFiles.sort((a, b) => {
         return a.offset - b.offset;
     });
-}
+};
+exports.scanForFileTypes(buf, categories=Object.keys = scanForFileTypes(buf, categories=Object.keys;
 
 
 /**
@@ -210,7 +212,7 @@ function locatePotentialSig(buf, sig, offset) {
  * @param {Uint8Array|ArrayBuffer} buf
  * @returns {string|false} The mime type or false if the type does not match
  */
-export function isType(type, buf) {
+function isType(type, buf) {
     const types = detectFileType(buf);
 
     if (!types.length) return false;
@@ -228,7 +230,8 @@ export function isType(type, buf) {
     } else {
         throw new Error("Invalid type input.");
     }
-}
+};
+exports.isType = isType;
 
 
 /**
@@ -237,9 +240,10 @@ export function isType(type, buf) {
  * @param {Uint8Array|ArrayBuffer} buf
  * @returns {string|false} The mime type or false if the type does not match
  */
-export function isImage(buf) {
+function isImage(buf) {
     return isType("image", buf);
-}
+};
+exports.isImage = isImage;
 
 
 /**
@@ -253,7 +257,7 @@ export function isImage(buf) {
  * @param {number} offset
  * @returns {File}
  */
-export function extractFile(bytes, fileDetail, offset) {
+function extractFile(bytes, fileDetail, offset) {
     if (fileDetail.extractor) {
         sendStatusMessage(`Attempting to extract ${fileDetail.name} at pos ${offset}...`);
         const fileData = fileDetail.extractor(bytes, offset);
@@ -264,4 +268,5 @@ export function extractFile(bytes, fileDetail, offset) {
     }
 
     throw new Error(`No extraction algorithm available for "${fileDetail.mime}" files`);
-}
+};
+exports.extractFile = extractFile;

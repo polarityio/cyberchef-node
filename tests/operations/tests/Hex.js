@@ -1,4 +1,4 @@
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 TestRegister.addTests([
     {

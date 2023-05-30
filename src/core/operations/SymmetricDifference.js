@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require("../Utils.mjs");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Set Symmetric Difference operation

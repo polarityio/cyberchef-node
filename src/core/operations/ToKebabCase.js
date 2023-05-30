@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const kebabCase = require(""lodash/kebabCase.js"");
-const Operation = require(""../Operation.mjs"");
-const { replaceVariableNames } = require(""../lib/Code.mjs"");
+const kebabCase = require("lodash/kebabCase.js");
+const Operation = require("../Operation.mjs");
+const { replaceVariableNames } = require("../lib/Code.mjs");
 
 /**
  * To Kebab case operation

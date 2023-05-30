@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const { removeEXIF } = require(""../vendor/remove-exif.mjs"");
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const { removeEXIF } = require("../vendor/remove-exif.mjs");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Remove EXIF operation

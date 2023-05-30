@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 
 /**
@@ -28,7 +28,7 @@ const OperationError = require(""../errors/OperationError.mjs"");
  * // returns "1010:10100:11110"
  * toBinary([10,20,30], "Colon", 0);
  */
-export function toBinary(data, delim="Space", padding=8) {
+function toBinary(data, delim="Space", padding=8) {
     if (data === undefined || data === null)
         throw new OperationError("Unable to convert to binary: Empty input data enocuntered");
 
@@ -46,7 +46,8 @@ export function toBinary(data, delim="Space", padding=8) {
         return "";
     }
     return output;
-}
+};
+exports.toBinary = toBinary;
 
 
 /**
@@ -64,7 +65,7 @@ export function toBinary(data, delim="Space", padding=8) {
  * // returns [10,20,30]
  * fromBinary("00001010:00010100:00011110", "Colon");
  */
-export function fromBinary(data, delim="Space", byteLen=8) {
+function fromBinary(data, delim="Space", byteLen=8) {
     if (byteLen < 1 || Math.round(byteLen) !== byteLen)
         throw new OperationError("Byte length must be a positive integer");
 
@@ -76,5 +77,6 @@ export function fromBinary(data, delim="Space", byteLen=8) {
         output.push(parseInt(data.substr(i, byteLen), 2));
     }
     return output;
-}
+};
+exports.fromBinary = fromBinary;
 

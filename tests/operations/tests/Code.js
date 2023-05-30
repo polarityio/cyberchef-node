@@ -7,7 +7,7 @@
  * @copyright Crown Copyright 2017
  * @license Apache-2.0
  */
-const TestRegister = require(""../../lib/TestRegister.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
 
 const JSON_TEST_DATA = {
     "store": {

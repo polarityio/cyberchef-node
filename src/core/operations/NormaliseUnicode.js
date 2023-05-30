@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const {UNICODE_NORMALISATION_FORMS} = require(""../lib/ChrEnc.mjs"");
-const unorm = require(""unorm"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const {UNICODE_NORMALISATION_FORMS} = require("../lib/ChrEnc.mjs");
+const unorm = require("unorm");
 
 /**
  * Normalise Unicode operation

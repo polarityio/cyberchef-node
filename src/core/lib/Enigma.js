@@ -5,8 +5,8 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const OperationError = require(""../errors/OperationError.mjs"");
-const Utils = require(""../Utils.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * Provided default Enigma rotor set.
@@ -53,7 +53,7 @@ exports.LETTERS = LETTERS;
  * @param {boolean} permissive - Case insensitive; don't throw errors on other chars.
  * @returns {number}
  */
-export function a2i(c, permissive=false) {
+function a2i(c, permissive=false) {
     const i = Utils.ord(c);
     if (i >= 65 && i <= 90) {
         return i - 65;
@@ -66,7 +66,8 @@ export function a2i(c, permissive=false) {
         return -1;
     }
     throw new OperationError("a2i called on non-uppercase ASCII character");
-}
+};
+exports.a2i = a2i;
 
 /**
  * Map a number in 0..25 to a letter.
@@ -74,12 +75,13 @@ export function a2i(c, permissive=false) {
  * @param {number} i
  * @returns {char}
  */
-export function i2a(i) {
+function i2a(i) {
     if (i >= 0 && i < 26) {
         return Utils.chr(i+65);
     }
     throw new OperationError("i2a called on value outside 0..25");
-}
+};
+exports.i2a = i2a;
 
 /**
  * A rotor in the Enigma machine.

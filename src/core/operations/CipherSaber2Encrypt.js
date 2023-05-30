@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const crypto = require(""crypto"");
-const { encode } = require(""../lib/CipherSaber2.mjs"");
-const Utils = require(""../Utils.mjs"");
+const Operation = require("../Operation.mjs");
+const crypto = require("crypto");
+const { encode } = require("../lib/CipherSaber2.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * CipherSaber2 Encrypt operation

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const r = require(""jsrsasign"");
-const Operation = require(""../Operation.mjs"");
+const r = require("jsrsasign");
+const Operation = require("../Operation.mjs");
 
 /**
  * Object Identifier to Hex operation

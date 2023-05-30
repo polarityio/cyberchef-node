@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const { search } = require(""../lib/Extract.mjs"");
-const { hexadecimalSort } = require(""../lib/Sort.mjs"");
+const Operation = require("../Operation.mjs");
+const { search } = require("../lib/Extract.mjs");
+const { hexadecimalSort } = require("../lib/Sort.mjs");
 
 /**
  * Extract MAC addresses operation

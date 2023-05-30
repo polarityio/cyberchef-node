@@ -8,11 +8,11 @@
 
 /* eslint no-console: ["off"] */
 
-const NodeDish = require(""./NodeDish.mjs"");
-const NodeRecipe = require(""./NodeRecipe.mjs"");
+const NodeDish = require("./NodeDish.mjs");
+const NodeRecipe = require("./NodeRecipe.mjs");
 const OperationConfig = require(""../core/config/OperationConfig.json" assert {type: "json"}");
-const { sanitise, removeSubheadingsFromArray, sentenceToCamelCase } = require(""./apiUtils.mjs"");
-const ExcludedOperationError = require(""../core/errors/ExcludedOperationError.mjs"");
+const { sanitise, removeSubheadingsFromArray, sentenceToCamelCase } = require("./apiUtils.mjs");
+const ExcludedOperationError = require("../core/errors/ExcludedOperationError.mjs");
 
 
 /**
@@ -172,7 +172,7 @@ function createArgInfo(op) {
  * @returns {Function} The operation's run function, wrapped in
  * some type conversion logic
  */
-export function _wrap(OpClass) {
+function _wrap(OpClass) {
 
     // Check to see if class's run function is async.
     const opInstance = new OpClass();
@@ -244,7 +244,8 @@ export function _wrap(OpClass) {
     wrapped.flowControl = isFlowControl;
 
     return wrapped;
-}
+};
+exports._wrap = _wrap;
 
 
 /**
@@ -255,7 +256,7 @@ export function _wrap(OpClass) {
  * Case and whitespace are ignored in search.
  * @returns {Object[]} Config of matching operations.
  */
-export function help(input) {
+function help(input) {
     let searchTerm = false;
     if (typeof input === "string") {
         searchTerm = input;
@@ -312,7 +313,8 @@ export function help(input) {
 
     // console.log("No results found.");
     return null;
-}
+};
+exports.help = help;
 
 
 /**
@@ -324,11 +326,12 @@ export function help(input) {
  * @returns {NodeDish} of the result
  * @throws {TypeError} if invalid recipe given.
  */
-export function bake(input, recipeConfig) {
+function bake(input, recipeConfig) {
     const recipe =  new NodeRecipe(recipeConfig);
     const dish = ensureIsDish(input);
     return recipe.execute(dish);
-}
+};
+exports.bake = bake;
 
 
 /**
@@ -337,7 +340,7 @@ export function bake(input, recipeConfig) {
  * Explain that the given operation is not included in the Node.js version.
  * @param {String} name - name of operation
  */
-export function _explainExcludedFunction(name) {
+function _explainExcludedFunction(name) {
     /**
      * Throw new error type with useful message.
     */
@@ -347,4 +350,5 @@ export function _explainExcludedFunction(name) {
     // Add opName prop so NodeRecipe can handle it, just like wrap does.
     func.opName = name;
     return func;
-}
+};
+exports._explainExcludedFunction = _explainExcludedFunction;

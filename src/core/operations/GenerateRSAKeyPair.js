@@ -5,9 +5,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const forge = require(""node-forge"");
-const { cryptNotice } = require(""../lib/Crypt.mjs"");
+const Operation = require("../Operation.mjs");
+const forge = require("node-forge");
+const { cryptNotice } = require("../lib/Crypt.mjs");
 
 /**
  * Generate RSA Key Pair operation

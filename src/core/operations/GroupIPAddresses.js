@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const {IP_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
-const {ipv6ToStr, genIpv6Mask, IPV4_REGEX, strToIpv6,  ipv4ToStr, IPV6_REGEX, strToIpv4} = require(""../lib/IP.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const {IP_DELIM_OPTIONS} = require("../lib/Delim.mjs");
+const {ipv6ToStr, genIpv6Mask, IPV4_REGEX, strToIpv6,  ipv4ToStr, IPV6_REGEX, strToIpv4} = require("../lib/IP.mjs");
 
 /**
  * Group IP addresses operation

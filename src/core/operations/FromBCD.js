@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const {ENCODING_SCHEME, ENCODING_LOOKUP, FORMAT} = require(""../lib/BCD.mjs"");
-const BigNumber = require(""bignumber.js"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const {ENCODING_SCHEME, ENCODING_LOOKUP, FORMAT} = require("../lib/BCD.mjs");
+const BigNumber = require("bignumber.js");
 
 /**
  * From BCD operation

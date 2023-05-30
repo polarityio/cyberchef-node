@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const {INPUT_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const XRegExp = require(""xregexp"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const {INPUT_DELIM_OPTIONS} = require("../lib/Delim.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const XRegExp = require("xregexp");
 
 /**
  * Filter operation

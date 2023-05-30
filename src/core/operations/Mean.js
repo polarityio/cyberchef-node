@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const { mean, createNumArray } = require(""../lib/Arithmetic.mjs"");
-const { ARITHMETIC_DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
-const BigNumber = require(""bignumber.js"");
+const Operation = require("../Operation.mjs");
+const { mean, createNumArray } = require("../lib/Arithmetic.mjs");
+const { ARITHMETIC_DELIM_OPTIONS } = require("../lib/Delim.mjs");
+const BigNumber = require("bignumber.js");
 
 /**
  * Mean operation

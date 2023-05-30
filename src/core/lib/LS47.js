@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
+const OperationError = require("../errors/OperationError.mjs");
 
 const letters = "_abcdefghijklmnopqrstuvwxyz.0123456789,-+*/:?!'()";
 const tiles = [];
@@ -12,10 +12,11 @@ const tiles = [];
 /**
  * Initialises the tiles with values and positions.
  */
-export function initTiles() {
+function initTiles() {
     for (let i = 0; i < 49; i++)
         tiles.push([letters.charAt(i), [Math.floor(i/7), i % 7]]);
-}
+};
+exports.initTiles = initTiles;
 
 /**
  * Rotates the key "down".
@@ -78,7 +79,7 @@ function findIx(letter) {
  * @param {string} password
  * @returns {string}
  */
-export function deriveKey(password) {
+function deriveKey(password) {
     let i = 0;
     let k = letters;
     for (const c of password) {
@@ -87,7 +88,8 @@ export function deriveKey(password) {
         i = (i + 1) % 7;
     }
     return k;
-}
+};
+exports.deriveKey = deriveKey;
 
 /**
  * Checks the key is a valid key.
@@ -219,7 +221,7 @@ function decrypt(key, ciphertext) {
  * @param {number} paddingSize
  * @returns {string}
  */
-export function encryptPad(key, plaintext, signature, paddingSize) {
+function encryptPad(key, plaintext, signature, paddingSize) {
     initTiles();
     checkKey(key);
     let padding = "";
@@ -227,7 +229,8 @@ export function encryptPad(key, plaintext, signature, paddingSize) {
         padding += letters.charAt(Math.floor(Math.random() * letters.length));
     }
     return encrypt(key, padding+plaintext+"---"+signature);
-}
+};
+exports.encryptPad = encryptPad;
 
 /**
  * Removes padding from the ouput.
@@ -237,8 +240,9 @@ export function encryptPad(key, plaintext, signature, paddingSize) {
  * @param {number} paddingSize
  * @returns {string}
  */
-export function decryptPad(key, ciphertext, paddingSize) {
+function decryptPad(key, ciphertext, paddingSize) {
     initTiles();
     checkKey(key);
     return decrypt(key, ciphertext).slice(paddingSize);
-}
+};
+exports.decryptPad = decryptPad;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const argon2 = require(""argon2-browser"");
+const Operation = require("../Operation.mjs");
+const argon2 = require("argon2-browser");
 
 /**
  * Argon2 compare operation

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const * as JsDiff = require(""diff"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const * as JsDiff = require("diff");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Diff operation

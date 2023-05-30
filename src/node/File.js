@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const { detectFileType } = require(""../core/lib/FileType.mjs"");
+const { detectFileType } = require("../core/lib/FileType.mjs");
 
 
 /**

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Bzip2 = require(""libbzip2-wasm"");
-const { isWorkerEnvironment } = require(""../Utils.mjs"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const Bzip2 = require("libbzip2-wasm");
+const { isWorkerEnvironment } = require("../Utils.mjs");
 
 /**
  * Bzip2 Compress operation

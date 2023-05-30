@@ -17,7 +17,7 @@
  * @param {function} algo - The rotation operation to carry out
  * @returns {byteArray}
  */
-export function rot(data, amount, algo) {
+function rot(data, amount, algo) {
     const result = [];
     for (let i = 0; i < data.length; i++) {
         let b = data[i];
@@ -27,7 +27,8 @@ export function rot(data, amount, algo) {
         result.push(b);
     }
     return result;
-}
+};
+exports.rot = rot;
 
 
 /**
@@ -36,10 +37,11 @@ export function rot(data, amount, algo) {
  * @param {byte} b
  * @returns {byte}
  */
-export function rotr(b) {
+function rotr(b) {
     const bit = (b & 1) << 7;
     return (b >> 1) | bit;
-}
+};
+exports.rotr = rotr;
 
 /**
  * Rotate left bitwise op.
@@ -47,10 +49,11 @@ export function rotr(b) {
  * @param {byte} b
  * @returns {byte}
  */
-export function rotl(b) {
+function rotl(b) {
     const bit = (b >> 7) & 1;
     return ((b << 1) | bit) & 0xFF;
-}
+};
+exports.rotl = rotl;
 
 
 /**
@@ -61,7 +64,7 @@ export function rotl(b) {
  * @param {number} amount
  * @returns {byteArray}
  */
-export function rotrCarry(data, amount) {
+function rotrCarry(data, amount) {
     const result = [];
     let carryBits = 0,
         newByte;
@@ -75,7 +78,8 @@ export function rotrCarry(data, amount) {
     }
     result[0] |= carryBits;
     return result;
-}
+};
+exports.rotrCarry = rotrCarry;
 
 
 /**
@@ -86,7 +90,7 @@ export function rotrCarry(data, amount) {
  * @param {number} amount
  * @returns {byteArray}
  */
-export function rotlCarry(data, amount) {
+function rotlCarry(data, amount) {
     const result = [];
     let carryBits = 0,
         newByte;
@@ -100,4 +104,5 @@ export function rotlCarry(data, amount) {
     }
     result[data.length-1] = result[data.length-1] | carryBits;
     return result;
-}
+};
+exports.rotlCarry = rotlCarry;

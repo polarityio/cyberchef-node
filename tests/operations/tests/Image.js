@@ -8,8 +8,8 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const TestRegister = require(""../../lib/TestRegister.mjs"");
-const { GIF_ANIMATED_HEX, PNG_HEX, JPG_B64, EXIF_JPG_HEX, NO_EXIF_JPG_HEX } = require(""../../samples/Images.mjs"");
+const TestRegister = require("../../lib/TestRegister.mjs");
+const { GIF_ANIMATED_HEX, PNG_HEX, JPG_B64, EXIF_JPG_HEX, NO_EXIF_JPG_HEX } = require("../../samples/Images.mjs");
 
 TestRegister.addTests([
     {

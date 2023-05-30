@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const {fromHex, toHex} = require(""../lib/Hex.mjs"");
-const {ipv4ToStr, protocolLookup} = require(""../lib/IP.mjs"");
-const TCPIPChecksum = require(""./TCPIPChecksum.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
+const {fromHex, toHex} = require("../lib/Hex.mjs");
+const {ipv4ToStr, protocolLookup} = require("../lib/IP.mjs");
+const TCPIPChecksum = require("./TCPIPChecksum.mjs");
 
 /**
  * Parse IPv4 header operation

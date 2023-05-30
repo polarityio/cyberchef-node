@@ -12,7 +12,7 @@
  * @param {number} length
  * @returns {string}
  */
-export function GenerateParagraphs(length=3) {
+function GenerateParagraphs(length=3) {
     const paragraphs = [];
     while (paragraphs.length < length) {
         const paragraphLength = getRandomLength(PARAGRAPH_LENGTH_MEAN, PARAGRAPH_LENGTH_STD_DEV);
@@ -27,7 +27,8 @@ export function GenerateParagraphs(length=3) {
     paragraphs[paragraphs.length-1] = paragraphs[paragraphs.length-1].slice(0, -2);
     paragraphs[0] = replaceStart(paragraphs[0]);
     return paragraphs.join("");
-}
+};
+exports.GenerateParagraphs = GenerateParagraphs;
 
 
 /**
@@ -36,7 +37,7 @@ export function GenerateParagraphs(length=3) {
  * @param {number} length
  * @returns {string}
  */
-export function GenerateSentences(length=3) {
+function GenerateSentences(length=3) {
     const sentences = [];
     while (sentences.length < length) {
         const sentenceLength = getRandomLength(SENTENCE_LENGTH_MEAN, SENTENCE_LENGTH_STD_DEV);
@@ -45,7 +46,8 @@ export function GenerateSentences(length=3) {
     }
     const paragraphs = sentencesToParagraphs(sentences);
     return paragraphs.join("");
-}
+};
+exports.GenerateSentences = GenerateSentences;
 
 
 /**
@@ -54,12 +56,13 @@ export function GenerateSentences(length=3) {
  * @param {number} length
  * @returns {string}
  */
-export function GenerateWords(length=3) {
+function GenerateWords(length=3) {
     const words = getWords(length);
     const sentences = wordsToSentences(words);
     const paragraphs = sentencesToParagraphs(sentences);
     return paragraphs.join("");
-}
+};
+exports.GenerateWords = GenerateWords;
 
 
 /**
@@ -68,10 +71,11 @@ export function GenerateWords(length=3) {
  * @param {number} length
  * @returns {string}
  */
-export function GenerateBytes(length=3) {
+function GenerateBytes(length=3) {
     const str = GenerateWords(length/3);
     return str.slice(0, length);
-}
+};
+exports.GenerateBytes = GenerateBytes;
 
 
 /**

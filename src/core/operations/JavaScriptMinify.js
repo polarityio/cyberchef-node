@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const Operation = require(""../Operation.mjs"");
-const * as terser = require(""terser"");
+const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.mjs");
+const * as terser = require("terser");
 
 /**
  * JavaScript Minify operation

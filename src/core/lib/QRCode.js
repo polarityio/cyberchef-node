@@ -6,11 +6,11 @@
  * @license Apache-2.0
  */
 
-const OperationError = require(""../errors/OperationError.mjs"");
-const jsQR = require(""jsqr"");
-const qr = require(""qr-image"");
-const Utils = require(""../Utils.mjs"");
-const jimp = require(""jimp"");
+const OperationError = require("../errors/OperationError.mjs");
+const jsQR = require("jsqr");
+const qr = require("qr-image");
+const Utils = require("../Utils.mjs");
+const jimp = require("jimp");
 
 /**
  * Parses a QR code image from an image
@@ -58,7 +58,7 @@ export async function parseQrCode(input, normalise) {
  * @param {string} errorCorrection
  * @returns {ArrayBuffer}
  */
-export function generateQrCode(input, format, moduleSize, margin, errorCorrection) {
+function generateQrCode(input, format, moduleSize, margin, errorCorrection) {
     const formats = ["SVG", "EPS", "PDF", "PNG"];
     if (!formats.includes(format.toUpperCase())) {
         throw new OperationError("Unsupported QR code format.");
@@ -90,4 +90,5 @@ export function generateQrCode(input, format, moduleSize, margin, errorCorrectio
         default:
             throw new OperationError("Unsupported QR code format.");
     }
-}
+};
+exports.generateQrCode = generateQrCode;

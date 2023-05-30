@@ -8,8 +8,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Parses an IPv4 CIDR range (e.g. 192.168.0.0/24) and displays information about it.
@@ -20,7 +20,7 @@ const OperationError = require(""../errors/OperationError.mjs"");
  * @param {boolean} allowLargeList
  * @returns {string}
  */
-export function ipv4CidrRange(cidr, includeNetworkInfo, enumerateAddresses, allowLargeList) {
+function ipv4CidrRange(cidr, includeNetworkInfo, enumerateAddresses, allowLargeList) {
     const network = strToIpv4(cidr[1]),
         cidrRange = parseInt(cidr[2], 10);
     let output = "";
@@ -49,7 +49,8 @@ export function ipv4CidrRange(cidr, includeNetworkInfo, enumerateAddresses, allo
         }
     }
     return output;
-}
+};
+exports.ipv4CidrRange = ipv4CidrRange;
 
 /**
  * Parses an IPv6 CIDR range (e.g. ff00::/48) and displays information about it.
@@ -58,7 +59,7 @@ export function ipv4CidrRange(cidr, includeNetworkInfo, enumerateAddresses, allo
  * @param {boolean} includeNetworkInfo
  * @returns {string}
  */
-export function ipv6CidrRange(cidr, includeNetworkInfo) {
+function ipv6CidrRange(cidr, includeNetworkInfo) {
     let output = "";
     const network = strToIpv6(cidr[1]),
         cidrRange = parseInt(cidr[cidr.length-1], 10);
@@ -97,7 +98,8 @@ export function ipv6CidrRange(cidr, includeNetworkInfo) {
     }
 
     return output;
-}
+};
+exports.ipv6CidrRange = ipv6CidrRange;
 
 /**
  * Parses an IPv4 hyphenated range (e.g. 192.168.0.0 - 192.168.0.255) and displays information
@@ -109,7 +111,7 @@ export function ipv6CidrRange(cidr, includeNetworkInfo) {
  * @param {boolean} allowLargeList
  * @returns {string}
  */
-export function ipv4HyphenatedRange(range, includeNetworkInfo, enumerateAddresses, allowLargeList) {
+function ipv4HyphenatedRange(range, includeNetworkInfo, enumerateAddresses, allowLargeList) {
     const ip1 = strToIpv4(range[0].split("-")[0].trim()),
         ip2 = strToIpv4(range[0].split("-")[1].trim());
 
@@ -153,7 +155,8 @@ Total addresses in range: ${(((ip2 - ip1) >>> 0) + 1)}
         }
     }
     return output;
-}
+};
+exports.ipv4HyphenatedRange = ipv4HyphenatedRange;
 
 /**
  * Parses an IPv6 hyphenated range (e.g. ff00:: - ffff::) and displays information about it.
@@ -162,7 +165,7 @@ Total addresses in range: ${(((ip2 - ip1) >>> 0) + 1)}
  * @param {boolean} includeNetworkInfo
  * @returns {string}
  */
-export function ipv6HyphenatedRange(range, includeNetworkInfo) {
+function ipv6HyphenatedRange(range, includeNetworkInfo) {
     const ip1 = strToIpv6(range[0].split("-")[0].trim()),
         ip2 = strToIpv6(range[0].split("-")[1].trim()),
         total = new Array(128).fill();
@@ -187,7 +190,8 @@ export function ipv6HyphenatedRange(range, includeNetworkInfo) {
     }
 
     return output;
-}
+};
+exports.ipv6HyphenatedRange = ipv6HyphenatedRange;
 
 /**
  * Parses a list of IPv4 addresses separated by a new line (\n) and displays information
@@ -199,7 +203,7 @@ export function ipv6HyphenatedRange(range, includeNetworkInfo) {
  * @param {boolean} allowLargeList
  * @returns {string}
  */
-export function ipv4ListedRange(match, includeNetworkInfo, enumerateAddresses, allowLargeList) {
+function ipv4ListedRange(match, includeNetworkInfo, enumerateAddresses, allowLargeList) {
 
     let ipv4List = match[0].split("\n");
     ipv4List = ipv4List.filter(Boolean);
@@ -225,7 +229,8 @@ export function ipv4ListedRange(match, includeNetworkInfo, enumerateAddresses, a
     const ip2 = ipv4List[ipv4List.length - 1];
     const range = [ip1 + " - " + ip2];
     return ipv4HyphenatedRange(range, includeNetworkInfo, enumerateAddresses, allowLargeList);
-}
+};
+exports.ipv4ListedRange = ipv4ListedRange;
 
 /**
  * Parses a list of IPv6 addresses separated by a new line (\n) and displays information
@@ -235,7 +240,7 @@ export function ipv4ListedRange(match, includeNetworkInfo, enumerateAddresses, a
  * @param {boolean} includeNetworkInfo
  * @returns {string}
  */
-export function ipv6ListedRange(match, includeNetworkInfo) {
+function ipv6ListedRange(match, includeNetworkInfo) {
 
     let ipv6List = match[0].split("\n");
     ipv6List = ipv6List.filter(function(str) {
@@ -274,7 +279,8 @@ export function ipv6ListedRange(match, includeNetworkInfo) {
     const ip2 = ipv6List[ipv6List.length - 1];
     const range = [ip1 + " - " + ip2];
     return ipv6HyphenatedRange(range, includeNetworkInfo);
-}
+};
+exports.ipv6ListedRange = ipv6ListedRange;
 
 /**
  * Converts an IPv4 address from string format to numerical format.
@@ -286,7 +292,7 @@ export function ipv6ListedRange(match, includeNetworkInfo) {
  * // returns 168427520
  * strToIpv4("10.10.0.0");
  */
-export function strToIpv4(ipStr) {
+function strToIpv4(ipStr) {
     const blocks = ipStr.split("."),
         numBlocks = parseBlocks(blocks);
     let result = 0;
@@ -313,7 +319,8 @@ export function strToIpv4(ipStr) {
         }
         return numBlocks;
     }
-}
+};
+exports.strToIpv4 = strToIpv4;
 
 /**
  * Converts an IPv4 address from numerical format to string format.
@@ -325,14 +332,15 @@ export function strToIpv4(ipStr) {
  * // returns "10.10.0.0"
  * ipv4ToStr(168427520);
  */
-export function ipv4ToStr(ipInt) {
+function ipv4ToStr(ipInt) {
     const blockA = (ipInt >> 24) & 255,
         blockB = (ipInt >> 16) & 255,
         blockC = (ipInt >> 8) & 255,
         blockD = ipInt & 255;
 
     return blockA + "." + blockB + "." + blockC + "." + blockD;
-}
+};
+exports.ipv4ToStr = ipv4ToStr;
 
 
 /**
@@ -345,7 +353,7 @@ export function ipv4ToStr(ipInt) {
  * // returns [65280, 0, 0, 0, 0, 0, 4369, 8738]
  * strToIpv6("ff00::1111:2222");
  */
-export function strToIpv6(ipStr) {
+function strToIpv6(ipStr) {
     let j = 0;
     const blocks = ipStr.split(":"),
         numBlocks = parseBlocks(blocks),
@@ -376,7 +384,8 @@ export function strToIpv6(ipStr) {
         }
         return numBlocks;
     }
-}
+};
+exports.strToIpv6 = strToIpv6;
 
 /**
  * Converts an IPv6 address from numerical array format to string format.
@@ -392,7 +401,7 @@ export function strToIpv6(ipStr) {
  * // returns "ff00:0000:0000:0000:0000:0000:1111:2222"
  * ipv6ToStr([65280, 0, 0, 0, 0, 0, 4369, 8738], false);
  */
-export function ipv6ToStr(ipv6, compact) {
+function ipv6ToStr(ipv6, compact) {
     let output = "",
         i = 0;
 
@@ -431,7 +440,8 @@ export function ipv6ToStr(ipv6, compact) {
         }
     }
     return output.slice(0, output.length-1);
-}
+};
+exports.ipv6ToStr = ipv6ToStr;
 
 /**
  * Generates a list of IPv4 addresses in string format between two given numerical values.
@@ -444,7 +454,7 @@ export function ipv6ToStr(ipv6, compact) {
  * // returns ["0.0.0.1", "0.0.0.2", "0.0.0.3"]
  * IP.generateIpv4Range(1, 3);
  */
-export function generateIpv4Range(ip, endIp) {
+function generateIpv4Range(ip, endIp) {
     const range = [];
     if (endIp >= ip) {
         for (; ip <= endIp; ip++) {
@@ -454,7 +464,8 @@ export function generateIpv4Range(ip, endIp) {
         range[0] = "Second IP address smaller than first.";
     }
     return range;
-}
+};
+exports.generateIpv4Range = generateIpv4Range;
 
 /**
  * Generates an IPv6 subnet mask given a CIDR value.
@@ -462,7 +473,7 @@ export function generateIpv4Range(ip, endIp) {
  * @param {number} cidr
  * @returns {number[]}
  */
-export function genIpv6Mask(cidr) {
+function genIpv6Mask(cidr) {
     const mask = new Array(8);
     let shift;
 
@@ -477,7 +488,8 @@ export function genIpv6Mask(cidr) {
     }
 
     return mask;
-}
+};
+exports.genIpv6Mask = genIpv6Mask;
 
 /**
  * Comparison operation for sorting of IPv4 addresses.
@@ -486,9 +498,10 @@ export function genIpv6Mask(cidr) {
  * @param {string} b
  * @returns {number}
  */
-export function ipv4Compare(a, b) {
+function ipv4Compare(a, b) {
     return strToIpv4(a) - strToIpv4(b);
-}
+};
+exports.ipv4Compare = ipv4Compare;
 
 /**
  * Comparison operation for sorting of IPv6 addresses.
@@ -497,7 +510,7 @@ export function ipv4Compare(a, b) {
  * @param {string} b
  * @returns {number}
  */
-export function ipv6Compare(a, b) {
+function ipv6Compare(a, b) {
 
     const a_ = strToIpv6(a),
         b_ = strToIpv6(b);
@@ -508,7 +521,8 @@ export function ipv6Compare(a, b) {
         }
     }
     return 0;
-}
+};
+exports.ipv6Compare = ipv6Compare;
 
 const _LARGE_RANGE_ERROR = "The specified range contains more than 65,536 addresses. Running this query could crash your browser. If you want to run it, select the \"Allow large queries\" option. You are advised to turn off \"Auto Bake\" whilst editing large ranges.";
 

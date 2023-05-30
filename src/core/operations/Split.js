@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {SPLIT_DELIM_OPTIONS, JOIN_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const Operation = require("../Operation.mjs");
+const {SPLIT_DELIM_OPTIONS, JOIN_DELIM_OPTIONS} = require("../lib/Delim.mjs");
 
 /**
  * Split operation

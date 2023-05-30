@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const cptable = require(""codepage"");
+const cptable = require("codepage");
 
 /**
  * Character encoding format mappings.
@@ -189,7 +189,7 @@ for (const name in CHR_ENC_CODE_PAGES) {
  * @param {number} page - The codepage number
  * @returns {number}
  */
-export function chrEncWidth(page) {
+function chrEncWidth(page) {
     if (typeof page !== "number") return 0;
 
     // Raw Bytes have a width of 1
@@ -218,7 +218,8 @@ export function chrEncWidth(page) {
     }
 
     return 0;
-}
+};
+exports.chrEncWidth = chrEncWidth;
 
 /**
  * Unicode Normalisation Forms

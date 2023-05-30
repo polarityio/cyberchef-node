@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const { scanForFileTypes } = require(""../lib/FileType.mjs"");
-const { FILE_SIGNATURES } = require(""../lib/FileSignatures.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const { scanForFileTypes } = require("../lib/FileType.mjs");
+const { FILE_SIGNATURES } = require("../lib/FileSignatures.mjs");
 
 /**
  * Scan for Embedded Files operation

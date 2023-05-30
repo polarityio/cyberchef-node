@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-const JSON5 = require(""json5"");
-const OperationError = require(""../errors/OperationError.mjs"");
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
+const JSON5 = require("json5");
+const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
 
 /**
  * JSON Beautify operation

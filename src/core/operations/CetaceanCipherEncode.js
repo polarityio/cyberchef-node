@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {toBinary} = require(""../lib/Binary.mjs"");
+const Operation = require("../Operation.mjs");
+const {toBinary} = require("../lib/Binary.mjs");
 
 /**
  * Cetacean Cipher Encode operation

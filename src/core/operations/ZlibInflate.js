@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {INFLATE_BUFFER_TYPE} = require(""../lib/Zlib.mjs"");
-const zlibAndGzip = require(""zlibjs/bin/zlib_and_gzip.min.js"");
+const Operation = require("../Operation.mjs");
+const {INFLATE_BUFFER_TYPE} = require("../lib/Zlib.mjs");
+const zlibAndGzip = require("zlibjs/bin/zlib_and_gzip.min.js");
 
 const Zlib = zlibAndGzip.Zlib;
 

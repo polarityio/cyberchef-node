@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
-const { toHexFast } = require(""../lib/Hex.mjs"");
+const { toHexFast } = require("../lib/Hex.mjs");
 
 /**
  * CRC-8 Checksum operation

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const cptable = require(""codepage"");
+const Operation = require("../Operation.mjs");
+const cptable = require("codepage");
 
 /**
  * Citrix CTX1 Encode operation

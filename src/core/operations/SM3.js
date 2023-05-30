@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const Sm3 = require(""crypto-api/src/hasher/sm3.mjs"");
-const {toHex} = require(""crypto-api/src/encoder/hex.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const Sm3 = require("crypto-api/src/hasher/sm3.mjs");
+const {toHex} = require("crypto-api/src/encoder/hex.mjs");
 
 /**
  * SM3 operation

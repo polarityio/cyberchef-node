@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
-const BigNumber = require(""bignumber.js"");
+const Utils = require("../Utils.mjs");
+const BigNumber = require("bignumber.js");
 
 
 /**
@@ -16,7 +16,7 @@ const BigNumber = require(""bignumber.js"");
  * @param {string} delim
  * @returns {BigNumber[]}
  */
-export function createNumArray(input, delim) {
+function createNumArray(input, delim) {
     delim = Utils.charRep(delim || "Space");
     const splitNumbers = input.split(delim);
     const numbers = [];
@@ -33,7 +33,8 @@ export function createNumArray(input, delim) {
         }
     });
     return numbers;
-}
+};
+exports.createNumArray = createNumArray;
 
 
 /**
@@ -42,11 +43,12 @@ export function createNumArray(input, delim) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function sum(data) {
+function sum(data) {
     if (data.length > 0) {
         return data.reduce((acc, curr) => acc.plus(curr));
     }
-}
+};
+exports.sum = sum;
 
 
 /**
@@ -55,11 +57,12 @@ export function sum(data) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function sub(data) {
+function sub(data) {
     if (data.length > 0) {
         return data.reduce((acc, curr) => acc.minus(curr));
     }
-}
+};
+exports.sub = sub;
 
 
 /**
@@ -68,11 +71,12 @@ export function sub(data) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function multi(data) {
+function multi(data) {
     if (data.length > 0) {
         return data.reduce((acc, curr) => acc.times(curr));
     }
-}
+};
+exports.multi = multi;
 
 
 /**
@@ -81,11 +85,12 @@ export function multi(data) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function div(data) {
+function div(data) {
     if (data.length > 0) {
         return data.reduce((acc, curr) => acc.div(curr));
     }
-}
+};
+exports.div = div;
 
 
 /**
@@ -94,11 +99,12 @@ export function div(data) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function mean(data) {
+function mean(data) {
     if (data.length > 0) {
         return sum(data).div(data.length);
     }
-}
+};
+exports.mean = mean;
 
 
 /**
@@ -107,7 +113,7 @@ export function mean(data) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function median(data) {
+function median(data) {
     if ((data.length % 2) === 0 && data.length > 0) {
         data.sort(function(a, b) {
             return a.minus(b);
@@ -118,7 +124,8 @@ export function median(data) {
     } else {
         return data[Math.floor(data.length / 2)];
     }
-}
+};
+exports.median = median;
 
 
 /**
@@ -127,7 +134,7 @@ export function median(data) {
  * @param {BigNumber[]} data
  * @returns {BigNumber}
  */
-export function stdDev(data) {
+function stdDev(data) {
     if (data.length > 0) {
         const avg = mean(data);
         let devSum = new BigNumber(0);
@@ -136,4 +143,5 @@ export function stdDev(data) {
         });
         return devSum.div(data.length).sqrt();
     }
-}
+};
+exports.stdDev = stdDev;

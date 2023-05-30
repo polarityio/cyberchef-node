@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const Utils = require(""../Utils.mjs"");
-const { DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
-const { isWorkerEnvironment } = require(""../Utils.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require("../Operation.mjs");
+const Utils = require("../Utils.mjs");
+const { DELIM_OPTIONS } = require("../lib/Delim.mjs");
+const { isWorkerEnvironment } = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * From Charcode operation

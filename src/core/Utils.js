@@ -5,12 +5,12 @@
  */
 
 // loglevel import required for Node API
-const log = require(""loglevel"");
-const utf8 = require(""utf8"");
-const {fromBase64, toBase64} = require(""./lib/Base64.mjs"");
-const {fromHex} = require(""./lib/Hex.mjs"");
-const {fromDecimal} = require(""./lib/Decimal.mjs"");
-const {fromBinary} = require(""./lib/Binary.mjs"");
+const log = require("loglevel");
+const utf8 = require("utf8");
+const {fromBase64, toBase64} = require("./lib/Base64.mjs");
+const {fromHex} = require("./lib/Hex.mjs");
+const {fromDecimal} = require("./lib/Decimal.mjs");
+const {fromBinary} = require("./lib/Binary.mjs");
 
 /**
  * Utility functions for use in operations, the core framework and the stage.
@@ -1345,25 +1345,28 @@ class Utils {
  * Check whether the code is running in a Node.js environment
  * @returns {boolean}
  */
-export function isNodeEnvironment() {
+function isNodeEnvironment() {
     return typeof process !== "undefined" && process.versions != null && process.versions.node != null;
-}
+};
+exports.isNodeEnvironment = isNodeEnvironment;
 
 /**
  * Check whether the code is running in a web environment
  * @returns {boolean}
 */
-export function isWebEnvironment() {
+function isWebEnvironment() {
     return typeof window === "object";
-}
+};
+exports.isWebEnvironment = isWebEnvironment;
 
 /**
  * Check whether the code is running in a worker
  * @returns {boolean}
 */
-export function isWorkerEnvironment() {
+function isWorkerEnvironment() {
     return typeof importScripts === "function";
-}
+};
+exports.isWorkerEnvironment = isWorkerEnvironment;
 
 module.exports = Utils;
 
@@ -1481,7 +1484,7 @@ String.prototype.count = function(chr) {
  *
  * @param {string} msg
  */
-export function sendStatusMessage(msg) {
+function sendStatusMessage(msg) {
     if (isWorkerEnvironment())
         self.sendStatusMessage(msg);
     else if (isWebEnvironment())
@@ -1489,7 +1492,8 @@ export function sendStatusMessage(msg) {
     else if (isNodeEnvironment() && !global.TESTING)
         // eslint-disable-next-line no-console
         console.debug(msg);
-}
+};
+exports.sendStatusMessage = sendStatusMessage;
 
 const debounceTimeouts = {};
 
@@ -1505,7 +1509,7 @@ const debounceTimeouts = {};
  * @param {array} args - Array of arguments to be passed to func
  * @returns {function}
  */
-export function debounce(func, wait, id, scope, args) {
+function debounce(func, wait, id, scope, args) {
     return function() {
         const later = function() {
             func.apply(scope, args);
@@ -1513,7 +1517,8 @@ export function debounce(func, wait, id, scope, args) {
         clearTimeout(debounceTimeouts[id]);
         debounceTimeouts[id] = setTimeout(later, wait);
     };
-}
+};
+exports.debounce = debounce;
 
 
 /*

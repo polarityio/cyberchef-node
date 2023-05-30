@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const {runHash} = require(""../lib/Hash.mjs"");
+const Operation = require("../Operation.mjs");
+const {runHash} = require("../lib/Hash.mjs");
 
 /**
  * SHA1 operation

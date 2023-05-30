@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const snakeCase = require(""lodash/snakeCase.js"");
-const Operation = require(""../Operation.mjs"");
-const { replaceVariableNames } = require(""../lib/Code.mjs"");
+const snakeCase = require("lodash/snakeCase.js");
+const Operation = require("../Operation.mjs");
+const { replaceVariableNames } = require("../lib/Code.mjs");
 
 /**
  * To Snake case operation

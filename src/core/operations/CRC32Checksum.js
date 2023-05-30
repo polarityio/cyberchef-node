@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require(""../Operation.mjs"");
-const JSCRC = require(""js-crc"");
+const Operation = require("../Operation.mjs");
+const JSCRC = require("js-crc");
 
 /**
  * CRC-32 Checksum operation

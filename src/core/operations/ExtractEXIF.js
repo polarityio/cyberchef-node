@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const ExifParser = require(""exif-parser"");
-const Operation = require(""../Operation.mjs"");
-const OperationError = require(""../errors/OperationError.mjs"");
+const ExifParser = require("exif-parser");
+const Operation = require("../Operation.mjs");
+const OperationError = require("../errors/OperationError.mjs");
 
 /**
  * Extract EXIF operation

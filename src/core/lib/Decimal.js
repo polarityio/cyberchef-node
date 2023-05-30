@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-const Utils = require(""../Utils.mjs"");
+const Utils = require("../Utils.mjs");
 
 
 /**
@@ -23,7 +23,7 @@ const Utils = require(""../Utils.mjs"");
  * // returns [10,20,30]
  * fromDecimal("10:20:30", "Colon");
  */
-export function fromDecimal(data, delim="Auto") {
+function fromDecimal(data, delim="Auto") {
     delim = Utils.charRep(delim);
     const output = [];
     let byteStr = data.split(delim);
@@ -34,4 +34,5 @@ export function fromDecimal(data, delim="Auto") {
         output[i] = parseInt(byteStr[i], 10);
     }
     return output;
-}
+};
+exports.fromDecimal = fromDecimal;
