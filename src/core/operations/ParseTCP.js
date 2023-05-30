@@ -4,13 +4,13 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Stream = require("../lib/Stream.mjs");
-const {toHexFast, fromHex} = require("../lib/Hex.mjs");
-const {toBinary} = require("../lib/Binary.mjs");
-const {objToTable, bytesToLargeNumber} = require("../lib/Protocol.mjs");
-const Utils = require("../Utils.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const Stream = require("../lib/Stream.js");
+const {toHexFast, fromHex} = require("../lib/Hex.js");
+const {toBinary} = require("../lib/Binary.js");
+const {objToTable, bytesToLargeNumber} = require("../lib/Protocol.js");
+const Utils = require("../Utils.js");
+const OperationError = require("../errors/OperationError.js");
 const BigNumber = require("bignumber.js");
 
 /**

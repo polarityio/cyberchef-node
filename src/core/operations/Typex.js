@@ -9,10 +9,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const {LETTERS, Reflector} = require("../lib/Enigma.mjs");
-const {ROTORS, REFLECTORS, TypexMachine, Plugboard, Rotor} = require("../lib/Typex.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const {LETTERS, Reflector} = require("../lib/Enigma.js");
+const {ROTORS, REFLECTORS, TypexMachine, Plugboard, Rotor} = require("../lib/Typex.js");
 
 /**
  * Typex operation

@@ -5,8 +5,8 @@
  */
 
 const {JSONPath} = require("jsonpath-plus");
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * JPath expression operation

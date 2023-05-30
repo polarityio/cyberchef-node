@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Dish = require("../Dish.mjs");
+const Operation = require("../Operation.js");
+const Dish = require("../Dish.js");
 const XRegExp = require("xregexp");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 /**
  * Register operation

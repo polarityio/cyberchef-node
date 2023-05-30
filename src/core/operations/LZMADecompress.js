@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
 const {decompress} = require("@blu3r4y/lzma");
-const Utils, {isWorkerEnvironment} = require("../Utils.mjs");
+const Utils, {isWorkerEnvironment} = require("../Utils.js");
 
 /**
  * LZMA Decompress operation

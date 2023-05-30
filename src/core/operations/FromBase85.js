@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
-const {ALPHABET_OPTIONS} = require("../lib/Base85.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
+const {ALPHABET_OPTIONS} = require("../lib/Base85.js");
 
 /**
  * From Base85 operation

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const BigNumber = require("bignumber.js");
-const Utils = require("../Utils.mjs");
-const {toHexFast} = require("../lib/Hex.mjs");
+const Utils = require("../Utils.js");
+const {toHexFast} = require("../lib/Hex.js");
 
 /**
  * To Base62 operation

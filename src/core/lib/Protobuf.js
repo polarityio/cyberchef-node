@@ -1,4 +1,4 @@
-const Utils = require("../Utils.mjs");
+const Utils = require("../Utils.js");
 const protobuf = require("protobufjs");
 
 /**

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Recipe = require("../Recipe.mjs");
-const Dish = require("../Dish.mjs");
+const Operation = require("../Operation.js");
+const Recipe = require("../Recipe.js");
+const Dish = require("../Dish.js");
 
 /**
  * Fork operation

@@ -6,9 +6,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const {LETTERS} = require("../lib/Enigma.mjs");
-const {NUMBERS, CR_ROTORS, I_ROTORS, SigabaMachine, CRRotor, IRotor} = require("../lib/SIGABA.mjs");
+const Operation = require("../Operation.js");
+const {LETTERS} = require("../lib/Enigma.js");
+const {NUMBERS, CR_ROTORS, I_ROTORS, SigabaMachine, CRRotor, IRotor} = require("../lib/SIGABA.js");
 
 /**
  * Sigaba operation

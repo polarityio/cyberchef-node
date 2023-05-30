@@ -30,10 +30,10 @@
  * 
  */
 
-const GostRandom = require("'./gostRandom.mjs'");
-const GostCipher = require("'./gostCipher.mjs'");
-const GostDigest = require("'./gostDigest.mjs'");
-const GostSign = require("'./gostSign.mjs'");
+const GostRandom = require("'./gostRandom.js'");
+const GostCipher = require("'./gostCipher.js'");
+const GostDigest = require("'./gostDigest.js'");
+const GostSign = require("'./gostSign.js'");
 
 /*
     * Engine definition base on normalized algorithm identifier

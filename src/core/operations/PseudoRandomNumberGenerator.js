@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
 const forge = require("node-forge");
 const BigNumber = require("bignumber.js");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 /**
  * Pseudo-Random Number Generator operation

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const CryptoApi = require("crypto-api/src/crypto-api.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const CryptoApi = require("crypto-api/src/crypto-api.js");
 
 /**
  * HMAC operation

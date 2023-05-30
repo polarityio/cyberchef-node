@@ -8,11 +8,11 @@
 
 /* eslint no-console: ["off"] */
 
-const NodeDish = require("./NodeDish.mjs");
-const NodeRecipe = require("./NodeRecipe.mjs");
+const NodeDish = require("./NodeDish.js");
+const NodeRecipe = require("./NodeRecipe.js");
 const OperationConfig = require(""../core/config/OperationConfig.json" assert {type: "json"}");
-const { sanitise, removeSubheadingsFromArray, sentenceToCamelCase } = require("./apiUtils.mjs");
-const ExcludedOperationError = require("../core/errors/ExcludedOperationError.mjs");
+const { sanitise, removeSubheadingsFromArray, sentenceToCamelCase } = require("./apiUtils.js");
+const ExcludedOperationError = require("../core/errors/ExcludedOperationError.js");
 
 
 /**

@@ -5,7 +5,7 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-const TestRegister = require("../../lib/TestRegister.mjs");
+const TestRegister = require("../../lib/TestRegister.js");
 
 const BASIC_STRING = "The ships hung in the sky in much the same way that bricks don't.";
 const UTF8_STR = "ნუ პანიკას";

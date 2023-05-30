@@ -1,5 +1,5 @@
 /**
- * assertionHandler.mjs
+ * assertionHandler.js
  *
  * Pair native node assertions with a description for
  * the benefit of the TestRegister.

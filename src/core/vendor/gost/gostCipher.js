@@ -32,7 +32,7 @@
  *
  */
 
-const GostRandom = require("'./gostRandom.mjs'");
+const GostRandom = require("'./gostRandom.js'");
 
 import crypto from 'crypto'
 

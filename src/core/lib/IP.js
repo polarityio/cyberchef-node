@@ -8,8 +8,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require("../Utils.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * Parses an IPv4 CIDR range (e.g. 192.168.0.0/24) and displays information about it.

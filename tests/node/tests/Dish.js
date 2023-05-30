@@ -1,6 +1,6 @@
-const TestRegister = require("../../lib/TestRegister.mjs");
-const Dish = require("../../../src/core/Dish.mjs");
-const it = require("../../node/assertionHandler.mjs");
+const TestRegister = require("../../lib/TestRegister.js");
+const Dish = require("../../../src/core/Dish.js");
+const it = require("../../node/assertionHandler.js");
 const assert = require("assert");
 
 TestRegister.addApiTests([

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {toHex} = require("../lib/Hex.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {toHex} = require("../lib/Hex.js");
 
 /**
  * To Hex Content operation

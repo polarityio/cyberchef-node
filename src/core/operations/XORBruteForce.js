@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const { bitOp, xor } = require("../lib/BitwiseOp.mjs");
-const { toHex } = require("../lib/Hex.mjs");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const { bitOp, xor } = require("../lib/BitwiseOp.js");
+const { toHex } = require("../lib/Hex.js");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 /**
  * XOR Brute Force operation

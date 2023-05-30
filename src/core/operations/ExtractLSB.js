@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
-const { fromBinary } = require("../lib/Binary.mjs");
-const { isImage } = require("../lib/FileType.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
+const { fromBinary } = require("../lib/Binary.js");
+const { isImage } = require("../lib/FileType.js");
 const jimp = require("jimp");
 
 /**

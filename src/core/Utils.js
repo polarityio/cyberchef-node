@@ -7,10 +7,10 @@
 // loglevel import required for Node API
 const log = require("loglevel");
 const utf8 = require("utf8");
-const {fromBase64, toBase64} = require("./lib/Base64.mjs");
-const {fromHex} = require("./lib/Hex.mjs");
-const {fromDecimal} = require("./lib/Decimal.mjs");
-const {fromBinary} = require("./lib/Binary.mjs");
+const {fromBase64, toBase64} = require("./lib/Base64.js");
+const {fromHex} = require("./lib/Hex.js");
+const {fromDecimal} = require("./lib/Decimal.js");
+const {fromBinary} = require("./lib/Binary.js");
 
 /**
  * Utility functions for use in operations, the core framework and the stage.
@@ -1204,7 +1204,7 @@ class Utils {
      *
      * Only works in the Node environment
      *
-     * @param {File} file - a File shim object (see src/node/File.mjs)
+     * @param {File} file - a File shim object (see src/node/File.js)
      * @returns {ArrayBuffer} the data from the file in an ArrayBuffer
      * @throws {TypeError} thrown if the method is called from a browser environment
      */

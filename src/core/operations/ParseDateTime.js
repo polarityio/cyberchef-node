@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const moment = require("moment-timezone");
-const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require("../lib/DateTime.mjs");
+const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require("../lib/DateTime.js");
 
 /**
  * Parse DateTime operation

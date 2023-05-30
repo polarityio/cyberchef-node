@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * HTTP request operation

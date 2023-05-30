@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const BigNumber = require("bignumber.js");
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * From Base operation

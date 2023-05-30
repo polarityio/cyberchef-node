@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-const { fromBase64 } = require("../lib/Base64.mjs");
-const { toHexFast } = require("../lib/Hex.mjs");
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const { fromBase64 } = require("../lib/Base64.js");
+const { toHexFast } = require("../lib/Hex.js");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * PEM to Hex operation

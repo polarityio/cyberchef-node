@@ -16,7 +16,7 @@ const defaults = {
 /**
  * TLVParser library
  */
-export default class TLVParser {
+class TLVParser {
 
     /**
      * TLVParser constructor
@@ -76,3 +76,5 @@ export default class TLVParser {
         return this.input.length <= this.location;
     }
 }
+
+module.exports = TLVParser;

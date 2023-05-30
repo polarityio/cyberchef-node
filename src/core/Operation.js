@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Dish = require("./Dish.mjs");
-const Ingredient = require("./Ingredient.mjs");
+const Dish = require("./Dish.js");
+const Ingredient = require("./Ingredient.js");
 
 /**
  * The Operation specified by the user to be run.

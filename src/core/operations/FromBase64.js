@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const {fromBase64, ALPHABET_OPTIONS} = require("../lib/Base64.mjs");
+const Operation = require("../Operation.js");
+const {fromBase64, ALPHABET_OPTIONS} = require("../lib/Base64.js");
 
 /**
  * From Base64 operation

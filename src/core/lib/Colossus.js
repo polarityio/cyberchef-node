@@ -5,12 +5,12 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const {INIT_PATTERNS, ITA2_TABLE, ROTOR_SIZES} = require("../lib/Lorenz.mjs");
+const {INIT_PATTERNS, ITA2_TABLE, ROTOR_SIZES} = require("../lib/Lorenz.js");
 
 /**
  * Colossus simulator class.
  */
-export class ColossusComputer {
+class ColossusComputer {
     /**
      * Construct a Colossus.
      *
@@ -415,3 +415,5 @@ export class ColossusComputer {
     }
 
 }
+
+exports.ColossusComputer = ColossusComputer;

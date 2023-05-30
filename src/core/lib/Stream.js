@@ -12,7 +12,7 @@
  * A Stream can be used to traverse a binary blob, interpreting sections of it
  * as various data types.
  */
-export default class Stream {
+class Stream {
 
     /**
      * Stream constructor.
@@ -325,3 +325,5 @@ export default class Stream {
     }
 
 }
+
+module.exports = Stream;

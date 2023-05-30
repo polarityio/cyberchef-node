@@ -7,7 +7,7 @@
  */
 
 const BigNumber = require("bignumber.js");
-const {toHexFast} = require("../lib/Hex.mjs");
+const {toHexFast} = require("../lib/Hex.js");
 
 /**
  * Recursively displays a JSON object as an HTML table

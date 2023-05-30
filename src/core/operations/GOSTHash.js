@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const GostDigest = require("../vendor/gost/gostDigest.mjs");
-const {toHexFast} = require("../lib/Hex.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const GostDigest = require("../vendor/gost/gostDigest.js");
+const {toHexFast} = require("../lib/Hex.js");
 
 /**
  * GOST hash operation

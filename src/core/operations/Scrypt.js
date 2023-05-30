@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const OperationError = require("../errors/OperationError.js");
 const scryptsy = require("scryptsy");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 /**
  * Scrypt operation

@@ -6,10 +6,10 @@
  * @license Apache-2.0
  */
 
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 const geohash = require("ngeohash");
 /*
-Currently unable to update to geodesy v2 as we cannot load .js modules into a .mjs file.
+Currently unable to update to geodesy v2 as we cannot load .js modules into a .js file.
 When we do update, imports will look like this:
 
 const LatLonEllipsoidal = require("geodesy/latlon-ellipsoidal.js");

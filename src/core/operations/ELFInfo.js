@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Stream = require("../lib/Stream.mjs");
-const Utils = require("../Utils.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const Stream = require("../lib/Stream.js");
+const Utils = require("../Utils.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * ELF Info operation

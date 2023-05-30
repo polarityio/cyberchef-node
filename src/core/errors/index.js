@@ -1,8 +1,8 @@
-const OperationError = require("./OperationError.mjs");
-const DishError = require("./DishError.mjs");
-const ExcludedOperationError = require("./ExcludedOperationError.mjs");
+const OperationError = require("./OperationError.js");
+const DishError = require("./DishError.js");
+const ExcludedOperationError = require("./ExcludedOperationError.js");
 
-export {
+module.exports = {
     OperationError,
     DishError,
     ExcludedOperationError,

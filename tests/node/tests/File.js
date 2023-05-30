@@ -1,8 +1,8 @@
 const assert = require("assert");
-const it = require("../assertionHandler.mjs");
-const TestRegister = require("../../lib/TestRegister.mjs");
-const File = require("../../../src/node/File.mjs");
-const {zip, Dish} = require("../../../src/node/index.mjs");
+const it = require("../assertionHandler.js");
+const TestRegister = require("../../lib/TestRegister.js");
+const File = require("../../../src/node/File.js");
+const {zip, Dish} = require("../../../src/node/index.js");
 
 TestRegister.addApiTests([
     it("File: should exist", () => {

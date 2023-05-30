@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const Protobuf = require("../lib/Protobuf.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const Protobuf = require("../lib/Protobuf.js");
 
 /**
  * VarInt Decode operation

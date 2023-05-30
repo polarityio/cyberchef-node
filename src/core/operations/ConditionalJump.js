@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Dish = require("../Dish.mjs");
-const { getLabelIndex } = require("../lib/FlowControl.mjs");
+const Operation = require("../Operation.js");
+const Dish = require("../Dish.js");
+const { getLabelIndex } = require("../lib/FlowControl.js");
 
 /**
  * Conditional Jump operation

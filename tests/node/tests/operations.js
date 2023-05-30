@@ -17,7 +17,7 @@
  */
 
 const assert = require("assert");
-const it = require("../assertionHandler.mjs");
+const it = require("../assertionHandler.js");
 const fs = require("fs");
 
 import {
@@ -32,10 +32,10 @@ import {
     CSSMinify,
     toBase64,
     toHex
-} from "../../../src/node/index.mjs";
-const chef = require("../../../src/node/index.mjs");
-const TestRegister = require("../../lib/TestRegister.mjs");
-const File = require("../../../src/node/File.mjs");
+} from "../../../src/node/index.js";
+const chef = require("../../../src/node/index.js");
+const TestRegister = require("../../lib/TestRegister.js");
+const File = require("../../../src/node/File.js");
 
 global.File = File;
 
@@ -727,7 +727,7 @@ YQ9ESHo+FsmIvDzU3e/PD0SfXfO4vqBrFYN8986NBF2bZaMBBADJafe0w9diaCNx
 3A7e8MqjbNrhrLkD2cPxXspCATX3SuI19d2+hMiHZfKTyadBTIa+ICxvqoxwxyZD
 raHSY3CWVZd1V4KB5mqf+3Zj5riLeGU0dtXwi/5c0bdUhBUgHiAMhi75p05jYih5
 KsNxPcK9hEwPu7B+QeHURMiIgojTGQARAQABwsCDBBgBCgAPBQJdm2WjBQkDwmcA
-AhsuAKgJEGS79V2S7D0onSAEGQEKAAYFAl2bZaMACgkQzdkMJSM5Bqg2rwP/Ue28
+AhsuAKgJEGS79V2S7D0onSAEGQEKAAYFAl2bZaMACgkQzd.jsM5Bqg2rwP/Ue28
 m3Fdfgh5JxouZ3Dm2KUDhZL95B+vdMk72acdoU7SRjlyDT8cApRqYx+MIXb8WrPN
 1xCZnOM4zXeWIM0CAPQ1e/sCrK58L+P+eVngNmrW9epKtZ4L6hx+dqqja9vPZGQK
 CsFAhA6A1gWB++OLk9Y6H23tWIdKEXMeAX7492zDYgP+OSPS79EWAqXL8SvmDrbl
@@ -781,7 +781,7 @@ KivtI3/tLLNTaVSVblG2VVoydKelRhsjGwIAyy0E1KI5O2EhLsVsDwx9NtO4SmUG
 REZt/LRYp1p5+nsarfeCVKQ4qQ6eqdK71Z7tEICT0JXqgSjQsKYVdscR2wH9GiyR
 LuHX3Nnh+M8lUv36ZM5XrWEypRFQaNYssRzPpqU4f9oViSPxdADonxehDP4ICmFr
 vqT+etEmjr9dzp4ZSKLswsCDBBgBCgAPBQJdm2WjBQkDwmcAAhsuAKgJEGS79V2S
-7D0onSAEGQEKAAYFAl2bZaMACgkQzdkMJSM5Bqg2rwP/Ue28m3Fdfgh5JxouZ3Dm
+7D0onSAEGQEKAAYFAl2bZaMACgkQzd.jsM5Bqg2rwP/Ue28m3Fdfgh5JxouZ3Dm
 2KUDhZL95B+vdMk72acdoU7SRjlyDT8cApRqYx+MIXb8WrPN1xCZnOM4zXeWIM0C
 APQ1e/sCrK58L+P+eVngNmrW9epKtZ4L6hx+dqqja9vPZGQKCsFAhA6A1gWB++OL
 k9Y6H23tWIdKEXMeAX7492zDYgP+OSPS79EWAqXL8SvmDrblWI5eiM6X5hAMrOjQ

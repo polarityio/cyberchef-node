@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 
 const letters = "_abcdefghijklmnopqrstuvwxyz.0123456789,-+*/:?!'()";
 const tiles = [];

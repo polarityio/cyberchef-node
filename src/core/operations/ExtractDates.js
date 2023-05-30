@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { search } = require("../lib/Extract.mjs");
+const Operation = require("../Operation.js");
+const { search } = require("../lib/Extract.js");
 
 /**
  * Extract dates operation

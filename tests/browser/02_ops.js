@@ -26,7 +26,7 @@ module.exports = {
     },
 
     "Sanity check operations": async browser => {
-        const Images = await import("../samples/Images.mjs");
+        const Images = await import("../samples/Images.js");
         testOp(browser, "A1Z26 Cipher Decode", "20 5 19 20 15 21 20 16 21 20", "testoutput");
         testOp(browser, "A1Z26 Cipher Encode", "test input", "20 5 19 20 9 14 16 21 20");
         testOp(browser, "ADD", "test input", "Ê»ÉÊv¿ÄÆËÊ", [{ "option": "Hex", "string": "56" }]);

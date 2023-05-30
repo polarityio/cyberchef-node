@@ -1,7 +1,7 @@
 /**
   Blowfish.js from Dojo Toolkit 1.8.1 (https://github.com/dojo/dojox/tree/1.8/encoding)
   Extracted by Sladex (xslade@gmail.com)
-  Shoehorned into working with mjs for CyberChef by Matt C (matt@artemisbot.uk)
+  Shoehorned into working with.js for CyberChef by Matt C (matt@artemisbot.uk)
   Refactored and implemented modes support by cbeuw (cbeuw.andy@gmail.com)
 
   @license BSD

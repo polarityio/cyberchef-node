@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const kbpgp = require("kbpgp");
-const { ASP, importPrivateKey } = require("../lib/PGP.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const * as es6promisify = require("es6-promisify");
+const { ASP, importPrivateKey } = require("../lib/PGP.js");
+const OperationError = require("../errors/OperationError.js");
+const es6promisify = require("es6-promisify");
 const promisify = es6promisify.default ? es6promisify.default.promisify : es6promisify.promisify;
 
 /**

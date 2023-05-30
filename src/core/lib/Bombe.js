@@ -7,9 +7,9 @@
  * @license Apache-2.0
  */
 
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
-const {Rotor, Plugboard, a2i, i2a} = require("./Enigma.mjs");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
+const {Rotor, Plugboard, a2i, i2a} = require("./Enigma.js");
 
 /**
  * Convenience/optimisation subclass of Rotor
@@ -273,7 +273,7 @@ class Scrambler {
 /**
  * Bombe simulator class.
  */
-export class BombeMachine {
+class BombeMachine {
     /**
      * Construct a Bombe.
      *
@@ -754,3 +754,5 @@ export class BombeMachine {
         return result;
     }
 }
+
+exports.BombeMachine = BombeMachine;

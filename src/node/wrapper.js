@@ -7,5 +7,5 @@
  * @license Apache-2.0
  */
 
-module.exports = (async () => await import("./index.mjs"))();
-module.exports.File = (async () => await import("./File.mjs"))();
+module.exports = (async () => await import("./index.js"))();
+module.exports.File = (async () => await import("./File.js"))();

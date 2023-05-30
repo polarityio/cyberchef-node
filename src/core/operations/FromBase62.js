@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const BigNumber = require("bignumber.js");
-const Utils = require("../Utils.mjs");
+const Utils = require("../Utils.js");
 
 
 /**

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {fromBase64, toBase64} = require("../lib/Base64.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {fromBase64, toBase64} = require("../lib/Base64.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * Show Base64 offsets operation

@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const { isImage } = require("../lib/FileType.mjs");
-const { toBase64 } = require("../lib/Base64.mjs");
-const { gaussianBlur } = require("../lib/ImageManipulation.mjs");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const { isImage } = require("../lib/FileType.js");
+const { toBase64 } = require("../lib/Base64.js");
+const { gaussianBlur } = require("../lib/ImageManipulation.js");
+const { isWorkerEnvironment } = require("../Utils.js");
 const jimp = require("jimp");
 
 /**

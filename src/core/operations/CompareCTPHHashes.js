@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {HASH_DELIM_OPTIONS} = require("../lib/Delim.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {HASH_DELIM_OPTIONS} = require("../lib/Delim.js");
 const ctphjs = require("ctph.js");
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * Compare CTPH hashes operation

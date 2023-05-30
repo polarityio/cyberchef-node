@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { getLabelIndex } = require("../lib/FlowControl.mjs");
+const Operation = require("../Operation.js");
+const { getLabelIndex } = require("../lib/FlowControl.js");
 
 /**
  * Jump operation

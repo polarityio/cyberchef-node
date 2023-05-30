@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const {rot, rotr, rotrCarry} = require("../lib/Rotate.mjs");
+const Operation = require("../Operation.js");
+const {rot, rotr, rotrCarry} = require("../lib/Rotate.js");
 
 
 /**

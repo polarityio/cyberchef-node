@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const {operations} = require("./index.mjs");
-const { sanitise } = require("./apiUtils.mjs");
+const {operations} = require("./index.js");
+const { sanitise } = require("./apiUtils.js");
 
 /**
  * Similar to core/Recipe, Recipe controls a list of operations and

@@ -6,9 +6,9 @@
  */
 
 const BigNumber = require("bignumber.js");
-const Operation = require("../Operation.mjs");
-const { sum, createNumArray } = require("../lib/Arithmetic.mjs");
-const { ARITHMETIC_DELIM_OPTIONS } = require("../lib/Delim.mjs");
+const Operation = require("../Operation.js");
+const { sum, createNumArray } = require("../lib/Arithmetic.js");
+const { ARITHMETIC_DELIM_OPTIONS } = require("../lib/Delim.js");
 
 
 /**

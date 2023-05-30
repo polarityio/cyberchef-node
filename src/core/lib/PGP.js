@@ -10,10 +10,10 @@
  *
  */
 
-const OperationError = require("../errors/OperationError.mjs");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.js");
+const { isWorkerEnvironment } = require("../Utils.js");
 const kbpgp = require("kbpgp");
-const * as es6promisify = require("es6-promisify");
+const es6promisify = require("es6-promisify");
 const promisify = es6promisify.default ? es6promisify.default.promisify : es6promisify.promisify;
 
 /**
@@ -76,7 +76,7 @@ exports.getSubkeySize = getSubkeySize;
 * @param {string} [passphrase]
 * @returns {Object}
 */
-export async function importPrivateKey(privateKey, passphrase) {
+async function importPrivateKey(privateKey, passphrase) {
     try {
         const key = await promisify(kbpgp.KeyManager.import_from_armored_pgp)({
             armored: privateKey,
@@ -98,6 +98,7 @@ export async function importPrivateKey(privateKey, passphrase) {
         throw new OperationError(`Could not import private key: ${err}`);
     }
 }
+exports.importPrivateKey = importPrivateKey;
 
 /**
  * Import public key
@@ -105,7 +106,7 @@ export async function importPrivateKey(privateKey, passphrase) {
  * @param {string} publicKey
  * @returns {Object}
  */
-export async function importPublicKey (publicKey) {
+async function importPublicKey (publicKey) {
     try {
         const key = await promisify(kbpgp.KeyManager.import_from_armored_pgp)({
             armored: publicKey,
@@ -118,3 +119,5 @@ export async function importPublicKey (publicKey) {
         throw new OperationError(`Could not import public key: ${err}`);
     }
 }
+exports.importPublicKey = importPublicKey;
+

@@ -5,7 +5,7 @@
  */
 
 const util = require("util");
-const Dish = require("../core/Dish.mjs");
+const Dish = require("../core/Dish.js");
 
 /**
  * Subclass of Dish for use in the Node.js environment.

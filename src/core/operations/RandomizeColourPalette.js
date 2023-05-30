@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
-const { isImage } = require("../lib/FileType.mjs");
-const { runHash } = require("../lib/Hash.mjs");
-const { toBase64 } = require("../lib/Base64.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
+const { isImage } = require("../lib/FileType.js");
+const { runHash } = require("../lib/Hash.js");
+const { toBase64 } = require("../lib/Base64.js");
 const jimp = require("jimp");
 
 /**

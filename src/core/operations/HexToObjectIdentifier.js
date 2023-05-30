@@ -5,7 +5,7 @@
  */
 
 const r = require("jsrsasign");
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 
 /**
  * Hex to Object Identifier operation

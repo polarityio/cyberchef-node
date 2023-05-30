@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const cptable = require("codepage");
-const {CHR_ENC_CODE_PAGES} = require("../lib/ChrEnc.mjs");
+const {CHR_ENC_CODE_PAGES} = require("../lib/ChrEnc.js");
 
 /**
  * Encode text operation

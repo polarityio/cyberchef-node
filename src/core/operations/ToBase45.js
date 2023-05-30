@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const {ALPHABET, highlightToBase45, highlightFromBase45} = require("../lib/Base45.mjs");
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
+const {ALPHABET, highlightToBase45, highlightFromBase45} = require("../lib/Base45.js");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
 
 /**
  * To Base45 operation

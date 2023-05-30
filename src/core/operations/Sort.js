@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {INPUT_DELIM_OPTIONS} = require("../lib/Delim.mjs");
-const {caseInsensitiveSort, ipSort, numericSort, hexadecimalSort, lengthSort} = require("../lib/Sort.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {INPUT_DELIM_OPTIONS} = require("../lib/Delim.js");
+const {caseInsensitiveSort, ipSort, numericSort, hexadecimalSort, lengthSort} = require("../lib/Sort.js");
 
 /**
  * Sort operation

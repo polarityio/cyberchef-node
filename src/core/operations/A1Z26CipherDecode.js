@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {DELIM_OPTIONS} = require("../lib/Delim.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {DELIM_OPTIONS} = require("../lib/Delim.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * A1Z26 Cipher Decode operation

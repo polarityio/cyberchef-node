@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
 
 /**
  * @constant

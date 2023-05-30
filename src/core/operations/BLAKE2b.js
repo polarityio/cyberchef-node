@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const blakejs = require("blakejs");
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
-const { toBase64 } = require("../lib/Base64.mjs");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
+const { toBase64 } = require("../lib/Base64.js");
 
 /**
  * BLAKE2b operation

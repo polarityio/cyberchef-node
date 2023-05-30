@@ -9,7 +9,7 @@
  *
  */
 
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 const CryptoJS = require("crypto-js");
 
 /**

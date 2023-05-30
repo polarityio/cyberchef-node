@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const {FORMATS, convertCoordinates} = require("../lib/ConvertCoordinates.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const {FORMATS, convertCoordinates} = require("../lib/ConvertCoordinates.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * Show on map operation

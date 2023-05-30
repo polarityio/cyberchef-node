@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const XRegExp = require("xregexp");
-const { search } = require("../lib/Extract.mjs");
-const { caseInsensitiveSort } = require("../lib/Sort.mjs");
+const { search } = require("../lib/Extract.js");
+const { caseInsensitiveSort } = require("../lib/Sort.js");
 
 /**
  * Strings operation

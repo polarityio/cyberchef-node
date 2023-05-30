@@ -9,8 +9,8 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-const Chef = require("../../src/core/Chef.mjs");
-const Utils = require("../../src/core/Utils.mjs");
+const Chef = require("../../src/core/Chef.js");
+const Utils = require("../../src/core/Utils.js");
 const cliProgress = require("cli-progress");
 const log = require("loglevel");
 

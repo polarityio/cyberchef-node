@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
 const moment = require("moment-timezone");
-const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require("../lib/DateTime.mjs");
+const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require("../lib/DateTime.js");
 
 /**
  * Translate DateTime Format operation

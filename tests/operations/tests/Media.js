@@ -4,7 +4,7 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-const TestRegister = require("../../lib/TestRegister.mjs");
+const TestRegister = require("../../lib/TestRegister.js");
 
 TestRegister.addTests([
     {

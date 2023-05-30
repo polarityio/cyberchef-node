@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { search } = require("../lib/Extract.mjs");
-const { ipSort } = require("../lib/Sort.mjs");
+const Operation = require("../Operation.js");
+const { search } = require("../lib/Extract.js");
+const { ipSort } = require("../lib/Sort.js");
 
 /**
  * Extract IP addresses operation

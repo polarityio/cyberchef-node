@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const bcrypt = require("bcryptjs");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 
 /**

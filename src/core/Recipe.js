@@ -5,11 +5,11 @@
  */
 
 const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
-const OperationError = require("./errors/OperationError.mjs");
-const Operation = require("./Operation.mjs");
-const DishError = require("./errors/DishError.mjs");
+const OperationError = require("./errors/OperationError.js");
+const Operation = require("./Operation.js");
+const DishError = require("./errors/DishError.js");
 const log = require("loglevel");
-const { isWorkerEnvironment } = require("./Utils.mjs");
+const { isWorkerEnvironment } = require("./Utils.js");
 
 // Cache container for modules
 let modules = null;
@@ -62,7 +62,7 @@ class Recipe  {
         if (!modules) {
             // Using Webpack Magic Comments to force the dynamic import to be included in the main chunk
             // https://webpack.js.org/api/module-methods/
-            modules = await import(/* webpackMode: "eager" */ "./config/modules/OpModules.mjs");
+            modules = await import(/* webpackMode: "eager" */ "./config/modules/OpModules.js");
             modules = modules.default;
         }
 

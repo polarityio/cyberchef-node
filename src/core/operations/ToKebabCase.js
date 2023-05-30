@@ -5,8 +5,8 @@
  */
 
 const kebabCase = require("lodash/kebabCase.js");
-const Operation = require("../Operation.mjs");
-const { replaceVariableNames } = require("../lib/Code.mjs");
+const Operation = require("../Operation.js");
+const { replaceVariableNames } = require("../lib/Code.js");
 
 /**
  * To Kebab case operation

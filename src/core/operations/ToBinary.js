@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {BIN_DELIM_OPTIONS} = require("../lib/Delim.mjs");
-const {toBinary} = require("../lib/Binary.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {BIN_DELIM_OPTIONS} = require("../lib/Delim.js");
+const {toBinary} = require("../lib/Binary.js");
 
 /**
  * To Binary operation

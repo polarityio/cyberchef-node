@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 const gunzip = require("zlibjs/bin/gunzip.min.js");
 
 const Zlib = gunzip.Zlib;

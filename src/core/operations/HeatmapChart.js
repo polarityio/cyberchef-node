@@ -5,13 +5,13 @@
  * @license Apache-2.0
  */
 
-const * as d3temp = require("d3");
-const * as nodomtemp = require("nodom");
-const { getScatterValues, RECORD_DELIMITER_OPTIONS, COLOURS, FIELD_DELIMITER_OPTIONS } = require("../lib/Charts.mjs");
+const d3temp = require("d3");
+const nodomtemp = require("nodom");
+const { getScatterValues, RECORD_DELIMITER_OPTIONS, COLOURS, FIELD_DELIMITER_OPTIONS } = require("../lib/Charts.js");
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
 
 const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { genPolybiusSquare } = require("../lib/Ciphers.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Operation = require("../Operation.js");
+const { genPolybiusSquare } = require("../lib/Ciphers.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * Bifid Cipher Decode operation

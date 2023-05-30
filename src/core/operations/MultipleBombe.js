@@ -7,11 +7,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const { BombeMachine } = require("../lib/Bombe.mjs");
-const { ROTORS, ROTORS_FOURTH, REFLECTORS, Reflector } = require("../lib/Enigma.mjs");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const { BombeMachine } = require("../lib/Bombe.js");
+const { ROTORS, ROTORS_FOURTH, REFLECTORS, Reflector } = require("../lib/Enigma.js");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 
 /**

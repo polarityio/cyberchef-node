@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { fromHex } = require("../lib/Hex.mjs");
-const { isWorkerEnvironment } = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const { fromHex } = require("../lib/Hex.js");
+const { isWorkerEnvironment } = require("../Utils.js");
 
 
 /**

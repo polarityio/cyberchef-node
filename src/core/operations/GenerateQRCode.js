@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const { generateQrCode } = require("../lib/QRCode.mjs");
-const { toBase64 } = require("../lib/Base64.mjs");
-const { isImage } = require("../lib/FileType.mjs");
-const Utils = require("../Utils.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const { generateQrCode } = require("../lib/QRCode.js");
+const { toBase64 } = require("../lib/Base64.js");
+const { isImage } = require("../lib/FileType.js");
+const Utils = require("../Utils.js");
 
 /**
  * Generate QR Code operation

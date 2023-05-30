@@ -5,7 +5,7 @@
  */
 
 const r = require("jsrsasign");
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 
 /**
  * Parse ASN.1 hex string operation

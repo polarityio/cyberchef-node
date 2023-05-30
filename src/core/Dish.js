@@ -5,20 +5,20 @@
  * @license Apache-2.0
  */
 
-const Utils, { isNodeEnvironment } = require("./Utils.mjs");
-const DishError = require("./errors/DishError.mjs");
+const Utils, { isNodeEnvironment } = require("./Utils.js");
+const DishError = require("./errors/DishError.js");
 const BigNumber = require("bignumber.js");
-const { detectFileType } = require("./lib/FileType.mjs");
+const { detectFileType } = require("./lib/FileType.js");
 const log = require("loglevel");
 
-const DishByteArray = require("./dishTypes/DishByteArray.mjs");
-const DishBigNumber = require("./dishTypes/DishBigNumber.mjs");
-const DishFile = require("./dishTypes/DishFile.mjs");
-const DishHTML = require("./dishTypes/DishHTML.mjs");
-const DishJSON = require("./dishTypes/DishJSON.mjs");
-const DishListFile = require("./dishTypes/DishListFile.mjs");
-const DishNumber = require("./dishTypes/DishNumber.mjs");
-const DishString = require("./dishTypes/DishString.mjs");
+const DishByteArray = require("./dishTypes/DishByteArray.js");
+const DishBigNumber = require("./dishTypes/DishBigNumber.js");
+const DishFile = require("./dishTypes/DishFile.js");
+const DishHTML = require("./dishTypes/DishHTML.js");
+const DishJSON = require("./dishTypes/DishJSON.js");
+const DishListFile = require("./dishTypes/DishListFile.js");
+const DishNumber = require("./dishTypes/DishNumber.js");
+const DishString = require("./dishTypes/DishString.js");
 
 
 /**

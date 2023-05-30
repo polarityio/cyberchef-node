@@ -6,7 +6,7 @@
  * @license Apache-2.0
  *
  */
-const Stream = require("./Stream.mjs");
+const Stream = require("./Stream.js");
 
 /**
  * A categorised table of file types, including signatures to identify them and functions

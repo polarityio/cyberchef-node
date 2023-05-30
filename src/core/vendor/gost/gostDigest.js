@@ -36,8 +36,8 @@
  *
  */
 
- const GostRandom = require("'./gostRandom.mjs'");
- const GostCipher = require("'./gostCipher.mjs'");
+ const GostRandom = require("'./gostRandom.js'");
+ const GostCipher = require("'./gostCipher.js'");
  const crypto = require("'crypto'");
 
 /*

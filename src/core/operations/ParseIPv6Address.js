@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} = require("../lib/IP.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const OperationError = require("../errors/OperationError.js");
+const {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} = require("../lib/IP.js");
 const BigNumber = require("bignumber.js");
 
 /**

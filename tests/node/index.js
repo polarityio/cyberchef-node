@@ -13,16 +13,16 @@
 import {
     setLongTestFailure,
     logTestReport,
-} from "../lib/utils.mjs";
+} from "../lib/utils.js";
 
-const TestRegister = require("../lib/TestRegister.mjs");
-import "./tests/nodeApi.mjs";
-import "./tests/operations.mjs";
-import "./tests/File.mjs";
-import "./tests/Dish.mjs";
-import "./tests/NodeDish.mjs";
-import "./tests/Utils.mjs";
-import "./tests/Categories.mjs";
+const TestRegister = require("../lib/TestRegister.js");
+import "./tests/nodeApi.js";
+import "./tests/operations.js";
+import "./tests/File.js";
+import "./tests/Dish.js";
+import "./tests/NodeDish.js";
+import "./tests/Utils.js";
+import "./tests/Categories.js";
 
 const testStatus = {
     allTestsPassing: true,

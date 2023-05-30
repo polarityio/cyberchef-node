@@ -5,8 +5,8 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
 
 /**
  * Provided default Enigma rotor set.
@@ -86,7 +86,7 @@ exports.i2a = i2a;
 /**
  * A rotor in the Enigma machine.
  */
-export class Rotor {
+class Rotor {
     /**
      * Rotor constructor.
      *
@@ -161,7 +161,7 @@ export class Rotor {
         return Utils.mod(this.revMap[Utils.mod(c + this.pos, 26)] - this.pos, 26);
     }
 }
-
+exports.Rotor = Rotor;
 /**
  * Base class for plugboard and reflector (since these do effectively the same
  * thing).
@@ -231,7 +231,7 @@ class PairMapBase {
  *
  * Includes a couple of optimisations on that basis.
  */
-export class Reflector extends PairMapBase {
+class Reflector extends PairMapBase {
     /**
      * Reflector constructor. See PairMapBase.
      * Additional restriction: every character must be accounted for.
@@ -259,11 +259,11 @@ export class Reflector extends PairMapBase {
         return this.map[c];
     }
 }
-
+exports.Reflector = Reflector;
 /**
  * Plugboard. Unmodified PairMapBase.
  */
-export class Plugboard extends PairMapBase {
+class Plugboard extends PairMapBase {
     /**
      * Plugboard constructor. See PairMapbase.
      */
@@ -271,11 +271,11 @@ export class Plugboard extends PairMapBase {
         super(pairs, "Plugboard");
     }
 }
-
+exports.Plugboard = Plugboard;
 /**
  * Base class for the Enigma machine itself. Holds rotors, a reflector, and a plugboard.
  */
-export class EnigmaBase {
+class EnigmaBase {
     /**
      * EnigmaBase constructor.
      *
@@ -354,11 +354,11 @@ export class EnigmaBase {
         return result;
     }
 }
-
+exports.EnigmaBase = EnigmaBase;
 /**
  * The Enigma machine itself. Holds 3-4 rotors, a reflector, and a plugboard.
  */
-export class EnigmaMachine extends EnigmaBase {
+class EnigmaMachine extends EnigmaBase {
     /**
      * EnigmaMachine constructor.
      *
@@ -373,3 +373,5 @@ export class EnigmaMachine extends EnigmaBase {
         }
     }
 }
+
+exports.EnigmaMachine = EnigmaMachine;

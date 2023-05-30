@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const DishType = require("./DishType.mjs");
+const DishType = require("./DishType.js");
 
 /**
  * Translation methods for ArrayBuffer Dishes

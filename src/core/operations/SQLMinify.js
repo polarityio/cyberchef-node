@@ -5,7 +5,7 @@
  */
 
 const vkbeautify = require("vkbeautify");
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 
 /**
  * SQL Minify operation

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-const Dish = require("./Dish.mjs");
-const Recipe = require("./Recipe.mjs");
+const Dish = require("./Dish.js");
+const Recipe = require("./Recipe.js");
 const log = require("loglevel");
-const { isWorkerEnvironment } = require("./Utils.mjs");
+const { isWorkerEnvironment } = require("./Utils.js");
 
 /**
  * The main controller for CyberChef.

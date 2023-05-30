@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const {LETTER_DELIM_OPTIONS, WORD_DELIM_OPTIONS} = require("../lib/Delim.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const {LETTER_DELIM_OPTIONS, WORD_DELIM_OPTIONS} = require("../lib/Delim.js");
 
 /**
  * From Morse Code operation

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { format } = require("../lib/Ciphers.mjs");
+const Operation = require("../Operation.js");
+const { format } = require("../lib/Ciphers.js");
 const CryptoJS = require("crypto-js");
 
 /**

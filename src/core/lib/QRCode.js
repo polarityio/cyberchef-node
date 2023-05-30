@@ -6,10 +6,10 @@
  * @license Apache-2.0
  */
 
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 const jsQR = require("jsqr");
 const qr = require("qr-image");
-const Utils = require("../Utils.mjs");
+const Utils = require("../Utils.js");
 const jimp = require("jimp");
 
 /**
@@ -19,7 +19,7 @@ const jimp = require("jimp");
  * @param {boolean} normalise
  * @returns {string}
  */
-export async function parseQrCode(input, normalise) {
+async function parseQrCode(input, normalise) {
     let image;
     try {
         image = await jimp.read(input);
@@ -47,6 +47,7 @@ export async function parseQrCode(input, normalise) {
         throw new OperationError("Could not read a QR code from the image.");
     }
 }
+exports.parseQrCode = parseQrCode;
 
 /**
  * Generates a QR code from the input string

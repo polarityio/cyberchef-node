@@ -7,7 +7,7 @@
  * @license Apache-2.0
  */
 
-const chef = require("./index.mjs");
+const chef = require("./index.js");
 const repl = require("repl");
 
 

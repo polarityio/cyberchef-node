@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const { affineEncode } = require("../lib/Ciphers.mjs");
+const Operation = require("../Operation.js");
+const { affineEncode } = require("../lib/Ciphers.js");
 
 /**
  * Atbash Cipher operation

@@ -5,7 +5,7 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 
 /**
  * ROT8000 operation.

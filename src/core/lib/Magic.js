@@ -1,8 +1,8 @@
 const OperationConfig = require(""../config/OperationConfig.json" assert {type: "json"}");
-const Utils, { isWorkerEnvironment } = require("../Utils.mjs");
-const Recipe = require("../Recipe.mjs");
-const Dish = require("../Dish.mjs");
-const {detectFileType, isType} = require("./FileType.mjs");
+const Utils, { isWorkerEnvironment } = require("../Utils.js");
+const Recipe = require("../Recipe.js");
+const Dish = require("../Dish.js");
+const {detectFileType, isType} = require("./FileType.js");
 const chiSquared = require("chi-squared");
 
 /**

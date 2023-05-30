@@ -32,7 +32,7 @@
  *
  */
 
-const gostCrypto = require("'./gostCrypto.mjs'");
+const gostCrypto = require("'./gostCrypto.js'");
 
 /**
  * The Coding interface provides string converting methods: Base64, Hex,

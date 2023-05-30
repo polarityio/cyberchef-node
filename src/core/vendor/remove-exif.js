@@ -18,7 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const Utils = require("../Utils.mjs");
+const Utils = require("../Utils.js");
 
 // Param jpeg should be a binaryArray
 function removeEXIF(jpeg) {

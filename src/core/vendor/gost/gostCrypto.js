@@ -32,8 +32,8 @@
  *
  */
 
-const GostRandom = require("'./gostRandom.mjs'");
-const gostEngine = require("'./gostEngine.mjs'");
+const GostRandom = require("'./gostRandom.js'");
+const gostEngine = require("'./gostEngine.js'");
 
 import crypto from 'crypto'
 

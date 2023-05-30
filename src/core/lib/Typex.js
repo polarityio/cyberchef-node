@@ -6,9 +6,9 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-const OperationError = require("../errors/OperationError.mjs");
-const * as Enigma = require("../lib/Enigma.mjs");
-const Utils = require("../Utils.mjs");
+const OperationError = require("../errors/OperationError.js");
+const Enigma = require("../lib/Enigma.js");
+const Utils = require("../Utils.js");
 
 /**
  * A set of example Typex rotors. No Typex rotor wirings are publicly available, so these are
@@ -48,7 +48,7 @@ for (const i of Object.keys(KEYBOARD)) {
 /**
  * Typex machine. A lot like the Enigma, but five rotors, of which the first two are static.
  */
-export class TypexMachine extends Enigma.EnigmaBase {
+class TypexMachine extends Enigma.EnigmaBase {
     /**
      * TypexMachine constructor.
      *
@@ -141,10 +141,11 @@ export class TypexMachine extends Enigma.EnigmaBase {
     }
 }
 
+exports.TypexMachine = TypexMachine;
 /**
  * Typex rotor. Like an Enigma rotor, but no ring setting, and can be reversed.
  */
-export class Rotor extends Enigma.Rotor {
+class Rotor extends Enigma.Rotor {
     /**
      * Rotor constructor.
      *
@@ -171,6 +172,8 @@ export class Rotor extends Enigma.Rotor {
     }
 }
 
+exports.Rotor = Rotor;
+
 /**
  * Typex input plugboard. Based on a Rotor, because it allows arbitrary maps, not just switches
  * like the Enigma plugboard.
@@ -178,7 +181,7 @@ export class Rotor extends Enigma.Rotor {
  * This is also where the Typex's backwards input wiring is implemented - it's a bit of a hack, but
  * it means everything else continues to work like in the Enigma.
  */
-export class Plugboard extends Enigma.Rotor {
+class Plugboard extends Enigma.Rotor {
     /**
      * Typex plugboard constructor.
      *
@@ -227,3 +230,5 @@ export class Plugboard extends Enigma.Rotor {
         return Utils.mod(this.revMap[Utils.mod(c + this.pos, 26)] - this.pos, 26);
     }
 }
+exports.Plugboard = Plugboard;
+

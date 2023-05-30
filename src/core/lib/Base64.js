@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-const Utils = require("../Utils.mjs");
-const OperationError = require("../errors/OperationError.mjs");
+const Utils = require("../Utils.js");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * Base64's the input byte array using the given alphabet, returning a string.

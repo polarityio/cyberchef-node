@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const {INFLATE_BUFFER_TYPE} = require("../lib/Zlib.mjs");
+const Operation = require("../Operation.js");
+const {INFLATE_BUFFER_TYPE} = require("../lib/Zlib.js");
 const rawinflate = require("zlibjs/bin/rawinflate.min.js");
 
 const Zlib = rawinflate.Zlib;

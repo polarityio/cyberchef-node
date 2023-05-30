@@ -9,10 +9,10 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const { ColossusComputer } = require("../lib/Colossus.mjs");
-const { SWITCHES, VALID_ITA2 } = require("../lib/Lorenz.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const { ColossusComputer } = require("../lib/Colossus.js");
+const { SWITCHES, VALID_ITA2 } = require("../lib/Lorenz.js");
 
 /**
  * Colossus operation

@@ -1,6 +1,6 @@
-const TestRegister = require("../../lib/TestRegister.mjs");
-const Utils = require("../../../src/core/Utils.mjs");
-const it = require("../assertionHandler.mjs");
+const TestRegister = require("../../lib/TestRegister.js");
+const Utils = require("../../../src/core/Utils.js");
+const it = require("../assertionHandler.js");
 const assert = require("assert");
 
 TestRegister.addApiTests([

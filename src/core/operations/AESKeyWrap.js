@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const { toHexFast } = require("../lib/Hex.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const { toHexFast } = require("../lib/Hex.js");
 const forge = require("node-forge");
-const OperationError = require("../errors/OperationError.mjs");
+const OperationError = require("../errors/OperationError.js");
 
 /**
  * AES Key Wrap operation

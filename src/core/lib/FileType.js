@@ -6,8 +6,8 @@
  * @license Apache-2.0
  *
  */
-const {FILE_SIGNATURES} = require("./FileSignatures.mjs");
-const {sendStatusMessage} = require("../Utils.mjs");
+const {FILE_SIGNATURES} = require("./FileSignatures.js");
+const {sendStatusMessage} = require("../Utils.js");
 
 
 /**

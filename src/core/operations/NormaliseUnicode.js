@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const {UNICODE_NORMALISATION_FORMS} = require("../lib/ChrEnc.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const {UNICODE_NORMALISATION_FORMS} = require("../lib/ChrEnc.js");
 const unorm = require("unorm");
 
 /**

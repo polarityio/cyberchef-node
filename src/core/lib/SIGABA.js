@@ -56,7 +56,7 @@ exports.convToUpperCase = convToUpperCase;
 /**
  * The SIGABA machine consisting of the 3 rotor banks: cipher, control and index banks.
  */
-export class SigabaMachine {
+class SigabaMachine {
 
     /**
      * SigabaMachine constructor
@@ -144,10 +144,12 @@ export class SigabaMachine {
 
 }
 
+exports.SigabaMachine = SigabaMachine;
+
 /**
  * The cipher rotor bank consists of 5 cipher rotors in either a forward or reversed orientation.
  */
-export class CipherBank {
+class CipherBank {
 
     /**
      * CipherBank constructor
@@ -209,10 +211,12 @@ export class CipherBank {
 
 }
 
+exports.CipherBank = CipherBank;
+
 /**
  * The control rotor bank consists of 5 control rotors in either a forward or reversed orientation. Signals to the control rotor bank always go from right-to-left.
  */
-export class ControlBank {
+class ControlBank {
 
     /**
      * ControlBank constructor. The rotors have been reversed as signals go from right-to-left through the control rotors.
@@ -284,11 +288,12 @@ export class ControlBank {
     }
 
 }
+exports.ControlBank = ControlBank;
 
 /**
  * The index rotor bank consists of 5 index rotors all placed in the forwards orientation.
  */
-export class IndexBank {
+class IndexBank {
 
     /**
      * IndexBank constructor
@@ -327,11 +332,12 @@ export class IndexBank {
     }
 
 }
+exports.IndexBank = IndexBank;
 
 /**
  * Rotor class
  */
-export class Rotor {
+class Rotor {
 
     /**
      * Rotor constructor
@@ -425,10 +431,12 @@ export class Rotor {
 
 }
 
+exports.Rotor = Rotor;
+
 /**
  * A CRRotor is a cipher (C) or control (R) rotor. These rotors are identical and interchangeable. A C or R rotor consists of 26 contacts, one for each letter, and may be put into either a forwards of reversed orientation.
  */
-export class CRRotor extends Rotor {
+class CRRotor extends Rotor {
 
     /**
      * CRRotor constructor
@@ -476,11 +484,12 @@ export class CRRotor extends Rotor {
     }
 
 }
+exports.CRRotor = CRRotor;
 
 /**
  * An IRotor is an index rotor, which consists of 10 contacts each numbered from 0 to 9. Unlike C and R rotors, they cannot be put in the reversed orientation. The index rotors do not step at any point during encryption or decryption.
  */
-export class IRotor extends Rotor {
+class IRotor extends Rotor {
 
     /**
      * IRotor constructor
@@ -504,3 +513,5 @@ export class IRotor extends Rotor {
     }
 
 }
+
+exports.IRotor = IRotor;

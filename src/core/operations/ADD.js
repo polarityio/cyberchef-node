@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const Utils = require("../Utils.mjs");
-const { bitOp, add, BITWISE_OP_DELIMS } = require("../lib/BitwiseOp.mjs");
+const Operation = require("../Operation.js");
+const Utils = require("../Utils.js");
+const { bitOp, add, BITWISE_OP_DELIMS } = require("../lib/BitwiseOp.js");
 
 /**
  * ADD operation

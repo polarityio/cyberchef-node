@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
+const Operation = require("../Operation.js");
 import {
     BACON_ALPHABETS,
     BACON_TRANSLATION_CASE, BACON_TRANSLATION_AMNZ, BACON_TRANSLATIONS, BACON_CLEARER_MAP, BACON_NORMALIZE_MAP,
     swapZeroAndOne
-} from "../lib/Bacon.mjs";
+} from "../lib/Bacon.js";
 
 /**
  * Bacon Cipher Decode operation

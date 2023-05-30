@@ -11,11 +11,11 @@
  * Algorithm released under the BSD-3-clause licence
  */
 
-const Operation = require("../Operation.mjs");
-const OperationError = require("../errors/OperationError.mjs");
-const Utils = require("../Utils.mjs");
-const Stream = require("../lib/Stream.mjs");
-const {runHash} = require("../lib/Hash.mjs");
+const Operation = require("../Operation.js");
+const OperationError = require("../errors/OperationError.js");
+const Utils = require("../Utils.js");
+const Stream = require("../lib/Stream.js");
+const {runHash} = require("../lib/Hash.js");
 
 /**
  * JA3 Fingerprint operation

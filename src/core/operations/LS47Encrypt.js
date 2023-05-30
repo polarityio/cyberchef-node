@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-const Operation = require("../Operation.mjs");
-const * as LS47 = require("../lib/LS47.mjs");
+const Operation = require("../Operation.js");
+const LS47 = require("../lib/LS47.js");
 
 /**
  * LS47 Encrypt operation
