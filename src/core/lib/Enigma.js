@@ -5,15 +5,15 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Provided default Enigma rotor set.
  * These are specified as a list of mappings from the letters A through Z in order, optionally
  * followed by < and a list of letters at which the rotor steps.
  */
-export const ROTORS = [
+const ROTORS = [
     {name: "I", value: "EKMFLGDQVZNTOWYHXUSPAIBRCJ<R"},
     {name: "II", value: "AJDKSIRUXBLHWTMCQGZNPYFVOE<F"},
     {name: "III", value: "BDFHJLCPRTXVZNYEIWGAKMUSQO<W"},
@@ -23,24 +23,28 @@ export const ROTORS = [
     {name: "VII", value: "NZJHGRCXMYSWBOUFAIVLPEKQDT<AN"},
     {name: "VIII", value: "FKQHTLXOCBJSPDZRAMEWNIUYGV<AN"},
 ];
+exports.ROTORS = ROTORS;
 
-export const ROTORS_FOURTH = [
+const ROTORS_FOURTH = [
     {name: "Beta", value: "LEYJVCNIXWPBQMDRTAKZGFUHOS"},
     {name: "Gamma", value: "FSOKANUERHMBTIYCWLQPZXVGJD"},
 ];
+exports.ROTORS_FOURTH = ROTORS_FOURTH;
 
 /**
  * Provided default Enigma reflector set.
  * These are specified as 13 space-separated transposed pairs covering every letter.
  */
-export const REFLECTORS = [
+const REFLECTORS = [
     {name: "B", value: "AY BR CU DH EQ FS GL IP JX KN MO TZ VW"},
     {name: "C", value: "AF BV CP DJ EI GO HY KR LZ MX NW TQ SU"},
     {name: "B Thin", value: "AE BN CK DQ FU GY HW IJ LO MP RX SZ TV"},
     {name: "C Thin", value: "AR BD CO EJ FN GT HK IV LM PW QZ SX UY"},
 ];
+exports.REFLECTORS = REFLECTORS;
 
-export const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+exports.LETTERS = LETTERS;
 
 /**
  * Map a letter to a number in 0..25.

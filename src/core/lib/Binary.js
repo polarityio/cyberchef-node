@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 
 /**

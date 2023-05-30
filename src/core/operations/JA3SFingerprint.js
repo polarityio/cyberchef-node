@@ -11,11 +11,11 @@
  * Algorithm released under the BSD-3-clause licence
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import Stream from "../lib/Stream.mjs";
-import {runHash} from "../lib/Hash.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const Stream = require(""../lib/Stream.mjs"");
+const {runHash} = require(""../lib/Hash.mjs"");
 
 /**
  * JA3S Fingerprint operation
@@ -142,4 +142,4 @@ ${exts.join("-")}`;
 
 }
 
-export default JA3SFingerprint;
+module.exports = JA3SFingerprint;

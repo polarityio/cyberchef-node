@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Gaussian blurs an image.

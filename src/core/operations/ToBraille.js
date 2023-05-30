@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {BRAILLE_LOOKUP} from "../lib/Braille.mjs";
+const Operation = require(""../Operation.mjs"");
+const {BRAILLE_LOOKUP} = require(""../lib/Braille.mjs"");
 
 /**
  * To Braille operation
@@ -67,4 +67,4 @@ class ToBraille extends Operation {
 
 }
 
-export default ToBraille;
+module.exports = ToBraille;

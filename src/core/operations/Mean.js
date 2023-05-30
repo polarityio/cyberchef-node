@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { mean, createNumArray } from "../lib/Arithmetic.mjs";
-import { ARITHMETIC_DELIM_OPTIONS } from "../lib/Delim.mjs";
-import BigNumber from "bignumber.js";
+const Operation = require(""../Operation.mjs"");
+const { mean, createNumArray } = require(""../lib/Arithmetic.mjs"");
+const { ARITHMETIC_DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
+const BigNumber = require(""bignumber.js"");
 
 /**
  * Mean operation
@@ -48,4 +48,4 @@ class Mean extends Operation {
 
 }
 
-export default Mean;
+module.exports = Mean;

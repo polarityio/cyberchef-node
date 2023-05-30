@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import * as d3temp from "d3";
-import * as nodomtemp from "nodom";
+const * as d3temp = require(""d3"");
+const * as nodomtemp = require(""nodom"");
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;
@@ -427,4 +427,4 @@ class Entropy extends Operation {
     }
 }
 
-export default Entropy;
+module.exports = Entropy;

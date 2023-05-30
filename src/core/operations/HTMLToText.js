@@ -5,7 +5,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * HTML To Text operation
@@ -38,4 +38,4 @@ class HTMLToText extends Operation {
 
 }
 
-export default HTMLToText;
+module.exports = HTMLToText;

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import forge from "node-forge";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const forge = require(""node-forge"");
 
 /**
  * DES Decrypt operation
@@ -106,4 +106,4 @@ Make sure you have specified the type correctly (e.g. Hex vs UTF8).`);
 
 }
 
-export default DESDecrypt;
+module.exports = DESDecrypt;

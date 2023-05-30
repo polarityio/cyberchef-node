@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * P-list Viewer operation
@@ -130,4 +130,4 @@ class PlistViewer extends Operation {
     }
 }
 
-export default PlistViewer;
+module.exports = PlistViewer;

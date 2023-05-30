@@ -9,52 +9,61 @@
 /**
  * Generic sequence delimiters.
  */
-export const DELIM_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF"];
+const DELIM_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF"];
+exports.DELIM_OPTIONS = DELIM_OPTIONS;
 
 /**
  * Binary sequence delimiters.
  */
-export const BIN_DELIM_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF", "None"];
+const BIN_DELIM_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF", "None"];
+exports.BIN_DELIM_OPTIONS = BIN_DELIM_OPTIONS;
 
 /**
  * Letter sequence delimiters.
  */
-export const LETTER_DELIM_OPTIONS = ["Space", "Line feed", "CRLF", "Forward slash", "Backslash", "Comma", "Semi-colon", "Colon"];
+const LETTER_DELIM_OPTIONS = ["Space", "Line feed", "CRLF", "Forward slash", "Backslash", "Comma", "Semi-colon", "Colon"];
+exports.LETTER_DELIM_OPTIONS = LETTER_DELIM_OPTIONS;
 
 /**
  * Word sequence delimiters.
  */
-export const WORD_DELIM_OPTIONS = ["Line feed", "CRLF", "Forward slash", "Backslash", "Comma", "Semi-colon", "Colon"];
+const WORD_DELIM_OPTIONS = ["Line feed", "CRLF", "Forward slash", "Backslash", "Comma", "Semi-colon", "Colon"];
+exports.WORD_DELIM_OPTIONS = WORD_DELIM_OPTIONS;
 
 /**
  * Input sequence delimiters.
  */
-export const INPUT_DELIM_OPTIONS = ["Line feed", "CRLF", "Space", "Comma", "Semi-colon", "Colon", "Nothing (separate chars)"];
+const INPUT_DELIM_OPTIONS = ["Line feed", "CRLF", "Space", "Comma", "Semi-colon", "Colon", "Nothing (separate chars)"];
+exports.INPUT_DELIM_OPTIONS = INPUT_DELIM_OPTIONS;
 
 /**
  * Arithmetic sequence delimiters
  */
-export const ARITHMETIC_DELIM_OPTIONS = ["Line feed", "Space", "Comma", "Semi-colon", "Colon", "CRLF"];
+const ARITHMETIC_DELIM_OPTIONS = ["Line feed", "Space", "Comma", "Semi-colon", "Colon", "CRLF"];
+exports.ARITHMETIC_DELIM_OPTIONS = ARITHMETIC_DELIM_OPTIONS;
 
 /**
  * Hash delimiters
  */
-export const HASH_DELIM_OPTIONS = ["Line feed", "CRLF", "Space", "Comma"];
+const HASH_DELIM_OPTIONS = ["Line feed", "CRLF", "Space", "Comma"];
+exports.HASH_DELIM_OPTIONS = HASH_DELIM_OPTIONS;
 
 /**
  * IP delimiters
  */
-export const IP_DELIM_OPTIONS = ["Line feed", "CRLF", "Space", "Comma", "Semi-colon"];
+const IP_DELIM_OPTIONS = ["Line feed", "CRLF", "Space", "Comma", "Semi-colon"];
+exports.IP_DELIM_OPTIONS = IP_DELIM_OPTIONS;
 
 /**
  * Split delimiters.
  */
-export const SPLIT_DELIM_OPTIONS = [
+const SPLIT_DELIM_OPTIONS = [
     {name: "Comma", value: ","},
     {name: "Space", value: " "},
     {name: "Line feed", value: "\\n"},
     {name: "CRLF", value: "\\r\\n"},
-    {name: "Semi-colon", value: ";"},
+    {name: "Semi-colon", value: ";
+exports.SPLIT_DELIM_OPTIONS = SPLIT_DELIM_OPTIONS;"},
     {name: "Colon", value: ":"},
     {name: "Nothing (separate chars)", value: ""}
 ];
@@ -62,12 +71,13 @@ export const SPLIT_DELIM_OPTIONS = [
 /**
  * Join delimiters.
  */
-export const JOIN_DELIM_OPTIONS = [
+const JOIN_DELIM_OPTIONS = [
     {name: "Line feed", value: "\\n"},
     {name: "CRLF", value: "\\r\\n"},
     {name: "Space", value: " "},
     {name: "Comma", value: ","},
-    {name: "Semi-colon", value: ";"},
+    {name: "Semi-colon", value: ";
+exports.JOIN_DELIM_OPTIONS = JOIN_DELIM_OPTIONS;"},
     {name: "Colon", value: ":"},
     {name: "Nothing (join chars)", value: ""}
 ];
@@ -75,9 +85,10 @@ export const JOIN_DELIM_OPTIONS = [
 /**
  * RGBA list delimiters.
  */
-export const RGBA_DELIM_OPTIONS = [
+const RGBA_DELIM_OPTIONS = [
     {name: "Comma", value: ","},
     {name: "Space", value: " "},
     {name: "CRLF", value: "\\r\\n"},
     {name: "Line Feed", value: "\n"}
 ];
+exports.RGBA_DELIM_OPTIONS = RGBA_DELIM_OPTIONS;

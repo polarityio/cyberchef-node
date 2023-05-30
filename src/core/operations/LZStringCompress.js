@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
-import {COMPRESSION_OUTPUT_FORMATS, COMPRESSION_FUNCTIONS} from "../lib/LZString.mjs";
+const {COMPRESSION_OUTPUT_FORMATS, COMPRESSION_FUNCTIONS} = require(""../lib/LZString.mjs"");
 
 /**
  * LZString Compress operation
@@ -52,4 +52,4 @@ class LZStringCompress extends Operation {
 
 }
 
-export default LZStringCompress;
+module.exports = LZStringCompress;

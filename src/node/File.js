@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import { detectFileType } from "../core/lib/FileType.mjs";
+const { detectFileType } = require(""../core/lib/FileType.mjs"");
 
 
 /**
@@ -73,4 +73,4 @@ class File {
 
 }
 
-export default File;
+module.exports = File;

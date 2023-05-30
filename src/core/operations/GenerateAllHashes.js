@@ -5,38 +5,38 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import MD2 from "./MD2.mjs";
-import MD4 from "./MD4.mjs";
-import MD5 from "./MD5.mjs";
-import MD6 from "./MD6.mjs";
-import SHA0 from "./SHA0.mjs";
-import SHA1 from "./SHA1.mjs";
-import SHA2 from "./SHA2.mjs";
-import SHA3 from "./SHA3.mjs";
-import Keccak from "./Keccak.mjs";
-import Shake from "./Shake.mjs";
-import RIPEMD from "./RIPEMD.mjs";
-import HAS160 from "./HAS160.mjs";
-import Whirlpool from "./Whirlpool.mjs";
-import SSDEEP from "./SSDEEP.mjs";
-import CTPH from "./CTPH.mjs";
-import Fletcher8Checksum from "./Fletcher8Checksum.mjs";
-import Fletcher16Checksum from "./Fletcher16Checksum.mjs";
-import Fletcher32Checksum from "./Fletcher32Checksum.mjs";
-import Fletcher64Checksum from "./Fletcher64Checksum.mjs";
-import Adler32Checksum from "./Adler32Checksum.mjs";
-import CRC8Checksum from "./CRC8Checksum.mjs";
-import CRC16Checksum from "./CRC16Checksum.mjs";
-import CRC32Checksum from "./CRC32Checksum.mjs";
-import BLAKE2b from "./BLAKE2b.mjs";
-import BLAKE2s from "./BLAKE2s.mjs";
-import Streebog from "./Streebog.mjs";
-import GOSTHash from "./GOSTHash.mjs";
-import LMHash from "./LMHash.mjs";
-import NTHash from "./NTHash.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const MD2 = require(""./MD2.mjs"");
+const MD4 = require(""./MD4.mjs"");
+const MD5 = require(""./MD5.mjs"");
+const MD6 = require(""./MD6.mjs"");
+const SHA0 = require(""./SHA0.mjs"");
+const SHA1 = require(""./SHA1.mjs"");
+const SHA2 = require(""./SHA2.mjs"");
+const SHA3 = require(""./SHA3.mjs"");
+const Keccak = require(""./Keccak.mjs"");
+const Shake = require(""./Shake.mjs"");
+const RIPEMD = require(""./RIPEMD.mjs"");
+const HAS160 = require(""./HAS160.mjs"");
+const Whirlpool = require(""./Whirlpool.mjs"");
+const SSDEEP = require(""./SSDEEP.mjs"");
+const CTPH = require(""./CTPH.mjs"");
+const Fletcher8Checksum = require(""./Fletcher8Checksum.mjs"");
+const Fletcher16Checksum = require(""./Fletcher16Checksum.mjs"");
+const Fletcher32Checksum = require(""./Fletcher32Checksum.mjs"");
+const Fletcher64Checksum = require(""./Fletcher64Checksum.mjs"");
+const Adler32Checksum = require(""./Adler32Checksum.mjs"");
+const CRC8Checksum = require(""./CRC8Checksum.mjs"");
+const CRC16Checksum = require(""./CRC16Checksum.mjs"");
+const CRC32Checksum = require(""./CRC32Checksum.mjs"");
+const BLAKE2b = require(""./BLAKE2b.mjs"");
+const BLAKE2s = require(""./BLAKE2s.mjs"");
+const Streebog = require(""./Streebog.mjs"");
+const GOSTHash = require(""./GOSTHash.mjs"");
+const LMHash = require(""./LMHash.mjs"");
+const NTHash = require(""./NTHash.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Generate all hashes operation
@@ -202,4 +202,4 @@ class GenerateAllHashes extends Operation {
 
 }
 
-export default GenerateAllHashes;
+module.exports = GenerateAllHashes;

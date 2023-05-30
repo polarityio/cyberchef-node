@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { search, URL_REGEX } from "../lib/Extract.mjs";
-import { caseInsensitiveSort } from "../lib/Sort.mjs";
+const Operation = require(""../Operation.mjs"");
+const { search, URL_REGEX } = require(""../lib/Extract.mjs"");
+const { caseInsensitiveSort } = require(""../lib/Sort.mjs"");
 
 /**
  * Extract URLs operation
@@ -67,4 +67,4 @@ class ExtractURLs extends Operation {
 
 }
 
-export default ExtractURLs;
+module.exports = ExtractURLs;

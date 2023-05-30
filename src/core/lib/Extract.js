@@ -55,10 +55,12 @@ const protocol = "[A-Z]+://",
     path = "/[^.!,?\"<>\\[\\]{}\\s\\x7F-\\xFF]*" +
         "(?:[.!,?]+[^.!,?\"<>\\[\\]{}\\s\\x7F-\\xFF]+)*";
 
-export const URL_REGEX = new RegExp(protocol + hostname + "(?:" + port + ")?(?:" + path + ")?", "ig");
+const URL_REGEX = new RegExp(protocol + hostname + "(?:" + port + ")?(?:" + path + ")?", "ig");
+exports.URL_REGEX = URL_REGEX;
 
 
 /**
  * Domain name regular expression
  */
-export const DOMAIN_REGEX = /\b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b/ig;
+const DOMAIN_REGEX = /\b((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b/ig;
+exports.DOMAIN_REGEX = DOMAIN_REGEX;

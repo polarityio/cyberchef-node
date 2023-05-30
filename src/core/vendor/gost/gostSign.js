@@ -33,10 +33,10 @@
  *
  */
 
- import GostRandom from './gostRandom.mjs';
- import GostDigest from './gostDigest.mjs';
+ const GostRandom = require("'./gostRandom.mjs'");
+ const GostDigest = require("'./gostDigest.mjs'");
 
- import crypto from 'crypto';
+ const crypto = require("'crypto'");
 
     /*
      * Predefined curves and params collection
@@ -2020,4 +2020,4 @@ function GostSign(algorithm) // <editor-fold defaultstate="collapsed">
 
 } // </editor-fold>
 
-export default GostSign;
+module.exports = GostSign;

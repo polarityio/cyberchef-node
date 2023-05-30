@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { bitOp, add, BITWISE_OP_DELIMS } from "../lib/BitwiseOp.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { bitOp, add, BITWISE_OP_DELIMS } = require(""../lib/BitwiseOp.mjs"");
 
 /**
  * ADD operation
@@ -74,4 +74,4 @@ class ADD extends Operation {
 
 }
 
-export default ADD;
+module.exports = ADD;

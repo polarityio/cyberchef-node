@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * From Case Insensitive Regex operation
@@ -36,4 +36,4 @@ class FromCaseInsensitiveRegex extends Operation {
     }
 }
 
-export default FromCaseInsensitiveRegex;
+module.exports = FromCaseInsensitiveRegex;

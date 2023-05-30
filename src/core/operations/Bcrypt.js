@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import bcrypt from "bcryptjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const bcrypt = require(""bcryptjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * Bcrypt operation
@@ -53,4 +53,4 @@ class Bcrypt extends Operation {
 
 }
 
-export default Bcrypt;
+module.exports = Bcrypt;

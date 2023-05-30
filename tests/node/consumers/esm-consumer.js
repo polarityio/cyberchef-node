@@ -5,9 +5,9 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-import assert from "assert";
-import chef from "cyberchef";
-import { bake, toHex, reverse, unique, multiply } from "cyberchef";
+const assert = require(""assert"");
+const chef = require(""cyberchef"");
+const { bake, toHex, reverse, unique, multiply } = require(""cyberchef"");
 
 const a = bake("Testing, 1 2 3", [
     toHex,

@@ -1,9 +1,9 @@
-import OperationConfig from "../config/OperationConfig.json" assert {type: "json"};
-import Utils, { isWorkerEnvironment } from "../Utils.mjs";
-import Recipe from "../Recipe.mjs";
-import Dish from "../Dish.mjs";
-import {detectFileType, isType} from "./FileType.mjs";
-import chiSquared from "chi-squared";
+const OperationConfig = require(""../config/OperationConfig.json" assert {type: "json"}");
+const Utils, { isWorkerEnvironment } = require(""../Utils.mjs"");
+const Recipe = require(""../Recipe.mjs"");
+const Dish = require(""../Dish.mjs"");
+const {detectFileType, isType} = require(""./FileType.mjs"");
+const chiSquared = require(""chi-squared"");
 
 /**
  * A class for detecting encodings, file types and byte frequencies and
@@ -1194,4 +1194,4 @@ function _buffersEqual(a, b) {
     return true;
 }
 
-export default Magic;
+module.exports = Magic;

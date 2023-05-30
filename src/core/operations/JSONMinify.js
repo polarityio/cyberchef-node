@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import vkbeautify from "vkbeautify";
-import Operation from "../Operation.mjs";
+const vkbeautify = require(""vkbeautify"");
+const Operation = require(""../Operation.mjs"");
 
 /**
  * JSON Minify operation
@@ -38,4 +38,4 @@ class JSONMinify extends Operation {
 
 }
 
-export default JSONMinify;
+module.exports = JSONMinify;

@@ -6,13 +6,13 @@
  * @license Apache-2.0
  *
  */
-import Stream from "./Stream.mjs";
+const Stream = require(""./Stream.mjs"");
 
 /**
  * A categorised table of file types, including signatures to identify them and functions
  * to extract them where possible.
  */
-export const FILE_SIGNATURES = {
+const FILE_SIGNATURES = {
     "Images": [
         {
             name: "Joint Photographic Experts Group image",
@@ -2596,6 +2596,7 @@ export const FILE_SIGNATURES = {
         }
     ]
 };
+exports.FILE_SIGNATURES = FILE_SIGNATURES;
 
 
 /**

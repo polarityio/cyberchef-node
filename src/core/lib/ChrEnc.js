@@ -6,12 +6,12 @@
  * @license Apache-2.0
  */
 
-import cptable from "codepage";
+const cptable = require(""codepage"");
 
 /**
  * Character encoding format mappings.
  */
-export const CHR_ENC_CODE_PAGES = {
+const CHR_ENC_CODE_PAGES = {
     "UTF-8 (65001)": 65001,
     "UTF-7 (65000)": 65000,
     "UTF-16LE (1200)": 1200,
@@ -55,7 +55,8 @@ export const CHR_ENC_CODE_PAGES = {
     "IBM EBCDIC Latin 1/Open System (1047 + Euro symbol) (20924)": 20924,
     "IBM EBCDIC Cyrillic Serbian-Bulgarian (21025)": 21025,
     "OEM United States (437)": 437,
-    "OEM Greek (formerly 437G); Greek (DOS) (737)": 737,
+    "OEM Greek (formerly 437G);
+exports.CHR_ENC_CODE_PAGES = CHR_ENC_CODE_PAGES; Greek (DOS) (737)": 737,
     "OEM Baltic; Baltic (DOS) (775)": 775,
     "OEM Russian; Cyrillic + Euro symbol (808)": 808,
     "OEM Multilingual Latin 1; Western European (DOS) (850)": 850,
@@ -167,8 +168,10 @@ export const CHR_ENC_CODE_PAGES = {
 };
 
 
-export const CHR_ENC_SIMPLE_LOOKUP = {};
-export const CHR_ENC_SIMPLE_REVERSE_LOOKUP = {};
+const CHR_ENC_SIMPLE_LOOKUP = {};
+exports.CHR_ENC_SIMPLE_LOOKUP = CHR_ENC_SIMPLE_LOOKUP;
+const CHR_ENC_SIMPLE_REVERSE_LOOKUP = {};
+exports.CHR_ENC_SIMPLE_REVERSE_LOOKUP = CHR_ENC_SIMPLE_REVERSE_LOOKUP;
 
 for (const name in CHR_ENC_CODE_PAGES) {
     const simpleName = name.match(/(^.+)\([\d/]+\)$/)[1];
@@ -228,4 +231,5 @@ export function chrEncWidth(page) {
 /**
  * Character encoding format mappings.
  */
-export const UNICODE_NORMALISATION_FORMS = ["NFD", "NFC", "NFKD", "NFKC"];
+const UNICODE_NORMALISATION_FORMS = ["NFD", "NFC", "NFKD", "NFKC"];
+exports.UNICODE_NORMALISATION_FORMS = UNICODE_NORMALISATION_FORMS;

@@ -31,7 +31,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * 
  */
-import crypto from 'crypto';
+const crypto = require("'crypto'");
 
 
 /**
@@ -125,4 +125,4 @@ GostRandom.prototype.getRandomValues = function (array) // <editor-fold defaults
     return array;
 }; // </editor-fold>
 
-export default GostRandom;
+module.exports = GostRandom;

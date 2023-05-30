@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import Operation from "../Operation.mjs";
-import * as terser from "terser";
+const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require(""../Operation.mjs"");
+const * as terser = require(""terser"");
 
 /**
  * JavaScript Minify operation
@@ -42,4 +42,4 @@ class JavaScriptMinify extends Operation {
 
 }
 
-export default JavaScriptMinify;
+module.exports = JavaScriptMinify;

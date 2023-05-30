@@ -3,8 +3,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * ROT13 Brute Force operation.
@@ -99,4 +99,4 @@ class ROT13BruteForce extends Operation {
     }
 }
 
-export default ROT13BruteForce;
+module.exports = ROT13BruteForce;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import * as esprima from "esprima";
+const Operation = require(""../Operation.mjs"");
+const * as esprima = require(""esprima"");
 
 /**
  * JavaScript Parser operation
@@ -75,4 +75,4 @@ class JavaScriptParser extends Operation {
 
 }
 
-export default JavaScriptParser;
+module.exports = JavaScriptParser;

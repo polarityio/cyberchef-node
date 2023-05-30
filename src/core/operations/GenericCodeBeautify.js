@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Generic Code Beautify operation
@@ -158,4 +158,4 @@ class GenericCodeBeautify extends Operation {
 
 }
 
-export default GenericCodeBeautify;
+module.exports = GenericCodeBeautify;

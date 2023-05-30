@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 
 /**
@@ -124,10 +124,12 @@ export function fromHex(data, delim="Auto", byteLen=2) {
 /**
  * To Hexadecimal delimiters.
  */
-export const TO_HEX_DELIM_OPTIONS = ["Space", "Percent", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF", "0x", "0x with comma", "\\x", "None"];
+const TO_HEX_DELIM_OPTIONS = ["Space", "Percent", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF", "0x", "0x with comma", "\\x", "None"];
+exports.TO_HEX_DELIM_OPTIONS = TO_HEX_DELIM_OPTIONS;
 
 
 /**
  * From Hexadecimal delimiters.
  */
-export const FROM_HEX_DELIM_OPTIONS = ["Auto"].concat(TO_HEX_DELIM_OPTIONS);
+const FROM_HEX_DELIM_OPTIONS = ["Auto"].concat(TO_HEX_DELIM_OPTIONS);
+exports.FROM_HEX_DELIM_OPTIONS = FROM_HEX_DELIM_OPTIONS;

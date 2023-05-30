@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { DELIM_OPTIONS } from "../lib/Delim.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * To Charcode operation
@@ -84,4 +84,4 @@ class ToCharcode extends Operation {
 
 }
 
-export default ToCharcode;
+module.exports = ToCharcode;

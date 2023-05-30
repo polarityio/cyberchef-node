@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {HASH_DELIM_OPTIONS} from "../lib/Delim.mjs";
-import ctphjs from "ctph.js";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {HASH_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const ctphjs = require(""ctph.js"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Compare CTPH hashes operation
@@ -49,4 +49,4 @@ class CompareCTPHHashes extends Operation {
 
 }
 
-export default CompareCTPHHashes;
+module.exports = CompareCTPHHashes;

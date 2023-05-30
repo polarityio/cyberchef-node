@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 import {
     BACON_ALPHABETS,
     BACON_TRANSLATION_CASE, BACON_TRANSLATION_AMNZ, BACON_TRANSLATIONS, BACON_CLEARER_MAP, BACON_NORMALIZE_MAP,
@@ -146,4 +146,4 @@ class BaconCipherDecode extends Operation {
     }
 }
 
-export default BaconCipherDecode;
+module.exports = BaconCipherDecode;

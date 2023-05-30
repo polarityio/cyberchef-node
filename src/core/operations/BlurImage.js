@@ -4,13 +4,13 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import { toBase64 } from "../lib/Base64.mjs";
-import { gaussianBlur } from "../lib/ImageManipulation.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const { toBase64 } = require(""../lib/Base64.mjs"");
+const { gaussianBlur } = require(""../lib/ImageManipulation.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Blur Image operation
@@ -109,4 +109,4 @@ class BlurImage extends Operation {
 
 }
 
-export default BlurImage;
+module.exports = BlurImage;

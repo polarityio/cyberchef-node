@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { DELIM_OPTIONS } from "../lib/Delim.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * From Charcode operation
@@ -82,4 +82,4 @@ class FromCharcode extends Operation {
 
 }
 
-export default FromCharcode;
+module.exports = FromCharcode;

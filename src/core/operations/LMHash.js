@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {smbhash} from "ntlm";
+const Operation = require(""../Operation.mjs"");
+const {smbhash} = require(""ntlm"");
 
 /**
  * LM Hash operation
@@ -38,4 +38,4 @@ class LMHash extends Operation {
 
 }
 
-export default LMHash;
+module.exports = LMHash;

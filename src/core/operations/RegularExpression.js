@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import XRegExp from "xregexp";
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const XRegExp = require(""xregexp"");
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Regular expression operation
@@ -265,4 +265,4 @@ function regexHighlight(input, regex, displayTotal) {
     return output;
 }
 
-export default RegularExpression;
+module.exports = RegularExpression;

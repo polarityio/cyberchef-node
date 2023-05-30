@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import JSSHA3 from "js-sha3";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const JSSHA3 = require(""js-sha3"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Keccak operation
@@ -65,4 +65,4 @@ class Keccak extends Operation {
 
 }
 
-export default Keccak;
+module.exports = Keccak;

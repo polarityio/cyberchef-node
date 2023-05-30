@@ -8,8 +8,8 @@
  * @license Apache-2.0
  */
 
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Parses an IPv4 CIDR range (e.g. 192.168.0.0/24) and displays information about it.
@@ -515,18 +515,20 @@ const _LARGE_RANGE_ERROR = "The specified range contains more than 65,536 addres
 /**
  * A regular expression that matches an IPv4 address
  */
-export const IPV4_REGEX = /^\s*((?:\d{1,3}\.){3}\d{1,3})\s*$/;
+const IPV4_REGEX = /^\s*((?:\d{1,3}\.){3}\d{1,3})\s*$/;
+exports.IPV4_REGEX = IPV4_REGEX;
 
 /**
  * A regular expression that matches an IPv6 address
  */
-export const IPV6_REGEX = /^\s*(((?=.*::)(?!.*::.+::)(::)?([\dA-F]{1,4}:(:|\b)|){5}|([\dA-F]{1,4}:){6})((([\dA-F]{1,4}((?!\4)::|:\b|(?![\dA-F])))|(?!\3\4)){2}|(((2[0-4]|1\d|[1-9])?\d|25[0-5])\.?\b){4}))\s*$/i;
+const IPV6_REGEX = /^\s*(((?=.*::)(?!.*::.+::)(::)?([\dA-F]{1,4}:(:|\b)|){5}|([\dA-F]{1,4}:){6})((([\dA-F]{1,4}((?!\4)::|:\b|(?![\dA-F])))|(?!\3\4)){2}|(((2[0-4]|1\d|[1-9])?\d|25[0-5])\.?\b){4}))\s*$/i;
+exports.IPV6_REGEX = IPV6_REGEX;
 
 /**
  * Lookup table for Internet Protocols.
  * Taken from https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
  */
-export const protocolLookup = {
+const protocolLookup = {
     0: {keyword: "HOPOPT", protocol: "IPv6 Hop-by-Hop Option"},
     1: {keyword: "ICMP", protocol: "Internet Control Message"},
     2: {keyword: "IGMP", protocol: "Internet Group Management"},
@@ -674,3 +676,4 @@ export const protocolLookup = {
     254: {keyword: "", protocol: "Use for experimentation and testing"},
     255: {keyword: "Reserved", protocol: ""}
 };
+exports.protocolLookup = protocolLookup;

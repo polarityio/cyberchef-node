@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * XKCD Random Number operation
@@ -38,4 +38,4 @@ class XKCDRandomNumber extends Operation {
 
 }
 
-export default XKCDRandomNumber;
+module.exports = XKCDRandomNumber;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import otp from "otp";
-import ToBase32 from "./ToBase32.mjs";
+const Operation = require(""../Operation.mjs"");
+const otp = require(""otp"");
+const ToBase32 = require(""./ToBase32.mjs"");
 
 /**
  * Generate HOTP operation
@@ -67,4 +67,4 @@ class GenerateHOTP extends Operation {
 
 }
 
-export default GenerateHOTP;
+module.exports = GenerateHOTP;

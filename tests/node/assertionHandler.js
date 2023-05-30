@@ -57,4 +57,4 @@ export function it(name, run) {
     };
 }
 
-export default it;
+module.exports = it;

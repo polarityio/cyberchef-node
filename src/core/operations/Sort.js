@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {INPUT_DELIM_OPTIONS} from "../lib/Delim.mjs";
-import {caseInsensitiveSort, ipSort, numericSort, hexadecimalSort, lengthSort} from "../lib/Sort.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {INPUT_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const {caseInsensitiveSort, ipSort, numericSort, hexadecimalSort, lengthSort} = require(""../lib/Sort.mjs"");
 
 /**
  * Sort operation
@@ -75,4 +75,4 @@ class Sort extends Operation {
 
 }
 
-export default Sort;
+module.exports = Sort;

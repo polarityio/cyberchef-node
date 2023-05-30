@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {SPLIT_DELIM_OPTIONS, JOIN_DELIM_OPTIONS} from "../lib/Delim.mjs";
+const Operation = require(""../Operation.mjs"");
+const {SPLIT_DELIM_OPTIONS, JOIN_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
 
 /**
  * Split operation
@@ -52,4 +52,4 @@ class Split extends Operation {
 
 }
 
-export default Split;
+module.exports = Split;

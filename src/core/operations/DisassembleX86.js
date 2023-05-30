@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import * as disassemble from "../vendor/DisassembleX86-64.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const * as disassemble = require(""../vendor/DisassembleX86-64.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Disassemble x86 operation
@@ -131,4 +131,4 @@ class DisassembleX86 extends Operation {
 
 }
 
-export default DisassembleX86;
+module.exports = DisassembleX86;

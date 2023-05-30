@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Unicode Text Format operation
@@ -64,4 +64,4 @@ class UnicodeTextFormat extends Operation {
 
 }
 
-export default UnicodeTextFormat;
+module.exports = UnicodeTextFormat;

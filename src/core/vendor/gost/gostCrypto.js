@@ -32,8 +32,8 @@
  *
  */
 
-import GostRandom from './gostRandom.mjs';
-import gostEngine from './gostEngine.mjs';
+const GostRandom = require("'./gostRandom.mjs'");
+const gostEngine = require("'./gostEngine.mjs'");
 
 import crypto from 'crypto'
 
@@ -1650,4 +1650,4 @@ gostCrypto.getRandomValues = function (array) // <editor-fold defaultstate="coll
 }; // </editor-fold>
 // </editor-fold>
 
-export default gostCrypto;
+module.exports = gostCrypto;

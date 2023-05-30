@@ -10,14 +10,14 @@
  * @license Apache-2.0
  */
 
-import assert from "assert";
-import it from "../assertionHandler.mjs";
-import chef from "../../../src/node/index.mjs";
-import { OperationError, ExcludedOperationError } from "../../../src/core/errors/index.mjs";
-import NodeDish from "../../../src/node/NodeDish.mjs";
+const assert = require(""assert"");
+const it = require(""../assertionHandler.mjs"");
+const chef = require(""../../../src/node/index.mjs"");
+const { OperationError, ExcludedOperationError } = require(""../../../src/core/errors/index.mjs"");
+const NodeDish = require(""../../../src/node/NodeDish.mjs"");
 
-import { toBase32, magic} from "../../../src/node/index.mjs";
-import TestRegister from "../../lib/TestRegister.mjs";
+const { toBase32, magic} = require(""../../../src/node/index.mjs"");
+const TestRegister = require(""../../lib/TestRegister.mjs"");
 
 TestRegister.addApiTests([
     it("should have some operations", () => {

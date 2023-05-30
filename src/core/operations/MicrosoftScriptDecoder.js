@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Microsoft Script Decoder operation
@@ -222,4 +222,4 @@ const D_COMBINATION = [
     0, 0, 2, 1, 2, 1, 2, 0, 2, 0, 0, 1, 2, 0, 2, 1, 0, 2, 1, 2, 0, 0, 1, 2, 2, 0, 0, 1, 2, 0, 2, 1
 ];
 
-export default MicrosoftScriptDecoder;
+module.exports = MicrosoftScriptDecoder;

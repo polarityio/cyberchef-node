@@ -5,13 +5,13 @@
  * @license Apache-2.0
  */
 
-import * as d3temp from "d3";
-import * as d3hexbintemp from "d3-hexbin";
-import * as nodomtemp from "nodom";
-import { getScatterValues, RECORD_DELIMITER_OPTIONS, COLOURS, FIELD_DELIMITER_OPTIONS } from "../lib/Charts.mjs";
+const * as d3temp = require(""d3"");
+const * as d3hexbintemp = require(""d3-hexbin"");
+const * as nodomtemp = require(""nodom"");
+const { getScatterValues, RECORD_DELIMITER_OPTIONS, COLOURS, FIELD_DELIMITER_OPTIONS } = require(""../lib/Charts.mjs"");
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 const d3 = d3temp.default ? d3temp.default : d3temp;
 const d3hexbin = d3hexbintemp.default ? d3hexbintemp.default : d3hexbintemp;
@@ -293,4 +293,4 @@ class HexDensityChart extends Operation {
 
 }
 
-export default HexDensityChart;
+module.exports = HexDensityChart;

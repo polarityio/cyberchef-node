@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import BigNumber from "bignumber.js";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const BigNumber = require(""bignumber.js"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Windows Filetime to UNIX Timestamp operation
@@ -87,4 +87,4 @@ class WindowsFiletimeToUNIXTimestamp extends Operation {
 
 }
 
-export default WindowsFiletimeToUNIXTimestamp;
+module.exports = WindowsFiletimeToUNIXTimestamp;

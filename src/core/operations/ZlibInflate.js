@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {INFLATE_BUFFER_TYPE} from "../lib/Zlib.mjs";
-import zlibAndGzip from "zlibjs/bin/zlib_and_gzip.min.js";
+const Operation = require(""../Operation.mjs"");
+const {INFLATE_BUFFER_TYPE} = require(""../lib/Zlib.mjs"");
+const zlibAndGzip = require(""zlibjs/bin/zlib_and_gzip.min.js"");
 
 const Zlib = zlibAndGzip.Zlib;
 
@@ -86,4 +86,4 @@ class ZlibInflate extends Operation {
 
 }
 
-export default ZlibInflate;
+module.exports = ZlibInflate;

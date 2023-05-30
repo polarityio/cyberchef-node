@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import BigNumber from "bignumber.js";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const BigNumber = require(""bignumber.js"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * From Base operation
@@ -61,4 +61,4 @@ class FromBase extends Operation {
 
 }
 
-export default FromBase;
+module.exports = FromBase;

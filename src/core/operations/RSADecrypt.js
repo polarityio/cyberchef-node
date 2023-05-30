@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import forge from "node-forge";
-import { MD_ALGORITHMS } from "../lib/RSA.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const forge = require(""node-forge"");
+const { MD_ALGORITHMS } = require(""../lib/RSA.mjs"");
 
 /**
  * RSA Decrypt operation
@@ -83,4 +83,4 @@ class RSADecrypt extends Operation {
 
 }
 
-export default RSADecrypt;
+module.exports = RSADecrypt;

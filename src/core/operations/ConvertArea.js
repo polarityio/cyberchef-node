@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Convert area operation
@@ -110,4 +110,4 @@ const AREA_FACTOR = { // Multiples of a square metre
 };
 
 
-export default ConvertArea;
+module.exports = ConvertArea;

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Stream from "../lib/Stream.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Stream = require(""../lib/Stream.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * ELF Info operation
@@ -910,4 +910,4 @@ class ELFInfo extends Operation {
 
 }
 
-export default ELFInfo;
+module.exports = ELFInfo;

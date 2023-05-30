@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import CryptoJS from "crypto-js";
-import { format } from "../lib/Ciphers.mjs";
+const Operation = require(""../Operation.mjs"");
+const CryptoJS = require(""crypto-js"");
+const { format } = require(""../lib/Ciphers.mjs"");
 
 /**
  * RC4 operation
@@ -86,4 +86,4 @@ class RC4 extends Operation {
 
 }
 
-export default RC4;
+module.exports = RC4;

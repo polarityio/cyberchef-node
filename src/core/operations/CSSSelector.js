@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import xmldom from "xmldom";
-import nwmatcher from "nwmatcher";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const xmldom = require(""xmldom"");
+const nwmatcher = require(""nwmatcher"");
 
 /**
  * CSS selector operation
@@ -88,4 +88,4 @@ class CSSSelector extends Operation {
 
 }
 
-export default CSSSelector;
+module.exports = CSSSelector;

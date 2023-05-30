@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
-import { toHexFast } from "../lib/Hex.mjs";
+const { toHexFast } = require(""../lib/Hex.mjs"");
 
 /**
  * CRC-8 Checksum operation
@@ -154,4 +154,4 @@ class CRC8Checksum extends Operation {
     }
 }
 
-export default CRC8Checksum;
+module.exports = CRC8Checksum;

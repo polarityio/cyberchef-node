@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import Stream from "../lib/Stream.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const Stream = require(""../lib/Stream.mjs"");
 
 /**
  * Untar operation
@@ -106,4 +106,4 @@ class Untar extends Operation {
 
 }
 
-export default Untar;
+module.exports = Untar;

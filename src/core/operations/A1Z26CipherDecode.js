@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {DELIM_OPTIONS} from "../lib/Delim.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * A1Z26 Cipher Decode operation
@@ -92,4 +92,4 @@ class A1Z26CipherDecode extends Operation {
 
 }
 
-export default A1Z26CipherDecode;
+module.exports = A1Z26CipherDecode;

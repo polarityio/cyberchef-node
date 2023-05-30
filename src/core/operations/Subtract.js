@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-import BigNumber from "bignumber.js";
-import Operation from "../Operation.mjs";
-import { sub, createNumArray } from "../lib/Arithmetic.mjs";
-import { ARITHMETIC_DELIM_OPTIONS } from "../lib/Delim.mjs";
+const BigNumber = require(""bignumber.js"");
+const Operation = require(""../Operation.mjs"");
+const { sub, createNumArray } = require(""../lib/Arithmetic.mjs"");
+const { ARITHMETIC_DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
 
 
 /**
@@ -49,4 +49,4 @@ class Subtract extends Operation {
 
 }
 
-export default Subtract;
+module.exports = Subtract;

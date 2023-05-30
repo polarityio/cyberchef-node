@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import ctphjs from "ctph.js";
+const Operation = require(""../Operation.mjs"");
+const ctphjs = require(""ctph.js"");
 
 /**
  * CTPH operation
@@ -38,4 +38,4 @@ class CTPH extends Operation {
 
 }
 
-export default CTPH;
+module.exports = CTPH;

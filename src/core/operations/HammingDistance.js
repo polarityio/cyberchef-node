@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {fromHex} from "../lib/Hex.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {fromHex} = require(""../lib/Hex.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Hamming Distance operation
@@ -95,4 +95,4 @@ class HammingDistance extends Operation {
 
 }
 
-export default HammingDistance;
+module.exports = HammingDistance;

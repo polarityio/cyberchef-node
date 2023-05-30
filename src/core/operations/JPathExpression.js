@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import {JSONPath} from "jsonpath-plus";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const {JSONPath} = require(""jsonpath-plus"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * JPath expression operation
@@ -75,4 +75,4 @@ class JPathExpression extends Operation {
 
 }
 
-export default JPathExpression;
+module.exports = JPathExpression;

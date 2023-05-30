@@ -9,7 +9,7 @@
 /**
  * A set of randomised example SIGABA cipher/control rotors (these rotors are interchangeable). Cipher and control rotors can be referred to as C and R rotors respectively.
  */
-export const CR_ROTORS = [
+const CR_ROTORS = [
     {name: "Example 1", value: "SRGWANHPJZFXVIDQCEUKBYOLMT"},
     {name: "Example 2", value: "THQEFSAZVKJYULBODCPXNIMWRG"},
     {name: "Example 3", value: "XDTUYLEVFNQZBPOGIRCSMHWKAJ"},
@@ -21,19 +21,22 @@ export const CR_ROTORS = [
     {name: "Example 9", value: "CZWNHEMPOVXLKRSIDGJFYBTQAU"},
     {name: "Example 10", value: "ENPXJVKYQBFZTICAGMOHWRLDUS"}
 ];
+exports.CR_ROTORS = CR_ROTORS;
 
 /**
  * A set of randomised example SIGABA index rotors (may be referred to as I rotors).
  */
-export const I_ROTORS = [
+const I_ROTORS = [
     {name: "Example 1", value: "6201348957"},
     {name: "Example 2", value: "6147253089"},
     {name: "Example 3", value: "8239647510"},
     {name: "Example 4", value: "7194835260"},
     {name: "Example 5", value: "4873205916"}
 ];
+exports.I_ROTORS = I_ROTORS;
 
-export const NUMBERS = "0123456789".split("");
+const NUMBERS = "0123456789".split("");
+exports.NUMBERS = NUMBERS;
 
 /**
  * Converts a letter to uppercase (if it already isn't)

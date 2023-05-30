@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * From HTML Entity operation
@@ -1536,4 +1536,4 @@ const entityToByte = {
     "zopf": 120171
 };
 
-export default FromHTMLEntity;
+module.exports = FromHTMLEntity;

@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import { fromBase64 } from "../lib/Base64.mjs";
-import { fromHex, toHexFast } from "../lib/Hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { fromBase64 } = require(""../lib/Base64.mjs"");
+const { fromHex, toHexFast } = require(""../lib/Hex.mjs"");
 
 /**
  * Parse SSH Host Key operation
@@ -156,4 +156,4 @@ class ParseSSHHostKey extends Operation {
 
 }
 
-export default ParseSSHHostKey;
+module.exports = ParseSSHHostKey;

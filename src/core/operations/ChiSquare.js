@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Chi Square operation
@@ -51,4 +51,4 @@ class ChiSquare extends Operation {
 
 }
 
-export default ChiSquare;
+module.exports = ChiSquare;

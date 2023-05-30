@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Convert data units operation
@@ -109,4 +109,4 @@ const DATA_FACTOR = { // Multiples of a bit
 };
 
 
-export default ConvertDataUnits;
+module.exports = ConvertDataUnits;

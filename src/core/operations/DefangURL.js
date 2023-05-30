@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {URL_REGEX, DOMAIN_REGEX} from "../lib/Extract.mjs";
+const Operation = require(""../Operation.mjs"");
+const {URL_REGEX, DOMAIN_REGEX} = require(""../lib/Extract.mjs"");
 
 /**
  * DefangURL operation
@@ -99,4 +99,4 @@ function defangURL(url, dots, http, slashes) {
     return url;
 }
 
-export default DefangURL;
+module.exports = DefangURL;

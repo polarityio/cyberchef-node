@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import JSSHA3 from "js-sha3";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const JSSHA3 = require(""js-sha3"");
 
 /**
  * Shake operation
@@ -68,4 +68,4 @@ class Shake extends Operation {
 
 }
 
-export default Shake;
+module.exports = Shake;

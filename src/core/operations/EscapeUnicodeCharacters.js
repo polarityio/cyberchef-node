@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Escape Unicode Characters operation
@@ -93,4 +93,4 @@ class EscapeUnicodeCharacters extends Operation {
 
 }
 
-export default EscapeUnicodeCharacters;
+module.exports = EscapeUnicodeCharacters;

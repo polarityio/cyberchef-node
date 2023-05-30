@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * URL Encode operation
@@ -66,4 +66,4 @@ class URLEncode extends Operation {
 }
 
 
-export default URLEncode;
+module.exports = URLEncode;

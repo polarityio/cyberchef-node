@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {fromHex, toHex} from "../lib/Hex.mjs";
-import {ipv4ToStr, protocolLookup} from "../lib/IP.mjs";
-import TCPIPChecksum from "./TCPIPChecksum.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {fromHex, toHex} = require(""../lib/Hex.mjs"");
+const {ipv4ToStr, protocolLookup} = require(""../lib/IP.mjs"");
+const TCPIPChecksum = require(""./TCPIPChecksum.mjs"");
 
 /**
  * Parse IPv4 header operation
@@ -127,4 +127,4 @@ class ParseIPv4Header extends Operation {
 
 }
 
-export default ParseIPv4Header;
+module.exports = ParseIPv4Header;

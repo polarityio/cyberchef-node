@@ -5,8 +5,8 @@
  * @copyright Crown Copyright 2020
  * @license Apache-2.0
  */
-import TestRegister from "../../lib/TestRegister.mjs";
-import {ASCII_TEXT, UTF8_TEXT, ALL_BYTES} from "../../samples/Ciphers.mjs";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const {ASCII_TEXT, UTF8_TEXT, ALL_BYTES} = require(""../../samples/Ciphers.mjs"");
 
 const PEM_PRIV_2048 = `-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAwfaUOpUEutKyU3wkCv6kYunz4MqxzSuTSckRz1IxwZtwIiqq

@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import DishType from "./DishType.mjs";
+const DishType = require(""./DishType.mjs"");
 
 /**
  * Translation methods for ArrayBuffer Dishes
@@ -28,4 +28,4 @@ class DishByteArray extends DishType {
     }
 }
 
-export default DishByteArray;
+module.exports = DishByteArray;

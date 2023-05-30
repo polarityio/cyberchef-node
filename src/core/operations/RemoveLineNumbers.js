@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Remove line numbers operation
@@ -36,4 +36,4 @@ class RemoveLineNumbers extends Operation {
 
 }
 
-export default RemoveLineNumbers;
+module.exports = RemoveLineNumbers;

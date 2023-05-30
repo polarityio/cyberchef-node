@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Yara from "libyara-wasm";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Yara = require(""libyara-wasm"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * YARA Rules operation
@@ -138,4 +138,4 @@ class YARARules extends Operation {
 
 }
 
-export default YARARules;
+module.exports = YARARules;

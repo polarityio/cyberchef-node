@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { encode } from "../lib/CipherSaber2.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const { encode } = require(""../lib/CipherSaber2.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * CipherSaber2 Decrypt operation
@@ -58,4 +58,4 @@ class CipherSaber2Decrypt extends Operation {
 
 }
 
-export default CipherSaber2Decrypt;
+module.exports = CipherSaber2Decrypt;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {DELIM_OPTIONS} from "../lib/Delim.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
 
 /**
  * A1Z26 Cipher Encode operation
@@ -58,4 +58,4 @@ class A1Z26CipherEncode extends Operation {
 
 }
 
-export default A1Z26CipherEncode;
+module.exports = A1Z26CipherEncode;

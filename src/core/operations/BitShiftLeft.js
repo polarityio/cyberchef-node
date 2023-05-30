@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Bit shift left operation
@@ -74,4 +74,4 @@ class BitShiftLeft extends Operation {
 
 }
 
-export default BitShiftLeft;
+module.exports = BitShiftLeft;

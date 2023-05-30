@@ -1,8 +1,8 @@
-import assert from "assert";
-import it from "../assertionHandler.mjs";
-import TestRegister from "../../lib/TestRegister.mjs";
-import File from "../../../src/node/File.mjs";
-import {zip, Dish} from "../../../src/node/index.mjs";
+const assert = require(""assert"");
+const it = require(""../assertionHandler.mjs"");
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const File = require(""../../../src/node/File.mjs"");
+const {zip, Dish} = require(""../../../src/node/index.mjs"");
 
 TestRegister.addApiTests([
     it("File: should exist", () => {

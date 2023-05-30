@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Analyse hash operation
@@ -181,4 +181,4 @@ class AnalyseHash extends Operation {
 
 }
 
-export default AnalyseHash;
+module.exports = AnalyseHash;

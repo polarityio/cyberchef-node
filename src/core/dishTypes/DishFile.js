@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import DishType from "./DishType.mjs";
-import Utils, { isNodeEnvironment } from "../Utils.mjs";
+const DishType = require(""./DishType.mjs"");
+const Utils, { isNodeEnvironment } = require(""../Utils.mjs"");
 
 /**
  * Translation methods for file Dishes
@@ -39,4 +39,4 @@ class DishFile extends DishType {
     }
 }
 
-export default DishFile;
+module.exports = DishFile;

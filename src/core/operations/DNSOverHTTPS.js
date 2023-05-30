@@ -3,8 +3,8 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * DNS over HTTPS operation
@@ -139,4 +139,4 @@ function extractData(data) {
     }
 }
 
-export default DNSOverHTTPS;
+module.exports = DNSOverHTTPS;

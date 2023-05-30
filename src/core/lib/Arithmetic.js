@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-import Utils from "../Utils.mjs";
-import BigNumber from "bignumber.js";
+const Utils = require(""../Utils.mjs"");
+const BigNumber = require(""bignumber.js"");
 
 
 /**

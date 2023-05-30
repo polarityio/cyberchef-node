@@ -18,7 +18,7 @@
  * UTM: 30N 699456 5709791,
  */
 
-import TestRegister from "../../lib/TestRegister.mjs";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
 
 TestRegister.addTests([
     {

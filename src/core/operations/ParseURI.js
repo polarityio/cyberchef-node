@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import url from "url";
+const Operation = require(""../Operation.mjs"");
+const url = require(""url"");
 
 /**
  * Parse URI operation
@@ -67,4 +67,4 @@ class ParseURI extends Operation {
 
 }
 
-export default ParseURI;
+module.exports = ParseURI;

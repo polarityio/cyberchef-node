@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import notepack from "notepack.io";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const notepack = require(""notepack.io"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * To MessagePack operation
@@ -50,4 +50,4 @@ class ToMessagePack extends Operation {
 
 }
 
-export default ToMessagePack;
+module.exports = ToMessagePack;

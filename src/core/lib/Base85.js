@@ -1,4 +1,4 @@
-import Utils from "../Utils.mjs";
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Base85 resources.
@@ -11,7 +11,7 @@ import Utils from "../Utils.mjs";
 /**
  * Base85 alphabet options.
  */
-export const ALPHABET_OPTIONS = [
+const ALPHABET_OPTIONS = [
     {
         name: "Standard",
         value: "!-u",
@@ -22,7 +22,8 @@ export const ALPHABET_OPTIONS = [
     },
     {
         name: "IPv6",
-        value: "0-9A-Za-z!#$%&()*+\\-;<=>?@^_`{|}~",
+        value: "0-9A-Za-z!#$%&()*+\\-;
+exports.ALPHABET_OPTIONS = ALPHABET_OPTIONS;<=>?@^_`{|}~",
     }
 ];
 

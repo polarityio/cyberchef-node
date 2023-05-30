@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import scryptsy from "scryptsy";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const scryptsy = require(""scryptsy"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * Scrypt operation
@@ -87,4 +87,4 @@ class Scrypt extends Operation {
 
 }
 
-export default Scrypt;
+module.exports = Scrypt;

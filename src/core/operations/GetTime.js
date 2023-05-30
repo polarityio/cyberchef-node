@@ -5,9 +5,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {UNITS} from "../lib/DateTime.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {UNITS} = require(""../lib/DateTime.mjs"");
 
 /**
  * Get Time operation
@@ -60,4 +60,4 @@ class GetTime extends Operation {
 
 }
 
-export default GetTime;
+module.exports = GetTime;

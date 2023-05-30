@@ -7,11 +7,13 @@
  * @license Apache-2.0
  */
 
-export const ASCII_TEXT = "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.";
+const ASCII_TEXT = "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.";
+exports.ASCII_TEXT = ASCII_TEXT;
 
-export const UTF8_TEXT = "Шанцы на высвятленне таго, што адбываецца на самай справе ў сусвеце настолькі выдаленыя, адзінае, што трэба зрабіць, гэта павесіць пачуццё яго і трымаць сябе занятымі.";
+const UTF8_TEXT = "Шанцы на высвятленне таго, што адбываецца на самай справе ў сусвеце настолькі выдаленыя, адзінае, што трэба зрабіць, гэта павесіць пачуццё яго і трымаць сябе занятымі.";
+exports.UTF8_TEXT = UTF8_TEXT;
 
-export const ALL_BYTES = [
+const ALL_BYTES = [
     "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f",
     "\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f",
     "\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2a\x2b\x2c\x2d\x2e\x2f",
@@ -29,3 +31,4 @@ export const ALL_BYTES = [
     "\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef",
     "\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff",
 ].join("");
+exports.ALL_BYTES = ALL_BYTES;

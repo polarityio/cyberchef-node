@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Recipe from "../Recipe.mjs";
-import Dish from "../Dish.mjs";
+const Operation = require(""../Operation.mjs"");
+const Recipe = require(""../Recipe.mjs"");
+const Dish = require(""../Dish.mjs"");
 
 /**
  * Fork operation
@@ -123,4 +123,4 @@ class Fork extends Operation {
 
 }
 
-export default Fork;
+module.exports = Fork;

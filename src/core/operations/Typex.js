@@ -9,10 +9,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {LETTERS, Reflector} from "../lib/Enigma.mjs";
-import {ROTORS, REFLECTORS, TypexMachine, Plugboard, Rotor} from "../lib/Typex.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {LETTERS, Reflector} = require(""../lib/Enigma.mjs"");
+const {ROTORS, REFLECTORS, TypexMachine, Plugboard, Rotor} = require(""../lib/Typex.mjs"");
 
 /**
  * Typex operation
@@ -250,4 +250,4 @@ class Typex extends Operation {
 
 }
 
-export default Typex;
+module.exports = Typex;

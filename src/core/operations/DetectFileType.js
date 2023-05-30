@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {detectFileType} from "../lib/FileType.mjs";
-import {FILE_SIGNATURES} from "../lib/FileSignatures.mjs";
+const Operation = require(""../Operation.mjs"");
+const {detectFileType} = require(""../lib/FileType.mjs"");
+const {FILE_SIGNATURES} = require(""../lib/FileSignatures.mjs"");
 
 // Concat all supported extensions into a single flat list
 const exts = [].concat.apply([], Object.keys(FILE_SIGNATURES).map(cat =>
@@ -78,4 +78,4 @@ MIME type:   ${type.mime}\n`;
 
 }
 
-export default DetectFileType;
+module.exports = DetectFileType;

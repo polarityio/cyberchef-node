@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Convert distance operation
@@ -93,4 +93,4 @@ const DISTANCE_FACTOR = { // Multiples of a metre
 };
 
 
-export default ConvertDistance;
+module.exports = ConvertDistance;

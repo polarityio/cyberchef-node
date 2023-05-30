@@ -6,11 +6,11 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import jsQR from "jsqr";
-import qr from "qr-image";
-import Utils from "../Utils.mjs";
-import jimp from "jimp";
+const OperationError = require(""../errors/OperationError.mjs"");
+const jsQR = require(""jsqr"");
+const qr = require(""qr-image"");
+const Utils = require(""../Utils.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Parses a QR code image from an image

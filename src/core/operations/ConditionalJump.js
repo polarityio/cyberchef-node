@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Dish from "../Dish.mjs";
-import { getLabelIndex } from "../lib/FlowControl.mjs";
+const Operation = require(""../Operation.mjs"");
+const Dish = require(""../Dish.mjs"");
+const { getLabelIndex } = require(""../lib/FlowControl.mjs"");
 
 /**
  * Conditional Jump operation
@@ -84,4 +84,4 @@ class ConditionalJump extends Operation {
 
 }
 
-export default ConditionalJump;
+module.exports = ConditionalJump;

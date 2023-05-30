@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {DELIM_OPTIONS} from "../lib/Delim.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
 
 /**
  * From Octal operation
@@ -79,4 +79,4 @@ class FromOctal extends Operation {
 
 }
 
-export default FromOctal;
+module.exports = FromOctal;

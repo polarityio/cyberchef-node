@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { bitOp, or, BITWISE_OP_DELIMS } from "../lib/BitwiseOp.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { bitOp, or, BITWISE_OP_DELIMS } = require(""../lib/BitwiseOp.mjs"");
 
 /**
  * OR operation
@@ -75,4 +75,4 @@ class OR extends Operation {
 
 }
 
-export default OR;
+module.exports = OR;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Tar operation
@@ -139,4 +139,4 @@ class Tar extends Operation {
 
 }
 
-export default Tar;
+module.exports = Tar;

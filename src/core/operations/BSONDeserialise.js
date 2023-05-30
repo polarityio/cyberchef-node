@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import bson from "bson";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const bson = require(""bson"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * BSON deserialise operation
@@ -46,4 +46,4 @@ class BSONDeserialise extends Operation {
 
 }
 
-export default BSONDeserialise;
+module.exports = BSONDeserialise;

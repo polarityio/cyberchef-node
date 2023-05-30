@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { fromHex } from "../lib/Hex.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const { fromHex } = require(""../lib/Hex.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 
 /**
@@ -163,4 +163,4 @@ class FromHexdump extends Operation {
 
 }
 
-export default FromHexdump;
+module.exports = FromHexdump;

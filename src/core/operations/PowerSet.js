@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Power Set operation
@@ -90,4 +90,4 @@ class PowerSet extends Operation {
     }
 }
 
-export default PowerSet;
+module.exports = PowerSet;

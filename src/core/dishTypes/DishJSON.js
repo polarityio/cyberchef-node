@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import DishType from "./DishType.mjs";
-import Utils from "../Utils.mjs";
+const DishType = require(""./DishType.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Translation methods for JSON dishes
@@ -29,4 +29,4 @@ class DishJSON extends DishType {
     }
 }
 
-export default DishJSON;
+module.exports = DishJSON;

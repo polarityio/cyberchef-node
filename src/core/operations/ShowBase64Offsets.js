@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {fromBase64, toBase64} from "../lib/Base64.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {fromBase64, toBase64} = require(""../lib/Base64.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Show Base64 offsets operation
@@ -170,4 +170,4 @@ class ShowBase64Offsets extends Operation {
 
 }
 
-export default ShowBase64Offsets;
+module.exports = ShowBase64Offsets;

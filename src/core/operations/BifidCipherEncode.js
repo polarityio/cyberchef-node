@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { genPolybiusSquare } from "../lib/Ciphers.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { genPolybiusSquare } = require(""../lib/Ciphers.mjs"");
 
 /**
  * Bifid Cipher Encode operation
@@ -127,4 +127,4 @@ class BifidCipherEncode extends Operation {
 
 }
 
-export default BifidCipherEncode;
+module.exports = BifidCipherEncode;

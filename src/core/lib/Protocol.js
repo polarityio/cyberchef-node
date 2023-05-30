@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-import BigNumber from "bignumber.js";
-import {toHexFast} from "../lib/Hex.mjs";
+const BigNumber = require(""bignumber.js"");
+const {toHexFast} = require(""../lib/Hex.mjs"");
 
 /**
  * Recursively displays a JSON object as an HTML table

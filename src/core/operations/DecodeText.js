@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import cptable from "codepage";
-import {CHR_ENC_CODE_PAGES} from "../lib/ChrEnc.mjs";
+const Operation = require(""../Operation.mjs"");
+const cptable = require(""codepage"");
+const {CHR_ENC_CODE_PAGES} = require(""../lib/ChrEnc.mjs"");
 
 /**
  * Decode text operation
@@ -53,4 +53,4 @@ class DecodeText extends Operation {
 
 }
 
-export default DecodeText;
+module.exports = DecodeText;

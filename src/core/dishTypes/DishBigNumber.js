@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import DishType from "./DishType.mjs";
-import Utils from "../Utils.mjs";
-import BigNumber from "bignumber.js";
+const DishType = require(""./DishType.mjs"");
+const Utils = require(""../Utils.mjs"");
+const BigNumber = require(""bignumber.js"");
 
 /**
  * translation methods for BigNumber Dishes
@@ -35,4 +35,4 @@ class DishBigNumber extends DishType {
     }
 }
 
-export default DishBigNumber;
+module.exports = DishBigNumber;

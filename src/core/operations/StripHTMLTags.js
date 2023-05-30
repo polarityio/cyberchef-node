@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Strip HTML tags operation
@@ -69,4 +69,4 @@ class StripHTMLTags extends Operation {
 
 }
 
-export default StripHTMLTags;
+module.exports = StripHTMLTags;

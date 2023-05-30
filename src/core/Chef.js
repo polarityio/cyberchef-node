@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Dish from "./Dish.mjs";
-import Recipe from "./Recipe.mjs";
-import log from "loglevel";
-import { isWorkerEnvironment } from "./Utils.mjs";
+const Dish = require(""./Dish.mjs"");
+const Recipe = require(""./Recipe.mjs"");
+const log = require(""loglevel"");
+const { isWorkerEnvironment } = require(""./Utils.mjs"");
 
 /**
  * The main controller for CyberChef.
@@ -180,4 +180,4 @@ class Chef {
 
 }
 
-export default Chef;
+module.exports = Chef;

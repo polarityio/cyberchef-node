@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {FORMATS, convertCoordinates} from "../lib/ConvertCoordinates.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const {FORMATS, convertCoordinates} = require(""../lib/ConvertCoordinates.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Show on map operation
@@ -117,4 +117,4 @@ mapscript.src = "${leafletUrl}";
     }
 }
 
-export default ShowOnMap;
+module.exports = ShowOnMap;

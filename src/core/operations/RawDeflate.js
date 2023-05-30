@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {COMPRESSION_TYPE} from "../lib/Zlib.mjs";
-import rawdeflate from "zlibjs/bin/rawdeflate.min.js";
+const Operation = require(""../Operation.mjs"");
+const {COMPRESSION_TYPE} = require(""../lib/Zlib.mjs"");
+const rawdeflate = require(""zlibjs/bin/rawdeflate.min.js"");
 
 const Zlib = rawdeflate.Zlib;
 
@@ -56,4 +56,4 @@ class RawDeflate extends Operation {
 
 }
 
-export default RawDeflate;
+module.exports = RawDeflate;

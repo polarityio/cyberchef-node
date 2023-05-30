@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import kebabCase from "lodash/kebabCase.js";
-import Operation from "../Operation.mjs";
-import { replaceVariableNames } from "../lib/Code.mjs";
+const kebabCase = require(""lodash/kebabCase.js"");
+const Operation = require(""../Operation.mjs"");
+const { replaceVariableNames } = require(""../lib/Code.mjs"");
 
 /**
  * To Kebab case operation
@@ -51,4 +51,4 @@ class ToKebabCase extends Operation {
 
 }
 
-export default ToKebabCase;
+module.exports = ToKebabCase;

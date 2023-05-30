@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import { toBase64 } from "../lib/Base64.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const { toBase64 } = require(""../lib/Base64.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Normalise Image operation
@@ -82,4 +82,4 @@ class NormaliseImage extends Operation {
 
 }
 
-export default NormaliseImage;
+module.exports = NormaliseImage;

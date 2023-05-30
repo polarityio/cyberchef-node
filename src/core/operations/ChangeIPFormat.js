@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import {fromHex} from "../lib/Hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {fromHex} = require(""../lib/Hex.mjs"");
 
 /**
  * Change IP format operation
@@ -135,4 +135,4 @@ class ChangeIPFormat extends Operation {
 
 }
 
-export default ChangeIPFormat;
+module.exports = ChangeIPFormat;

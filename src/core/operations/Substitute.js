@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Substitute operation
@@ -109,4 +109,4 @@ class Substitute extends Operation {
 
 }
 
-export default Substitute;
+module.exports = Substitute;

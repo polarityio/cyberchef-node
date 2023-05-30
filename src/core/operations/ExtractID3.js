@@ -5,9 +5,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Extract ID3 operation
@@ -321,4 +321,4 @@ const FRAME_DESCRIPTIONS = {
     "WXXX": "User defined URL link frame"
 };
 
-export default ExtractID3;
+module.exports = ExtractID3;

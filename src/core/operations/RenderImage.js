@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import { fromBase64, toBase64 } from "../lib/Base64.mjs";
-import { fromHex } from "../lib/Hex.mjs";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import {isImage} from "../lib/FileType.mjs";
+const { fromBase64, toBase64 } = require(""../lib/Base64.mjs"");
+const { fromHex } = require(""../lib/Hex.mjs"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {isImage} = require(""../lib/FileType.mjs"");
 
 /**
  * Render Image operation
@@ -109,4 +109,4 @@ class RenderImage extends Operation {
 
 }
 
-export default RenderImage;
+module.exports = RenderImage;

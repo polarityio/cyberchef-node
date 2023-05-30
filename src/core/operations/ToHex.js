@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {toHex, TO_HEX_DELIM_OPTIONS} from "../lib/Hex.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const {toHex, TO_HEX_DELIM_OPTIONS} = require(""../lib/Hex.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * To Hex operation
@@ -129,4 +129,4 @@ class ToHex extends Operation {
     }
 }
 
-export default ToHex;
+module.exports = ToHex;

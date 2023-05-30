@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import CryptoApi from "crypto-api/src/crypto-api.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const CryptoApi = require(""crypto-api/src/crypto-api.mjs"");
 
 /**
  * HMAC operation
@@ -79,4 +79,4 @@ class HMAC extends Operation {
 
 }
 
-export default HMAC;
+module.exports = HMAC;

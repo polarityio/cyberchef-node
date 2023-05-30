@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {FORMATS, convertCoordinates} from "../lib/ConvertCoordinates.mjs";
+const Operation = require(""../Operation.mjs"");
+const {FORMATS, convertCoordinates} = require(""../lib/ConvertCoordinates.mjs"");
 
 /**
  * Convert co-ordinate format operation
@@ -92,4 +92,4 @@ class ConvertCoordinateFormat extends Operation {
     }
 }
 
-export default ConvertCoordinateFormat;
+module.exports = ConvertCoordinateFormat;

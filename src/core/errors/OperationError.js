@@ -23,4 +23,4 @@ class OperationError extends Error {
     }
 }
 
-export default OperationError;
+module.exports = OperationError;

@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import { toBase64 } from "../lib/Base64.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const { toBase64 } = require(""../lib/Base64.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Invert Image operation
@@ -84,4 +84,4 @@ class InvertImage extends Operation {
 
 }
 
-export default InvertImage;
+module.exports = InvertImage;

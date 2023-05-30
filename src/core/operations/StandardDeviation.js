@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-import BigNumber from "bignumber.js";
-import Operation from "../Operation.mjs";
-import { stdDev, createNumArray } from "../lib/Arithmetic.mjs";
-import { ARITHMETIC_DELIM_OPTIONS } from "../lib/Delim.mjs";
+const BigNumber = require(""bignumber.js"");
+const Operation = require(""../Operation.mjs"");
+const { stdDev, createNumArray } = require(""../lib/Arithmetic.mjs"");
+const { ARITHMETIC_DELIM_OPTIONS } = require(""../lib/Delim.mjs"");
 
 
 /**
@@ -50,4 +50,4 @@ class StandardDeviation extends Operation {
 
 }
 
-export default StandardDeviation;
+module.exports = StandardDeviation;

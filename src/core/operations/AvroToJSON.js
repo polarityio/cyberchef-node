@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import avro from "avsc";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const avro = require(""avsc"");
 
 /**
  * Avro to JSON operation
@@ -73,4 +73,4 @@ class AvroToJSON extends Operation {
     }
 }
 
-export default AvroToJSON;
+module.exports = AvroToJSON;

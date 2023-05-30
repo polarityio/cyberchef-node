@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {fromHex, FROM_HEX_DELIM_OPTIONS} from "../lib/Hex.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const {fromHex, FROM_HEX_DELIM_OPTIONS} = require(""../lib/Hex.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * From Hex operation
@@ -149,4 +149,4 @@ class FromHex extends Operation {
     }
 }
 
-export default FromHex;
+module.exports = FromHex;

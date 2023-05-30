@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import moment from "moment-timezone";
-import {DATETIME_FORMATS, FORMAT_EXAMPLES} from "../lib/DateTime.mjs";
+const Operation = require(""../Operation.mjs"");
+const moment = require(""moment-timezone"");
+const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require(""../lib/DateTime.mjs"");
 
 /**
  * Parse DateTime operation
@@ -80,4 +80,4 @@ class ParseDateTime extends Operation {
 
 }
 
-export default ParseDateTime;
+module.exports = ParseDateTime;

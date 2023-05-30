@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import jwt from "jsonwebtoken";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const jwt = require(""jsonwebtoken"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * JWT Decode operation
@@ -55,4 +55,4 @@ class JWTDecode extends Operation {
 
 }
 
-export default JWTDecode;
+module.exports = JWTDecode;

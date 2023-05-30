@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {INPUT_DELIM_OPTIONS} from "../lib/Delim.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {INPUT_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
 
 /**
  * Tail operation
@@ -67,4 +67,4 @@ class Tail extends Operation {
 
 }
 
-export default Tail;
+module.exports = Tail;

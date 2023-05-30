@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import * as flat from "flat";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const * as flat = require(""flat"");
 const flatten = flat.default ? flat.default.flatten : flat.flatten;
 
 /**
@@ -139,4 +139,4 @@ class JSONToCSV extends Operation {
 
 }
 
-export default JSONToCSV;
+module.exports = JSONToCSV;

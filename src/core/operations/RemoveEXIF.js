@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import { removeEXIF } from "../vendor/remove-exif.mjs";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const { removeEXIF } = require(""../vendor/remove-exif.mjs"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Remove EXIF operation
@@ -53,4 +53,4 @@ class RemoveEXIF extends Operation {
 
 }
 
-export default RemoveEXIF;
+module.exports = RemoveEXIF;

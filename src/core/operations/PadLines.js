@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Pad lines operation
@@ -67,4 +67,4 @@ class PadLines extends Operation {
 
 }
 
-export default PadLines;
+module.exports = PadLines;

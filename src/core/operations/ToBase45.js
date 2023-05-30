@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import {ALPHABET, highlightToBase45, highlightFromBase45} from "../lib/Base45.mjs";
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const {ALPHABET, highlightToBase45, highlightFromBase45} = require(""../lib/Base45.mjs"");
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * To Base45 operation
@@ -79,4 +79,4 @@ class ToBase45 extends Operation {
 
 }
 
-export default ToBase45;
+module.exports = ToBase45;

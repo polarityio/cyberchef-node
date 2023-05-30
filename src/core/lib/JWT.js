@@ -10,7 +10,7 @@
 /**
  * List of the JWT algorithms that can be used
  */
-export const JWT_ALGORITHMS = [
+const JWT_ALGORITHMS = [
     "HS256",
     "HS384",
     "HS512",
@@ -22,3 +22,4 @@ export const JWT_ALGORITHMS = [
     "ES512",
     "None"
 ];
+exports.JWT_ALGORITHMS = JWT_ALGORITHMS;

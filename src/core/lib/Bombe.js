@@ -7,9 +7,9 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import {Rotor, Plugboard, a2i, i2a} from "./Enigma.mjs";
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {Rotor, Plugboard, a2i, i2a} = require(""./Enigma.mjs"");
 
 /**
  * Convenience/optimisation subclass of Rotor

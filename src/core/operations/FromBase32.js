@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * From Base32 operation
@@ -95,4 +95,4 @@ class FromBase32 extends Operation {
 
 }
 
-export default FromBase32;
+module.exports = FromBase32;

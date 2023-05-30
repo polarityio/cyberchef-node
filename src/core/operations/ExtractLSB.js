@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import { fromBinary } from "../lib/Binary.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { fromBinary } = require(""../lib/Binary.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Extract LSB operation
@@ -111,4 +111,4 @@ class ExtractLSB extends Operation {
 
 const COLOUR_OPTIONS = ["R", "G", "B", "A"];
 
-export default ExtractLSB;
+module.exports = ExtractLSB;

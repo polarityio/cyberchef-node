@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {toBase64, ALPHABET_OPTIONS} from "../lib/Base64.mjs";
+const Operation = require(""../Operation.mjs"");
+const {toBase64, ALPHABET_OPTIONS} = require(""../lib/Base64.mjs"");
 
 /**
  * To Base64 operation
@@ -74,4 +74,4 @@ class ToBase64 extends Operation {
     }
 }
 
-export default ToBase64;
+module.exports = ToBase64;

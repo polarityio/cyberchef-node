@@ -22,4 +22,4 @@ class ExcludedOperationError extends Error {
     }
 }
 
-export default ExcludedOperationError;
+module.exports = ExcludedOperationError;

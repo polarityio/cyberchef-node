@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import UAParser from "ua-parser-js";
+const Operation = require(""../Operation.mjs"");
+const UAParser = require(""ua-parser-js"");
 
 /**
  * Parse User Agent operation
@@ -60,4 +60,4 @@ CPU
 
 }
 
-export default ParseUserAgent;
+module.exports = ParseUserAgent;

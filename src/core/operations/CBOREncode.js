@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Cbor from "cbor";
+const Operation = require(""../Operation.mjs"");
+const Cbor = require(""cbor"");
 
 /**
  * CBOR Encode operation
@@ -38,4 +38,4 @@ class CBOREncode extends Operation {
 
 }
 
-export default CBOREncode;
+module.exports = CBOREncode;

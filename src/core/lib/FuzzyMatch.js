@@ -16,7 +16,7 @@
  *   Anurag Awasthi - updated to 0.2.0
  */
 
-export const DEFAULT_WEIGHTS = {
+const DEFAULT_WEIGHTS = {
     sequentialBonus: 15, // bonus for adjacent matches
     separatorBonus: 30, // bonus if match occurs after a separator
     camelBonus: 30, // bonus if match is uppercase and prev is lower
@@ -26,6 +26,7 @@ export const DEFAULT_WEIGHTS = {
     maxLeadingLetterPenalty: -15, // maximum penalty for leading letters
     unmatchedLetterPenalty: -1
 };
+exports.DEFAULT_WEIGHTS = DEFAULT_WEIGHTS;
 
 /**
  * Does a fuzzy search to find pattern inside a string.

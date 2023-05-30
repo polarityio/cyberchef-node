@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {fuzzyMatch, calcMatchRanges, DEFAULT_WEIGHTS} from "../lib/FuzzyMatch.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const {fuzzyMatch, calcMatchRanges, DEFAULT_WEIGHTS} = require(""../lib/FuzzyMatch.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Fuzzy Match operation
@@ -118,4 +118,4 @@ class FuzzyMatch extends Operation {
 
 }
 
-export default FuzzyMatch;
+module.exports = FuzzyMatch;

@@ -4,13 +4,13 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import { runHash } from "../lib/Hash.mjs";
-import { toBase64 } from "../lib/Base64.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const { runHash } = require(""../lib/Hash.mjs"");
+const { toBase64 } = require(""../lib/Base64.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Randomize Colour Palette operation
@@ -80,4 +80,4 @@ class RandomizeColourPalette extends Operation {
 
 }
 
-export default RandomizeColourPalette;
+module.exports = RandomizeColourPalette;

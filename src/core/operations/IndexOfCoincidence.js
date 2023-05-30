@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Index of Coincidence operation
@@ -104,4 +104,4 @@ The graph shows the IC of the input data. A low IC generally means that the text
 
 }
 
-export default IndexOfCoincidence;
+module.exports = IndexOfCoincidence;

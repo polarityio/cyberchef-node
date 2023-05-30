@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import forge from "node-forge";
-import OperationError from "../errors/OperationError.mjs";
-import { Blowfish } from "../lib/Blowfish.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const forge = require(""node-forge"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { Blowfish } = require(""../lib/Blowfish.mjs"");
 
 /**
  * Blowfish Encrypt operation
@@ -92,4 +92,4 @@ Blowfish uses a key length of 8 bytes (64 bits).`);
 
 }
 
-export default BlowfishEncrypt;
+module.exports = BlowfishEncrypt;

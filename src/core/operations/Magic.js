@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import Dish from "../Dish.mjs";
-import MagicLib from "../lib/Magic.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const Dish = require(""../Dish.mjs"");
+const MagicLib = require(""../lib/Magic.mjs"");
 
 /**
  * Magic operation
@@ -165,4 +165,4 @@ class Magic extends Operation {
 
 }
 
-export default Magic;
+module.exports = Magic;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import argon2 from "argon2-browser";
+const Operation = require(""../Operation.mjs"");
+const argon2 = require(""argon2-browser"");
 
 /**
  * Argon2 compare operation
@@ -55,4 +55,4 @@ class Argon2Compare extends Operation {
 
 }
 
-export default Argon2Compare;
+module.exports = Argon2Compare;

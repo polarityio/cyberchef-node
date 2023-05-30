@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Return operation
@@ -40,4 +40,4 @@ class Return extends Operation {
 
 }
 
-export default Return;
+module.exports = Return;

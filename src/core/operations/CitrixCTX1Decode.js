@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import cptable from "codepage";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const cptable = require(""codepage"");
 
 /**
  * Citrix CTX1 Decode operation
@@ -56,4 +56,4 @@ class CitrixCTX1Decode extends Operation {
 
 }
 
-export default CitrixCTX1Decode;
+module.exports = CitrixCTX1Decode;

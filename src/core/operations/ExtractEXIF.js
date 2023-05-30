@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import ExifParser from "exif-parser";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const ExifParser = require(""exif-parser"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Extract EXIF operation
@@ -60,4 +60,4 @@ class ExtractEXIF extends Operation {
 
 }
 
-export default ExtractEXIF;
+module.exports = ExtractEXIF;

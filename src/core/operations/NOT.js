@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { bitOp, not } from "../lib/BitwiseOp.mjs";
+const Operation = require(""../Operation.mjs"");
+const { bitOp, not } = require(""../lib/BitwiseOp.mjs"");
 
 /**
  * NOT operation
@@ -65,4 +65,4 @@ class NOT extends Operation {
 
 }
 
-export default NOT;
+module.exports = NOT;

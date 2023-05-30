@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Bzip2 from "libbzip2-wasm";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Bzip2 = require(""libbzip2-wasm"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * Bzip2 Decompress operation
@@ -70,4 +70,4 @@ class Bzip2Decompress extends Operation {
 
 }
 
-export default Bzip2Decompress;
+module.exports = Bzip2Decompress;

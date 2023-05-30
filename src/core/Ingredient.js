@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Utils from "./Utils.mjs";
-import {fromHex} from "./lib/Hex.mjs";
+const Utils = require(""./Utils.mjs"");
+const {fromHex} = require(""./lib/Hex.mjs"");
 
 /**
  * The arguments to operations.
@@ -129,4 +129,4 @@ class Ingredient {
 
 }
 
-export default Ingredient;
+module.exports = Ingredient;

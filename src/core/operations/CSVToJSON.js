@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * CSV to JSON operation
@@ -77,4 +77,4 @@ class CSVToJSON extends Operation {
 
 }
 
-export default CSVToJSON;
+module.exports = CSVToJSON;

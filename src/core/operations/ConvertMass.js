@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Convert mass operation
@@ -141,4 +141,4 @@ const MASS_FACTOR = { // Multiples of a gram
 };
 
 
-export default ConvertMass;
+module.exports = ConvertMass;

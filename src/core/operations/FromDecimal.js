@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {DELIM_OPTIONS} from "../lib/Delim.mjs";
-import {fromDecimal} from "../lib/Decimal.mjs";
+const Operation = require(""../Operation.mjs"");
+const {DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const {fromDecimal} = require(""../lib/Decimal.mjs"");
 
 /**
  * From Decimal operation
@@ -85,4 +85,4 @@ class FromDecimal extends Operation {
 
 }
 
-export default FromDecimal;
+module.exports = FromDecimal;

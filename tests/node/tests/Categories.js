@@ -1,8 +1,8 @@
-import TestRegister from "../../lib/TestRegister.mjs";
-import Categories from "../../../src/core/config/Categories.json" assert {type: "json"};
-import OperationConfig from "../../../src/core/config/OperationConfig.json" assert {type: "json"};
-import it from "../assertionHandler.mjs";
-import assert from "assert";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const Categories = require(""../../../src/core/config/Categories.json" assert {type: "json"}");
+const OperationConfig = require(""../../../src/core/config/OperationConfig.json" assert {type: "json"}");
+const it = require(""../assertionHandler.mjs"");
+const assert = require(""assert"");
 
 TestRegister.addApiTests([
     it("Categories: operations should be in a category", () => {

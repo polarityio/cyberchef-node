@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Cetacean Cipher Decode operation
@@ -60,4 +60,4 @@ class CetaceanCipherDecode extends Operation {
     }
 }
 
-export default CetaceanCipherDecode;
+module.exports = CetaceanCipherDecode;

@@ -9,8 +9,8 @@
  *
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import CryptoJS from "crypto-js";
+const OperationError = require(""../errors/OperationError.mjs"");
+const CryptoJS = require(""crypto-js"");
 
 /**
  * Affine Cipher Encode operation.
@@ -71,7 +71,7 @@ export function genPolybiusSquare (keyword) {
  * @private
  * @constant
  */
-export const format = {
+const format = {
     "Hex":     CryptoJS.enc.Hex,
     "Base64":  CryptoJS.enc.Base64,
     "UTF8":    CryptoJS.enc.Utf8,
@@ -80,3 +80,4 @@ export const format = {
     "UTF16BE": CryptoJS.enc.Utf16BE,
     "Latin1":  CryptoJS.enc.Latin1,
 };
+exports.format = format;

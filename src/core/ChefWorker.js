@@ -6,10 +6,10 @@
  * @license Apache-2.0
  */
 
-import Chef from "./Chef.mjs";
-import OperationConfig from "./config/OperationConfig.json" assert {type: "json"};
-import OpModules from "./config/modules/OpModules.mjs";
-import loglevelMessagePrefix from "loglevel-message-prefix";
+const Chef = require(""./Chef.mjs"");
+const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
+const OpModules = require(""./config/modules/OpModules.mjs"");
+const loglevelMessagePrefix = require(""loglevel-message-prefix"");
 
 
 // Set up Chef instance

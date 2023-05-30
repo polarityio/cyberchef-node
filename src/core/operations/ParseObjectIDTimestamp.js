@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import BSON from "bson";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const BSON = require(""bson"");
 
 /**
  * Parse ObjectID timestamp operation
@@ -44,4 +44,4 @@ class ParseObjectIDTimestamp extends Operation {
 
 }
 
-export default ParseObjectIDTimestamp;
+module.exports = ParseObjectIDTimestamp;

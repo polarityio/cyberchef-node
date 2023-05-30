@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {ENCODING_SCHEME, ENCODING_LOOKUP, FORMAT} from "../lib/BCD.mjs";
-import BigNumber from "bignumber.js";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {ENCODING_SCHEME, ENCODING_LOOKUP, FORMAT} = require(""../lib/BCD.mjs"");
+const BigNumber = require(""bignumber.js"");
 
 /**
  * To BCD operation
@@ -139,4 +139,4 @@ class ToBCD extends Operation {
 
 }
 
-export default ToBCD;
+module.exports = ToBCD;

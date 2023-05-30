@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import gunzip from "zlibjs/bin/gunzip.min.js";
+const Operation = require(""../Operation.mjs"");
+const gunzip = require(""zlibjs/bin/gunzip.min.js"");
 
 const Zlib = gunzip.Zlib;
 
@@ -48,4 +48,4 @@ class Gunzip extends Operation {
 
 }
 
-export default Gunzip;
+module.exports = Gunzip;

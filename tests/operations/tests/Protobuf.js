@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-import TestRegister from "../../lib/TestRegister.mjs";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
 
 TestRegister.addTests([
     {

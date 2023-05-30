@@ -3,7 +3,7 @@
  * @copyright Crown Copyright 2022
  * @license Apache-2.0
  */
-import TestRegister from "../../lib/TestRegister.mjs";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
 
 // values in "NIST's CSRC" testcases are taken from here:
 // https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/example-values

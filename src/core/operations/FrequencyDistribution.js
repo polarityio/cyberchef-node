@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Frequency distribution operation
@@ -129,4 +129,4 @@ Number of bytes not represented: ${256 - freq.bytesRepresented}
 
 }
 
-export default FrequencyDistribution;
+module.exports = FrequencyDistribution;

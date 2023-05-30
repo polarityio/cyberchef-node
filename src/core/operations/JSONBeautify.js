@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-import JSON5 from "json5";
-import OperationError from "../errors/OperationError.mjs";
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const JSON5 = require(""json5"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * JSON Beautify operation
@@ -241,4 +241,4 @@ function json2html(json, options) {
     return html;
 }
 
-export default JSONBeautify;
+module.exports = JSONBeautify;

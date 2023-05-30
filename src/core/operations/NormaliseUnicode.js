@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {UNICODE_NORMALISATION_FORMS} from "../lib/ChrEnc.mjs";
-import unorm from "unorm";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {UNICODE_NORMALISATION_FORMS} = require(""../lib/ChrEnc.mjs"");
+const unorm = require(""unorm"");
 
 /**
  * Normalise Unicode operation
@@ -59,4 +59,4 @@ class NormaliseUnicode extends Operation {
 
 }
 
-export default NormaliseUnicode;
+module.exports = NormaliseUnicode;

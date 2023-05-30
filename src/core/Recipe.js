@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import OperationConfig from "./config/OperationConfig.json" assert {type: "json"};
-import OperationError from "./errors/OperationError.mjs";
-import Operation from "./Operation.mjs";
-import DishError from "./errors/DishError.mjs";
-import log from "loglevel";
-import { isWorkerEnvironment } from "./Utils.mjs";
+const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
+const OperationError = require(""./errors/OperationError.mjs"");
+const Operation = require(""./Operation.mjs"");
+const DishError = require(""./errors/DishError.mjs"");
+const log = require(""loglevel"");
+const { isWorkerEnvironment } = require(""./Utils.mjs"");
 
 // Cache container for modules
 let modules = null;
@@ -343,4 +343,4 @@ class Recipe  {
 
 }
 
-export default Recipe;
+module.exports = Recipe;

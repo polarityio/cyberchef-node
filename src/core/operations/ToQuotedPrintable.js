@@ -8,7 +8,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * To Quoted Printable operation
@@ -243,4 +243,4 @@ class ToQuotedPrintable extends Operation {
 
 }
 
-export default ToQuotedPrintable;
+module.exports = ToQuotedPrintable;

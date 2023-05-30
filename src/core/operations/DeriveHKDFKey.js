@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import CryptoApi from "crypto-api/src/crypto-api.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const CryptoApi = require(""crypto-api/src/crypto-api.mjs"");
 
 /**
  * Derive HKDF Key operation
@@ -135,4 +135,4 @@ class DeriveHKDFKey extends Operation {
 
 }
 
-export default DeriveHKDFKey;
+module.exports = DeriveHKDFKey;

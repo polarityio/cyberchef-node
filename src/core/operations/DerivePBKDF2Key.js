@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import forge from "node-forge";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const forge = require(""node-forge"");
 
 /**
  * Derive PBKDF2 key operation
@@ -75,4 +75,4 @@ class DerivePBKDF2Key extends Operation {
 
 }
 
-export default DerivePBKDF2Key;
+module.exports = DerivePBKDF2Key;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import vkbeautify from "vkbeautify";
-import Operation from "../Operation.mjs";
+const vkbeautify = require(""vkbeautify"");
+const Operation = require(""../Operation.mjs"");
 
 /**
  * XML Beautify operation
@@ -44,4 +44,4 @@ class XMLBeautify extends Operation {
 
 }
 
-export default XMLBeautify;
+module.exports = XMLBeautify;

@@ -6,11 +6,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import kbpgp from "kbpgp";
-import { getSubkeySize, ASP } from "../lib/PGP.mjs";
-import { cryptNotice } from "../lib/Crypt.mjs";
-import * as es6promisify from "es6-promisify";
+const Operation = require(""../Operation.mjs"");
+const kbpgp = require(""kbpgp"");
+const { getSubkeySize, ASP } = require(""../lib/PGP.mjs"");
+const { cryptNotice } = require(""../lib/Crypt.mjs"");
+const * as es6promisify = require(""es6-promisify"");
 const promisify = es6promisify.default ? es6promisify.default.promisify : es6promisify.promisify;
 
 
@@ -119,4 +119,4 @@ class GeneratePGPKeyPair extends Operation {
 
 }
 
-export default GeneratePGPKeyPair;
+module.exports = GeneratePGPKeyPair;

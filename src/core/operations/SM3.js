@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import Sm3 from "crypto-api/src/hasher/sm3.mjs";
-import {toHex} from "crypto-api/src/encoder/hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const Sm3 = require(""crypto-api/src/hasher/sm3.mjs"");
+const {toHex} = require(""crypto-api/src/encoder/hex.mjs"");
 
 /**
  * SM3 operation
@@ -54,4 +54,4 @@ class SM3 extends Operation {
     }
 }
 
-export default SM3;
+module.exports = SM3;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * To Hexdump operation
@@ -192,4 +192,4 @@ class ToHexdump extends Operation {
 
 }
 
-export default ToHexdump;
+module.exports = ToHexdump;

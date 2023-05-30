@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Dish from "./Dish.mjs";
-import Ingredient from "./Ingredient.mjs";
+const Dish = require(""./Dish.mjs"");
+const Ingredient = require(""./Ingredient.mjs"");
 
 /**
  * The Operation specified by the user to be run.
@@ -319,4 +319,4 @@ class Operation {
 
 }
 
-export default Operation;
+module.exports = Operation;

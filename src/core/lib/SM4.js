@@ -13,7 +13,7 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /** Number of rounds */
 const NROUNDS = 32;

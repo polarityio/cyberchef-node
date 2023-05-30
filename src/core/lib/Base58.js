@@ -10,7 +10,7 @@
 /**
  * Base58 alphabet options.
  */
-export const ALPHABET_OPTIONS = [
+const ALPHABET_OPTIONS = [
     {
         name: "Bitcoin",
         value: "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
@@ -20,3 +20,4 @@ export const ALPHABET_OPTIONS = [
         value: "rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz",
     },
 ];
+exports.ALPHABET_OPTIONS = ALPHABET_OPTIONS;

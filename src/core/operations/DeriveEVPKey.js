@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import CryptoJS from "crypto-js";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const CryptoJS = require(""crypto-js"");
 
 /**
  * Derive EVP key operation
@@ -78,7 +78,7 @@ class DeriveEVPKey extends Operation {
 
 }
 
-export default DeriveEVPKey;
+module.exports = DeriveEVPKey;
 
 /**
  * Overwriting the CryptoJS OpenSSL key derivation function so that it is possible to not pass a

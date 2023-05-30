@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {LETTER_DELIM_OPTIONS, WORD_DELIM_OPTIONS} from "../lib/Delim.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {LETTER_DELIM_OPTIONS, WORD_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
 
 /**
  * To Morse Code operation
@@ -152,4 +152,4 @@ const MORSE_TABLE = {
     " ": "<dot><dot><dot><dot><dot><dot><dot>"
 };
 
-export default ToMorseCode;
+module.exports = ToMorseCode;

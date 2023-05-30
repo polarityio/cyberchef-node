@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {ALPHABET_OPTIONS} from "../lib/Base58.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {ALPHABET_OPTIONS} = require(""../lib/Base58.mjs"");
 
 /**
  * From Base58 operation
@@ -112,4 +112,4 @@ class FromBase58 extends Operation {
 
 }
 
-export default FromBase58;
+module.exports = FromBase58;

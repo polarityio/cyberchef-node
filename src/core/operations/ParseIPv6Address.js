@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} from "../lib/IP.mjs";
-import BigNumber from "bignumber.js";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} = require(""../lib/IP.mjs"");
+const BigNumber = require(""bignumber.js"");
 
 /**
  * Parse IPv6 address operation
@@ -273,4 +273,4 @@ class ParseIPv6Address extends Operation {
 
 }
 
-export default ParseIPv6Address;
+module.exports = ParseIPv6Address;

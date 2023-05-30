@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { toHexFast } from "../lib/Hex.mjs";
-import forge from "node-forge";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { toHexFast } = require(""../lib/Hex.mjs"");
+const forge = require(""node-forge"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * AES Key Wrap operation
@@ -112,4 +112,4 @@ class AESKeyWrap extends Operation {
 
 }
 
-export default AESKeyWrap;
+module.exports = AESKeyWrap;

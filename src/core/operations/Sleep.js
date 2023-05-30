@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Sleep operation
@@ -44,4 +44,4 @@ class Sleep extends Operation {
 
 }
 
-export default Sleep;
+module.exports = Sleep;

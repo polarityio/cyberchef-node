@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Convert speed operation
@@ -94,4 +94,4 @@ const SPEED_FACTOR = { // Multiples of m/s
 };
 
 
-export default ConvertSpeed;
+module.exports = ConvertSpeed;

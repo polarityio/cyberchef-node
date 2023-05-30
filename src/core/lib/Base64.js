@@ -6,8 +6,8 @@
  * @license Apache-2.0
  */
 
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Base64's the input byte array using the given alphabet, returning a string.
@@ -162,7 +162,7 @@ export function fromBase64(data, alphabet="A-Za-z0-9+/=", returnType="string", r
 /**
  * Base64 alphabets.
  */
-export const ALPHABET_OPTIONS = [
+const ALPHABET_OPTIONS = [
     {name: "Standard (RFC 4648): A-Za-z0-9+/=", value: "A-Za-z0-9+/="},
     {name: "URL safe (RFC 4648 \u00A75): A-Za-z0-9-_", value: "A-Za-z0-9-_"},
     {name: "Filename safe: A-Za-z0-9+-=", value: "A-Za-z0-9+\\-="},
@@ -181,3 +181,4 @@ export const ALPHABET_OPTIONS = [
     {name: "Zong22: ZKj9n+yf0wDVX1s/5YbdxSo=ILaUpPBCHg8uvNO4klm6iJGhQ7eFrWczAMEq3RTt2", value: "ZKj9n+yf0wDVX1s/5YbdxSo=ILaUpPBCHg8uvNO4klm6iJGhQ7eFrWczAMEq3RTt2"},
     {name: "Hazz15: HNO4klm6ij9n+J2hyf0gzA8uvwDEq3X1Q7ZKeFrWcVTts/MRGYbdxSo=ILaUpPBC5", value: "HNO4klm6ij9n+J2hyf0gzA8uvwDEq3X1Q7ZKeFrWcVTts/MRGYbdxSo=ILaUpPBC5"}
 ];
+exports.ALPHABET_OPTIONS = ALPHABET_OPTIONS;

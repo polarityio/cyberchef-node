@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { bitOp, and, BITWISE_OP_DELIMS } from "../lib/BitwiseOp.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { bitOp, and, BITWISE_OP_DELIMS } = require(""../lib/BitwiseOp.mjs"");
 
 /**
  * AND operation
@@ -74,4 +74,4 @@ class AND extends Operation {
 
 }
 
-export default AND;
+module.exports = AND;

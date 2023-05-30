@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Drop bytes operation
@@ -120,4 +120,4 @@ class DropBytes extends Operation {
 
 }
 
-export default DropBytes;
+module.exports = DropBytes;

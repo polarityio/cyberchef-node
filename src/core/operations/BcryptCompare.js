@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import bcrypt from "bcryptjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const bcrypt = require(""bcryptjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 
 /**
@@ -55,4 +55,4 @@ class BcryptCompare extends Operation {
 
 }
 
-export default BcryptCompare;
+module.exports = BcryptCompare;

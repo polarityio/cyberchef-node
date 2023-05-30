@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import XRegExp from "xregexp";
-import { search } from "../lib/Extract.mjs";
-import { caseInsensitiveSort } from "../lib/Sort.mjs";
+const Operation = require(""../Operation.mjs"");
+const XRegExp = require(""xregexp"");
+const { search } = require(""../lib/Extract.mjs"");
+const { caseInsensitiveSort } = require(""../lib/Sort.mjs"");
 
 /**
  * Strings operation
@@ -136,4 +136,4 @@ class Strings extends Operation {
 
 }
 
-export default Strings;
+module.exports = Strings;

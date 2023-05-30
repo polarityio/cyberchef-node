@@ -1,7 +1,7 @@
-import TestRegister from "../../lib/TestRegister.mjs";
-import Utils from "../../../src/core/Utils.mjs";
-import it from "../assertionHandler.mjs";
-import assert from "assert";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const Utils = require(""../../../src/core/Utils.mjs"");
+const it = require(""../assertionHandler.mjs"");
+const assert = require(""assert"");
 
 TestRegister.addApiTests([
     it("Utils: should parse six backslashes correctly", () => {

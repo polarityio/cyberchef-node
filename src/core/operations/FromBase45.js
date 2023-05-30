@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import {ALPHABET, highlightToBase45, highlightFromBase45} from "../lib/Base45.mjs";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
+const {ALPHABET, highlightToBase45, highlightFromBase45} = require(""../lib/Base45.mjs"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 
 /**
@@ -98,4 +98,4 @@ class FromBase45 extends Operation {
 
 }
 
-export default FromBase45;
+module.exports = FromBase45;

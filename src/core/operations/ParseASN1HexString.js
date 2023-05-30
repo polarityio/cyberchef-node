@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import r from "jsrsasign";
-import Operation from "../Operation.mjs";
+const r = require(""jsrsasign"");
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Parse ASN.1 hex string operation
@@ -52,4 +52,4 @@ class ParseASN1HexString extends Operation {
 
 }
 
-export default ParseASN1HexString;
+module.exports = ParseASN1HexString;

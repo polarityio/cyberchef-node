@@ -6,15 +6,17 @@
  * @license Apache-2.0
  */
 
-export const SWITCHES = [
+const SWITCHES = [
     {name: "Up (.)", value: "."},
     {name: "Centre", value: ""},
     {name: "Down (x)", value: "x"}
 ];
+exports.SWITCHES = SWITCHES;
 
-export const VALID_ITA2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ34589+-./";
+const VALID_ITA2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ34589+-./";
+exports.VALID_ITA2 = VALID_ITA2;
 
-export const ITA2_TABLE = {
+const ITA2_TABLE = {
     "A": "11000",
     "B": "10011",
     "C": "01110",
@@ -52,8 +54,9 @@ export const ITA2_TABLE = {
     "-": "11111",
     "+": "11011"
 };
+exports.ITA2_TABLE = ITA2_TABLE;
 
-export const ROTOR_SIZES = {
+const ROTOR_SIZES = {
     S1: 43,
     S2: 47,
     S3: 51,
@@ -67,11 +70,12 @@ export const ROTOR_SIZES = {
     X4: 26,
     X5: 23
 };
+exports.ROTOR_SIZES = ROTOR_SIZES;
 
 /**
  * Initial rotor patterns
  */
-export const INIT_PATTERNS = {
+const INIT_PATTERNS = {
     "No Pattern": {
         "X": {
             1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -154,3 +158,4 @@ export const INIT_PATTERNS = {
         }
     }
 };
+exports.INIT_PATTERNS = INIT_PATTERNS;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import NodeMD6 from "node-md6";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const NodeMD6 = require(""node-md6"");
 
 /**
  * MD6 operation
@@ -62,4 +62,4 @@ class MD6 extends Operation {
 
 }
 
-export default MD6;
+module.exports = MD6;

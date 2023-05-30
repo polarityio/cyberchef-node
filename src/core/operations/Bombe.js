@@ -9,11 +9,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
-import { BombeMachine } from "../lib/Bombe.mjs";
-import { ROTORS, ROTORS_FOURTH, REFLECTORS, Reflector } from "../lib/Enigma.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
+const { BombeMachine } = require(""../lib/Bombe.mjs"");
+const { ROTORS, ROTORS_FOURTH, REFLECTORS, Reflector } = require(""../lib/Enigma.mjs"");
 
 /**
  * Bombe operation
@@ -176,4 +176,4 @@ class Bombe extends Operation {
     }
 }
 
-export default Bombe;
+module.exports = Bombe;

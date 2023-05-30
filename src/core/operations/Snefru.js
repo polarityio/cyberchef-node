@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {runHash} from "../lib/Hash.mjs";
+const Operation = require(""../Operation.mjs"");
+const {runHash} = require(""../lib/Hash.mjs"");
 
 /**
  * Snefru operation
@@ -55,4 +55,4 @@ class Snefru extends Operation {
 
 }
 
-export default Snefru;
+module.exports = Snefru;

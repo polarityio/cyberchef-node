@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {runHash} from "../lib/Hash.mjs";
+const Operation = require(""../Operation.mjs"");
+const {runHash} = require(""../lib/Hash.mjs"");
 
 /**
  * HAS-160 operation
@@ -46,4 +46,4 @@ class HAS160 extends Operation {
 
 }
 
-export default HAS160;
+module.exports = HAS160;

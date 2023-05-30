@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Dish from "../Dish.mjs";
-import XRegExp from "xregexp";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Dish = require(""../Dish.mjs"");
+const XRegExp = require(""xregexp"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * Register operation
@@ -117,4 +117,4 @@ class Register extends Operation {
 
 }
 
-export default Register;
+module.exports = Register;

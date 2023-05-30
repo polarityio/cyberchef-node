@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import forge from "node-forge";
-import BigNumber from "bignumber.js";
-import { isWorkerEnvironment } from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const forge = require(""node-forge"");
+const BigNumber = require(""bignumber.js"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
 
 /**
  * Pseudo-Random Number Generator operation
@@ -83,4 +83,4 @@ class PseudoRandomNumberGenerator extends Operation {
 
 }
 
-export default PseudoRandomNumberGenerator;
+module.exports = PseudoRandomNumberGenerator;

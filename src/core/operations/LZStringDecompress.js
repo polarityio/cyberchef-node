@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
-import {COMPRESSION_OUTPUT_FORMATS, DECOMPRESSION_FUNCTIONS} from "../lib/LZString.mjs";
+const {COMPRESSION_OUTPUT_FORMATS, DECOMPRESSION_FUNCTIONS} = require(""../lib/LZString.mjs"");
 
 /**
  * LZString Decompress operation
@@ -53,4 +53,4 @@ class LZStringDecompress extends Operation {
 
 }
 
-export default LZStringDecompress;
+module.exports = LZStringDecompress;

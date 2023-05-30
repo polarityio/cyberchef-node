@@ -5,9 +5,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import TLVParser from "../lib/TLVParser.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const TLVParser = require(""../lib/TLVParser.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Parse TLV operation
@@ -74,4 +74,4 @@ class ParseTLV extends Operation {
 
 }
 
-export default ParseTLV;
+module.exports = ParseTLV;

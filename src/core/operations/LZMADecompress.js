@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import {decompress} from "@blu3r4y/lzma";
-import Utils, {isWorkerEnvironment} from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {decompress} = require(""@blu3r4y/lzma"");
+const Utils, {isWorkerEnvironment} = require(""../Utils.mjs"");
 
 /**
  * LZMA Decompress operation
@@ -54,4 +54,4 @@ class LZMADecompress extends Operation {
 
 }
 
-export default LZMADecompress;
+module.exports = LZMADecompress;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {toBinary} from "../lib/Binary.mjs";
+const Operation = require(""../Operation.mjs"");
+const {toBinary} = require(""../lib/Binary.mjs"");
 
 /**
  * Cetacean Cipher Encode operation
@@ -48,4 +48,4 @@ class CetaceanCipherEncode extends Operation {
     }
 }
 
-export default CetaceanCipherEncode;
+module.exports = CetaceanCipherEncode;

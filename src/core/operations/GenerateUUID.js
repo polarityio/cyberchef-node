@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import crypto from "crypto";
+const Operation = require(""../Operation.mjs"");
+const crypto = require(""crypto"");
 
 /**
  * Generate UUID operation
@@ -47,4 +47,4 @@ class GenerateUUID extends Operation {
 
 }
 
-export default GenerateUUID;
+module.exports = GenerateUUID;

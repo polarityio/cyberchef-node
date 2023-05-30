@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Strip HTTP headers operation
@@ -47,4 +47,4 @@ class StripHTTPHeaders extends Operation {
 
 }
 
-export default StripHTTPHeaders;
+module.exports = StripHTTPHeaders;

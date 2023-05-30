@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Label operation. For use with Jump and Conditional Jump.
@@ -45,4 +45,4 @@ class Label extends Operation {
 
 }
 
-export default Label;
+module.exports = Label;

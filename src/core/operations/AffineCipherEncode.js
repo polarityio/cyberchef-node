@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { affineEncode } from "../lib/Ciphers.mjs";
+const Operation = require(""../Operation.mjs"");
+const { affineEncode } = require(""../lib/Ciphers.mjs"");
 
 /**
  * Affine Cipher Encode operation
@@ -75,4 +75,4 @@ class AffineCipherEncode extends Operation {
 
 }
 
-export default AffineCipherEncode;
+module.exports = AffineCipherEncode;

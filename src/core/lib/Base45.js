@@ -24,4 +24,5 @@ export function highlightFromBase45(pos, args) {
     return pos;
 }
 
-export const ALPHABET = "0-9A-Z $%*+\\-./:";
+const ALPHABET = "0-9A-Z $%*+\\-./:";
+exports.ALPHABET = ALPHABET;

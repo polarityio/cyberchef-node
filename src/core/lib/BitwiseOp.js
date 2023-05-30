@@ -121,4 +121,5 @@ export function sub(operand, key) {
 /**
  * Delimiter options for bitwise operations
  */
-export const BITWISE_OP_DELIMS = ["Hex", "Decimal", "Binary", "Base64", "UTF8", "Latin1"];
+const BITWISE_OP_DELIMS = ["Hex", "Decimal", "Binary", "Base64", "UTF8", "Latin1"];
+exports.BITWISE_OP_DELIMS = BITWISE_OP_DELIMS;

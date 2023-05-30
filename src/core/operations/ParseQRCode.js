@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import { parseQrCode } from "../lib/QRCode.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const { parseQrCode } = require(""../lib/QRCode.mjs"");
 
 /**
  * Parse QR Code operation
@@ -59,4 +59,4 @@ class ParseQRCode extends Operation {
 
 }
 
-export default ParseQRCode;
+module.exports = ParseQRCode;

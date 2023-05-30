@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Reverse operation
@@ -84,4 +84,4 @@ class Reverse extends Operation {
 
 }
 
-export default Reverse;
+module.exports = Reverse;

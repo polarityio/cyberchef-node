@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { format } from "../lib/Ciphers.mjs";
-import CryptoJS from "crypto-js";
+const Operation = require(""../Operation.mjs"");
+const { format } = require(""../lib/Ciphers.mjs"");
+const CryptoJS = require(""crypto-js"");
 
 /**
  * RC4 Drop operation
@@ -92,4 +92,4 @@ class RC4Drop extends Operation {
 
 }
 
-export default RC4Drop;
+module.exports = RC4Drop;

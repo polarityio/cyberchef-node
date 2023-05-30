@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {HASH_DELIM_OPTIONS} from "../lib/Delim.mjs";
-import ssdeepjs from "ssdeep.js";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {HASH_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const ssdeepjs = require(""ssdeep.js"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Compare SSDEEP hashes operation
@@ -49,4 +49,4 @@ class CompareSSDEEPHashes extends Operation {
 
 }
 
-export default CompareSSDEEPHashes;
+module.exports = CompareSSDEEPHashes;

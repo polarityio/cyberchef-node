@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import snakeCase from "lodash/snakeCase.js";
-import Operation from "../Operation.mjs";
-import { replaceVariableNames } from "../lib/Code.mjs";
+const snakeCase = require(""lodash/snakeCase.js"");
+const Operation = require(""../Operation.mjs"");
+const { replaceVariableNames } = require(""../lib/Code.mjs"");
 
 /**
  * To Snake case operation
@@ -50,4 +50,4 @@ class ToSnakeCase extends Operation {
     }
 }
 
-export default ToSnakeCase;
+module.exports = ToSnakeCase;

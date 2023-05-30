@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { search } from "../lib/Extract.mjs";
-import { ipSort } from "../lib/Sort.mjs";
+const Operation = require(""../Operation.mjs"");
+const { search } = require(""../lib/Extract.mjs"");
+const { ipSort } = require(""../lib/Sort.mjs"");
 
 /**
  * Extract IP addresses operation
@@ -105,4 +105,4 @@ class ExtractIPAddresses extends Operation {
 
 }
 
-export default ExtractIPAddresses;
+module.exports = ExtractIPAddresses;

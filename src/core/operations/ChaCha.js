@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import { toHex } from "../lib/Hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { toHex } = require(""../lib/Hex.mjs"");
 
 /**
  * Computes the ChaCha block function
@@ -231,4 +231,4 @@ ChaCha uses a nonce of 8 or 12 bytes (64 or 96 bits).`);
 
 }
 
-export default ChaCha;
+module.exports = ChaCha;

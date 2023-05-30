@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Protobuf from "../lib/Protobuf.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Protobuf = require(""../lib/Protobuf.mjs"");
 
 /**
  * Protobuf Encode operation
@@ -51,4 +51,4 @@ class ProtobufEncode extends Operation {
 
 }
 
-export default ProtobufEncode;
+module.exports = ProtobufEncode;

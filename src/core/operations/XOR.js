@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { bitOp, xor, BITWISE_OP_DELIMS } from "../lib/BitwiseOp.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { bitOp, xor, BITWISE_OP_DELIMS } = require(""../lib/BitwiseOp.mjs"");
 
 /**
  * XOR operation
@@ -86,4 +86,4 @@ class XOR extends Operation {
 
 }
 
-export default XOR;
+module.exports = XOR;

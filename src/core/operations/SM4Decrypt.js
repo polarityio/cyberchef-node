@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { toHex } from "../lib/Hex.mjs";
-import { decryptSM4 } from "../lib/SM4.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { toHex } = require(""../lib/Hex.mjs"");
+const { decryptSM4 } = require(""../lib/SM4.mjs"");
 
 /**
  * SM4 Decrypt operation
@@ -85,4 +85,4 @@ Make sure you have specified the type correctly (e.g. Hex vs UTF8).`);
 
 }
 
-export default SM4Decrypt;
+module.exports = SM4Decrypt;

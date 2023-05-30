@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 import {
     BACON_ALPHABETS,
     BACON_TRANSLATIONS_FOR_ENCODING, BACON_TRANSLATION_AB,
@@ -98,4 +98,4 @@ class BaconCipherEncode extends Operation {
     }
 }
 
-export default BaconCipherEncode;
+module.exports = BaconCipherEncode;

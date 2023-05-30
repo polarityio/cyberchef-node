@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {BIN_DELIM_OPTIONS} from "../lib/Delim.mjs";
-import {fromBinary} from "../lib/Binary.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {BIN_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const {fromBinary} = require(""../lib/Binary.mjs"");
 
 /**
  * From Binary operation
@@ -122,4 +122,4 @@ class FromBinary extends Operation {
 
 }
 
-export default FromBinary;
+module.exports = FromBinary;

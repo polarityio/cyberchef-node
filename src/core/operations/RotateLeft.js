@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {rot, rotl, rotlCarry} from "../lib/Rotate.mjs";
+const Operation = require(""../Operation.mjs"");
+const {rot, rotl, rotlCarry} = require(""../lib/Rotate.mjs"");
 
 
 /**
@@ -79,4 +79,4 @@ class RotateLeft extends Operation {
     }
 }
 
-export default RotateLeft;
+module.exports = RotateLeft;

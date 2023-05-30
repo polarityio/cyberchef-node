@@ -5,21 +5,23 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * @constant
  * @default
  */
-export const RECORD_DELIMITER_OPTIONS = ["Line feed", "CRLF"];
+const RECORD_DELIMITER_OPTIONS = ["Line feed", "CRLF"];
+exports.RECORD_DELIMITER_OPTIONS = RECORD_DELIMITER_OPTIONS;
 
 
 /**
  * @constant
  * @default
  */
-export const FIELD_DELIMITER_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon", "Tab"];
+const FIELD_DELIMITER_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon", "Tab"];
+exports.FIELD_DELIMITER_OPTIONS = FIELD_DELIMITER_OPTIONS;
 
 
 /**
@@ -28,10 +30,11 @@ export const FIELD_DELIMITER_OPTIONS = ["Space", "Comma", "Semi-colon", "Colon",
  * @constant
  * @default
  */
-export const COLOURS = {
+const COLOURS = {
     min: "white",
     max: "black"
 };
+exports.COLOURS = COLOURS;
 
 
 /**

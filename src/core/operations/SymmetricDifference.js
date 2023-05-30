@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Utils from "../Utils.mjs";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Utils = require(""../Utils.mjs"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Set Symmetric Difference operation
@@ -96,4 +96,4 @@ class SymmetricDifference extends Operation {
 
 }
 
-export default SymmetricDifference;
+module.exports = SymmetricDifference;

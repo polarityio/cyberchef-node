@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Parse colour code operation
@@ -193,4 +193,4 @@ CMYK: ${cmyk}
     }
 }
 
-export default ParseColourCode;
+module.exports = ParseColourCode;

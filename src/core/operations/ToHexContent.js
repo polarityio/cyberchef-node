@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {toHex} from "../lib/Hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {toHex} = require(""../lib/Hex.mjs"");
 
 /**
  * To Hex Content operation
@@ -80,4 +80,4 @@ class ToHexContent extends Operation {
 
 }
 
-export default ToHexContent;
+module.exports = ToHexContent;

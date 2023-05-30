@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import r from "jsrsasign";
-import Operation from "../Operation.mjs";
+const r = require(""jsrsasign"");
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Object Identifier to Hex operation
@@ -38,4 +38,4 @@ class ObjectIdentifierToHex extends Operation {
 
 }
 
-export default ObjectIdentifierToHex;
+module.exports = ObjectIdentifierToHex;

@@ -5,12 +5,12 @@
  * @license Apache-2.0
  */
 
-import * as d3temp from "d3";
-import * as nodomtemp from "nodom";
-import { getSeriesValues, RECORD_DELIMITER_OPTIONS, FIELD_DELIMITER_OPTIONS } from "../lib/Charts.mjs";
+const * as d3temp = require(""d3"");
+const * as nodomtemp = require(""nodom"");
+const { getSeriesValues, RECORD_DELIMITER_OPTIONS, FIELD_DELIMITER_OPTIONS } = require(""../lib/Charts.mjs"");
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;
@@ -227,4 +227,4 @@ class SeriesChart extends Operation {
 
 }
 
-export default SeriesChart;
+module.exports = SeriesChart;

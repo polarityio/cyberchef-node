@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Permutate String operation
@@ -50,4 +50,4 @@ class GetAllCasings extends Operation {
     }
 }
 
-export default GetAllCasings;
+module.exports = GetAllCasings;

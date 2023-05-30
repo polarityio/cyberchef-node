@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import escodegen from "escodegen";
-import * as esprima from "esprima";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const escodegen = require(""escodegen"");
+const * as esprima = require(""esprima"");
 
 /**
  * JavaScript Beautify operation
@@ -92,4 +92,4 @@ class JavaScriptBeautify extends Operation {
 
 }
 
-export default JavaScriptBeautify;
+module.exports = JavaScriptBeautify;

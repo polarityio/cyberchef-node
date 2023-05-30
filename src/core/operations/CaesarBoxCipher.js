@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Caesar Box Cipher operation
@@ -58,4 +58,4 @@ class CaesarBoxCipher extends Operation {
 
 }
 
-export default CaesarBoxCipher;
+module.exports = CaesarBoxCipher;

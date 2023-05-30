@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Numberwang operation. Remain indoors.
@@ -98,4 +98,4 @@ const didYouKnow = [
     "Numberwang was first played on the moon in 1834.",
 ];
 
-export default Numberwang;
+module.exports = Numberwang;

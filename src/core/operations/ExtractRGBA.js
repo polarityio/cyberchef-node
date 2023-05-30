@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const jimp = require(""jimp"");
 
-import {RGBA_DELIM_OPTIONS} from "../lib/Delim.mjs";
+const {RGBA_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
 
 /**
  * Extract RGBA operation
@@ -62,4 +62,4 @@ class ExtractRGBA extends Operation {
 
 }
 
-export default ExtractRGBA;
+module.exports = ExtractRGBA;

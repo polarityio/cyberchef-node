@@ -3,10 +3,10 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-import Operation from "../Operation.mjs";
-import jwt from "jsonwebtoken";
-import OperationError from "../errors/OperationError.mjs";
-import {JWT_ALGORITHMS} from "../lib/JWT.mjs";
+const Operation = require(""../Operation.mjs"");
+const jwt = require(""jsonwebtoken"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const {JWT_ALGORITHMS} = require(""../lib/JWT.mjs"");
 
 
 /**
@@ -61,4 +61,4 @@ ${err}`);
 
 }
 
-export default JWTSign;
+module.exports = JWTSign;

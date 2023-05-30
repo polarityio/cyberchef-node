@@ -5,9 +5,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import forge from "node-forge";
-import { cryptNotice } from "../lib/Crypt.mjs";
+const Operation = require(""../Operation.mjs"");
+const forge = require(""node-forge"");
+const { cryptNotice } = require(""../lib/Crypt.mjs"");
 
 /**
  * Generate RSA Key Pair operation
@@ -85,4 +85,4 @@ class GenerateRSAKeyPair extends Operation {
 
 }
 
-export default GenerateRSAKeyPair;
+module.exports = GenerateRSAKeyPair;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import bcrypt from "bcryptjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const bcrypt = require(""bcryptjs"");
 
 /**
  * Bcrypt parse operation
@@ -46,4 +46,4 @@ Full hash: ${input}`;
 
 }
 
-export default BcryptParse;
+module.exports = BcryptParse;

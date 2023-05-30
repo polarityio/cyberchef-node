@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Expand alphabet range operation
@@ -43,4 +43,4 @@ class ExpandAlphabetRange extends Operation {
 
 }
 
-export default ExpandAlphabetRange;
+module.exports = ExpandAlphabetRange;

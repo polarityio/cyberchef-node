@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import {isImage} from "../lib/FileType.mjs";
-import jimp from "jimp";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {isImage} = require(""../lib/FileType.mjs"");
+const jimp = require(""jimp"");
 
 /**
  * Split Colour Channels operation
@@ -99,4 +99,4 @@ class SplitColourChannels extends Operation {
 
 }
 
-export default SplitColourChannels;
+module.exports = SplitColourChannels;

@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import r from "jsrsasign";
-import { fromBase64 } from "../lib/Base64.mjs";
-import { toHex } from "../lib/Hex.mjs";
-import { formatByteStr, formatDnObj } from "../lib/PublicKey.mjs";
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const r = require(""jsrsasign"");
+const { fromBase64 } = require(""../lib/Base64.mjs"");
+const { toHex } = require(""../lib/Hex.mjs"");
+const { formatByteStr, formatDnObj } = require(""../lib/PublicKey.mjs"");
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Parse X.509 certificate operation
@@ -221,4 +221,4 @@ function formatDate (dateStr) {
         dateStr[12] + dateStr[13];
 }
 
-export default ParseX509Certificate;
+module.exports = ParseX509Certificate;

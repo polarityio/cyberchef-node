@@ -9,10 +9,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { ColossusComputer } from "../lib/Colossus.mjs";
-import { SWITCHES, VALID_ITA2 } from "../lib/Lorenz.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { ColossusComputer } = require(""../lib/Colossus.mjs"");
+const { SWITCHES, VALID_ITA2 } = require(""../lib/Lorenz.mjs"");
 
 /**
  * Colossus operation
@@ -583,4 +583,4 @@ class Colossus extends Operation {
 
 }
 
-export default Colossus;
+module.exports = Colossus;

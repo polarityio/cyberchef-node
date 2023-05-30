@@ -6,8 +6,8 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-import TestRegister from "../../lib/TestRegister.mjs";
-import { JPG_RAW } from "../../samples/Images.mjs";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const { JPG_RAW } = require(""../../samples/Images.mjs"");
 
 TestRegister.addTests([
     {

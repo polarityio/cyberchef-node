@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import BigNumber from "bignumber.js";
-import Utils from "../Utils.mjs";
-import {toHexFast} from "../lib/Hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const BigNumber = require(""bignumber.js"");
+const Utils = require(""../Utils.mjs"");
+const {toHexFast} = require(""../lib/Hex.mjs"");
 
 /**
  * To Base62 operation
@@ -59,4 +59,4 @@ class ToBase62 extends Operation {
 
 }
 
-export default ToBase62;
+module.exports = ToBase62;

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import notepack from "notepack.io";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const notepack = require(""notepack.io"");
 
 /**
  * From MessagePack operation
@@ -44,4 +44,4 @@ class FromMessagePack extends Operation {
 
 }
 
-export default FromMessagePack;
+module.exports = FromMessagePack;

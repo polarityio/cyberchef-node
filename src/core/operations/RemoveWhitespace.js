@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Remove whitespace operation
@@ -83,4 +83,4 @@ class RemoveWhitespace extends Operation {
 
 }
 
-export default RemoveWhitespace;
+module.exports = RemoveWhitespace;

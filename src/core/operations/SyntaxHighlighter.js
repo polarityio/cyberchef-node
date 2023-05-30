@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import hljs from "highlight.js";
+const Operation = require(""../Operation.mjs"");
+const hljs = require(""highlight.js"");
 
 /**
  * Syntax highlighter operation
@@ -76,4 +76,4 @@ class SyntaxHighlighter extends Operation {
 
 }
 
-export default SyntaxHighlighter;
+module.exports = SyntaxHighlighter;

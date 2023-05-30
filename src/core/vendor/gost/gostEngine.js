@@ -30,10 +30,10 @@
  * 
  */
 
-import GostRandom from './gostRandom.mjs';
-import GostCipher from './gostCipher.mjs';
-import GostDigest from './gostDigest.mjs';
-import GostSign from './gostSign.mjs';
+const GostRandom = require("'./gostRandom.mjs'");
+const GostCipher = require("'./gostCipher.mjs'");
+const GostDigest = require("'./gostDigest.mjs'");
+const GostSign = require("'./gostSign.mjs'");
 
 /*
     * Engine definition base on normalized algorithm identifier
@@ -447,5 +447,5 @@ if (root.importScripts) {
         importScripts('gostSign.js');
 } // </editor-fold>
 
-export default gostEngine;
+module.exports = gostEngine;
 

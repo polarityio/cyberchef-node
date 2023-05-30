@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import JSCRC from "js-crc";
+const Operation = require(""../Operation.mjs"");
+const JSCRC = require(""js-crc"");
 
 /**
  * CRC-32 Checksum operation
@@ -38,4 +38,4 @@ class CRC32Checksum extends Operation {
 
 }
 
-export default CRC32Checksum;
+module.exports = CRC32Checksum;

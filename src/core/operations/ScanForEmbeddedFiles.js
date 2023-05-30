@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import { scanForFileTypes } from "../lib/FileType.mjs";
-import { FILE_SIGNATURES } from "../lib/FileSignatures.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { scanForFileTypes } = require(""../lib/FileType.mjs"");
+const { FILE_SIGNATURES } = require(""../lib/FileSignatures.mjs"");
 
 /**
  * Scan for Embedded Files operation
@@ -75,4 +75,4 @@ class ScanForEmbeddedFiles extends Operation {
 
 }
 
-export default ScanForEmbeddedFiles;
+module.exports = ScanForEmbeddedFiles;

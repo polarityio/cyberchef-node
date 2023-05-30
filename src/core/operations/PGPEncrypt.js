@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import kbpgp from "kbpgp";
-import { ASP, importPublicKey } from "../lib/PGP.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import * as es6promisify from "es6-promisify";
+const Operation = require(""../Operation.mjs"");
+const kbpgp = require(""kbpgp"");
+const { ASP, importPublicKey } = require(""../lib/PGP.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const * as es6promisify = require(""es6-promisify"");
 const promisify = es6promisify.default ? es6promisify.default.promisify : es6promisify.promisify;
 
 /**
@@ -76,4 +76,4 @@ class PGPEncrypt extends Operation {
 
 }
 
-export default PGPEncrypt;
+module.exports = PGPEncrypt;

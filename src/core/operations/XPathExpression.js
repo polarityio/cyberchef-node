@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import xmldom from "xmldom";
-import xpath from "xpath";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const xmldom = require(""xmldom"");
+const xpath = require(""xpath"");
 
 /**
  * XPath expression operation
@@ -83,4 +83,4 @@ class XPathExpression extends Operation {
 
 }
 
-export default XPathExpression;
+module.exports = XPathExpression;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * TCP/IP Checksum operation
@@ -51,4 +51,4 @@ class TCPIPChecksum extends Operation {
 
 }
 
-export default TCPIPChecksum;
+module.exports = TCPIPChecksum;

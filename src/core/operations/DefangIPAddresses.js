@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 
 /**
@@ -56,7 +56,7 @@ class DefangIPAddresses extends Operation {
     }
 }
 
-export default DefangIPAddresses;
+module.exports = DefangIPAddresses;
 
 
 /**

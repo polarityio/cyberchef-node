@@ -5,8 +5,8 @@
  * @copyright Crown Copyright 2018
  * @license Apache-2.0
  */
-import TestRegister from "../../lib/TestRegister.mjs";
-import {ASCII_TEXT, UTF8_TEXT, ALL_BYTES} from "../../samples/Ciphers.mjs";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const {ASCII_TEXT, UTF8_TEXT, ALL_BYTES} = require(""../../samples/Ciphers.mjs"");
 
 // RSA-1024
 const ALICE_PRIVATE = `-----BEGIN PGP PRIVATE KEY BLOCK-----

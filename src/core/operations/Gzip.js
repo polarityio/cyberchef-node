@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {COMPRESSION_TYPE, ZLIB_COMPRESSION_TYPE_LOOKUP} from "../lib/Zlib.mjs";
-import gzip from "zlibjs/bin/gzip.min.js";
+const Operation = require(""../Operation.mjs"");
+const {COMPRESSION_TYPE, ZLIB_COMPRESSION_TYPE_LOOKUP} = require(""../lib/Zlib.mjs"");
+const gzip = require(""zlibjs/bin/gzip.min.js"");
 
 const Zlib = gzip.Zlib;
 
@@ -86,4 +86,4 @@ class Gzip extends Operation {
 
 }
 
-export default Gzip;
+module.exports = Gzip;

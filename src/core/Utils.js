@@ -5,12 +5,12 @@
  */
 
 // loglevel import required for Node API
-import log from "loglevel";
-import utf8 from "utf8";
-import {fromBase64, toBase64} from "./lib/Base64.mjs";
-import {fromHex} from "./lib/Hex.mjs";
-import {fromDecimal} from "./lib/Decimal.mjs";
-import {fromBinary} from "./lib/Binary.mjs";
+const log = require(""loglevel"");
+const utf8 = require(""utf8"");
+const {fromBase64, toBase64} = require(""./lib/Base64.mjs"");
+const {fromHex} = require(""./lib/Hex.mjs"");
+const {fromDecimal} = require(""./lib/Decimal.mjs"");
+const {fromBinary} = require(""./lib/Binary.mjs"");
 
 /**
  * Utility functions for use in operations, the core framework and the stage.
@@ -1365,7 +1365,7 @@ export function isWorkerEnvironment() {
     return typeof importScripts === "function";
 }
 
-export default Utils;
+module.exports = Utils;
 
 
 /**

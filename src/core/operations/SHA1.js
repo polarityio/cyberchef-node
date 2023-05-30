@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {runHash} from "../lib/Hash.mjs";
+const Operation = require(""../Operation.mjs"");
+const {runHash} = require(""../lib/Hash.mjs"");
 
 /**
  * SHA1 operation
@@ -45,4 +45,4 @@ class SHA1 extends Operation {
 
 }
 
-export default SHA1;
+module.exports = SHA1;

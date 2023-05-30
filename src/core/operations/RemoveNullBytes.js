@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Remove null bytes operation
@@ -41,4 +41,4 @@ class RemoveNullBytes extends Operation {
 
 }
 
-export default RemoveNullBytes;
+module.exports = RemoveNullBytes;

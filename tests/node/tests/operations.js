@@ -16,9 +16,9 @@
  * @license Apache-2.0
  */
 
-import assert from "assert";
-import it from "../assertionHandler.mjs";
-import fs from "fs";
+const assert = require(""assert"");
+const it = require(""../assertionHandler.mjs"");
+const fs = require(""fs"");
 
 import {
     addLineNumbers,
@@ -33,9 +33,9 @@ import {
     toBase64,
     toHex
 } from "../../../src/node/index.mjs";
-import chef from "../../../src/node/index.mjs";
-import TestRegister from "../../lib/TestRegister.mjs";
-import File from "../../../src/node/File.mjs";
+const chef = require(""../../../src/node/index.mjs"");
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const File = require(""../../../src/node/File.mjs"");
 
 global.File = File;
 

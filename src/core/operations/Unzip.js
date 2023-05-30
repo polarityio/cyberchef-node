@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import unzip from "zlibjs/bin/unzip.min.js";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const unzip = require(""zlibjs/bin/unzip.min.js"");
 
 const Zlib = unzip.Zlib;
 
@@ -80,4 +80,4 @@ class Unzip extends Operation {
 
 }
 
-export default Unzip;
+module.exports = Unzip;

@@ -1,6 +1,6 @@
-import OperationError from "./OperationError.mjs";
-import DishError from "./DishError.mjs";
-import ExcludedOperationError from "./ExcludedOperationError.mjs";
+const OperationError = require(""./OperationError.mjs"");
+const DishError = require(""./DishError.mjs"");
+const ExcludedOperationError = require(""./ExcludedOperationError.mjs"");
 
 export {
     OperationError,

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import DishString from "./DishString.mjs";
-import Utils from "../Utils.mjs";
+const DishString = require(""./DishString.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Translation methods for HTML Dishes
@@ -23,4 +23,4 @@ class DishHTML extends DishString {
 
 }
 
-export default DishHTML;
+module.exports = DishHTML;

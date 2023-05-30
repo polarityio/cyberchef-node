@@ -6,15 +6,15 @@
  * @copyright Crown Copyright 2019
  * @license Apache-2.0
  */
-import OperationError from "../errors/OperationError.mjs";
-import * as Enigma from "../lib/Enigma.mjs";
-import Utils from "../Utils.mjs";
+const OperationError = require(""../errors/OperationError.mjs"");
+const * as Enigma = require(""../lib/Enigma.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * A set of example Typex rotors. No Typex rotor wirings are publicly available, so these are
  * randomised.
  */
-export const ROTORS = [
+const ROTORS = [
     {name: "Example 1", value: "MCYLPQUVRXGSAOWNBJEZDTFKHI<BFHNQUW"},
     {name: "Example 2", value: "KHWENRCBISXJQGOFMAPVYZDLTU<BFHNQUW"},
     {name: "Example 3", value: "BYPDZMGIKQCUSATREHOJNLFWXV<BFHNQUW"},
@@ -24,13 +24,15 @@ export const ROTORS = [
     {name: "Example 7", value: "WJUKEIABMSGFTQZVCNPHORDXYL<BFHNQUW"},
     {name: "Example 8", value: "TNVCZXDIPFWQKHSJMAOYLEURGB<BFHNQUW"},
 ];
+exports.ROTORS = ROTORS;
 
 /**
  * An example Typex reflector. Again, randomised.
  */
-export const REFLECTORS = [
+const REFLECTORS = [
     {name: "Example", value: "AN BC FG IE KD LU MH OR TS VZ WQ XJ YP"},
 ];
+exports.REFLECTORS = REFLECTORS;
 
 // Special character handling on Typex keyboard
 const KEYBOARD = {

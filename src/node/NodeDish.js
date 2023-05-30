@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import util from "util";
-import Dish from "../core/Dish.mjs";
+const util = require(""util"");
+const Dish = require(""../core/Dish.mjs"");
 
 /**
  * Subclass of Dish for use in the Node.js environment.
@@ -81,4 +81,4 @@ class NodeDish extends Dish {
 
 }
 
-export default NodeDish;
+module.exports = NodeDish;

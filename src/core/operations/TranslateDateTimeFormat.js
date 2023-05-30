@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import moment from "moment-timezone";
-import {DATETIME_FORMATS, FORMAT_EXAMPLES} from "../lib/DateTime.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const moment = require(""moment-timezone"");
+const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require(""../lib/DateTime.mjs"");
 
 /**
  * Translate DateTime Format operation
@@ -90,4 +90,4 @@ class TranslateDateTimeFormat extends Operation {
     }
 }
 
-export default TranslateDateTimeFormat;
+module.exports = TranslateDateTimeFormat;

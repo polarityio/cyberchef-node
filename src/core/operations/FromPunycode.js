@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import punycode from "punycode";
+const Operation = require(""../Operation.mjs"");
+const punycode = require(""punycode"");
 
 /**
  * From Punycode operation
@@ -50,4 +50,4 @@ class FromPunycode extends Operation {
 
 }
 
-export default FromPunycode;
+module.exports = FromPunycode;

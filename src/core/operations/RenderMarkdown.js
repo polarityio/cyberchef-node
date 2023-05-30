@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import MarkdownIt from "markdown-it";
-import hljs from "highlight.js";
+const Operation = require(""../Operation.mjs"");
+const MarkdownIt = require(""markdown-it"");
+const hljs = require(""highlight.js"");
 
 /**
  * Render Markdown operation
@@ -66,4 +66,4 @@ class RenderMarkdown extends Operation {
 
 }
 
-export default RenderMarkdown;
+module.exports = RenderMarkdown;

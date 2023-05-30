@@ -9,7 +9,7 @@
 /**
  * BCD encoding schemes.
  */
-export const ENCODING_SCHEME = [
+const ENCODING_SCHEME = [
     "8 4 2 1",
     "7 4 2 1",
     "4 2 2 1",
@@ -18,6 +18,7 @@ export const ENCODING_SCHEME = [
     "Excess-3",
     "IBM 8 4 2 1",
 ];
+exports.ENCODING_SCHEME = ENCODING_SCHEME;
 
 /**
  * Lookup table for the binary value of each digit representation.
@@ -32,7 +33,7 @@ export const ENCODING_SCHEME = [
  * For instance, in 4 2 2 1 encoding, 0100 and 0010 both represent 2. Support
  * has not yet been added for this.
  */
-export const ENCODING_LOOKUP = {
+const ENCODING_LOOKUP = {
     "8 4 2 1":     [0,  1,  2,  3,  4,  5,  6,  7,  8,  9],
     "7 4 2 1":     [0,  1,  2,  3,  4,  5,  6,  8,  9,  10],
     "4 2 2 1":     [0,  1,  4,  5,  8,  9,  12, 13, 14, 15],
@@ -41,8 +42,10 @@ export const ENCODING_LOOKUP = {
     "Excess-3":    [3,  4,  5,  6,  7,  8,  9,  10, 11, 12],
     "IBM 8 4 2 1": [10, 1,  2,  3,  4,  5,  6,  7,  8,  9],
 };
+exports.ENCODING_LOOKUP = ENCODING_LOOKUP;
 
 /**
  * BCD formats.
  */
-export const FORMAT = ["Nibbles", "Bytes", "Raw"];
+const FORMAT = ["Nibbles", "Bytes", "Raw"];
+exports.FORMAT = FORMAT;

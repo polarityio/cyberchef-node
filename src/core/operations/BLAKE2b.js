@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import blakejs from "blakejs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import { toBase64 } from "../lib/Base64.mjs";
+const Operation = require(""../Operation.mjs"");
+const blakejs = require(""blakejs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { toBase64 } = require(""../lib/Base64.mjs"");
 
 /**
  * BLAKE2b operation
@@ -76,4 +76,4 @@ class BLAKE2b extends Operation {
 
 }
 
-export default BLAKE2b;
+module.exports = BLAKE2b;

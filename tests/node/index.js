@@ -15,7 +15,7 @@ import {
     logTestReport,
 } from "../lib/utils.mjs";
 
-import TestRegister from "../lib/TestRegister.mjs";
+const TestRegister = require(""../lib/TestRegister.mjs"");
 import "./tests/nodeApi.mjs";
 import "./tests/operations.mjs";
 import "./tests/File.mjs";

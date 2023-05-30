@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Convert to NATO alphabet operation
@@ -79,4 +79,4 @@ const lookup = {
     ".": "Full stop ",
 };
 
-export default ConvertToNATOAlphabet;
+module.exports = ConvertToNATOAlphabet;

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import moment from "moment-timezone";
-import {UNITS} from "../lib/DateTime.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const moment = require(""moment-timezone"");
+const {UNITS} = require(""../lib/DateTime.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * From UNIX Timestamp operation
@@ -89,4 +89,4 @@ class FromUNIXTimestamp extends Operation {
 
 }
 
-export default FromUNIXTimestamp;
+module.exports = FromUNIXTimestamp;

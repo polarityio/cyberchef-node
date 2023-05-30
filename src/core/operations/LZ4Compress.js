@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import lz4 from "lz4js";
+const Operation = require(""../Operation.mjs"");
+const lz4 = require(""lz4js"");
 
 /**
  * LZ4 Compress operation
@@ -40,4 +40,4 @@ class LZ4Compress extends Operation {
 
 }
 
-export default LZ4Compress;
+module.exports = LZ4Compress;

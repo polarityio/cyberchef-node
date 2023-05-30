@@ -4,14 +4,14 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Stream from "../lib/Stream.mjs";
-import {toHexFast, fromHex} from "../lib/Hex.mjs";
-import {toBinary} from "../lib/Binary.mjs";
-import {objToTable, bytesToLargeNumber} from "../lib/Protocol.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import BigNumber from "bignumber.js";
+const Operation = require(""../Operation.mjs"");
+const Stream = require(""../lib/Stream.mjs"");
+const {toHexFast, fromHex} = require(""../lib/Hex.mjs"");
+const {toBinary} = require(""../lib/Binary.mjs"");
+const {objToTable, bytesToLargeNumber} = require(""../lib/Protocol.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const BigNumber = require(""bignumber.js"");
 
 /**
  * Parse TCP operation
@@ -242,4 +242,4 @@ function windowScaleParser(data) {
     };
 }
 
-export default ParseTCP;
+module.exports = ParseTCP;

@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import forge from "node-forge";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const forge = require(""node-forge"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * AES Decrypt operation
@@ -156,4 +156,4 @@ The following algorithms will be used based on the size of the key:
 
 }
 
-export default AESDecrypt;
+module.exports = AESDecrypt;

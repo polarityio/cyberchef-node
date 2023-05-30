@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Vigenère Encode operation
@@ -104,4 +104,4 @@ class VigenèreEncode extends Operation {
 
 }
 
-export default VigenèreEncode;
+module.exports = VigenèreEncode;

@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Stream from "../lib/Stream.mjs";
-import {toHexFast, fromHex} from "../lib/Hex.mjs";
-import {objToTable} from "../lib/Protocol.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Stream = require(""../lib/Stream.mjs"");
+const {toHexFast, fromHex} = require(""../lib/Hex.mjs"");
+const {objToTable} = require(""../lib/Protocol.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Parse UDP operation
@@ -86,4 +86,4 @@ class ParseUDP extends Operation {
 }
 
 
-export default ParseUDP;
+module.exports = ParseUDP;

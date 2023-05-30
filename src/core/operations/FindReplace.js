@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import XRegExp from "xregexp";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const XRegExp = require(""xregexp"");
 
 /**
  * Find / Replace operation
@@ -91,4 +91,4 @@ class FindReplace extends Operation {
 
 }
 
-export default FindReplace;
+module.exports = FindReplace;

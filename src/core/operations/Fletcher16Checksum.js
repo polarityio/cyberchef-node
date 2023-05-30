@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Fletcher-16 Checksum operation
@@ -47,4 +47,4 @@ class Fletcher16Checksum extends Operation {
 
 }
 
-export default Fletcher16Checksum;
+module.exports = Fletcher16Checksum;

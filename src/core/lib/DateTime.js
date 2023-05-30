@@ -9,12 +9,13 @@
 /**
  * DateTime units.
  */
-export const UNITS = ["Seconds (s)", "Milliseconds (ms)", "Microseconds (μs)", "Nanoseconds (ns)"];
+const UNITS = ["Seconds (s)", "Milliseconds (ms)", "Microseconds (μs)", "Nanoseconds (ns)"];
+exports.UNITS = UNITS;
 
 /**
  * DateTime formats.
  */
-export const DATETIME_FORMATS = [
+const DATETIME_FORMATS = [
     {
         name: "Standard date and time",
         value: "DD/MM/YYYY HH:mm:ss"
@@ -44,11 +45,12 @@ export const DATETIME_FORMATS = [
         value: ""
     },
 ];
+exports.DATETIME_FORMATS = DATETIME_FORMATS;
 
 /**
  * MomentJS DateTime formatting examples.
  */
-export const FORMAT_EXAMPLES = `Format string tokens:
+const FORMAT_EXAMPLES = `Format string tokens:
 <table class="table table-striped table-hover table-sm table-bordered" style="font-family: sans-serif">
   <thead class="thead-dark">
     <tr>
@@ -310,4 +312,5 @@ export const FORMAT_EXAMPLES = `Format string tokens:
     </tr>
   </tbody>
 </table>`;
+exports.FORMAT_EXAMPLES = FORMAT_EXAMPLES;
 

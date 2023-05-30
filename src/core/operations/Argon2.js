@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import argon2 from "argon2-browser";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const argon2 = require(""argon2-browser"");
 
 /**
  * Argon2 operation
@@ -114,4 +114,4 @@ class Argon2 extends Operation {
 
 }
 
-export default Argon2;
+module.exports = Argon2;

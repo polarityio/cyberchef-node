@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import {scanForFileTypes, extractFile} from "../lib/FileType.mjs";
-import {FILE_SIGNATURES} from "../lib/FileSignatures.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {scanForFileTypes, extractFile} = require(""../lib/FileType.mjs"");
+const {FILE_SIGNATURES} = require(""../lib/FileSignatures.mjs"");
 
 /**
  * Extract Files operation
@@ -120,4 +120,4 @@ class ExtractFiles extends Operation {
 
 }
 
-export default ExtractFiles;
+module.exports = ExtractFiles;

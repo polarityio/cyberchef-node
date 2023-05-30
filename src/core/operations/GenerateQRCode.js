@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { generateQrCode } from "../lib/QRCode.mjs";
-import { toBase64 } from "../lib/Base64.mjs";
-import { isImage } from "../lib/FileType.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { generateQrCode } = require(""../lib/QRCode.mjs"");
+const { toBase64 } = require(""../lib/Base64.mjs"");
+const { isImage } = require(""../lib/FileType.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * Generate QR Code operation
@@ -91,4 +91,4 @@ class GenerateQRCode extends Operation {
 
 }
 
-export default GenerateQRCode;
+module.exports = GenerateQRCode;

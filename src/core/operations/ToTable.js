@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
 
 /**
  * To Table operation
@@ -243,4 +243,4 @@ class ToTable extends Operation {
 
 }
 
-export default ToTable;
+module.exports = ToTable;

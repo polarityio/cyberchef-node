@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Decode NetBIOS Name operation
@@ -64,4 +64,4 @@ class DecodeNetBIOSName extends Operation {
 
 }
 
-export default DecodeNetBIOSName;
+module.exports = DecodeNetBIOSName;

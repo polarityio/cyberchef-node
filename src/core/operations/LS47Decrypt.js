@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import * as LS47 from "../lib/LS47.mjs";
+const Operation = require(""../Operation.mjs"");
+const * as LS47 = require(""../lib/LS47.mjs"");
 
 /**
  * LS47 Decrypt operation
@@ -54,4 +54,4 @@ class LS47Decrypt extends Operation {
 
 }
 
-export default LS47Decrypt;
+module.exports = LS47Decrypt;

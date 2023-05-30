@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import forge from "node-forge";
-import { toHexFast } from "../lib/Hex.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const forge = require(""node-forge"");
+const { toHexFast } = require(""../lib/Hex.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * CMAC operation
@@ -146,4 +146,4 @@ class CMAC extends Operation {
 
 }
 
-export default CMAC;
+module.exports = CMAC;

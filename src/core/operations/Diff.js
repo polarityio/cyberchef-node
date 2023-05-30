@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import * as JsDiff from "diff";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const * as JsDiff = require(""diff"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Diff operation
@@ -132,4 +132,4 @@ class Diff extends Operation {
 
 }
 
-export default Diff;
+module.exports = Diff;

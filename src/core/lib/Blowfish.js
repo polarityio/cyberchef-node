@@ -38,7 +38,7 @@
 
 const crypto = {};
 
-import forge from "node-forge";
+const forge = require(""node-forge"");
 
 
 /* dojo-release-1.8.1/dojo/_base/lang.js.uncompressed.js */
@@ -433,4 +433,5 @@ crypto.Blowfish.Algorithm.prototype.initialize=function(options) {
     this.box = box;
 };
 
-export const Blowfish = crypto.Blowfish;
+const Blowfish = crypto.Blowfish;
+exports.Blowfish = Blowfish;

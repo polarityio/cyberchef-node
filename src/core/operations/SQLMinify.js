@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import vkbeautify from "vkbeautify";
-import Operation from "../Operation.mjs";
+const vkbeautify = require(""vkbeautify"");
+const Operation = require(""../Operation.mjs"");
 
 /**
  * SQL Minify operation
@@ -37,4 +37,4 @@ class SQLMinify extends Operation {
 
 }
 
-export default SQLMinify;
+module.exports = SQLMinify;

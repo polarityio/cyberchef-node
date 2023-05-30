@@ -4,12 +4,12 @@
  * @license Apache-2.0
  */
 
-import { fromBase64, toBase64 } from "../lib/Base64.mjs";
-import { fromHex } from "../lib/Hex.mjs";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import Utils from "../Utils.mjs";
-import { isType, detectFileType } from "../lib/FileType.mjs";
+const { fromBase64, toBase64 } = require(""../lib/Base64.mjs"");
+const { fromHex } = require(""../lib/Hex.mjs"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const Utils = require(""../Utils.mjs"");
+const { isType, detectFileType } = require(""../lib/FileType.mjs"");
 
 /**
  * PlayMedia operation
@@ -98,4 +98,4 @@ class PlayMedia extends Operation {
     }
 }
 
-export default PlayMedia;
+module.exports = PlayMedia;

@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import r from "jsrsasign";
-import Operation from "../Operation.mjs";
+const r = require(""jsrsasign"");
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Hex to PEM operation
@@ -44,4 +44,4 @@ class HexToPEM extends Operation {
 
 }
 
-export default HexToPEM;
+module.exports = HexToPEM;

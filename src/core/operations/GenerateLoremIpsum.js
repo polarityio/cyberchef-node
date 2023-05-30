@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import { GenerateParagraphs, GenerateSentences, GenerateWords, GenerateBytes } from "../lib/LoremIpsum.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const { GenerateParagraphs, GenerateSentences, GenerateWords, GenerateBytes } = require(""../lib/LoremIpsum.mjs"");
 
 /**
  * Generate Lorem Ipsum operation
@@ -67,4 +67,4 @@ class GenerateLoremIpsum extends Operation {
 
 }
 
-export default GenerateLoremIpsum;
+module.exports = GenerateLoremIpsum;

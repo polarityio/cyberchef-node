@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import camelCase from "lodash/camelCase.js";
-import Operation from "../Operation.mjs";
-import { replaceVariableNames } from "../lib/Code.mjs";
+const camelCase = require(""lodash/camelCase.js"");
+const Operation = require(""../Operation.mjs"");
+const { replaceVariableNames } = require(""../lib/Code.mjs"");
 
 /**
  * To Camel case operation
@@ -51,4 +51,4 @@ class ToCamelCase extends Operation {
 
 }
 
-export default ToCamelCase;
+module.exports = ToCamelCase;

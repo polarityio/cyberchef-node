@@ -32,7 +32,7 @@
  *
  */
 
-import gostCrypto from './gostCrypto.mjs';
+const gostCrypto = require("'./gostCrypto.mjs'");
 
 /**
  * The Coding interface provides string converting methods: Base64, Hex,
@@ -1157,4 +1157,4 @@ if (gostCrypto)
      */
     gostCrypto.coding = new GostCoding();
 
-export default GostCoding;
+module.exports = GostCoding;

@@ -6,18 +6,18 @@
  * @license Apache-2.0
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import geohash from "ngeohash";
+const OperationError = require(""../errors/OperationError.mjs"");
+const geohash = require(""ngeohash"");
 /*
 Currently unable to update to geodesy v2 as we cannot load .js modules into a .mjs file.
 When we do update, imports will look like this:
 
-import LatLonEllipsoidal from "geodesy/latlon-ellipsoidal.js";
-import Mgrs from "geodesy/mgrs.js";
-import OsGridRef from "geodesy/osgridref.js";
-import Utm from "geodesy/utm.js";
+const LatLonEllipsoidal = require(""geodesy/latlon-ellipsoidal.js"");
+const Mgrs = require(""geodesy/mgrs.js"");
+const OsGridRef = require(""geodesy/osgridref.js"");
+const Utm = require(""geodesy/utm.js"");
 */
-import geodesy from "geodesy";
+const geodesy = require(""geodesy"");
 const LatLonEllipsoidal = geodesy.LatLonEllipsoidal,
     Mgrs = geodesy.Mgrs,
     OsGridRef = geodesy.OsGridRef,
@@ -26,7 +26,7 @@ const LatLonEllipsoidal = geodesy.LatLonEllipsoidal,
 /**
  * Co-ordinate formats
  */
-export const FORMATS = [
+const FORMATS = [
     "Degrees Minutes Seconds",
     "Degrees Decimal Minutes",
     "Decimal Degrees",
@@ -35,6 +35,7 @@ export const FORMATS = [
     "Ordnance Survey National Grid",
     "Universal Transverse Mercator"
 ];
+exports.FORMATS = FORMATS;
 
 /**
  * Formats that should be passed to the conversion module as-is

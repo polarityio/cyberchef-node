@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * Remove Diacritics operation
@@ -38,4 +38,4 @@ class RemoveDiacritics extends Operation {
 
 }
 
-export default RemoveDiacritics;
+module.exports = RemoveDiacritics;

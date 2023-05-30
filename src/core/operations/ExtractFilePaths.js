@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import { search } from "../lib/Extract.mjs";
-import { caseInsensitiveSort } from "../lib/Sort.mjs";
+const Operation = require(""../Operation.mjs"");
+const { search } = require(""../lib/Extract.mjs"");
+const { caseInsensitiveSort } = require(""../lib/Sort.mjs"");
 
 /**
  * Extract file paths operation
@@ -99,4 +99,4 @@ class ExtractFilePaths extends Operation {
 
 }
 
-export default ExtractFilePaths;
+module.exports = ExtractFilePaths;

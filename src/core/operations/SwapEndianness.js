@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {toHex, fromHex} from "../lib/Hex.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {toHex, fromHex} = require(""../lib/Hex.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Swap endianness operation
@@ -135,4 +135,4 @@ class SwapEndianness extends Operation {
 
 }
 
-export default SwapEndianness;
+module.exports = SwapEndianness;

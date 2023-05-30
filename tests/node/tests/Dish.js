@@ -1,7 +1,7 @@
-import TestRegister from "../../lib/TestRegister.mjs";
-import Dish from "../../../src/core/Dish.mjs";
-import it from "../../node/assertionHandler.mjs";
-import assert from "assert";
+const TestRegister = require(""../../lib/TestRegister.mjs"");
+const Dish = require(""../../../src/core/Dish.mjs"");
+const it = require(""../../node/assertionHandler.mjs"");
+const assert = require(""assert"");
 
 TestRegister.addApiTests([
     it("Dish - presentAs: should exist", () => {

@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Offset checker operation
@@ -104,4 +104,4 @@ class OffsetChecker extends Operation {
 
 }
 
-export default OffsetChecker;
+module.exports = OffsetChecker;

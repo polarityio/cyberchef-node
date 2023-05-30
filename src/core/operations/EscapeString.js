@@ -5,8 +5,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import jsesc from "jsesc";
+const Operation = require(""../Operation.mjs"");
+const jsesc = require(""jsesc"");
 
 /**
  * Escape string operation
@@ -85,4 +85,4 @@ class EscapeString extends Operation {
 
 }
 
-export default EscapeString;
+module.exports = EscapeString;

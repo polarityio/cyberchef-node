@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * Parse UNIX file permissions operation
@@ -329,4 +329,4 @@ function ftFromPerms(perms) {
     return "Regular file";
 }
 
-export default ParseUNIXFilePermissions;
+module.exports = ParseUNIXFilePermissions;

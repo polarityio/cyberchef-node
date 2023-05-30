@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 
 /**
  * URL Decode operation
@@ -49,4 +49,4 @@ class URLDecode extends Operation {
 
 }
 
-export default URLDecode;
+module.exports = URLDecode;

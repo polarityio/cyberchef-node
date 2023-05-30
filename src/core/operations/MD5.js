@@ -4,8 +4,8 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import {runHash} from "../lib/Hash.mjs";
+const Operation = require(""../Operation.mjs"");
+const {runHash} = require(""../lib/Hash.mjs"");
 
 /**
  * MD5 operation
@@ -38,4 +38,4 @@ class MD5 extends Operation {
 
 }
 
-export default MD5;
+module.exports = MD5;

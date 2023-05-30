@@ -35,4 +35,4 @@ class DishType {
     }
 }
 
-export default DishType;
+module.exports = DishType;

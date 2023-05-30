@@ -6,7 +6,7 @@
  * @license Apache-2.0
  */
 
-import { toHex, fromHex } from "./Hex.mjs";
+const { toHex, fromHex } = require(""./Hex.mjs"");
 
 /**
  * Formats Distinguished Name (DN) objects to strings.

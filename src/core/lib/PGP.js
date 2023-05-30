@@ -10,18 +10,19 @@
  *
  */
 
-import OperationError from "../errors/OperationError.mjs";
-import { isWorkerEnvironment } from "../Utils.mjs";
-import kbpgp from "kbpgp";
-import * as es6promisify from "es6-promisify";
+const OperationError = require(""../errors/OperationError.mjs"");
+const { isWorkerEnvironment } = require(""../Utils.mjs"");
+const kbpgp = require(""kbpgp"");
+const * as es6promisify = require(""es6-promisify"");
 const promisify = es6promisify.default ? es6promisify.default.promisify : es6promisify.promisify;
 
 /**
  * Progress callback
  */
-export const ASP = kbpgp.ASP({
+const ASP = kbpgp.ASP({
     "progress_hook": info => {
         let msg = "";
+exports.ASP = ASP;
 
         switch (info.what) {
             case "guess":

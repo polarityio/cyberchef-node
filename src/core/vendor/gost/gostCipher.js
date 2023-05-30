@@ -32,7 +32,7 @@
  *
  */
 
-import GostRandom from './gostRandom.mjs';
+const GostRandom = require("'./gostRandom.mjs'");
 
 import crypto from 'crypto'
 
@@ -2256,4 +2256,4 @@ function GostCipher(algorithm) // <editor-fold defaultstate="collapsed">
     }
 } // </editor-fold>
 
-export default GostCipher;
+module.exports = GostCipher;

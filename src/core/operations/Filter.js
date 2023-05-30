@@ -4,11 +4,11 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import Utils from "../Utils.mjs";
-import {INPUT_DELIM_OPTIONS} from "../lib/Delim.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import XRegExp from "xregexp";
+const Operation = require(""../Operation.mjs"");
+const Utils = require(""../Utils.mjs"");
+const {INPUT_DELIM_OPTIONS} = require(""../lib/Delim.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const XRegExp = require(""xregexp"");
 
 /**
  * Filter operation
@@ -70,4 +70,4 @@ class Filter extends Operation {
 
 }
 
-export default Filter;
+module.exports = Filter;

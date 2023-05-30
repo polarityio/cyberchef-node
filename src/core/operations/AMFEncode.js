@@ -4,9 +4,9 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
+const Operation = require(""../Operation.mjs"");
 import "reflect-metadata"; // Required as a shim for the amf library
-import { AMF0, AMF3 } from "@astronautlabs/amf";
+const { AMF0, AMF3 } = require(""@astronautlabs/amf"");
 
 /**
  * AMF Encode operation
@@ -49,4 +49,4 @@ class AMFEncode extends Operation {
 
 }
 
-export default AMFEncode;
+module.exports = AMFEncode;

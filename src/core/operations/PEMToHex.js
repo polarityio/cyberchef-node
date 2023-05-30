@@ -5,10 +5,10 @@
  * @license Apache-2.0
  */
 
-import { fromBase64 } from "../lib/Base64.mjs";
-import { toHexFast } from "../lib/Hex.mjs";
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const { fromBase64 } = require(""../lib/Base64.mjs"");
+const { toHexFast } = require(""../lib/Hex.mjs"");
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
 
 /**
  * PEM to Hex operation
@@ -65,4 +65,4 @@ class PEMToHex extends Operation {
 
 }
 
-export default PEMToHex;
+module.exports = PEMToHex;

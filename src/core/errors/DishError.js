@@ -23,4 +23,4 @@ class DishError extends Error {
     }
 }
 
-export default DishError;
+module.exports = DishError;

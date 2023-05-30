@@ -4,10 +4,10 @@
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
-import GostDigest from "../vendor/gost/gostDigest.mjs";
-import {toHexFast} from "../lib/Hex.mjs";
+const Operation = require(""../Operation.mjs"");
+const OperationError = require(""../errors/OperationError.mjs"");
+const GostDigest = require(""../vendor/gost/gostDigest.mjs"");
+const {toHexFast} = require(""../lib/Hex.mjs"");
 
 /**
  * GOST hash operation
@@ -68,4 +68,4 @@ class GOSTHash extends Operation {
 
 }
 
-export default GOSTHash;
+module.exports = GOSTHash;
