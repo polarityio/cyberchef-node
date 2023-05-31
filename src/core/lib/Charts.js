@@ -6,7 +6,7 @@
  */
 
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * @constant

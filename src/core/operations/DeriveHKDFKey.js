@@ -5,9 +5,8 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
-const CryptoApi = require("crypto-api/src/crypto-api.js");
 
 /**
  * Derive HKDF Key operation
@@ -98,7 +97,10 @@ class DeriveHKDFKey extends Operation {
      * @param {Object[]} args
      * @returns {ArrayBuffer}
      */
-    run(input, args) {
+    async run(input, args) {
+        const { default: CryptoApi } = await import(
+            "crypto-api/src/crypto-api.mjs"
+        );
         const argSalt = Utils.convertToByteString(args[0].string || "", args[0].option),
             info = Utils.convertToByteString(args[1].string || "", args[1].option),
             hashFunc = args[2].toLowerCase(),

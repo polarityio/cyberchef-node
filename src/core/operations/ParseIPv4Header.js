@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 const {fromHex, toHex} = require("../lib/Hex.js");
 const {ipv4ToStr, protocolLookup} = require("../lib/IP.js");

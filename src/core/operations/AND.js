@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const { bitOp, and, BITWISE_OP_DELIMS } = require("../lib/BitwiseOp.js");
 
 /**

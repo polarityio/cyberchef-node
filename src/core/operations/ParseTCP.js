@@ -9,7 +9,7 @@ const Stream = require("../lib/Stream.js");
 const {toHexFast, fromHex} = require("../lib/Hex.js");
 const {toBinary} = require("../lib/Binary.js");
 const {objToTable, bytesToLargeNumber} = require("../lib/Protocol.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 const BigNumber = require("bignumber.js");
 

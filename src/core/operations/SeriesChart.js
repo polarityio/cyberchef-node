@@ -5,14 +5,12 @@
  * @license Apache-2.0
  */
 
-const d3temp = require("d3");
 const nodomtemp = require("nodom");
 const { getSeriesValues, RECORD_DELIMITER_OPTIONS, FIELD_DELIMITER_OPTIONS } = require("../lib/Charts.js");
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
-const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;
 
 /**
@@ -67,7 +65,9 @@ class SeriesChart extends Operation {
      * @param {Object[]} args
      * @returns {html}
      */
-    run(input, args) {
+    async run(input, args) {
+        const d3 = await import("d3");
+
         const recordDelimiter = Utils.charRep(args[0]),
             fieldDelimiter = Utils.charRep(args[1]),
             xLabel = args[2],

@@ -1,5 +1,5 @@
 const TestRegister = require("../../lib/TestRegister.js");
-const Utils = require("../../../src/core/Utils.js");
+const { Utils } = require("../../../src/core/Utils.js");
 const it = require("../assertionHandler.js");
 const assert = require("assert");
 

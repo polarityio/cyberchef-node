@@ -8,7 +8,7 @@ const Operation = require("../Operation.js");
 const Stream = require("../lib/Stream.js");
 const {toHexFast, fromHex} = require("../lib/Hex.js");
 const {objToTable} = require("../lib/Protocol.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 
 /**

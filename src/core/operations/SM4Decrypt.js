@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 const { toHex } = require("../lib/Hex.js");
 const { decryptSM4 } = require("../lib/SM4.js");

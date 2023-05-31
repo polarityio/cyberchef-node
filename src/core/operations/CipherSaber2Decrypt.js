@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const { encode } = require("../lib/CipherSaber2.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * CipherSaber2 Decrypt operation

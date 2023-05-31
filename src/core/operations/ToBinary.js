@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {BIN_DELIM_OPTIONS} = require("../lib/Delim.js");
 const {toBinary} = require("../lib/Binary.js");
 

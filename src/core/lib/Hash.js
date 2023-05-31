@@ -7,8 +7,7 @@
  * @license Apache-2.0
  */
 
-const Utils = require("../Utils.js");
-const CryptoApi = require("crypto-api/src/crypto-api.js");
+const { Utils } = require("../Utils.js");
 
 
 /**
@@ -19,7 +18,10 @@ const CryptoApi = require("crypto-api/src/crypto-api.js");
  * @param {Object} [options={}]
  * @returns {string}
  */
-function runHash(name, input, options={}) {
+async function runHash(name, input, options={}) {
+    const { default: CryptoApi } = await import(
+        "crypto-api/src/crypto-api.mjs"
+    );
     const msg = Utils.arrayBufferToStr(input, false),
         hasher = CryptoApi.getHasher(name, options);
     hasher.update(msg);

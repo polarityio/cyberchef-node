@@ -5,15 +5,13 @@
  * @license Apache-2.0
  */
 
-const d3temp = require("d3");
 const nodomtemp = require("nodom");
 const { getScatterValues, RECORD_DELIMITER_OPTIONS, COLOURS, FIELD_DELIMITER_OPTIONS } = require("../lib/Charts.js");
 
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
-const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;
 
 /**
@@ -94,7 +92,9 @@ class HeatmapChart extends Operation {
      * @param {Object[]} args
      * @returns {html}
      */
-    run(input, args) {
+    async run(input, args) {
+        const d3 = await import("d3");
+        
         const recordDelimiter = Utils.charRep(args[0]),
             fieldDelimiter = Utils.charRep(args[1]),
             vBins = args[2],
@@ -141,7 +141,7 @@ class HeatmapChart extends Operation {
             marginedSpace = svg.append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        const bins = this.getHeatmapPacking(values, vBins, hBins),
+        const bins = await this.getHeatmapPacking(values, vBins, hBins),
             maxCount = Math.max(...bins.map(row => {
                 const lengths = row.map(cell => cell.length);
                 return Math.max(...lengths);
@@ -228,7 +228,9 @@ class HeatmapChart extends Operation {
      * @param {number} number of horizontal bins
      * @returns {Object[]} a list of bins (each bin is an Array) with x y coordinates, filled with the points
      */
-    getHeatmapPacking(values, vBins, hBins) {
+    async getHeatmapPacking(values, vBins, hBins) {
+        const d3 = await import("d3");
+
         const xBounds = d3.extent(values, d => d[0]),
             yBounds = d3.extent(values, d => d[1]),
             bins = [];

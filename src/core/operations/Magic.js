@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const Dish = require("../Dish.js");
 const MagicLib = require("../lib/Magic.js");
 

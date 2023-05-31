@@ -8,7 +8,7 @@ const { fromBase64, toBase64 } = require("../lib/Base64.js");
 const { fromHex } = require("../lib/Hex.js");
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const { isType, detectFileType } = require("../lib/FileType.js");
 
 /**

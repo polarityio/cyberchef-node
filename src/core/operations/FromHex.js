@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const {fromHex, FROM_HEX_DELIM_OPTIONS} = require("../lib/Hex.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * From Hex operation

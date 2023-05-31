@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {HASH_DELIM_OPTIONS} = require("../lib/Delim.js");
 const ssdeepjs = require("ssdeep.js");
 const OperationError = require("../errors/OperationError.js");

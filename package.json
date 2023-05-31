@@ -42,6 +42,7 @@
     "buffer": "^6.0.3",
     "cbor": "8.1.0",
     "chi-squared": "^1.1.0",
+    "cli-progress": "^3.12.0",
     "codepage": "^1.15.0",
     "crypto-api": "^0.8.5",
     "crypto-browserify": "^3.12.0",
@@ -52,6 +53,7 @@
     "diff": "^5.1.0",
     "es6-promisify": "^7.0.0",
     "escodegen": "^2.0.0",
+    "esm": "^3.2.25",
     "esprima": "^4.0.1",
     "exif-parser": "^0.1.12",
     "file-saver": "^2.0.5",
@@ -99,6 +101,7 @@
     "split.js": "^1.6.5",
     "ssdeep.js": "0.0.3",
     "stream-browserify": "^3.0.0",
+    "terser": "^5.17.6",
     "tesseract.js": "3.0.3",
     "ua-parser-js": "^1.0.34",
     "unorm": "^1.6.0",
@@ -110,16 +113,8 @@
     "zlibjs": "^0.3.1"
   },
   "scripts": {
-    "start": "npx grunt dev",
-    "build": "npx grunt prod",
-    "node": "npx grunt node",
-    "repl": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-experimental-fetch --no-warnings src/node/repl.js",
+    "build": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node ./build.js",
     "test": "node tests/operations/index.js",
-    "testnodeconsumer": "npx grunt testnodeconsumer",
-    "lint": "npx grunt lint",
-    "newop": "node --experimental-modules --experimental-json-modules src/core/config/scripts/newOperation.js",
-    "minor": "node --experimental-modules --experimental-json-modules src/core/config/scripts/newMinorVersion.js",
-    "getheapsize": "node -e 'console.log(`node heap limit = ${require(\"v8\").getHeapStatistics().heap_size_limit / (1024 * 1024)} Mb`)'",
-    "setheapsize": "export NODE_OPTIONS=--max_old_space_size=2048"
+    "lint": "echo \"Not Implemented\""
   }
 }

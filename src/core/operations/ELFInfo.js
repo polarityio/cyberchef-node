@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const Stream = require("../lib/Stream.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 
 /**

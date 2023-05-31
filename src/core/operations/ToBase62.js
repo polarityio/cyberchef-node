@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const BigNumber = require("bignumber.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {toHexFast} = require("../lib/Hex.js");
 
 /**

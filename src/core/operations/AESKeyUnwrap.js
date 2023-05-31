@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const { toHexFast } = require("../lib/Hex.js");
 const forge = require("node-forge");
 const OperationError = require("../errors/OperationError.js");

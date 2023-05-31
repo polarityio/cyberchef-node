@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const JsDiff = require("diff");
 const OperationError = require("../errors/OperationError.js");
 

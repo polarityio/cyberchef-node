@@ -6,7 +6,7 @@
 
 const {ALPHABET, highlightToBase45, highlightFromBase45} = require("../lib/Base45.js");
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * To Base45 operation

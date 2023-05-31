@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {fromBase64, toBase64} = require("../lib/Base64.js");
 const OperationError = require("../errors/OperationError.js");
 

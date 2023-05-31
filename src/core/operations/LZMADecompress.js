@@ -7,7 +7,7 @@
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
 const {decompress} = require("@blu3r4y/lzma");
-const Utils, {isWorkerEnvironment} = require("../Utils.js");
+const { Utils, isWorkerEnvironment} = require("../Utils.js");
 
 /**
  * LZMA Decompress operation

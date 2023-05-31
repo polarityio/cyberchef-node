@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 const scryptsy = require("scryptsy");
 const { isWorkerEnvironment } = require("../Utils.js");

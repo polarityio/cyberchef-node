@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {COMPRESSION_TYPE, ZLIB_COMPRESSION_TYPE_LOOKUP} = require("../lib/Zlib.js");
 const zip = require("zlibjs/bin/zip.min.js");
 

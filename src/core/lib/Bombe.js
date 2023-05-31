@@ -8,7 +8,7 @@
  */
 
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {Rotor, Plugboard, a2i, i2a} = require("./Enigma.js");
 
 /**

@@ -9,7 +9,7 @@ const { fromBase64 } = require("../lib/Base64.js");
 const { toHex } = require("../lib/Hex.js");
 const { formatByteStr, formatDnObj } = require("../lib/PublicKey.js");
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * Parse X.509 certificate operation

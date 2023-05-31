@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {LETTER_DELIM_OPTIONS, WORD_DELIM_OPTIONS} = require("../lib/Delim.js");
 
 /**

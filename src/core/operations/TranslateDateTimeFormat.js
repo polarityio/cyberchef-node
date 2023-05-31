@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const moment = require("moment-timezone");
 const {DATETIME_FORMATS, FORMAT_EXAMPLES} = require("../lib/DateTime.js");
 

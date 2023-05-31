@@ -9,7 +9,7 @@
 const OperationError = require("../errors/OperationError.js");
 const jsQR = require("jsqr");
 const qr = require("qr-image");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const jimp = require("jimp");
 
 /**

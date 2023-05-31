@@ -62,11 +62,12 @@ const SPLIT_DELIM_OPTIONS = [
     {name: "Space", value: " "},
     {name: "Line feed", value: "\\n"},
     {name: "CRLF", value: "\\r\\n"},
-    {name: "Semi-colon", value: ";
-exports.SPLIT_DELIM_OPTIONS = SPLIT_DELIM_OPTIONS;"},
+    {name: "Semi-colon", value: ";"},
     {name: "Colon", value: ":"},
     {name: "Nothing (separate chars)", value: ""}
 ];
+exports.SPLIT_DELIM_OPTIONS = SPLIT_DELIM_OPTIONS;
+
 
 /**
  * Join delimiters.
@@ -76,11 +77,11 @@ const JOIN_DELIM_OPTIONS = [
     {name: "CRLF", value: "\\r\\n"},
     {name: "Space", value: " "},
     {name: "Comma", value: ","},
-    {name: "Semi-colon", value: ";
-exports.JOIN_DELIM_OPTIONS = JOIN_DELIM_OPTIONS;"},
+    {name: "Semi-colon", value: ";"},
     {name: "Colon", value: ":"},
     {name: "Nothing (join chars)", value: ""}
 ];
+exports.JOIN_DELIM_OPTIONS = JOIN_DELIM_OPTIONS;
 
 /**
  * RGBA list delimiters.

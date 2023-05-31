@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {INPUT_DELIM_OPTIONS} = require("../lib/Delim.js");
 const {caseInsensitiveSort, ipSort, numericSort, hexadecimalSort, lengthSort} = require("../lib/Sort.js");
 

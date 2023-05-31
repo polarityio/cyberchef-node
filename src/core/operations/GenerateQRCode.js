@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { generateQrCode } = require("../lib/QRCode.js");
 const { toBase64 } = require("../lib/Base64.js");
 const { isImage } = require("../lib/FileType.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * Generate QR Code operation

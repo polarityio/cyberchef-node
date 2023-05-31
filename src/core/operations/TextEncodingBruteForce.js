@@ -6,7 +6,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const cptable = require("codepage");
 const {CHR_ENC_CODE_PAGES} = require("../lib/ChrEnc.js");
 

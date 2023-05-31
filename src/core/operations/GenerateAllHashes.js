@@ -6,7 +6,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const MD2 = require("./MD2.js");
 const MD4 = require("./MD4.js");
 const MD5 = require("./MD5.js");

@@ -11,19 +11,25 @@
 
 /* eslint no-console: 0 */
 
-const fs = require("fs")
-const path = require("path")
-const * as operations = require("../../../core/operations/index.js")
-const { decapitalise } = require("../../apiUtils.js")
-const excludedOperations = require("../excludedOperations.js")
+const fs = require("fs");
+const path = require("path");
+const { decapitalise } = require("../../apiUtils.js");
+const excludedOperations = require("../excludedOperations.js");
 
-const includedOperations = Object.keys(operations).filter((op => excludedOperations.indexOf(op) === -1));
+const operations = require("../../../core/operations/index.js");
+const includedOperations = Object.keys(operations).filter(
+    (op) => excludedOperations.indexOf(op) === -1
+);
 
 const dir = path.join(`${process.cwd()}/src/node`);
 if (!fs.existsSync(dir)) {
     console.log("\nCWD: " + process.cwd());
-    console.log("Error: generateNodeIndex.js should be run from the project root");
-    console.log("Example> node --experimental-modules src/core/config/scripts/generateNodeIndex.js");
+    console.log(
+        "Error: generateNodeIndex.js should be run from the project root"
+    );
+    console.log(
+        "Example> node --experimental-modules src/core/config/scripts/generateNodeIndex.js"
+    );
     process.exit(1);
 }
 
@@ -42,17 +48,17 @@ const NodeDish = require("./NodeDish.js")
 const { _wrap, help, bake, _explainExcludedFunction } = require("./api.js")
 const File = require("./File.js")
 const { OperationError, DishError, ExcludedOperationError } = require("../core/errors/index.js")
-import {
+const {
     // import as core_ to avoid name clashes after wrap.
 `;
 
 includedOperations.forEach((op) => {
     // prepend with core_ to avoid name collision later.
-    code += `    ${op} as core_${op},\n`;
+    code += `    ${op}: core_${op},\n`;
 });
 
-code +=`
-} from "../core/operations/index.js";
+code += `
+} = require("../core/operations/index.js");
 
 global.File = File;
 
@@ -70,7 +76,9 @@ includedOperations.forEach((op) => {
 });
 
 excludedOperations.forEach((op) => {
-    code += `        "${decapitalise(op)}": _explainExcludedFunction("${op}"),\n`;
+    code += `        "${decapitalise(
+        op
+    )}": _explainExcludedFunction("${op}"),\n`;
 });
 
 code += `    };
@@ -89,7 +97,7 @@ Object.keys(operations).forEach((op) => {
     code += `const ${decapitalise(op)} = chef.${decapitalise(op)};\n`;
 });
 
-code +=`
+code += `
 
 // Define array of all operations to create register for bake.
 const operations = [\n`;
@@ -112,17 +120,14 @@ Object.keys(operations).forEach((op) => {
     code += `    ${decapitalise(op)},\n`;
 });
 
-code += "    NodeDish as Dish,\n";
-code += "    bake,\n";
-code += "    help,\n";
-code += "    OperationError,\n";
-code += "    ExcludedOperationError,\n";
-code += "    DishError,\n";
-code += "};\n";
-code += "exports.operations = _operations";
+code += `    Dish: NodeDish,
+    bake,
+    help,
+    OperationError,
+    ExcludedOperationError,
+    DishError
+};
 
-
-fs.writeFileSync(
-    path.join(dir, "./index.js"),
-    code
-);
+exports.operations = _operations;
+`
+fs.writeFileSync(path.join(dir, "./index.js"), code);

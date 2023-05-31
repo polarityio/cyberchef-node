@@ -5,15 +5,13 @@
  * @license Apache-2.0
  */
 
-const d3temp = require("d3");
 const d3hexbintemp = require("d3-hexbin");
 const nodomtemp = require("nodom");
 const { getScatterValues, RECORD_DELIMITER_OPTIONS, COLOURS, FIELD_DELIMITER_OPTIONS } = require("../lib/Charts.js");
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
-const d3 = d3temp.default ? d3temp.default : d3temp;
 const d3hexbin = d3hexbintemp.default ? d3hexbintemp.default : d3hexbintemp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;
 
@@ -101,7 +99,9 @@ class HexDensityChart extends Operation {
      * @param {Object[]} args
      * @returns {html}
      */
-    run(input, args) {
+    async run(input, args) {
+        const d3 = await import("d3");
+
         const recordDelimiter = Utils.charRep(args[0]),
             fieldDelimiter = Utils.charRep(args[1]),
             packRadius = args[2],
@@ -176,10 +176,11 @@ class HexDensityChart extends Operation {
             .attr("height", height);
 
         if (drawEmptyHexagons) {
+            const emptyHexagons = await this.getEmptyHexagons(hexPoints, packRadius);
             marginedSpace.append("g")
                 .attr("class", "empty-hexagon")
                 .selectAll("path")
-                .data(this.getEmptyHexagons(hexPoints, packRadius))
+                .data(emptyHexagons)
                 .enter()
                 .append("path")
                 .attr("d", d => {
@@ -268,7 +269,9 @@ class HexDensityChart extends Operation {
      * @param {number} - radius
      * @returns {Object[]}
      */
-    getEmptyHexagons(centres, radius) {
+    async getEmptyHexagons(centres, radius) {
+        const d3 = await import("d3");
+
         const emptyCentres = [],
             boundingRect = [d3.extent(centres, d => d.x), d3.extent(centres, d => d.y)],
             hexagonCenterToEdge = Math.cos(2 * Math.PI / 12) * radius,

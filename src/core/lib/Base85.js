@@ -1,4 +1,4 @@
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * Base85 resources.
@@ -22,11 +22,10 @@ const ALPHABET_OPTIONS = [
     },
     {
         name: "IPv6",
-        value: "0-9A-Za-z!#$%&()*+\\-;
-exports.ALPHABET_OPTIONS = ALPHABET_OPTIONS;<=>?@^_`{|}~",
+        value: "0-9A-Za-z!#$%&()*+\\-;<=>?@^_`{|}~",
     }
 ];
-
+exports.ALPHABET_OPTIONS = ALPHABET_OPTIONS;
 
 /**
  * Returns the name of the alphabet, when given the alphabet.

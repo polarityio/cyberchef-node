@@ -5,7 +5,7 @@
  */
 
 const DishString = require("./DishString.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * Translation methods for HTML Dishes

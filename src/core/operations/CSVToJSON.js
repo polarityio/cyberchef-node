@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * CSV to JSON operation

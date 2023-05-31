@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 const {ENCODING_SCHEME, ENCODING_LOOKUP, FORMAT} = require("../lib/BCD.js");
 const BigNumber = require("bignumber.js");

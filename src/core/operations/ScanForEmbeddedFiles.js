@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const { scanForFileTypes } = require("../lib/FileType.js");
 const { FILE_SIGNATURES } = require("../lib/FileSignatures.js");
 

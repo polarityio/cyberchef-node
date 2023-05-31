@@ -8,7 +8,7 @@
  */
 const OperationError = require("../errors/OperationError.js");
 const Enigma = require("../lib/Enigma.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * A set of example Typex rotors. No Typex rotor wirings are publicly available, so these are

@@ -5,7 +5,7 @@
  */
 
 const DishType = require("./DishType.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * Translation methods for JSON dishes

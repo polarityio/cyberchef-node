@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const {alphabetName, ALPHABET_OPTIONS} = require("../lib/Base85.js");
 
 /**

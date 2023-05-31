@@ -4,12 +4,10 @@
  * @license Apache-2.0
  */
 
-const d3temp = require("d3");
 const nodomtemp = require("nodom");
 
 const Operation = require("../Operation.js");
 
-const d3 = d3temp.default ? d3temp.default : d3temp;
 const nodom = nodomtemp.default ? nodomtemp.default: nodomtemp;
 
 /**
@@ -104,7 +102,9 @@ class Entropy extends Operation {
      * @param {string} xTitle
      * @param {string} yTitle
      */
-    createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, title, xTitle, yTitle) {
+    async createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, title, xTitle, yTitle) {
+        const d3 = await import("d3");
+
         // Axes
         const yAxis = d3.axisLeft()
             .scale(yScale);
@@ -170,7 +170,7 @@ class Entropy extends Operation {
      * @param {number[]} byteFrequency
      * @returns {HTML}
      */
-    createByteFrequencyLineHistogram(byteFrequency) {
+    async createByteFrequencyLineHistogram(byteFrequency) {
         const margins = { top: 30, right: 20, bottom: 50, left: 30 };
 
         const svgWidth = 500,
@@ -203,7 +203,7 @@ class Entropy extends Operation {
             .attr("stroke", "steelblue")
             .attr("d", line);
 
-        this.createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, "", "Byte", "Byte Frequency");
+        await this.createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, "", "Byte", "Byte Frequency");
 
         return svg._groups[0][0].outerHTML;
     }
@@ -214,7 +214,7 @@ class Entropy extends Operation {
      * @param {number[]} byteFrequency
      * @returns {HTML}
      */
-    createByteFrequencyBarHistogram(byteFrequency) {
+    async createByteFrequencyBarHistogram(byteFrequency) {
         const margins = { top: 30, right: 20, bottom: 50, left: 30 };
 
         const svgWidth = 500,
@@ -246,7 +246,7 @@ class Entropy extends Operation {
             .attr("height", dataPoint => yScale(yExtent[0]) - yScale(dataPoint))
             .attr("fill", "blue");
 
-        this.createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, "", "Byte", "Byte Frequency");
+        await this.createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, "", "Byte", "Byte Frequency");
 
         return svg._groups[0][0].outerHTML;
     }
@@ -257,7 +257,7 @@ class Entropy extends Operation {
      * @param {number[]} entropyData
      * @returns {HTML}
      */
-    createEntropyCurve(entropyData) {
+    async createEntropyCurve(entropyData) {
         const margins = { top: 30, right: 20, bottom: 50, left: 30 };
 
         const svgWidth = 500,
@@ -291,7 +291,7 @@ class Entropy extends Operation {
             svg.selectAll("path").attr("fill", "none").attr("stroke", "steelblue");
         }
 
-        this.createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, "Scanning Entropy", "Block", "Entropy");
+        await this.createAxes(svg, xScale, yScale, svgHeight, svgWidth, margins, "Scanning Entropy", "Block", "Entropy");
 
         return svg._groups[0][0].outerHTML;
     }
@@ -302,7 +302,9 @@ class Entropy extends Operation {
      * @param {number[]} entropyData
      * @returns {HTML}
      */
-    createEntropyImage(entropyData) {
+    async createEntropyImage(entropyData) {
+        const d3 = await import("d3");
+
         const svgHeight = 100,
             svgWidth = 100,
             cellSize = 1,
@@ -408,18 +410,18 @@ class Entropy extends Operation {
      * @param {Object[]} args
      * @returns {html}
      */
-    present(entropyData, args) {
+    async present(entropyData, args) {
         const visualizationType = args[0];
 
         switch (visualizationType) {
             case "Histogram (Bar)":
-                return this.createByteFrequencyBarHistogram(entropyData);
+                return await this.createByteFrequencyBarHistogram(entropyData);
             case "Histogram (Line)":
-                return this.createByteFrequencyLineHistogram(entropyData);
+                return await this.createByteFrequencyLineHistogram(entropyData);
             case "Curve":
-                return this.createEntropyCurve(entropyData);
+                return await this.createEntropyCurve(entropyData);
             case "Image":
-                return this.createEntropyImage(entropyData);
+                return await this.createEntropyImage(entropyData);
             case "Shannon scale":
             default:
                 return this.createShannonEntropyVisualization(entropyData);

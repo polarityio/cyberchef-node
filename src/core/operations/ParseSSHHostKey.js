@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const { fromBase64 } = require("../lib/Base64.js");
 const { fromHex, toHexFast } = require("../lib/Hex.js");
 

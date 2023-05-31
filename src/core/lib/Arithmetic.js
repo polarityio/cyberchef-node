@@ -5,7 +5,7 @@
  * @license Apache-2.0
  */
 
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const BigNumber = require("bignumber.js");
 
 

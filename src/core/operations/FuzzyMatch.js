@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const {fuzzyMatch, calcMatchRanges, DEFAULT_WEIGHTS} = require("../lib/FuzzyMatch.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * Fuzzy Match operation

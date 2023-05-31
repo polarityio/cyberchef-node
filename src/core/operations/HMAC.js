@@ -5,8 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
-const CryptoApi = require("crypto-api/src/crypto-api.js");
+const { Utils } = require("../Utils.js");
 
 /**
  * HMAC operation
@@ -66,7 +65,10 @@ class HMAC extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
+        const { default: CryptoApi } = await import(
+            "crypto-api/src/crypto-api.mjs"
+        );
         const key = Utils.convertToByteString(args[0].string || "", args[0].option),
             hashFunc = args[1].toLowerCase(),
             msg = Utils.arrayBufferToStr(input, false),

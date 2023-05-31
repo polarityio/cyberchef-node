@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-const Utils = require("../Utils.js");
+const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
 const {strToIpv6, ipv6ToStr, ipv4ToStr, IPV6_REGEX} = require("../lib/IP.js");
 const BigNumber = require("bignumber.js");
