@@ -8,19 +8,19 @@
 
 /* eslint no-console: ["off"] */
 
-import prompt from "prompt";
-import colors from "colors";
-import process from "process";
-import fs from "fs";
-import path from "path";
-import EscapeString from "../../operations/EscapeString.mjs";
+const prompt = require("prompt")
+const colors = require("colors")
+const process = require("process")
+const fs = require("fs")
+const path = require("path")
+const EscapeString = require("../../operations/EscapeString.js")
 
 
 const dir = path.join(process.cwd() + "/src/core/operations/");
 if (!fs.existsSync(dir)) {
     console.log("\nCWD: " + process.cwd());
-    console.log("Error: newOperation.mjs should be run from the project root");
-    console.log("Example> node --experimental-modules src/core/config/scripts/newOperation.mjs");
+    console.log("Error: newOperation.js should be run from the project root");
+    console.log("Example> node --experimental-modules src/core/config/scripts/newOperation.js");
     process.exit(1);
 }
 
@@ -130,8 +130,8 @@ prompt.get(schema, (err, result) => {
  * @license Apache-2.0
  */
 
-import Operation from "../Operation.mjs";
-import OperationError from "../errors/OperationError.mjs";
+const Operation = require("../Operation.js")
+const OperationError = require("../errors/OperationError.js")
 
 /**
  * ${result.opName} operation
@@ -205,12 +205,12 @@ ${result.highlight ? `
 ` : ""}
 }
 
-export default ${moduleName};
+module.exports = ${moduleName};
 `;
 
     // console.log(template);
 
-    const filename = path.join(dir, `./${moduleName}.mjs`);
+    const filename = path.join(dir, `./${moduleName}.js`);
     if (fs.existsSync(filename)) {
         console.log(`${filename} already exists. It has NOT been overwritten.`.red);
         console.log("Choose a different operation name to avoid conflicts.");

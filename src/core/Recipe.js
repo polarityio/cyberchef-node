@@ -4,7 +4,7 @@
  * @license Apache-2.0
  */
 
-const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
+const OperationConfig = require("./config/OperationConfig.json");
 const OperationError = require("./errors/OperationError.js");
 const Operation = require("./Operation.js");
 const DishError = require("./errors/DishError.js");

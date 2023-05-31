@@ -1,5 +1,5 @@
-const OperationConfig = require(""../config/OperationConfig.json" assert {type: "json"}");
-const Utils, { isWorkerEnvironment } = require("../Utils.js");
+const OperationConfig = require("../config/OperationConfig.json");
+const { Utils, isWorkerEnvironment } = require("../Utils.js");
 const Recipe = require("../Recipe.js");
 const Dish = require("../Dish.js");
 const {detectFileType, isType} = require("./FileType.js");

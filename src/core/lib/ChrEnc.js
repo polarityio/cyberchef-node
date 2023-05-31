@@ -55,8 +55,7 @@ const CHR_ENC_CODE_PAGES = {
     "IBM EBCDIC Latin 1/Open System (1047 + Euro symbol) (20924)": 20924,
     "IBM EBCDIC Cyrillic Serbian-Bulgarian (21025)": 21025,
     "OEM United States (437)": 437,
-    "OEM Greek (formerly 437G);
-exports.CHR_ENC_CODE_PAGES = CHR_ENC_CODE_PAGES; Greek (DOS) (737)": 737,
+    "OEM Greek (formerly 437G); Greek (DOS) (737)": 737,
     "OEM Baltic; Baltic (DOS) (775)": 775,
     "OEM Russian; Cyrillic + Euro symbol (808)": 808,
     "OEM Multilingual Latin 1; Western European (DOS) (850)": 850,
@@ -166,10 +165,11 @@ exports.CHR_ENC_CODE_PAGES = CHR_ENC_CODE_PAGES; Greek (DOS) (737)": 737,
     "HZ-GB2312 Simplified Chinese (52936)": 52936,
     "Simplified Chinese GB18030 (54936)": 54936,
 };
-
+exports.CHR_ENC_CODE_PAGES = CHR_ENC_CODE_PAGES;
 
 const CHR_ENC_SIMPLE_LOOKUP = {};
 exports.CHR_ENC_SIMPLE_LOOKUP = CHR_ENC_SIMPLE_LOOKUP;
+
 const CHR_ENC_SIMPLE_REVERSE_LOOKUP = {};
 exports.CHR_ENC_SIMPLE_REVERSE_LOOKUP = CHR_ENC_SIMPLE_REVERSE_LOOKUP;
 
@@ -218,7 +218,8 @@ function chrEncWidth(page) {
     }
 
     return 0;
-};
+}
+
 exports.chrEncWidth = chrEncWidth;
 
 /**

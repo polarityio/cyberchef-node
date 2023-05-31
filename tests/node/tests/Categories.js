@@ -1,6 +1,6 @@
 const TestRegister = require("../../lib/TestRegister.js");
-const Categories = require(""../../../src/core/config/Categories.json" assert {type: "json"}");
-const OperationConfig = require(""../../../src/core/config/OperationConfig.json" assert {type: "json"}");
+const Categories = require("../../../src/core/config/Categories.json");
+const OperationConfig = require("../../../src/core/config/OperationConfig.json");
 const it = require("../assertionHandler.js");
 const assert = require("assert");
 

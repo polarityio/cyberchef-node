@@ -1368,7 +1368,7 @@ function isWorkerEnvironment() {
 };
 exports.isWorkerEnvironment = isWorkerEnvironment;
 
-module.exports = Utils;
+exports.Utils = Utils;
 
 
 /**

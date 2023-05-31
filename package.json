@@ -117,7 +117,6 @@
     "test": "node tests/operations/index.js",
     "testnodeconsumer": "npx grunt testnodeconsumer",
     "lint": "npx grunt lint",
-    "postinstall": "npx grunt exec:fixCryptoApiImports && npx grunt exec:fixSnackbarMarkup",
     "newop": "node --experimental-modules --experimental-json-modules src/core/config/scripts/newOperation.js",
     "minor": "node --experimental-modules --experimental-json-modules src/core/config/scripts/newMinorVersion.js",
     "getheapsize": "node -e 'console.log(`node heap limit = ${require(\"v8\").getHeapStatistics().heap_size_limit / (1024 * 1024)} Mb`)'",

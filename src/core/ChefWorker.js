@@ -7,7 +7,7 @@
  */
 
 const Chef = require("./Chef.js");
-const OperationConfig = require(""./config/OperationConfig.json" assert {type: "json"}");
+const OperationConfig = require("./config/OperationConfig.json");
 const OpModules = require("./config/modules/OpModules.js");
 const loglevelMessagePrefix = require("loglevel-message-prefix");
 

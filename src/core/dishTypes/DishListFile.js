@@ -5,14 +5,12 @@
  */
 
 const DishType = require("./DishType.js");
-const Utils, { isNodeEnvironment } = require("../Utils.js");
-
+const { Utils, isNodeEnvironment } = require("../Utils.js");
 
 /**
  * Translation methods for ListFile Dishes
  */
 class DishListFile extends DishType {
-
     /**
      * convert the given value to a ArrayBuffer
      */
@@ -20,9 +18,12 @@ class DishListFile extends DishType {
         DishListFile.checkForValue(this.value);
 
         if (isNodeEnvironment()) {
-            this.value = this.value.map(file => Uint8Array.from(file.data));
+            this.value = this.value.map((file) => Uint8Array.from(file.data));
         } else {
-            this.value = await DishListFile.concatenateTypedArraysWithTypedElements(...this.value);
+            this.value =
+                await DishListFile.concatenateTypedArraysWithTypedElements(
+                    ...this.value
+                );
         }
     }
 

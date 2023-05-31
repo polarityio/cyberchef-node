@@ -8,17 +8,17 @@
 
 /* eslint no-console: ["off"] */
 
-import prompt from "prompt";
-import colors from "colors";
-import path from "path";
-import fs  from "fs";
-import process from "process";
+const prompt = require("prompt")
+const colors = require("colors")
+const path = require("path")
+const fs  = require("fs")
+const process = require("process")
 
 const dir = path.join(process.cwd() + "/src/core/config/");
 if (!fs.existsSync(dir)) {
     console.log("\nCWD: " + process.cwd());
-    console.log("Error: newMinorVersion.mjs should be run from the project root");
-    console.log("Example> node --experimental-modules src/core/config/scripts/newMinorVersion.mjs");
+    console.log("Error: newMinorVersion.js should be run from the project root");
+    console.log("Example> node --experimental-modules src/core/config/scripts/newMinorVersion.js");
     process.exit(1);
 }
 

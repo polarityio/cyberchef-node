@@ -10,7 +10,7 @@
 
 const NodeDish = require("./NodeDish.js");
 const NodeRecipe = require("./NodeRecipe.js");
-const OperationConfig = require(""../core/config/OperationConfig.json" assert {type: "json"}");
+const OperationConfig = require("../core/config/OperationConfig.json");
 const { sanitise, removeSubheadingsFromArray, sentenceToCamelCase } = require("./apiUtils.js");
 const ExcludedOperationError = require("../core/errors/ExcludedOperationError.js");
 

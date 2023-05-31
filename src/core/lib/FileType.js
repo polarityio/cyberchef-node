@@ -112,7 +112,7 @@ function detectFileType(buf, categories=Object.keys(FILE_SIGNATURES)) {
     }
     return matchingFiles;
 };
-exports.detectFileType(buf, categories=Object.keys = detectFileType(buf, categories=Object.keys;
+exports.detectFileType = detectFileType;
 
 
 /**
@@ -171,7 +171,8 @@ function scanForFileTypes(buf, categories=Object.keys(FILE_SIGNATURES)) {
         return a.offset - b.offset;
     });
 };
-exports.scanForFileTypes(buf, categories=Object.keys = scanForFileTypes(buf, categories=Object.keys;
+
+exports.scanForFileTypes = scanForFileTypes;
 
 
 /**

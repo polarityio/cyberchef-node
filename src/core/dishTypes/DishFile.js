@@ -5,7 +5,7 @@
  */
 
 const DishType = require("./DishType.js");
-const Utils, { isNodeEnvironment } = require("../Utils.js");
+const { Utils, isNodeEnvironment } = require("../Utils.js");
 
 /**
  * Translation methods for file Dishes
