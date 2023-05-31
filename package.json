@@ -116,8 +116,6 @@
     "repl": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-experimental-fetch --no-warnings src/node/repl.js",
     "test": "node tests/operations/index.js",
     "testnodeconsumer": "npx grunt testnodeconsumer",
-    "testui": "npx grunt testui",
-    "testuidev": "npx nightwatch --env=dev",
     "lint": "npx grunt lint",
     "postinstall": "npx grunt exec:fixCryptoApiImports && npx grunt exec:fixSnackbarMarkup",
     "newop": "node --experimental-modules --experimental-json-modules src/core/config/scripts/newOperation.js",

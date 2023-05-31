@@ -62,7 +62,7 @@ class Recipe  {
         if (!modules) {
             // Using Webpack Magic Comments to force the dynamic import to be included in the main chunk
             // https://webpack.js.org/api/module-methods/
-            modules = await import(/* webpackMode: "eager" */ "./config/modules/OpModules.js");
+            modules = await require(/* webpackMode: "eager" */ "./config/modules/OpModules.js");
             modules = modules.default;
         }
 
@@ -230,12 +230,12 @@ class Recipe  {
                 this.lastRunOp = op;
             } catch (err) {
                 // Return expected errors as output
-                if (err instanceof OperationError || err?.type === "OperationError") {
+                if (err instanceof OperationError || err && err.type === "OperationError") {
                     // Cannot rely on `err instanceof OperationError` here as extending
                     // native types is not fully supported yet.
                     dish.set(err.message, "string");
                     return i;
-                } else if (err instanceof DishError || err?.type === "DishError") {
+                } else if (err instanceof DishError || err && err.type === "DishError") {
                     dish.set(err.message, "string");
                     return i;
                 } else {

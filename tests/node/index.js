@@ -10,19 +10,19 @@
  * @license Apache-2.0
  */
 
-import {
+const {
     setLongTestFailure,
     logTestReport,
-} from "../lib/utils.js";
+} = require("../lib/utils.js");
 
 const TestRegister = require("../lib/TestRegister.js");
-import "./tests/nodeApi.js";
-import "./tests/operations.js";
-import "./tests/File.js";
-import "./tests/Dish.js";
-import "./tests/NodeDish.js";
-import "./tests/Utils.js";
-import "./tests/Categories.js";
+require("./tests/nodeApi.js");
+require("./tests/operations.js");
+require("./tests/File.js");
+require("./tests/Dish.js");
+require("./tests/NodeDish.js");
+require("./tests/Utils.js");
+require("./tests/Categories.js");
 
 const testStatus = {
     allTestsPassing: true,

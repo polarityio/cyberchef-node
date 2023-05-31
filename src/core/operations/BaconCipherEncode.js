@@ -5,11 +5,11 @@
  */
 
 const Operation = require("../Operation.js");
-import {
+const {
     BACON_ALPHABETS,
     BACON_TRANSLATIONS_FOR_ENCODING, BACON_TRANSLATION_AB,
     swapZeroAndOne
-} from "../lib/Bacon.js";
+} = require("../lib/Bacon.js");
 
 /**
  * Bacon Cipher Encode operation

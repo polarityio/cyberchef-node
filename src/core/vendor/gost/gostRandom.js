@@ -31,7 +31,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * 
  */
-const crypto = require("'crypto'");
+const crypto = require("crypto");;
 
 
 /**

@@ -20,7 +20,7 @@ const assert = require("assert");
 const it = require("../assertionHandler.js");
 const fs = require("fs");
 
-import {
+const {
     addLineNumbers,
     adler32Checksum,
     AESDecrypt,
@@ -32,7 +32,7 @@ import {
     CSSMinify,
     toBase64,
     toHex
-} from "../../../src/node/index.js";
+} = require("../../../src/node/index.js");
 const chef = require("../../../src/node/index.js");
 const TestRegister = require("../../lib/TestRegister.js");
 const File = require("../../../src/node/File.js");

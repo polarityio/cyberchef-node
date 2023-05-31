@@ -65,7 +65,7 @@ class DetectFileType extends Operation {
 Extension:   ${type.extension}
 MIME type:   ${type.mime}\n`;
 
-                if (type?.description?.length) {
+                if (type && type.description && type.description.length) {
                     output += `Description: ${type.description}\n`;
                 }
 

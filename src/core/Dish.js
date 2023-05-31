@@ -5,7 +5,7 @@
  * @license Apache-2.0
  */
 
-const Utils, { isNodeEnvironment } = require("./Utils.js");
+const { Utils, isNodeEnvironment } = require("./Utils.js");
 const DishError = require("./errors/DishError.js");
 const BigNumber = require("bignumber.js");
 const { detectFileType } = require("./lib/FileType.js");

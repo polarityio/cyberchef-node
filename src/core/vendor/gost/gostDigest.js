@@ -36,9 +36,9 @@
  *
  */
 
- const GostRandom = require("'./gostRandom.js'");
- const GostCipher = require("'./gostCipher.js'");
- const crypto = require("'crypto'");
+ const GostRandom = require("./gostRandom.js");;
+ const GostCipher = require("./gostCipher.js");;
+ const crypto = require("crypto");;
 
 /*
     * GOST R 34.11
@@ -113,7 +113,7 @@ function getSeed(length) {
 function buffer(d) {
     if (d instanceof ArrayBuffer)
         return d;
-    else if (d && d?.buffer instanceof ArrayBuffer)
+    else if (d && d.buffer instanceof ArrayBuffer)
         return d.byteOffset === 0 && d.byteLength === d.buffer.byteLength ?
                 d.buffer : new Uint8Array(new Uint8Array(d, d.byteOffset, d.byteLength)).buffer;
     else

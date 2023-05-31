@@ -33,10 +33,10 @@
  *
  */
 
- const GostRandom = require("'./gostRandom.js'");
- const GostDigest = require("'./gostDigest.js'");
+ const GostRandom = require("./gostRandom.js");;
+ const GostDigest = require("./gostDigest.js");;
 
- const crypto = require("'crypto'");
+ const crypto = require("crypto");;
 
     /*
      * Predefined curves and params collection
@@ -1445,7 +1445,7 @@ function hash(d) {
 function buffer(d) {
     if (d instanceof CryptoOperationData)
         return d;
-    else if (d && d?.buffer instanceof CryptoOperationData)
+    else if (d && d.buffer instanceof CryptoOperationData)
         return d.byteOffset === 0 && d.byteLength === d.buffer.byteLength ?
                 d.buffer : new Uint8Array(new Uint8Array(d, d.byteOffset, d.byteLength)).buffer;
     else

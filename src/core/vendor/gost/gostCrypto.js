@@ -32,10 +32,10 @@
  *
  */
 
-const GostRandom = require("'./gostRandom.js'");
-const gostEngine = require("'./gostEngine.js'");
+const GostRandom = require("./gostRandom.js");;
+const gostEngine = require("./gostEngine.js");;
 
-import crypto from 'crypto'
+const crypto = require("crypto");
 
 /*
 * Algorithm normalization
@@ -611,7 +611,7 @@ if (!Promise) {
                             return;
                         }
                         value = mswrap(value);
-                        if (value && value?.then?.call) {
+                        if (value && value.then && value.then.call) {
                             value.then(resolve, reject);
                         } else {
                             resolve(value);
@@ -627,7 +627,7 @@ if (!Promise) {
                             return;
                         }
                         reason = mswrap(reason);
-                        if (reason && reason?.then?.call) {
+                        if (reason && reason.then && reason.then.call) {
                             reason.then(resolve, reject);
                         } else {
                             reject(reason);
@@ -698,7 +698,7 @@ if (!Promise) {
 
                 for (var i = 0, n = promises.length; i < n; i++) {
                     var data = promises[i];
-                    if (data?.then?.call)
+                    if (data && data.then && data.then.call)
                         data.then(asyncResolve(i), asyncReject);
                     else
                         result[i] = data;
@@ -1492,7 +1492,7 @@ SubtleCrypto.prototype.exportKey = function (format, key) // <editor-fold defaul
         var raw = extractKey(null, null, key);
         if (format === 'raw')
             return raw;
-        else if (format === 'pkcs8' && key?.algorithm?.id) {
+        else if (format === 'pkcs8' && key && key.algorithm && key.algorithm.id) {
             if (key.algorithm.procreator === 'VN') {
                 // Add masks for ViPNet
                 var algorithm = key.algorithm, mask;
@@ -1514,7 +1514,7 @@ SubtleCrypto.prototype.exportKey = function (format, key) // <editor-fold defaul
                 });
             } else
                 return gostCrypto.asn1.GostPrivateKeyInfo.encode(key);
-        } else if (format === 'spki' && key?.algorithm?.id)
+        } else if (format === 'spki' && key && key.algorithm && key.algorithm.id)
             return gostCrypto.asn1.GostSubjectPublicKeyInfo.encode(key);
         else
             throw new NotSupportedError('Key format not supported');

@@ -69,7 +69,7 @@ class Chef {
 
         const returnType =
             this.dish.type === Dish.HTML ? Dish.HTML :
-                options?.returnType ? options.returnType : Dish.ARRAY_BUFFER;
+                options && options.returnType ? options.returnType : Dish.ARRAY_BUFFER;
 
         return {
             dish: rawDish,

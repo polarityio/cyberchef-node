@@ -5,11 +5,11 @@
  */
 
 const Operation = require("../Operation.js");
-import {
+const {
     BACON_ALPHABETS,
     BACON_TRANSLATION_CASE, BACON_TRANSLATION_AMNZ, BACON_TRANSLATIONS, BACON_CLEARER_MAP, BACON_NORMALIZE_MAP,
     swapZeroAndOne
-} from "../lib/Bacon.js";
+} = require("../lib/Bacon.js");
 
 /**
  * Bacon Cipher Decode operation

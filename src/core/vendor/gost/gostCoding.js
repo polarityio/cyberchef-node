@@ -32,7 +32,7 @@
  *
  */
 
-const gostCrypto = require("'./gostCrypto.js'");
+const gostCrypto = require("./gostCrypto.js");;
 
 /**
  * The Coding interface provides string converting methods: Base64, Hex,
@@ -48,7 +48,7 @@ var Date = Date;
 function buffer(d) {
     if (d instanceof CryptoOperationData)
         return d;
-    else if (d && d?.buffer instanceof CryptoOperationData)
+    else if (d && d.buffer instanceof CryptoOperationData)
         return d.byteOffset === 0 && d.byteLength === d.buffer.byteLength ?
                 d.buffer : new Uint8Array(new Uint8Array(d, d.byteOffset, d.byteLength)).buffer;
     else

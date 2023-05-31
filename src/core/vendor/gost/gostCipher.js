@@ -32,9 +32,9 @@
  *
  */
 
-const GostRandom = require("'./gostRandom.js'");
+const GostRandom = require("./gostRandom.js");;
 
-import crypto from 'crypto'
+const crypto = require("crypto");
 
 /*
 * Initial parameters and common algortithms of GOST 28147-89
@@ -198,7 +198,7 @@ function randomSeed(e) {
 function buffer(d) {
     if (d instanceof CryptoOperationData)
         return d;
-    else if (d && d?.buffer instanceof CryptoOperationData)
+    else if (d && d.buffer instanceof CryptoOperationData)
         return d.byteOffset === 0 && d.byteLength === d.buffer.byteLength ?
                 d.buffer : new Uint8Array(new Uint8Array(d, d.byteOffset, d.byteLength)).buffer;
     else
@@ -2076,7 +2076,7 @@ function GostCipher(algorithm) // <editor-fold defaultstate="collapsed">
                     ((algorithm.keyWrapping || 'NO') !== 'NO' ? algorithm.keyWrapping : '') + 'KW' :
                     (algorithm.block || 'ECB') + ((algorithm.block === 'CFB' || algorithm.block === 'OFB' ||
                     (algorithm.block === 'CTR' && algorithm.version === 2015)) &&
-                    algorithm?.shiftBits !== this.blockLength ? '-' + algorithm.shiftBits : '') +
+                    algorithm && algorithm.shiftBits !== this.blockLength ? '-' + algorithm.shiftBits : '') +
                     (algorithm.padding ? '-' + (algorithm.padding || (algorithm.block === 'CTR' ||
                             algorithm.block === 'CFB' || algorithm.block === 'OFB' ? 'NO' : 'ZERO')) + 'PADDING' : '') +
                     ((algorithm.keyMeshing || 'NO') !== 'NO' ? '-CPKEYMESHING' : '')) +

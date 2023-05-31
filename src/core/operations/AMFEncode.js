@@ -5,7 +5,7 @@
  */
 
 const Operation = require("../Operation.js");
-import "reflect-metadata"; // Required as a shim for the amf library
+// require("reflect-metadata"); // Required as a shim for the amf library
 const { AMF0, AMF3 } = require("@astronautlabs/amf");
 
 /**
