@@ -53,7 +53,7 @@ class JA3SFingerprint extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         const [inputFormat, outputFormat] = args;
 
         input = Utils.convertToByteArray(input, inputFormat);
@@ -116,7 +116,7 @@ class JA3SFingerprint extends Operation {
             exts.join("-")
         ];
         const ja3sStr = ja3s.join(",");
-        const ja3sHash = runHash("md5", Utils.strToArrayBuffer(ja3sStr));
+        const ja3sHash = await runHash("md5", Utils.strToArrayBuffer(ja3sStr));
 
         switch (outputFormat) {
             case "JA3S string":

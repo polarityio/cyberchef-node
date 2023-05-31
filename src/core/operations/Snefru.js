@@ -46,8 +46,8 @@ class Snefru extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
-        return runHash("snefru", input, {
+    async run(input, args) {
+        return await runHash("snefru", input, {
             length: args[0],
             rounds: args[1]
         });

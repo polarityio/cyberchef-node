@@ -8,7 +8,7 @@
  */
 const TestRegister = require("../../lib/TestRegister.js");
 
-const CONSOLE_COMPILE_WARNING_RULE = `require("console");
+const CONSOLE_COMPILE_WARNING_RULE = `import "console"
 rule a
 {
   strings:
@@ -44,7 +44,7 @@ TestRegister.addTests([
             {
                 "op": "YARA Rules",
                 "args": [
-                    `require("hash");
+                    `import "hash"
                     rule HelloWorldMD5 {
                         condition:
                             hash.md5(0,filesize) == "ed076287532e86365e841e92bfc50d8c"

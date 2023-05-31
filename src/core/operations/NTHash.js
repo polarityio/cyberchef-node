@@ -5,13 +5,12 @@
  */
 
 const Operation = require("../Operation.js");
-const {runHash} = require("../lib/Hash.js");
+const { runHash } = require("../lib/Hash.js");
 
 /**
  * NT Hash operation
  */
 class NTHash extends Operation {
-
     /**
      * NTHash constructor
      */
@@ -20,7 +19,8 @@ class NTHash extends Operation {
 
         this.name = "NT Hash";
         this.module = "Crypto";
-        this.description = "An NT Hash, sometimes referred to as an NTLM hash, is a method of storing passwords on Windows systems. It works by running MD4 on UTF-16LE encoded input. NTLM hashes are considered weak because they can be brute-forced very easily with modern hardware.";
+        this.description =
+            "An NT Hash, sometimes referred to as an NTLM hash, is a method of storing passwords on Windows systems. It works by running MD4 on UTF-16LE encoded input. NTLM hashes are considered weak because they can be brute-forced very easily with modern hardware.";
         this.infoURL = "https://wikipedia.org/wiki/NT_LAN_Manager";
         this.inputType = "string";
         this.outputType = "string";
@@ -32,7 +32,7 @@ class NTHash extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         // Convert to UTF-16LE
         const buf = new ArrayBuffer(input.length * 2);
         const bufView = new Uint16Array(buf);
@@ -40,7 +40,7 @@ class NTHash extends Operation {
             bufView[i] = input.charCodeAt(i);
         }
 
-        const hashed = runHash("md4", buf);
+        const hashed = await runHash("md4", buf);
         return hashed.toUpperCase();
     }
 }

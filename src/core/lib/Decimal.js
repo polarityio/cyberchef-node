@@ -6,9 +6,6 @@
  * @license Apache-2.0
  */
 
-const { Utils } = require("../Utils.js");
-
-
 /**
  * Convert a string of decimal values into a byte array.
  *
@@ -23,16 +20,18 @@ const { Utils } = require("../Utils.js");
  * // returns [10,20,30]
  * fromDecimal("10:20:30", "Colon");
  */
-function fromDecimal(data, delim="Auto") {
+function fromDecimal(data, delim = "Auto") {
+    const { Utils } = require("../Utils.js");
+
     delim = Utils.charRep(delim);
     const output = [];
     let byteStr = data.split(delim);
-    if (byteStr[byteStr.length-1] === "")
-        byteStr = byteStr.slice(0, byteStr.length-1);
+    if (byteStr[byteStr.length - 1] === "")
+        byteStr = byteStr.slice(0, byteStr.length - 1);
 
     for (let i = 0; i < byteStr.length; i++) {
         output[i] = parseInt(byteStr[i], 10);
     }
     return output;
-};
+}
 exports.fromDecimal = fromDecimal;

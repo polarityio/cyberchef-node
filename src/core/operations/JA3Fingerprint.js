@@ -53,7 +53,7 @@ class JA3Fingerprint extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         const [inputFormat, outputFormat] = args;
 
         input = Utils.convertToByteArray(input, inputFormat);
@@ -137,7 +137,7 @@ class JA3Fingerprint extends Operation {
             ellipticCurvePointFormats
         ];
         const ja3Str = ja3.join(",");
-        const ja3Hash = runHash("md5", Utils.strToArrayBuffer(ja3Str));
+        const ja3Hash = await runHash("md5", Utils.strToArrayBuffer(ja3Str));
 
         switch (outputFormat) {
             case "JA3 string":

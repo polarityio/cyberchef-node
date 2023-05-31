@@ -32,8 +32,8 @@ class MD4 extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
-        return runHash("md4", input);
+    async run(input, args) {
+        return await runHash("md4", input);
     }
 
 }

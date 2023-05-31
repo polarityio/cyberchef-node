@@ -39,8 +39,8 @@ class SHA0 extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
-        return runHash("sha0", input, {rounds: args[0]});
+    async run(input, args) {
+        return await runHash("sha0", input, {rounds: args[0]});
     }
 
 }

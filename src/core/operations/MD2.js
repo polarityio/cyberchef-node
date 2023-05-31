@@ -39,8 +39,8 @@ class MD2 extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
-        return runHash("md2", input, {rounds: args[0]});
+    async run(input, args) {
+        return await runHash("md2", input, {rounds: args[0]});
     }
 
 }

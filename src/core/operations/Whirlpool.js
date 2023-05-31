@@ -45,9 +45,9 @@ class Whirlpool extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         const variant = args[0].toLowerCase();
-        return runHash(variant, input, {rounds: args[1]});
+        return await runHash(variant, input, {rounds: args[1]});
     }
 
 }

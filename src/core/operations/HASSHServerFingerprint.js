@@ -56,7 +56,7 @@ class HASSHServerFingerprint extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         const [inputFormat, outputFormat] = args;
 
         input = Utils.convertToByteArray(input, inputFormat);
@@ -135,7 +135,7 @@ class HASSHServerFingerprint extends Operation {
             compAlgosS2C
         ];
         const hasshStr = hassh.join(";");
-        const hasshHash = runHash("md5", Utils.strToArrayBuffer(hasshStr));
+        const hasshHash = await runHash("md5", Utils.strToArrayBuffer(hasshStr));
 
         switch (outputFormat) {
             case "HASSH algorithms string":

@@ -23,7 +23,7 @@
     "data manipulation",
     "data analysis"
   ],
-  "main": "src/node/wrapper.js",
+  "main": "src/node/index.js",
   "dependencies": {
     "@astronautlabs/amf": "^0.0.6",
     "@babel/polyfill": "^7.12.1",
@@ -114,7 +114,7 @@
   },
   "scripts": {
     "build": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node ./build.js",
-    "test": "node tests/operations/index.js",
+    "test": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node tests/operations/index.js",
     "lint": "echo \"Not Implemented\""
   }
 }

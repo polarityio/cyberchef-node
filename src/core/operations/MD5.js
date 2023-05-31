@@ -32,8 +32,8 @@ class MD5 extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
-        return runHash("md5", input);
+    async run(input, args) {
+        return await runHash("md5", input);
     }
 
 }

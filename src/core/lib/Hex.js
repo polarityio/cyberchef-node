@@ -6,9 +6,7 @@
  * @license Apache-2.0
  */
 
-const { Utils } = require("../Utils.js");
 const OperationError = require("../errors/OperationError.js");
-
 
 /**
  * Convert a byte array into a hex string.
@@ -28,12 +26,12 @@ const OperationError = require("../errors/OperationError.js");
  * // returns "0x0a,0x14,0x1e"
  * toHex([10,20,30], "0x", 2, ",")
  */
-function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
+function toHex(data, delim = " ", padding = 2, extraDelim = "", lineSize = 0) {
     if (!data) return "";
     if (data instanceof ArrayBuffer) data = new Uint8Array(data);
 
     let output = "";
-    const prepend = (delim === "0x" || delim === "\\x");
+    const prepend = delim === "0x" || delim === "\\x";
 
     for (let i = 0; i < data.length; i++) {
         const hex = data[i].toString(16).padStart(padding, "0");
@@ -43,7 +41,7 @@ function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
             output += extraDelim;
         }
         // Add LF after each lineSize amount of bytes but not at the end
-        if ((i !== data.length - 1) && ((i + 1) % lineSize === 0)) {
+        if (i !== data.length - 1 && (i + 1) % lineSize === 0) {
             output += "\n";
         }
     }
@@ -57,9 +55,8 @@ function toHex(data, delim=" ", padding=2, extraDelim="", lineSize=0) {
     } else {
         return output;
     }
-};
+}
 exports.toHex = toHex;
-
 
 /**
  * Convert a byte array into a hex string as efficiently as possible with no options.
@@ -83,9 +80,8 @@ function toHexFast(data) {
     }
 
     return output.join("");
-};
+}
 exports.toHexFast = toHexFast;
-
 
 /**
  * Convert a hex string into a byte array.
@@ -102,12 +98,15 @@ exports.toHexFast = toHexFast;
  * // returns [10,20,30]
  * fromHex("0a:14:1e", "Colon");
  */
-function fromHex(data, delim="Auto", byteLen=2) {
+function fromHex(data, delim = "Auto", byteLen = 2) {
+    const { Utils } = require("../Utils.js");
+
     if (byteLen < 1 || Math.round(byteLen) !== byteLen)
         throw new OperationError("Byte length must be a positive integer");
 
     if (delim !== "None") {
-        const delimRegex = delim === "Auto" ? /[^a-f\d]|0x/gi : Utils.regexRep(delim);
+        const delimRegex =
+            delim === "Auto" ? /[^a-f\d]|0x/gi : Utils.regexRep(delim);
         data = data.split(delimRegex);
     } else {
         data = [data];
@@ -120,16 +119,26 @@ function fromHex(data, delim="Auto", byteLen=2) {
         }
     }
     return output;
-};
+}
 exports.fromHex = fromHex;
-
 
 /**
  * To Hexadecimal delimiters.
  */
-const TO_HEX_DELIM_OPTIONS = ["Space", "Percent", "Comma", "Semi-colon", "Colon", "Line feed", "CRLF", "0x", "0x with comma", "\\x", "None"];
+const TO_HEX_DELIM_OPTIONS = [
+    "Space",
+    "Percent",
+    "Comma",
+    "Semi-colon",
+    "Colon",
+    "Line feed",
+    "CRLF",
+    "0x",
+    "0x with comma",
+    "\\x",
+    "None",
+];
 exports.TO_HEX_DELIM_OPTIONS = TO_HEX_DELIM_OPTIONS;
-
 
 /**
  * From Hexadecimal delimiters.

@@ -51,7 +51,7 @@ class TestRegister {
      */
     async runTests() {
         // Turn off logging to avoid messy errors
-        // log.setLevel("silent", false);
+        log.setLevel("silent", false);
 
         const progBar = new cliProgress.SingleBar(
             {
@@ -93,13 +93,20 @@ class TestRegister {
                         ret.status = "failing";
                         ret.output = [
                             "Expected",
-                            "\t" + test.expectedOutput.replace(/\n/g, "\n\t"),
+                            '\t"' +
+                                test.expectedOutput.replace(/\n/g, "\n\t") +
+                                '"',
                             "Received",
-                            "\t" + result &&
-                            result.error &&
-                            typeof result.error.displayStr === "string"
-                                ? result.error.displayStr.replace(/\n/g, "\n\t")
-                                : "UNKNOWN",
+                            '\t"' +
+                                (result &&
+                                result.error &&
+                                typeof result.error.displayStr === "string"
+                                    ? result.error.displayStr.replace(
+                                          /\n/g,
+                                          "\n\t"
+                                      )
+                                    : "UNKNOWN") +
+                                '"',
                         ].join("\n");
                     }
                 } else {
@@ -133,9 +140,9 @@ class TestRegister {
                         : "unknown";
                     ret.output = [
                         "Expected",
-                        "\t" + expected.replace(/\n/g, "\n\t"),
+                        '\t"' + expected.replace(/\n/g, "\n\t") + '"',
                         "Received",
-                        "\t" + result.result.replace(/\n/g, "\n\t"),
+                        '\t"' + result.result.replace(/\n/g, "\n\t") + '"',
                     ].join("\n");
                 }
             }

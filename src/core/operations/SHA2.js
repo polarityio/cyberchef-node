@@ -81,10 +81,10 @@ class SHA2 extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         const size = args[0];
         const rounds = (size === "256" || size === "224") ? args[1] : args[2];
-        return runHash("sha" + size, input, {rounds: rounds});
+        return await runHash("sha" + size, input, {rounds: rounds});
     }
 
 }

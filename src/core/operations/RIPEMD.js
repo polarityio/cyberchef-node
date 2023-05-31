@@ -38,9 +38,9 @@ class RIPEMD extends Operation {
      * @param {Object[]} args
      * @returns {string}
      */
-    run(input, args) {
+    async run(input, args) {
         const size = args[0];
-        return runHash("ripemd" + size, input);
+        return await runHash("ripemd" + size, input);
     }
 
 }
