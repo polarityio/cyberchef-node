@@ -107,10 +107,6 @@ exports.importPrivateKey = importPrivateKey;
  */
 async function importPublicKey(publicKey) {
     try {
-        console.log({
-            kbpgp: kbpgp.KeyManager.import_from_armored_pgp,
-            publicKey,
-        });
         const key = await promisify(kbpgp.KeyManager.import_from_armored_pgp)({
             armored: publicKey,
             opts: {
