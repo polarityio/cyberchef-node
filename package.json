@@ -1,6 +1,6 @@
 {
-  "name": "cyberchef",
-  "version": "10.4.0",
+  "name": "cyberchef-node",
+  "version": "1.0.0",
   "description": "The Cyber Swiss Army Knife for encryption, encoding, compression and data analysis.",
   "author": "n1474335 <n1474335@gmail.com>",
   "homepage": "https://gchq.github.io/CyberChef",
@@ -113,10 +113,10 @@
     "zlibjs": "^0.3.1"
   },
   "scripts": {
-    "build": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node ./build.js",
+    "build": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-warnings --no-deprecation ./scripts/build.js",
     "test": "npm run testOperations && npm run testNodePackage",
-    "testOperations": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-warnings tests/operations/index.js",
-    "testNodePackage": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-warnings tests/node/index.js",
+    "testOperations": "sh ./scripts/testOperations.sh",
+    "testNodePackage": "sh ./scripts/testNodePackage.sh",
     "lint": "echo \"Not Implemented\""
   }
 }
