@@ -115,8 +115,8 @@
   "scripts": {
     "build": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node ./build.js",
     "test": "npm run testOperations && npm run testNodePackage",
-    "testOperations": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node tests/operations/index.js",
-    "testNodePackage": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node tests/node/index.js",
+    "testOperations": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-warnings tests/operations/index.js",
+    "testNodePackage": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --no-warnings tests/node/index.js",
     "lint": "echo \"Not Implemented\""
   }
 }
