@@ -830,6 +830,7 @@ const chef = generateChef();
 // Add some additional features to chef object.
 chef.help = help;
 chef.Dish = NodeDish;
+chef.bake = bake;
 
 // Define consts here so we can add to top-level export - wont allow
 // export of chef property.
@@ -1645,12 +1646,7 @@ const operations = [
     zlibInflate,
 ];
 
-chef.bake = bake;
-module.exports = chef;
-
-// Operations as top level exports.
-const _operations = {
-    operations,
+const operationFunctions = {
     A1Z26CipherDecode,
     A1Z26CipherEncode,
     ADD,
@@ -2062,4 +2058,7 @@ const _operations = {
     DishError
 };
 
-exports.operations = _operations;
+chef.operationFunctions = operationFunctions;
+chef.operations = operations;
+
+module.exports = chef;

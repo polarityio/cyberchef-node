@@ -51,7 +51,7 @@ class TestRegister {
      */
     async runTests() {
         // Turn off logging to avoid messy errors
-        log.setLevel("silent", false);
+        // log.setLevel("silent", false);
 
         const progBar = new cliProgress.SingleBar(
             {

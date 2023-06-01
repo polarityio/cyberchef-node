@@ -88,6 +88,7 @@ const chef = generateChef();
 // Add some additional features to chef object.
 chef.help = help;
 chef.Dish = NodeDish;
+chef.bake = bake;
 
 // Define consts here so we can add to top-level export - wont allow
 // export of chef property.
@@ -108,12 +109,7 @@ Object.keys(operations).forEach((op) => {
 
 code += `];
 
-chef.bake = bake;
-module.exports = chef;
-
-// Operations as top level exports.
-const _operations = {
-    operations,
+const operationFunctions = {
 `;
 
 Object.keys(operations).forEach((op) => {
@@ -128,6 +124,9 @@ code += `    Dish: NodeDish,
     DishError
 };
 
-exports.operations = _operations;
+chef.operationFunctions = operationFunctions;
+chef.operations = operations;
+
+module.exports = chef;
 `
 fs.writeFileSync(path.join(dir, "./index.js"), code);

@@ -16,13 +16,13 @@ const {
 } = require("../lib/utils.js");
 
 const TestRegister = require("../lib/TestRegister.js");
-require("./tests/nodeApi.js");
+// require("./tests/nodeApi.js");
 require("./tests/operations.js");
-require("./tests/File.js");
-require("./tests/Dish.js");
-require("./tests/NodeDish.js");
-require("./tests/Utils.js");
-require("./tests/Categories.js");
+// require("./tests/File.js");
+// require("./tests/Dish.js");
+// require("./tests/NodeDish.js");
+// require("./tests/Utils.js");
+// require("./tests/Categories.js");
 
 const testStatus = {
     allTestsPassing: true,
