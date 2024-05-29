@@ -6,7 +6,7 @@
 
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
-const xmldom = require("xmldom");
+const xmldom = require("@xmldom/xmldom");
 const xpath = require("xpath");
 
 /**
