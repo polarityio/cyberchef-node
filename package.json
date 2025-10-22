@@ -6,6 +6,10 @@
   "homepage": "https://github.com/polarityio/cyberchef-node",
   "copyright": "Crown copyright 2016",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polarityio/cyberchef-node"
+  },
   "keywords": [
     "cipher",
     "cypher",
