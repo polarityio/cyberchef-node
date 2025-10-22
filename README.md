@@ -17,7 +17,7 @@ npm install --save cyberchef-node
 
 ## Node.js support
 
-CyberChef is built to fully support Node.js `v12` & `v18`. For more information, see the Node API page in the project [wiki pages](https://github.com/gchq/CyberChef/wiki/Node-API)
+CyberChef is built to fully support Node.js `v18`. For more information, see the Node API page in the project [wiki pages](https://github.com/gchq/CyberChef/wiki/Node-API)
 
 
 ## Licencing

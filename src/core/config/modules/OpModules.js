@@ -4,7 +4,7 @@
 * Imports all modules for builds which do not load modules separately.
 *
 * @author n1474335 [n1474335@gmail.com]
-* @copyright Crown Copyright 2023
+* @copyright Crown Copyright 2025
 * @license Apache-2.0
 */
 const CiphersModule = require("./Ciphers.js")
