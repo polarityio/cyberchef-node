@@ -2,8 +2,7 @@ name: Docs & Release
 
 on:
   push:
-    branches:
-      - main, master
+    branches: [ master, main ]
 
 permissions:
   contents: write          # required by the release action
