@@ -3,7 +3,7 @@ name: Docs & Release
 on:
   push:
     branches:
-      - main
+      - main, master
 
 permissions:
   contents: write          # required by the release action
