@@ -10,7 +10,7 @@ const { Utils } = require("../Utils.js");
 const {isImage} = require("../lib/FileType.js");
 const {toBase64} = require("../lib/Base64.js");
 const {isWorkerEnvironment} = require("../Utils.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime, ResizeStrategy, rgbaToInt } = require("jimp");
 
 /**
  * Generate Image operation
@@ -81,7 +81,7 @@ class GenerateImage extends Operation {
         }
 
         const height = Math.ceil(input.length / bytesPerPixel / width);
-        const image = await new jimp(width, height, (err, image) => {});
+        const image = new Jimp({ width, height });
 
         if (isWorkerEnvironment())
             self.sendStatusMessage("Generating image from data...");
@@ -95,7 +95,7 @@ class GenerateImage extends Operation {
                     const y = Math.floor(index / width);
 
                     const value = curByte[k] === "0" ? 0xFF : 0x00;
-                    const pixel = jimp.rgbaToInt(value, value, value, 0xFF);
+                    const pixel = rgbaToInt(value, value, value, 0xFF);
                     image.setPixelColor(pixel, x, y);
                 }
             }
@@ -139,7 +139,7 @@ class GenerateImage extends Operation {
                 }
 
                 try {
-                    const pixel = jimp.rgbaToInt(red, green, blue, alpha);
+                    const pixel = rgbaToInt(red, green, blue, alpha);
                     image.setPixelColor(pixel, x, y);
                 } catch (err) {
                     throw new OperationError(`Error while generating image from pixel values. (${err})`);
@@ -151,11 +151,11 @@ class GenerateImage extends Operation {
             if (isWorkerEnvironment())
                 self.sendStatusMessage("Scaling image...");
 
-            image.scaleToFit(width*scale, height*scale, jimp.RESIZE_NEAREST_NEIGHBOR);
+            image.scaleToFit(width*scale, height*scale, ResizeStrategy.NEAREST_NEIGHBOR);
         }
 
         try {
-            const imageBuffer = await image.getBufferAsync(jimp.MIME_PNG);
+            const imageBuffer = await image.getBuffer(JimpMime.png);
             return imageBuffer.buffer;
         } catch (err) {
             throw new OperationError(`Error generating image. (${err})`);

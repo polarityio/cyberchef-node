@@ -323,7 +323,7 @@ TestRegister.addTests([
                 ]
             }
         ],
-        expectedOutput: "Invalid JPath expression: Eval [?(expr)] prevented in JSONPath expression."
+        expectedOutput: "Invalid JPath expression: Unexpected \"{\" at character 1"
     },
     {
         name: "CSS selector",

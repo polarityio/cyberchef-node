@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
 const { isWorkerEnvironment } = require("../Utils.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime, HorizontalAlign, VerticalAlign, ResizeStrategy } = require("jimp");
 
 /**
  * Cover Image operation
@@ -86,20 +86,20 @@ class CoverImage extends Operation {
         const [width, height, hAlign, vAlign, alg] = args;
 
         const resizeMap = {
-            "Nearest Neighbour": jimp.RESIZE_NEAREST_NEIGHBOR,
-            "Bilinear": jimp.RESIZE_BILINEAR,
-            "Bicubic": jimp.RESIZE_BICUBIC,
-            "Hermite": jimp.RESIZE_HERMITE,
-            "Bezier": jimp.RESIZE_BEZIER
+            "Nearest Neighbour": ResizeStrategy.NEAREST_NEIGHBOR,
+            "Bilinear": ResizeStrategy.BILINEAR,
+            "Bicubic": ResizeStrategy.BICUBIC,
+            "Hermite": ResizeStrategy.HERMITE,
+            "Bezier": ResizeStrategy.BEZIER
         };
 
         const alignMap = {
-            "Left": jimp.HORIZONTAL_ALIGN_LEFT,
-            "Center": jimp.HORIZONTAL_ALIGN_CENTER,
-            "Right": jimp.HORIZONTAL_ALIGN_RIGHT,
-            "Top": jimp.VERTICAL_ALIGN_TOP,
-            "Middle": jimp.VERTICAL_ALIGN_MIDDLE,
-            "Bottom": jimp.VERTICAL_ALIGN_BOTTOM
+            "Left": HorizontalAlign.LEFT,
+            "Center": HorizontalAlign.CENTER,
+            "Right": HorizontalAlign.RIGHT,
+            "Top": VerticalAlign.TOP,
+            "Middle": VerticalAlign.MIDDLE,
+            "Bottom": VerticalAlign.BOTTOM
         };
 
         if (!isImage(input)) {
@@ -108,7 +108,7 @@ class CoverImage extends Operation {
 
         let image;
         try {
-            image = await jimp.read(input);
+            image = await Jimp.read(input);
         } catch (err) {
             throw new OperationError(`Error loading image. (${err})`);
         }
@@ -117,10 +117,10 @@ class CoverImage extends Operation {
                 self.sendStatusMessage("Covering image...");
             image.cover(width, height, alignMap[hAlign] | alignMap[vAlign], resizeMap[alg]);
             let imageBuffer;
-            if (image.getMIME() === "image/gif") {
-                imageBuffer = await image.getBufferAsync(jimp.MIME_PNG);
+            if (image.mime === "image/gif") {
+                imageBuffer = await image.getBuffer(JimpMime.png);
             } else {
-                imageBuffer = await image.getBufferAsync(jimp.AUTO);
+                imageBuffer = await image.getBuffer(JimpMime.png);
             }
             return imageBuffer.buffer;
         } catch (err) {

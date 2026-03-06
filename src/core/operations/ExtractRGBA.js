@@ -7,7 +7,7 @@
 const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
-const jimp = require("jimp");
+const { Jimp } = require("jimp");
 
 const {RGBA_DELIM_OPTIONS} = require("../lib/Delim.js");
 
@@ -52,7 +52,7 @@ class ExtractRGBA extends Operation {
 
         const delimiter = args[0],
             includeAlpha = args[1],
-            parsedImage = await jimp.read(input);
+            parsedImage = await Jimp.read(input);
 
         let bitmap = parsedImage.bitmap.data;
         bitmap = includeAlpha ? bitmap : bitmap.filter((val, idx) => idx % 4 !== 3);

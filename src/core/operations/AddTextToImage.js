@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
 const { isWorkerEnvironment } = require("../Utils.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime, ResizeStrategy, loadFont, measureText, measureTextHeight } = require("jimp");
 
 /**
  * Add Text To Image operation
@@ -127,7 +127,7 @@ class AddTextToImage extends Operation {
 
         let image;
         try {
-            image = await jimp.read(input);
+            image = await Jimp.read(input);
         } catch (err) {
             throw new OperationError(`Error loading image. (${err})`);
         }
@@ -163,7 +163,7 @@ class AddTextToImage extends Operation {
             const font = fontsMap[fontFace];
 
             // LoadFont needs an absolute url, so append the font name to self.docURL
-            const jimpFont = await jimp.loadFont(self.docURL + "/" + font.default);
+            const jimpFont = await loadFont(self.docURL + "/" + font.default);
 
             jimpFont.pages.forEach(function(page) {
                 if (page.bitmap) {
@@ -190,7 +190,7 @@ class AddTextToImage extends Operation {
             });
 
             // Create a temporary image to hold the rendered text
-            const textImage = new jimp(jimp.measureText(jimpFont, text), jimp.measureTextHeight(jimpFont, text));
+            const textImage = new Jimp({ width: measureText(jimpFont, text), height: measureTextHeight(jimpFont, text) });
             textImage.print(jimpFont, 0, 0, text);
 
             // Scale the rendered text image to the correct size
@@ -198,9 +198,9 @@ class AddTextToImage extends Operation {
             if (size !== 1) {
                 // Use bicubic for decreasing size
                 if (size > 1) {
-                    textImage.scale(scaleFactor, jimp.RESIZE_BICUBIC);
+                    textImage.scale(scaleFactor, ResizeStrategy.BICUBIC);
                 } else {
-                    textImage.scale(scaleFactor, jimp.RESIZE_BILINEAR);
+                    textImage.scale(scaleFactor, ResizeStrategy.BILINEAR);
                 }
             }
 
@@ -210,10 +210,10 @@ class AddTextToImage extends Operation {
                     xPos = 0;
                     break;
                 case "Center":
-                    xPos = (image.getWidth() / 2) - (textImage.getWidth() / 2);
+                    xPos = (image.width / 2) - (textImage.width / 2);
                     break;
                 case "Right":
-                    xPos = image.getWidth() - textImage.getWidth();
+                    xPos = image.width - textImage.width;
                     break;
             }
 
@@ -222,10 +222,10 @@ class AddTextToImage extends Operation {
                     yPos = 0;
                     break;
                 case "Middle":
-                    yPos = (image.getHeight() / 2) - (textImage.getHeight() / 2);
+                    yPos = (image.height / 2) - (textImage.height / 2);
                     break;
                 case "Bottom":
-                    yPos = image.getHeight() - textImage.getHeight();
+                    yPos = image.height - textImage.height;
                     break;
             }
 
@@ -233,10 +233,10 @@ class AddTextToImage extends Operation {
             image.blit(textImage, xPos, yPos);
 
             let imageBuffer;
-            if (image.getMIME() === "image/gif") {
-                imageBuffer = await image.getBufferAsync(jimp.MIME_PNG);
+            if (image.mime === "image/gif") {
+                imageBuffer = await image.getBuffer(JimpMime.png);
             } else {
-                imageBuffer = await image.getBufferAsync(jimp.AUTO);
+                imageBuffer = await image.getBuffer(JimpMime.png);
             }
             return imageBuffer.buffer;
         } catch (err) {

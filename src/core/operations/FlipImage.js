@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
 const { isWorkerEnvironment } = require("../Utils.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime } = require("jimp");
 
 /**
  * Flip Image operation
@@ -51,7 +51,7 @@ class FlipImage extends Operation {
 
         let image;
         try {
-            image = await jimp.read(input);
+            image = await Jimp.read(input);
         } catch (err) {
             throw new OperationError(`Error loading image. (${err})`);
         }
@@ -68,10 +68,10 @@ class FlipImage extends Operation {
             }
 
             let imageBuffer;
-            if (image.getMIME() === "image/gif") {
-                imageBuffer = await image.getBufferAsync(jimp.MIME_PNG);
+            if (image.mime === "image/gif") {
+                imageBuffer = await image.getBuffer(JimpMime.png);
             } else {
-                imageBuffer = await image.getBufferAsync(jimp.AUTO);
+                imageBuffer = await image.getBuffer(JimpMime.png);
             }
             return imageBuffer.buffer;
         } catch (err) {

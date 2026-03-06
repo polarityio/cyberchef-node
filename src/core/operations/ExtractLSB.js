@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { Utils } = require("../Utils.js");
 const { fromBinary } = require("../lib/Binary.js");
 const { isImage } = require("../lib/FileType.js");
-const jimp = require("jimp");
+const { Jimp } = require("jimp");
 
 /**
  * Extract LSB operation
@@ -73,7 +73,7 @@ class ExtractLSB extends Operation {
         const bit = 7 - args.pop(),
             pixelOrder = args.pop(),
             colours = args.filter(option => option !== "").map(option => COLOUR_OPTIONS.indexOf(option)),
-            parsedImage = await jimp.read(input),
+            parsedImage = await Jimp.read(input),
             width = parsedImage.bitmap.width,
             height = parsedImage.bitmap.height,
             rgba = parsedImage.bitmap.data;
