@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
 const { isWorkerEnvironment } = require("../Utils.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime, ResizeStrategy } = require("jimp");
 
 /**
  * Resize Image operation
@@ -80,11 +80,11 @@ class ResizeImage extends Operation {
             resizeAlg = args[4];
 
         const resizeMap = {
-            "Nearest Neighbour": jimp.RESIZE_NEAREST_NEIGHBOR,
-            "Bilinear": jimp.RESIZE_BILINEAR,
-            "Bicubic": jimp.RESIZE_BICUBIC,
-            "Hermite": jimp.RESIZE_HERMITE,
-            "Bezier": jimp.RESIZE_BEZIER
+            "Nearest Neighbour": ResizeStrategy.NEAREST_NEIGHBOR,
+            "Bilinear": ResizeStrategy.BILINEAR,
+            "Bicubic": ResizeStrategy.BICUBIC,
+            "Hermite": ResizeStrategy.HERMITE,
+            "Bezier": ResizeStrategy.BEZIER
         };
 
         if (!isImage(input)) {
@@ -93,14 +93,14 @@ class ResizeImage extends Operation {
 
         let image;
         try {
-            image = await jimp.read(input);
+            image = await Jimp.read(input);
         } catch (err) {
             throw new OperationError(`Error loading image. (${err})`);
         }
         try {
             if (unit === "Percent") {
-                width = image.getWidth() * (width / 100);
-                height = image.getHeight() * (height / 100);
+                width = image.width * (width / 100);
+                height = image.height * (height / 100);
             }
 
             if (isWorkerEnvironment())
@@ -112,10 +112,10 @@ class ResizeImage extends Operation {
             }
 
             let imageBuffer;
-            if (image.getMIME() === "image/gif") {
-                imageBuffer = await image.getBufferAsync(jimp.MIME_PNG);
+            if (image.mime === "image/gif") {
+                imageBuffer = await image.getBuffer(JimpMime.png);
             } else {
-                imageBuffer = await image.getBufferAsync(jimp.AUTO);
+                imageBuffer = await image.getBuffer(JimpMime.png);
             }
             return imageBuffer.buffer;
         } catch (err) {

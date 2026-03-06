@@ -10,7 +10,7 @@ const { Utils } = require("../Utils.js");
 const { isImage } = require("../lib/FileType.js");
 const { runHash } = require("../lib/Hash.js");
 const { toBase64 } = require("../lib/Base64.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime } = require("jimp");
 
 /**
  * Randomize Colour Palette operation
@@ -49,7 +49,7 @@ class RandomizeColourPalette extends Operation {
             throw new OperationError("Please enter a valid image file.");
 
         const seed = args[0] || Math.random().toString().substr(2),
-            parsedImage = await jimp.read(input),
+            parsedImage = await Jimp.read(input),
             width = parsedImage.bitmap.width,
             height = parsedImage.bitmap.height;
 
@@ -73,7 +73,7 @@ class RandomizeColourPalette extends Operation {
         const rgbHex = rgbHash.substr(0, 6) + "ff";
         parsedImage.setPixelColor(parseInt(rgbHex, 16), x, y);
 
-        const imageBuffer = await parsedImage.getBufferAsync(jimp.AUTO);
+        const imageBuffer = await parsedImage.getBuffer(JimpMime.png);
 
         return new Uint8Array(imageBuffer).buffer;
     }

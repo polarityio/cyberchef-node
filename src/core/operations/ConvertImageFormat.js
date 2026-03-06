@@ -8,7 +8,7 @@ const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime, PNGFilterType } = require("jimp");
 
 /**
  * Convert Image Format operation
@@ -76,19 +76,19 @@ class ConvertImageFormat extends Operation {
     async run(input, args) {
         const [format, jpegQuality, pngFilterType, pngDeflateLevel] = args;
         const formatMap = {
-            "JPEG": jimp.MIME_JPEG,
-            "PNG": jimp.MIME_PNG,
-            "BMP": jimp.MIME_BMP,
-            "TIFF": jimp.MIME_TIFF
+            "JPEG": JimpMime.jpeg,
+            "PNG": JimpMime.png,
+            "BMP": JimpMime.bmp,
+            "TIFF": JimpMime.tiff
         };
 
         const pngFilterMap = {
-            "Auto": jimp.PNG_FILTER_AUTO,
-            "None": jimp.PNG_FILTER_NONE,
-            "Sub": jimp.PNG_FILTER_SUB,
-            "Up": jimp.PNG_FILTER_UP,
-            "Average": jimp.PNG_FILTER_AVERAGE,
-            "Paeth": jimp.PNG_FILTER_PATH
+            "Auto": PNGFilterType.AUTO,
+            "None": PNGFilterType.NONE,
+            "Sub": PNGFilterType.SUB,
+            "Up": PNGFilterType.UP,
+            "Average": PNGFilterType.AVERAGE,
+            "Paeth": PNGFilterType.PATH
         };
 
         const mime = formatMap[format];
@@ -98,7 +98,7 @@ class ConvertImageFormat extends Operation {
         }
         let image;
         try {
-            image = await jimp.read(input);
+            image = await Jimp.read(input);
         } catch (err) {
             throw new OperationError(`Error opening image file. (${err})`);
         }
@@ -113,7 +113,7 @@ class ConvertImageFormat extends Operation {
                     break;
             }
 
-            const imageBuffer = await image.getBufferAsync(mime);
+            const imageBuffer = await image.getBuffer(mime);
             return imageBuffer.buffer;
         } catch (err) {
             throw new OperationError(`Error converting image format. (${err})`);

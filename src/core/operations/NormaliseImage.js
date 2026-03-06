@@ -8,7 +8,7 @@ const Operation = require("../Operation.js");
 const OperationError = require("../errors/OperationError.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime } = require("jimp");
 
 /**
  * Normalise Image operation
@@ -43,7 +43,7 @@ class NormaliseImage extends Operation {
 
         let image;
         try {
-            image = await jimp.read(input);
+            image = await Jimp.read(input);
         } catch (err) {
             throw new OperationError(`Error opening image file. (${err})`);
         }
@@ -52,10 +52,10 @@ class NormaliseImage extends Operation {
             image.normalize();
 
             let imageBuffer;
-            if (image.getMIME() === "image/gif") {
-                imageBuffer = await image.getBufferAsync(jimp.MIME_PNG);
+            if (image.mime === "image/gif") {
+                imageBuffer = await image.getBuffer(JimpMime.png);
             } else {
-                imageBuffer = await image.getBufferAsync(jimp.AUTO);
+                imageBuffer = await image.getBuffer(JimpMime.png);
             }
             return imageBuffer.buffer;
         } catch (err) {

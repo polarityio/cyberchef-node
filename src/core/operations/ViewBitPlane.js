@@ -9,7 +9,7 @@ const OperationError = require("../errors/OperationError.js");
 const { Utils } = require("../Utils.js");
 const { isImage } = require("../lib/FileType.js");
 const { toBase64 } = require("../lib/Base64.js");
-const jimp = require("jimp");
+const { Jimp, JimpMime } = require("jimp");
 
 /**
  * View Bit Plane operation
@@ -52,7 +52,7 @@ class ViewBitPlane extends Operation {
         if (!isImage(input)) throw new OperationError("Please enter a valid image file.");
 
         const [colour, bit] = args,
-            parsedImage = await jimp.read(input),
+            parsedImage = await Jimp.read(input),
             width = parsedImage.bitmap.width,
             height = parsedImage.bitmap.height,
             colourIndex = COLOUR_OPTIONS.indexOf(colour),
@@ -78,7 +78,7 @@ class ViewBitPlane extends Operation {
 
         });
 
-        const imageBuffer = await parsedImage.getBufferAsync(jimp.AUTO);
+        const imageBuffer = await parsedImage.getBuffer(JimpMime.png);
 
         return new Uint8Array(imageBuffer).buffer;
     }

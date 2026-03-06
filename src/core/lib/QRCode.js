@@ -10,7 +10,7 @@ const OperationError = require("../errors/OperationError.js");
 const jsQR = require("jsqr");
 const qr = require("qr-image");
 const { Utils } = require("../Utils.js");
-const jimp = require("jimp");
+const {Jimp, JimpMime} = require("jimp");
 
 /**
  * Parses a QR code image from an image
@@ -22,25 +22,25 @@ const jimp = require("jimp");
 async function parseQrCode(input, normalise) {
     let image;
     try {
-        image = await jimp.read(input);
+        image = await Jimp.read(input);
     } catch (err) {
         throw new OperationError(`Error opening image. (${err})`);
     }
 
     try {
         if (normalise) {
-            image.rgba(false);
-            image.background(0xFFFFFFFF);
+            image.background = 0xFFFFFFFF;
+            image.opaque();
             image.normalize();
             image.greyscale();
-            image = await image.getBufferAsync(jimp.MIME_JPEG);
-            image = await jimp.read(image);
+            image = await image.getBuffer(JimpMime.jpeg);
+            image = await Jimp.read(image);
         }
     } catch (err) {
         throw new OperationError(`Error normalising image. (${err})`);
     }
 
-    const qrData = jsQR(image.bitmap.data, image.getWidth(), image.getHeight());
+    const qrData = jsQR(image.bitmap.data, image.width, image.height);
     if (qrData) {
         return qrData.data;
     } else {
