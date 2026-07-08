@@ -2,6 +2,8 @@ node_modules
 npm-debug.log
 travis.log
 build
+# ncc bundle output; produced by `npm run build` (prepack) and published from dist/
+dist
 .vscode
 .*.swp
 **/*.DS_Store

@@ -5,3 +5,12 @@ build/*
 !build/node
 .vscode
 .github
+
+# Published package ships the ncc bundle in dist/ (see scripts/bundle.js).
+# Source, tests, and build scripts are not needed by consumers.
+src
+tests
+scripts
+.editorconfig
+.eslintignore
+.eslintrc.json
