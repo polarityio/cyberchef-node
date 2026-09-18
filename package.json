@@ -32,7 +32,7 @@
     "@astronautlabs/amf": "^0.0.6",
     "@babel/polyfill": "^7.12.1",
     "@blu3r4y/lzma": "^2.3.3",
-    "@xmldom/xmldom": "^0.8.12",
+    "@xmldom/xmldom": "^0.8.15",
     "argon2-browser": "^1.18.0",
     "arrive": "^2.4.1",
     "avsc": "^5.7.7",
