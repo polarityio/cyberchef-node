@@ -1,6 +1,6 @@
 {
   "name": "cyberchef-node",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The Cyber Swiss Army Knife for encryption, encoding, compression and data analysis.",
   "author": "n1474335 <n1474335@gmail.com>",
   "homepage": "https://github.com/polarityio/cyberchef-node",
@@ -50,7 +50,7 @@
     "cli-progress": "^3.12.0",
     "codepage": "^1.15.0",
     "crypto-api": "^0.8.5",
-    "crypto-browserify":"^3.12.1",
+    "crypto-browserify": "^3.12.1",
     "crypto-js": "^4.2.0",
     "ctph.js": "0.0.5",
     "d3": "7.8.2",
